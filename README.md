@@ -61,6 +61,11 @@ uvicorn referral.api:app --reload
 
 Cases live in `data/cases/<case_id>/` as PDFs plus `gold.json` (not committed).
 
+## Workflow
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the order of work, experiment loop, branch and PR rules, and
+[docs/run-log.md](docs/run-log.md) for the shared record of runs. Tasks are tracked as GitHub issues.
+
 ## Ownership
 
 - **Shreyas:** pipeline — ingestion, retrieval, verifier, validator, absence and conflict checks

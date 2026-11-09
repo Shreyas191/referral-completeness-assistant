@@ -134,6 +134,12 @@ Not written yet, roughly in priority order:
 5. Other three checklists; LLM judge for citations; referral reason and handoff summary
 6. React review UI (last)
 
+## Workflow
+
+Follow [CONTRIBUTING.md](CONTRIBUTING.md): one branch per GitHub issue, PRs with `Closes #N`, one change
+per experiment behind a `PipelineConfig` flag, and a row in [docs/run-log.md](docs/run-log.md) for every
+run worth comparing (including what did not help).
+
 ## Rules
 
 - **Never use real patient data.** All cases are synthetic.
