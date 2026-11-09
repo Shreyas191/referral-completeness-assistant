@@ -1,0 +1,40 @@
+[project]
+name = "referral-completeness"
+version = "0.1.0"
+description = "Checks specialist referral packets against clinic checklists, with cited evidence for every item."
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.6",
+    "pdfplumber>=0.11",
+    "rapidfuzz>=3.6",
+    "rank-bm25>=0.2.2",
+    "chromadb>=0.5",
+    "anthropic>=0.40",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "python-multipart>=0.0.9",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["referral"]

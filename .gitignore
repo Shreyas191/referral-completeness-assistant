@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Generated data and run outputs
+data/cases/
+data/chroma/
+data/synthea/
+runs/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
