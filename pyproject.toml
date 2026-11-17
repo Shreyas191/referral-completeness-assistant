@@ -29,7 +29,7 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "."]  # "." lets tests import the datagen scripts
 
 [tool.ruff]
 line-length = 120
@@ -38,4 +38,4 @@ line-length = 120
 select = ["E", "F", "I"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["referral"]
+known-first-party = ["referral", "datagen"]
