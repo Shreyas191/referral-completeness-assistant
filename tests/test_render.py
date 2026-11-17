@@ -6,6 +6,7 @@ and dose conflicts only where a contradiction was planted.
 """
 import json
 import random
+import re
 from pathlib import Path
 
 import pytest
@@ -14,6 +15,9 @@ from datagen.defect_plan import DEFECTS, DefectPlan, ItemPlan, eligible, make_pl
 from datagen.render import (
     BURY_PAGE,
     LONG_PAGES,
+    MAX_DOCS,
+    NO_REASON_RULE,
+    PRESENTATIONS,
     LeakError,
     LetterProse,
     LongNoteProse,
@@ -45,6 +49,8 @@ class ScriptedLLM:
 
     def __init__(self, leaks: int = 0, warfarin: bool = False):
         self.leaks, self.warfarin = leaks, warfarin
+        self.profile_prompts: list[str] = []
+        self.prose_prompts: list[str] = []
         self.calls = self.input_tokens = self.output_tokens = 0
 
     def structured(self, system, user, schema):
@@ -56,6 +62,7 @@ class ScriptedLLM:
             self.leaks -= 1
             leak = " A recent EKG was normal."
         if schema is ProfileDraft:
+            self.profile_prompts.append(user)
             return ProfileDraft(
                 first_name="Avery", last_name="Lane", conditions=["hypertension", "type 2 diabetes"],
                 medications=[Medication(name="metoprolol tartrate", dose=25, unit="mg", frequency="twice daily"),
@@ -64,6 +71,8 @@ class ScriptedLLM:
                 allergies="no known drug allergies", referral_reason="Evaluation of exertional chest tightness.",
                 history="Six weeks of chest tightness on stairs." + leak, referring_physician="Dr. Sam Reed",
                 practice="Elm Street Clinic")
+        if schema is not ProfileDraft:
+            self.prose_prompts.append(user)
         if schema is LetterProse:
             return LetterProse(paragraphs=["Symptoms began six weeks ago." + leak, "She remains active."])
         if schema is NoteProse:
@@ -126,7 +135,7 @@ def test_rendered_case_is_labelled_by_construction(plan):
     docs = {d.doc_id: d for d in case.docs}
     own = case_docs(case)
     assert set(case.expected) == set(ITEMS)
-    assert 2 <= len(case.docs) <= 9
+    assert 2 <= len(case.docs) <= MAX_DOCS
 
     for d in case.docs:  # the loader must read the date we meant
         assert guess_doc_date(d.pages[0]) == d.doc_date, d.doc_id
@@ -192,6 +201,34 @@ def test_wrong_patient_document_differs_on_every_identifier():
     assert f"{p.first_name} {p.last_name}" not in text and p.mrn not in text and p.dob.strftime("%m/%d/%Y") not in text
     mrn = text.split("MRN: ")[1].split()[0]
     assert sorted(mrn) == sorted(p.mrn), "MRN should be the case MRN with two digits swapped"
+
+
+def test_code_varies_the_patient_the_llm_is_asked_for():
+    llm = ScriptedLLM()
+    for n in range(20):
+        render_case(plan_with(f"v{n}"), CHECKLIST, llm)
+    problems = {re.search(r"Presenting problem: (.*?);", u)[1] for u in llm.profile_prompts}
+    sexes = {re.search(r"-year-old (\w+)\.", u)[1] for u in llm.profile_prompts}
+    assert len(problems) >= 6 and sexes == {"female", "male"}
+    for problem in PRESENTATIONS["cardiology"]:  # a presenting problem must not name a checklist item
+        assert not find_terms(problem, [t for i in ITEMS.values() for t in item_terms(i)]), problem
+
+
+def test_missing_reason_is_never_shown_to_the_prose_model():
+    llm = ScriptedLLM()
+    case = render_case(plan_with("no-reason", {"reason": "omit"}), CHECKLIST, llm)
+    assert llm.prose_prompts and case.expected["reason"] == Status.MISSING
+    for prompt in llm.prose_prompts:
+        assert case.patient.referral_reason not in prompt and case.patient.history not in prompt
+        assert NO_REASON_RULE in prompt
+
+
+def test_crowded_packet_drops_older_notes_to_stay_within_eight_documents():
+    for seed in range(10):  # older-note count is random; the cap must hold for every draw
+        case = render_case(plan_with("crowded", {"bmp": "stale", "ecg": "bury"}, wrong=True), CHECKLIST,
+                           ScriptedLLM(), seed=seed)
+        assert len(case.docs) == MAX_DOCS
+        assert sum(d.doc_type == "progress_note" for d in case.docs) == 1
 
 
 def test_leak_guard_retries_then_gives_up():

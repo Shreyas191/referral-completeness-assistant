@@ -38,6 +38,9 @@ LONG_PAGES = 12  # bury: length of the discharge summary...
 BURY_PAGE = 11   # ...and the page that holds the evidence ("buried past page 10")
 REF_START = date(2026, 9, 1)  # referral (reference) dates fall in the 90 days after this
 LEAK_ATTEMPTS = 3
+MAX_DOCS = 8  # packets are 2-8 documents (CLAUDE.md); older progress notes are dropped first
+NO_REASON_RULE = ("Do not say why the patient is being referred, what should be evaluated, or mention any planned "
+                  "procedure or the current complaint.")
 
 SYSTEM = ("You write synthetic clinical documents for testing software. Every patient is fictional. "
           "Write in the plain, terse style of transcribed US clinic notes (as in MTSamples). Return only JSON.")
@@ -148,6 +151,18 @@ SPECS = {
     "bmp": ItemSpec("lab", ("basic metabolic panel", "sodium", "kidney function")),
     "meds": ItemSpec("meds"),
     "inr": ItemSpec("lab", ("coagulation",)),
+}
+
+
+# Presenting problems by specialty, drawn per case for variety. None may name a checklist item.
+PRESENTATIONS = {
+    "cardiology": [
+        "chest pain or pressure on exertion", "an episode of fainting", "a newly heard heart murmur",
+        "leg swelling and breathlessness suggesting heart failure", "palpitations",
+        "blood pressure that stays high despite treatment", "risk assessment before planned non-cardiac surgery",
+        "an irregular pulse found at a routine visit", "breathlessness on exertion",
+        "fatigue with a strong family history of early heart disease",
+    ],
 }
 
 
@@ -387,14 +402,20 @@ class _Builder:
         sex, age = rng.choice(["female", "male"]), rng.randint(42, 88)
         dob = self.ref - timedelta(days=age * 365 + rng.randint(30, 330))
         letters = "ABCDEFGHJKLMNPRSTW"
+        initials = [rng.choice(letters) for _ in range(5)]
+        # Left alone, the model writes the same patient every time (spot check 1: 5/5 palpitations, 4/5 AF,
+        # three "Dr. Helen ..."), so code picks the presenting problem and the initials of every name.
+        problem = rng.choice(PRESENTATIONS.get(self.checklist.specialty, ["a problem typical for this clinic"]))
         conds = []
         for item_id, holds in self.plan.condition_holds.items():
             cond = self.items[item_id].condition
             conds.append(f'- The statement "{cond}" must be {"TRUE" if holds else "FALSE"} for this patient.'
                          + (" Include it among the medications." if holds else ""))
         user = (f"Create a fictional patient being referred to a {self.checklist.specialty} clinic.\n"
-                f"Fixed facts: {age}-year-old {sex}. First name starts with {rng.choice(letters)}, "
-                f"last name starts with {rng.choice(letters)}.\n" + "\n".join(conds) + "\n"
+                f"Fixed facts: {age}-year-old {sex}. First name starts with {initials[0]}, last name starts "
+                f"with {initials[1]}. Presenting problem: {problem}; referral_reason and history must be about it. "
+                f"Referring physician's first name starts with {initials[2]} and last name with {initials[3]}; "
+                f"practice name starts with {initials[4]}.\n" + "\n".join(conds) + "\n"
                 "Fields: conditions = 2-6 chronic diagnoses; medications = 2-8 current medications that fit them, "
                 "generic name, numeric dose, unit (mg, mcg or units) and frequency; referral_reason = one sentence "
                 "starting 'Evaluation of'; history = 2-4 sentences, no test results.\n"
@@ -411,9 +432,14 @@ class _Builder:
                        dob=dob, mrn=mrn)
 
     def patient_summary(self, p: Patient, with_reason: bool) -> str:
-        reason = f"Being referred to {self.checklist.specialty} for: {p.referral_reason}\n" if with_reason else ""
-        return (f"Patient: {p.first_name} {p.last_name}, {p.age}-year-old {p.sex}. "
-                f"Conditions: {', '.join(p.conditions)}.\nBackground: {p.history}\n{reason}")
+        """Patient context for prose prompts. Without the reason, the prompt gets only the chronic conditions: the
+        history is about the presenting problem, and spot check 2 showed the model reconstructing the reason from it
+        ("scheduled for elective knee replacement")."""
+        text = (f"Patient: {p.first_name} {p.last_name}, {p.age}-year-old {p.sex}. "
+                f"Conditions: {', '.join(p.conditions)}.\n")
+        if with_reason:
+            text += f"Background: {p.history}\nBeing referred to {self.checklist.specialty} for: {p.referral_reason}\n"
+        return text
 
     # -- main
 
@@ -451,11 +477,16 @@ class _Builder:
         else:
             note_date = self.fresh(min(windows) if windows else None, cap=45)
 
+        others = self._count_other_docs(facts)
+        notes_wanted = self.d("progress_note") in (None, "stale")
+        if others + notes_wanted > MAX_DOCS:
+            raise ValueError(f"packet would have {others + notes_wanted} documents (max {MAX_DOCS})")
+
         in_letter = target == "letter"
         self._letter(p, reason_known, inserts if in_letter else [], condition_lines if in_letter else [])
         if self.d("progress_note") in (None, "stale"):
             self._notes(p, note_date, reason_known, inserts if target == "note" else [],
-                        condition_lines if target == "note" else [])
+                        condition_lines if target == "note" else [], max_older=MAX_DOCS - others - 1)
         if self.d("meds") in (None, "contradict"):
             when = note_date if note_ok else self.ref - timedelta(days=rng.randint(0, 14))
             self.add(RenderedDoc(doc_id="medication_list", doc_type="medication_list", doc_date=when,
@@ -483,7 +514,7 @@ class _Builder:
     # -- documents
 
     def _letter(self, p: Patient, reason_known: bool, inserts, condition_lines) -> None:
-        extra = "" if reason_known else "Do not say why the patient is being referred or what should be evaluated."
+        extra = "Do not include a greeting or sign-off." + ("" if reason_known else " " + NO_REASON_RULE)
         prose = ask(self.llm, f"Write the body of a referral letter from {p.referring_physician} ({p.practice}) to a "
                               f"{self.checklist.specialty} clinic: 2-3 short paragraphs.\n"
                               f"{self.patient_summary(p, reason_known)}" + _rules(self.forbidden, extra),
@@ -507,7 +538,7 @@ class _Builder:
 
     def _note_prose(self, p: Patient, reason_known: bool, older: bool) -> NoteProse:
         kind = "an earlier routine follow-up visit" if older else "the visit at which the referral was decided"
-        extra = "" if reason_known else "Do not say why the patient is being referred or what should be evaluated."
+        extra = "" if reason_known and not older else NO_REASON_RULE
         return ask(self.llm, f"Write the narrative parts of a clinic progress note for {kind}: a subjective paragraph "
                              "and 2-5 assessment-and-plan entries, one problem each, without numbering.\n"
                              f"{self.patient_summary(p, reason_known and not older)}" + _rules(self.forbidden, extra),
@@ -527,8 +558,19 @@ class _Builder:
         self.add(RenderedDoc(doc_id=doc_id, doc_type="progress_note", doc_date=when, pages=["\n".join(parts) + "\n"]),
                  [("progress_note", exam), *inserts])
 
-    def _notes(self, p: Patient, note_date: date, reason_known: bool, inserts, condition_lines) -> None:
-        n_older = self.rng.randint(0, 2)  # 1-3 progress notes in total
+    def _count_other_docs(self, facts: dict) -> int:
+        """Documents besides the progress notes: letter, med list, reports, lab reports, discharge summary."""
+        lab_items = [i for i in self.items if SPECS[i].home == "lab" and i in facts]
+        labs = (any(self.d(i) in (None, "contradict") for i in lab_items)
+                + sum(self.d(i) == "stale" for i in lab_items) + self.plan.wrong_patient_doc)
+        reports = sum(i in facts and self.d(i) in (None, "stale", "contradict") for i in ("ecg", "echo"))
+        meds = "meds" in self.applicable and self.d("meds") in (None, "contradict")
+        bury = any(self.d(i) == "bury" for i in self.items)
+        return 1 + meds + reports + labs + bury
+
+    def _notes(self, p: Patient, note_date: date, reason_known: bool, inserts, condition_lines,
+               max_older: int = 2) -> None:
+        n_older = min(self.rng.randint(0, 2), max_older)  # 1-3 progress notes in total, within MAX_DOCS
         dates = [note_date]
         for _ in range(n_older):
             dates.append(dates[-1] - timedelta(days=self.rng.randint(60, 240)))
