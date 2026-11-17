@@ -67,7 +67,7 @@ Key design decisions and why (several answer professor feedback, so keep them):
 src/referral/
   schemas.py            Pydantic models shared by everything; change with care
   config.py             settings from .env
-  llm.py                Anthropic wrapper: structured JSON output, one repair retry, token counting
+  llm.py                Anthropic or OpenAI (LLM_PROVIDER): structured JSON output, one repair retry, token counting
   ingest/               pdf_loader.py, chunker.py (page + char offsets), identity.py
   retrieval/hybrid.py   BM25, ChromaDB dense, reciprocal rank fusion, CaseRetriever
   pipeline/             verifier.py (LLM), validator.py, absence.py, conflicts.py, trace.py, run.py (PipelineConfig)
@@ -85,7 +85,7 @@ tests/                  must pass without an API key; tests/fakes.py has FakeLLM
 
 ```bash
 pip install -e ".[dev]"
-cp .env.example .env        # ANTHROPIC_API_KEY, LLM_MODEL
+cp .env.example .env        # LLM_PROVIDER (anthropic|openai), LLM_MODEL, and that provider's API key
 pytest -q
 ruff check src tests datagen
 python -m referral.eval.harness --system b0 --split dev --name b0-dev

@@ -87,7 +87,8 @@ def run_split(
         preds.append(pred)
         (out_dir / f"{gold.case_id}.json").write_text(pred.model_dump_json(indent=2))
 
-    metrics: dict = {"system": system, "split": split, "cases": len(golds)}
+    metrics: dict = {"system": system, "split": split, "cases": len(golds),
+                     "model": getattr(llm, "name", type(llm).__name__) if llm is not None else None}
     if system == "pipeline":
         metrics["config"] = traces[golds[0].case_id].config if golds else {}
     metrics.update(summarize(golds, preds))
