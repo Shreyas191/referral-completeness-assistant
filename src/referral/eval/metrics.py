@@ -5,7 +5,7 @@ from collections import Counter
 from rapidfuzz import fuzz
 
 from referral.eval.gold import GoldCase, GoldEvidence
-from referral.schemas import GAP_STATUSES, CaseResult, Chunk, Citation, Status
+from referral.schemas import GAP_STATUSES, CaseResult, Chunk, Status
 
 
 def pairs(golds: list[GoldCase], preds: list[CaseResult]):
@@ -51,6 +51,14 @@ def status_macro_f1(golds: list[GoldCase], preds: list[CaseResult]) -> float:
     return sum(f1s) / len(f1s) if f1s else 0.0
 
 
+def status_accuracy(golds: list[GoldCase], preds: list[CaseResult]) -> float:
+    total = right = 0
+    for gi, pi, _ in pairs(golds, preds):
+        total += 1
+        right += (pi.status if pi else Status.NEEDS_REVIEW) == gi.status
+    return right / total if total else 0.0
+
+
 def false_missing_rate(golds: list[GoldCase], preds: list[CaseResult]) -> float:
     """Share of items that are really present (in some form) but predicted Missing."""
     present_like = {Status.PRESENT, Status.STALE, Status.CONTRADICTORY}
@@ -91,16 +99,6 @@ def citation_precision(golds: list[GoldCase], preds: list[CaseResult]) -> float:
 def recall_at_k(gold_evidence: list[GoldEvidence], retrieved: list[Chunk]) -> bool:
     """Trajectory: did retrieval surface at least one gold evidence passage?"""
     return any(ch.doc_id == ge.doc_id and _evidence_hit(ch.text, ge) for ge in gold_evidence for ch in retrieved)
-
-
-def attribute_error(gold_evidence: list[GoldEvidence], retrieved: list[Chunk], citations: list[Citation],
-                    flags: list[str]) -> str:
-    """Label one wrong item: retrieval_miss | validator_reject | reasoning_error."""
-    if gold_evidence and not recall_at_k(gold_evidence, retrieved):
-        return "retrieval_miss"
-    if any(f.startswith("citation_failed") for f in flags):
-        return "validator_reject"
-    return "reasoning_error"
 
 
 def retrieval_recall(golds: list[GoldCase], traces: dict, chunks_by_id: dict[str, Chunk],
@@ -151,10 +149,137 @@ def bootstrap_ci(per_case_values: list[float], n: int = 2000, seed: int = 0) -> 
     return means[int(0.025 * n)], means[int(0.975 * n)]
 
 
+# --- Case-level counts: the same metrics as above, built from per-case tallies that can be summed. ---
+# Bootstrap CIs and slice tables resample or filter cases and re-aggregate these tallies, so the
+# fuzzy citation matching runs once per case instead of once per resample.
+
+PRESENT_LIKE = {Status.PRESENT, Status.STALE, Status.CONTRADICTORY}
+CI_METRICS = ("gap_recall", "gap_precision", "gap_f1", "status_macro_f1", "status_accuracy",
+              "citation_precision", "false_missing_rate")
+# Slices from the dataset plan; always listed so tables line up across runs. Others found in gold are appended.
+REPORT_SLICES = ("buried", "contradiction", "stale", "wrong_patient", "abbreviation")
+
+
+def case_counts(gold: GoldCase, pred: CaseResult | None) -> Counter:
+    """Tallies for one case. A missing prediction counts as NEEDS_REVIEW, as in `pairs`."""
+    c: Counter = Counter()
+    pred_items = {r.item_id: r for r in pred.items} if pred else {}
+    for gi in gold.items:
+        pi = pred_items.get(gi.item_id)
+        ps = pi.status if pi else Status.NEEDS_REVIEW
+        c["items"] += 1
+        c["correct"] += ps == gi.status
+        gold_pos, pred_pos = gi.status in GAP_STATUSES, ps in GAP_STATUSES
+        c["gap_tp"] += gold_pos and pred_pos
+        c["gap_fp"] += pred_pos and not gold_pos
+        c["gap_fn"] += gold_pos and not pred_pos
+        c[("label", gi.status)] += 1
+        c[("label", ps)] += 1
+        if ps == gi.status:
+            c[("tp", ps)] += 1
+        else:
+            c[("fp", ps)] += 1
+            c[("fn", gi.status)] += 1
+        if gi.status in PRESENT_LIKE:
+            c["fm_total"] += 1
+            c["fm_wrong"] += ps == Status.MISSING
+        if "wrong_patient" in gold.slices and gi.status != Status.CONTRADICTORY:
+            c["fc_total"] += 1
+            c["fc_wrong"] += ps == Status.CONTRADICTORY
+        for cit in pi.citations if pi else []:
+            c["cite_total"] += 1
+            c["cite_good"] += any(cit.doc_id == ge.doc_id and _evidence_hit(cit.quote, ge) for ge in gi.evidence)
+    if pred:
+        for item in pred.items:
+            for cit in item.citations:
+                c["foreign_total"] += 1
+                c["foreign"] += not cit.chunk_id.startswith(f"{pred.case_id}/")
+    return c
+
+
+def metrics_from_counts(c: Counter, undefined: float | None = 0.0) -> dict[str, float | None]:
+    """Metrics from summed tallies. `undefined` is returned for a rate whose denominator is zero."""
+    def ratio(a: str, b: str) -> float | None:
+        return c[a] / c[b] if c[b] else undefined
+
+    tp, fp, fn = c["gap_tp"], c["gap_fp"], c["gap_fn"]
+    precision = tp / (tp + fp) if tp + fp else undefined
+    recall = tp / (tp + fn) if tp + fn else undefined
+    p, r = precision or 0.0, recall or 0.0
+    if p + r:
+        gap_f1 = 2 * p * r / (p + r)
+    else:
+        gap_f1 = undefined if precision is None and recall is None else 0.0
+    f1s = []
+    for lab in {k[1] for k in c if isinstance(k, tuple) and k[0] == "label" and c[k]}:
+        lp = c[("tp", lab)] / (c[("tp", lab)] + c[("fp", lab)]) if c[("tp", lab)] + c[("fp", lab)] else 0.0
+        lr = c[("tp", lab)] / (c[("tp", lab)] + c[("fn", lab)]) if c[("tp", lab)] + c[("fn", lab)] else 0.0
+        f1s.append(2 * lp * lr / (lp + lr) if lp + lr else 0.0)
+    return {
+        "gap_precision": precision,
+        "gap_recall": recall,
+        "gap_f1": gap_f1,
+        "status_macro_f1": sum(f1s) / len(f1s) if f1s else undefined,
+        "status_accuracy": ratio("correct", "items"),
+        "citation_precision": ratio("cite_good", "cite_total"),
+        "false_missing_rate": ratio("fm_wrong", "fm_total"),
+        "false_contradictory_wrong_patient": ratio("fc_wrong", "fc_total"),
+        "foreign_citation_rate": ratio("foreign", "foreign_total"),
+    }
+
+
+def _total(counts: list[Counter]) -> Counter:
+    total: Counter = Counter()
+    for c in counts:
+        total.update(c)
+    return total
+
+
+def bootstrap_cis(golds: list[GoldCase], preds: list[CaseResult], metrics: tuple[str, ...] = CI_METRICS,
+                  n: int = 2000, seed: int = 0) -> dict[str, list[float] | None]:
+    """95% percentile bootstrap CIs, resampling cases (not items, which are correlated within a case).
+
+    Resamples where a metric is undefined (e.g. no gold gaps drawn) are skipped for that metric.
+    """
+    by_case = {p.case_id: p for p in preds}
+    per_case = [case_counts(g, by_case.get(g.case_id)) for g in golds]
+    if not per_case:
+        return {m: None for m in metrics}
+    rng = random.Random(seed)
+    draws: dict[str, list[float]] = {m: [] for m in metrics}
+    for _ in range(n):
+        sample = metrics_from_counts(_total([rng.choice(per_case) for _ in per_case]), undefined=None)
+        for m in metrics:
+            if sample[m] is not None:
+                draws[m].append(sample[m])
+    out: dict[str, list[float] | None] = {}
+    for m, vals in draws.items():
+        vals.sort()
+        out[m] = [vals[int(0.025 * len(vals))], vals[min(int(0.975 * len(vals)), len(vals) - 1)]] if vals else None
+    return out
+
+
+def slice_table(golds: list[GoldCase], preds: list[CaseResult]) -> list[dict]:
+    """One row per slice (cases tagged with it in gold.json), plus 'all'. Undefined rates are None."""
+    by_case = {p.case_id: p for p in preds}
+    per_case = {g.case_id: case_counts(g, by_case.get(g.case_id)) for g in golds}
+    extra = sorted({s for g in golds for s in g.slices} - set(REPORT_SLICES))
+    rows = []
+    for name in ("all", *REPORT_SLICES, *extra):
+        members = [g for g in golds if name == "all" or name in g.slices]
+        total = _total([per_case[g.case_id] for g in members])
+        m = metrics_from_counts(total, undefined=None)
+        rows.append({"slice": name, "cases": len(members), "items": total["items"],
+                     **{k: m[k] for k in ("status_accuracy", "gap_recall", "gap_precision",
+                                          "false_missing_rate", "citation_precision")}})
+    return rows
+
+
 def summarize(golds: list[GoldCase], preds: list[CaseResult]) -> dict[str, float]:
     return {
         **gap_prf(golds, preds),
         "status_macro_f1": status_macro_f1(golds, preds),
+        "status_accuracy": status_accuracy(golds, preds),
         "citation_precision": citation_precision(golds, preds),
         "false_missing_rate": false_missing_rate(golds, preds),
         "false_contradictory_wrong_patient": false_contradictory_rate(golds, preds, "wrong_patient"),

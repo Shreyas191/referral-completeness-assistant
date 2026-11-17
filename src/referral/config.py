@@ -10,6 +10,11 @@ load_dotenv()
 DEFAULT_MODELS = {"anthropic": "claude-haiku-5-5", "openai": "gpt-6-luna"}
 
 
+def _float_env(name: str) -> float | None:
+    value = os.getenv(name, "").strip()
+    return float(value) if value else None
+
+
 @dataclass(frozen=True)
 class Settings:
     llm_provider: str = os.getenv("LLM_PROVIDER", "anthropic").lower()
@@ -18,6 +23,9 @@ class Settings:
     top_k: int = int(os.getenv("RETRIEVAL_TOP_K", "5"))
     absence_top_k: int = 20          # wider search before declaring an item Missing
     quote_match_threshold: int = 90  # rapidfuzz partial_ratio needed for a citation to count
+    # USD per million tokens for LLM_MODEL, copied from the provider's pricing page. Unset = cost not reported.
+    price_input_per_mtok: float | None = _float_env("LLM_PRICE_INPUT_PER_MTOK")
+    price_output_per_mtok: float | None = _float_env("LLM_PRICE_OUTPUT_PER_MTOK")
 
 
 settings = Settings()
