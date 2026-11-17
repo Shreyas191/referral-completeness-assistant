@@ -70,15 +70,15 @@ src/referral/
   llm.py                Anthropic wrapper: structured JSON output, one repair retry, token counting
   ingest/               pdf_loader.py, chunker.py (page + char offsets), identity.py
   retrieval/hybrid.py   BM25, ChromaDB dense, reciprocal rank fusion, CaseRetriever
-  pipeline/             verifier.py (LLM), validator.py, absence.py, conflicts.py, run.py (PipelineConfig)
+  pipeline/             verifier.py (LLM), validator.py, absence.py, conflicts.py, trace.py, run.py (PipelineConfig)
   baselines/            b0_keywords.py (lower bound), b1_long_context.py (primary baseline)
   eval/                 gold.py (label format), metrics.py, harness.py (CLI)
   api.py                FastAPI backend for the review UI
 datagen/                synthetic case generator (only defect_plan.py exists so far)
 data/checklists/        checklist JSON (cardiology-v1.json is the only one so far)
-data/cases/<case_id>/   PDFs + gold.json; not committed
-runs/<name>/            per-run predictions + metrics.json; not committed
-tests/                  unit tests; must pass without an API key
+data/cases/<case_id>/   .pdf or .txt documents (pages split by \f) + gold.json; not committed
+runs/<name>/            per-case predictions, <case_id>.trace.json, metrics.json; not committed
+tests/                  must pass without an API key; tests/fakes.py has FakeLLM for end-to-end runs
 ```
 
 ## Commands
@@ -91,6 +91,8 @@ ruff check src tests datagen
 python -m referral.eval.harness --system b0 --split dev --name b0-dev
 python -m referral.eval.harness --system b1 --split dev --name b1-dev
 python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --retrieval bm25
+# ablations: --scope global (E2), --no-absence-check, --no-long-context, --no-validator,
+#            --no-conflict-checker, --no-identity-check, --top-k N, --cases-dir PATH
 uvicorn referral.api:app --reload
 ```
 
@@ -118,21 +120,22 @@ Planned experiments: E1 B0 vs B1 vs pipeline; E2 case vs global retrieval; E3 BM
 chunk size, k; E4 evidence position and packet length; E5 with and without validator and conflict checker;
 plus the absence-check ablation.
 
-## Current status (Nov 8, 2026)
+## Current status (Nov 16, 2026)
 
-Written and unit-tested: schemas, chunking, identity check, validator rules, absence-check candidate
-search, dose/laterality conflict checks, core metrics, defect planner.
+Tested end to end offline (FakeLLM + text-file case): full pipeline, both absence stages, identity check,
+validator, conflict checker, harness with per-item traces, recall@k, foreign-citation rate (E2), and the
+LLM wrapper's JSON repair. Not yet run against the real API or real generated cases.
 
-Written but never run end to end (expect bugs): LLM wrapper, verifier, B1, `pipeline/run.py`, harness,
-dense retrieval, API.
+Untested: B1 against a real model, dense/hybrid retrieval (chromadb), API.
 
 Not written yet, roughly in priority order:
 1. Data generator after the defect plan: render documents, add noise, write PDFs and `gold.json`, leak check
-2. Harness saving retrieved chunks per item, so recall@k and error attribution can be computed
-3. Absence check final step: long-context read of the whole packet before accepting Missing
-4. Bootstrap CIs in harness output; per-run report
-5. Other three checklists; LLM judge for citations; referral reason and handoff summary
-6. React review UI (last)
+2. Bootstrap CIs, git hash and cost in harness output; error-attribution report from traces
+3. Other three checklists; LLM judge for citations; referral reason and handoff summary
+4. React review UI (last)
+
+Known behavior worth reporting: the wide re-check only shows the verifier chunks it has not seen, so it fixes
+retrieval misses; a misjudged chunk that was already shown is left to the long-context final read.
 
 ## Workflow
 
