@@ -14,8 +14,11 @@ from pathlib import Path
 
 from referral.baselines.b0_keywords import run_b0
 from referral.baselines.b1_long_context import run_b1
+from referral.config import settings
+from referral.eval.errors import write_errors
 from referral.eval.gold import GoldCase, load_gold
-from referral.eval.metrics import retrieval_recall, summarize
+from referral.eval.metrics import bootstrap_cis, retrieval_recall, slice_table, summarize
+from referral.eval.report import cost_usd, render_report, run_info
 from referral.ingest.chunker import chunk_case
 from referral.ingest.pdf_loader import load_case
 from referral.llm import LLM
@@ -87,17 +90,30 @@ def run_split(
         preds.append(pred)
         (out_dir / f"{gold.case_id}.json").write_text(pred.model_dump_json(indent=2))
 
-    metrics: dict = {"system": system, "split": split, "cases": len(golds),
-                     "model": getattr(llm, "name", type(llm).__name__) if llm is not None else None}
+    metrics: dict = {"run": out_dir.name, "system": system, "split": split, "cases": len(golds),
+                     "model": getattr(llm, "name", type(llm).__name__) if llm is not None else None,
+                     **run_info(), "cases_dir": str(cases_dir), "case_ids": [g.case_id for g in golds]}
     if system == "pipeline":
         metrics["config"] = traces[golds[0].case_id].config if golds else {}
     metrics.update(summarize(golds, preds))
+    metrics["ci95"] = bootstrap_cis(golds, preds)
     if traces:
         metrics.update(retrieval_recall(golds, traces, chunks_by_id))
     metrics["mean_latency_s"] = sum(latencies) / len(latencies) if latencies else 0.0
+    metrics["max_latency_s"] = max(latencies, default=0.0)
     if llm is not None:
-        metrics.update(llm_calls=llm.calls, input_tokens=llm.input_tokens, output_tokens=llm.output_tokens)
+        cost = cost_usd(llm.input_tokens, llm.output_tokens)
+        metrics.update(llm_calls=llm.calls, input_tokens=llm.input_tokens, output_tokens=llm.output_tokens,
+                       price_per_mtok={"input": settings.price_input_per_mtok,
+                                       "output": settings.price_output_per_mtok},
+                       cost_usd=cost, cost_per_case_usd=cost / len(golds) if cost is not None and golds else None)
+    else:
+        metrics.update(cost_usd=0.0, cost_per_case_usd=0.0)
+    metrics["slices"] = slice_table(golds, preds)
+    if traces:
+        metrics["error_attribution"] = write_errors(out_dir, golds, preds, traces, chunks_by_id)
     (out_dir / "metrics.json").write_text(json.dumps(metrics, indent=2))
+    (out_dir / "report.md").write_text(render_report(metrics), encoding="utf-8")
     return metrics
 
 
