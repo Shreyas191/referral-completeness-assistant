@@ -103,6 +103,46 @@ def attribute_error(gold_evidence: list[GoldEvidence], retrieved: list[Chunk], c
     return "reasoning_error"
 
 
+def retrieval_recall(golds: list[GoldCase], traces: dict, chunks_by_id: dict[str, Chunk],
+                     ks: tuple[int, ...] = (3, 5, 10)) -> dict[str, float]:
+    """Trajectory: share of items with gold evidence whose evidence is in the first-pass top k.
+
+    traces maps case_id -> CaseTrace; chunks_by_id must cover every chunk id the traces mention.
+    """
+    hits = {k: 0 for k in ks}
+    total = 0
+    for g in golds:
+        trace = traces.get(g.case_id)
+        if trace is None:
+            continue
+        by_item = {t.item_id: t for t in trace.items}
+        for gi in g.items:
+            if not gi.evidence or gi.item_id not in by_item:
+                continue
+            total += 1
+            ranked = [chunks_by_id[c] for c in by_item[gi.item_id].ranked if c in chunks_by_id]
+            for k in ks:
+                hits[k] += recall_at_k(gi.evidence, ranked[:k])
+    return {f"recall@{k}": hits[k] / total if total else 0.0 for k in ks}
+
+
+def foreign_citation_rate(preds: list[CaseResult]) -> float:
+    """E2: share of citations that point at another case's chunk (chunk ids are '<case_id>/...')."""
+    total = foreign = 0
+    for p in preds:
+        for item in p.items:
+            for c in item.citations:
+                total += 1
+                foreign += not c.chunk_id.startswith(f"{p.case_id}/")
+    return foreign / total if total else 0.0
+
+
+def overturn_counts(preds: list[CaseResult]) -> dict[str, int]:
+    """How often each absence stage rescued an item from a wrong Missing."""
+    flags = Counter(f for p in preds for item in p.items for f in item.flags)
+    return {name: flags[name] for name in ("absence_check_overturned", "long_context_overturned", "conflict_checker")}
+
+
 def bootstrap_ci(per_case_values: list[float], n: int = 2000, seed: int = 0) -> tuple[float, float]:
     rng = random.Random(seed)
     means = sorted(
@@ -118,4 +158,6 @@ def summarize(golds: list[GoldCase], preds: list[CaseResult]) -> dict[str, float
         "citation_precision": citation_precision(golds, preds),
         "false_missing_rate": false_missing_rate(golds, preds),
         "false_contradictory_wrong_patient": false_contradictory_rate(golds, preds, "wrong_patient"),
+        "foreign_citation_rate": foreign_citation_rate(preds),
+        **overturn_counts(preds),
     }

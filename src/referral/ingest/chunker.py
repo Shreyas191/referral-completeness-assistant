@@ -15,7 +15,8 @@ def chunk_document(doc: Document, max_chars: int = MAX_CHARS) -> list[Chunk]:
                 continue
             chunks.append(
                 Chunk(
-                    chunk_id=f"{doc.doc_id}:p{page_no}:{start}",
+                    # case_id prefix keeps ids unique when chunks from many cases share one index (E2)
+                    chunk_id=f"{doc.case_id}/{doc.doc_id}:p{page_no}:{start}",
                     case_id=doc.case_id,
                     doc_id=doc.doc_id,
                     doc_type=doc.doc_type,

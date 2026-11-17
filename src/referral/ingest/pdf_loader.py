@@ -55,6 +55,25 @@ def load_pdf(path: Path, case_id: str) -> Document:
     )
 
 
+def load_text(path: Path, case_id: str) -> Document:
+    """Plain-text document; pages separated by form feeds (\\f). Handy for hand-made cases and tests."""
+    pages = path.read_text(encoding="utf-8").split("\f")
+    return Document(
+        doc_id=path.stem,
+        case_id=case_id,
+        doc_type=guess_doc_type(path.name),
+        doc_date=guess_doc_date(pages[0] if pages else ""),
+        pages=pages,
+    )
+
+
 def load_case(case_dir: Path) -> list[Document]:
+    """Load every .pdf and .txt document in a case folder, sorted by file name."""
     case_id = case_dir.name
-    return [load_pdf(p, case_id) for p in sorted(case_dir.glob("*.pdf"))]
+    docs = []
+    for path in sorted(case_dir.iterdir()):
+        if path.suffix.lower() == ".pdf":
+            docs.append(load_pdf(path, case_id))
+        elif path.suffix.lower() == ".txt":
+            docs.append(load_text(path, case_id))
+    return docs
