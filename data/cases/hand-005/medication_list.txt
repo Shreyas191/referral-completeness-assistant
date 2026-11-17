@@ -1,0 +1,11 @@
+CURRENT MEDICATION LIST
+Date: 10/28/2026
+Patient Name: Evelyn Brooks
+DOB: 05/30/1962
+MRN: MRN-71834
+
+Metformin 1000 mg by mouth twice daily
+Lisinopril 10 mg by mouth once daily
+Atorvastatin 20 mg by mouth once daily
+
+Allergies: no known drug allergies.

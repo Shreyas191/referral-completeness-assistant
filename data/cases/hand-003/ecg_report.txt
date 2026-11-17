@@ -1,0 +1,10 @@
+12-LEAD ECG REPORT
+Date: 09/30/2026
+Patient Name: Dolores Martinez
+DOB: 11/03/1949
+MRN: MRN-62240
+
+Indication: coronary artery disease, routine follow-up.
+
+Findings: Sinus rhythm at 62 bpm. Left axis deviation. PR interval 180 ms, QRS 104 ms, QTc 446 ms. Q waves in leads II, III, and aVF.
+Impression: Sinus rhythm with left axis deviation and inferior Q waves consistent with prior inferior infarct.

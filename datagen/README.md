@@ -8,6 +8,8 @@ Builds referral packets whose gold labels are known by construction.
 3. **Render:** an LLM writes each document from the seed and plan in MTSamples note style.
 4. **Noise:** OCR-style character errors, headers and footers; render to PDF.
 5. **Gold:** write `gold.json` (see `src/referral/eval/gold.py`) next to the PDFs in `data/cases/<case_id>/`.
+   Make each evidence `text` the whole supporting block (e.g. the full BMP panel), not one line, so any correct
+   citation inside it scores as correct.
 6. **Leak check:** flag cases where an omitted item's synonyms appear in the rendered text anyway.
 
 Owner: Neel.

@@ -1,0 +1,30 @@
+{
+  "case_id": "hand-001",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-02",
+  "split": "adversarial",
+  "slices": ["missing"],
+  "wrong_patient_docs": [],
+  "items": [
+    {"item_id": "reason", "status": "present", "evidence": [
+      {"doc_id": "referral_letter", "page": 1,
+       "text": "Reason for referral: Evaluation of exertional chest tightness and shortness of breath over the past six weeks in a 68-year-old woman with hypertension and hyperlipidemia."}]},
+    {"item_id": "ecg", "status": "present", "evidence": [
+      {"doc_id": "ecg_report", "page": 1,
+       "text": "Findings: Normal sinus rhythm at 76 bpm. Normal axis. PR interval 164 ms, QRS 88 ms, QTc 421 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."}]},
+    {"item_id": "echo", "status": "missing", "evidence": []},
+    {"item_id": "lipids", "status": "present", "evidence": [
+      {"doc_id": "lab_report", "page": 1,
+       "text": "LIPID PANEL\nTotal Cholesterol: 224 mg/dL (H)\nLDL Cholesterol: 141 mg/dL (H)\nHDL Cholesterol: 52 mg/dL\nTriglycerides: 155 mg/dL (H)"}]},
+    {"item_id": "bmp", "status": "present", "evidence": [
+      {"doc_id": "lab_report", "page": 1,
+       "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.2 mmol/L\nChloride: 103 mmol/L\nCO2: 25 mmol/L\nBUN: 16 mg/dL\nCreatinine: 0.9 mg/dL\nGlucose: 98 mg/dL\nCalcium: 9.4 mg/dL"}]},
+    {"item_id": "meds", "status": "present", "evidence": [
+      {"doc_id": "medication_list", "page": 1,
+       "text": "Lisinopril 20 mg by mouth once daily\nHydrochlorothiazide 12.5 mg by mouth once daily\nAtorvastatin 20 mg by mouth once daily at bedtime\nAspirin 81 mg by mouth once daily"}]},
+    {"item_id": "progress_note", "status": "present", "evidence": [
+      {"doc_id": "progress_note", "page": 1,
+       "text": "EXAM:\nGeneral: well appearing, no distress.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."}]},
+    {"item_id": "inr", "status": "not_applicable", "evidence": []}
+  ]
+}

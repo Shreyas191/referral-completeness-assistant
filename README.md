@@ -59,7 +59,9 @@ python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --
 uvicorn referral.api:app --reload
 ```
 
-Cases live in `data/cases/<case_id>/` as PDFs plus `gold.json` (not committed).
+Cases live in `data/cases/<case_id>/` as PDFs plus `gold.json` (not committed). The exception is the five
+hand-made cases `hand-001` to `hand-005` (adversarial split), which are committed so everyone has them.
+Check any case with `python datagen/check_cases.py`.
 
 ## Workflow
 

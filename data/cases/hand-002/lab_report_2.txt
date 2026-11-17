@@ -1,0 +1,12 @@
+LABORATORY REPORT
+Date: 10/15/2026
+Patient Name: Robert Kim
+DOB: 07/22/1951
+MRN: MRN-50917
+Ordering provider: Dr. Samuel Okafor
+
+LIPID PANEL
+Total Cholesterol: 198 mg/dL
+LDL Cholesterol: 118 mg/dL (H)
+HDL Cholesterol: 46 mg/dL
+Triglycerides: 170 mg/dL (H)

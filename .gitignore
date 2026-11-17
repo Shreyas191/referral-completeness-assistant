@@ -6,8 +6,9 @@ __pycache__/
 .ruff_cache/
 *.egg-info/
 
-# Generated data and run outputs
-data/cases/
+# Generated data and run outputs. Hand-made cases (issue #7) are small and shared, so they are committed.
+data/cases/*
+!data/cases/hand-*/
 data/chroma/
 data/synthea/
 runs/

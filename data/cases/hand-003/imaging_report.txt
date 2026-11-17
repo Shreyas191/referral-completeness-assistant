@@ -1,0 +1,11 @@
+TRANSTHORACIC ECHOCARDIOGRAM REPORT
+Date: 05/12/2026
+Patient Name: Dolores Martinez
+DOB: 11/03/1949
+MRN: MRN-62240
+Ordering provider: Dr. Helen Park
+
+Indication: coronary artery disease, prior stent.
+
+Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 45%. Hypokinesis of the inferior wall. Mild mitral regurgitation. Normal left atrial size. No pericardial effusion.
+Impression: Mildly reduced left ventricular systolic function with inferior wall hypokinesis.

@@ -1,0 +1,11 @@
+CURRENT MEDICATION LIST
+Date: 10/27/2026
+Patient Name: Robert Kim
+DOB: 07/22/1951
+MRN: MRN-50917
+
+Lisinopril 10 mg by mouth once daily
+Amlodipine 5 mg by mouth once daily
+Rosuvastatin 10 mg by mouth once daily
+
+Allergies: penicillin (rash).

@@ -1,0 +1,25 @@
+LABORATORY REPORT
+Date: 10/22/2026
+Patient Name: Dolores Martinez
+DOB: 11/03/1949
+MRN: MRN-62240
+Ordering provider: Dr. Helen Park
+
+LIPID PANEL
+Total Cholesterol: 162 mg/dL
+LDL Cholesterol: 84 mg/dL
+HDL Cholesterol: 48 mg/dL
+Triglycerides: 150 mg/dL
+
+BASIC METABOLIC PANEL
+Sodium: 137 mmol/L
+Potassium: 4.5 mmol/L
+Chloride: 101 mmol/L
+CO2: 24 mmol/L
+BUN: 22 mg/dL
+Creatinine: 1.0 mg/dL
+Glucose: 101 mg/dL (H)
+Calcium: 9.1 mg/dL
+
+OTHER
+NT-proBNP: 640 pg/mL (H)

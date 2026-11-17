@@ -1,0 +1,10 @@
+12-LEAD ECG REPORT
+Date: 10/27/2026
+Patient Name: Robert Kim
+DOB: 07/22/1951
+MRN: MRN-50917
+
+Indication: palpitations.
+
+Findings: Sinus rhythm at 70 bpm with a single premature atrial complex. Normal axis. PR interval 172 ms, QRS 92 ms, QTc 430 ms.
+Impression: Sinus rhythm with one premature atrial complex, otherwise normal tracing.

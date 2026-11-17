@@ -1,0 +1,22 @@
+LABORATORY REPORT
+Date: 10/30/2026
+Patient Name: Ellen Brooks
+DOB: 09/12/1960
+MRN: MRN-71843
+Ordering provider: Dr. Angela Ruiz
+
+LIPID PANEL
+Total Cholesterol: 262 mg/dL (H)
+LDL Cholesterol: 188 mg/dL (H)
+HDL Cholesterol: 39 mg/dL (L)
+Triglycerides: 175 mg/dL (H)
+
+BASIC METABOLIC PANEL
+Sodium: 134 mmol/L (L)
+Potassium: 5.6 mmol/L (H)
+Chloride: 99 mmol/L
+CO2: 20 mmol/L (L)
+BUN: 38 mg/dL (H)
+Creatinine: 1.8 mg/dL (H)
+Glucose: 96 mg/dL
+Calcium: 8.7 mg/dL

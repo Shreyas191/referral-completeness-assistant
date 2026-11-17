@@ -1,0 +1,11 @@
+TRANSTHORACIC ECHOCARDIOGRAM REPORT
+Date: 08/18/2026
+Patient Name: Robert Kim
+DOB: 07/22/1951
+MRN: MRN-50917
+Ordering provider: Dr. Samuel Okafor
+
+Indication: palpitations, hypertension.
+
+Findings: Normal left ventricular size and wall thickness. Left ventricular ejection fraction estimated at 60%. No regional wall motion abnormalities. Mild left atrial enlargement. Trace mitral regurgitation. No pericardial effusion.
+Impression: Normal left ventricular systolic function with mild left atrial enlargement.

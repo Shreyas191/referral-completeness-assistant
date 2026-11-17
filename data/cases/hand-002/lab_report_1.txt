@@ -1,0 +1,16 @@
+LABORATORY REPORT
+Date: 06/30/2026
+Patient Name: Robert Kim
+DOB: 07/22/1951
+MRN: MRN-50917
+Ordering provider: Dr. Samuel Okafor
+
+BASIC METABOLIC PANEL
+Sodium: 141 mmol/L
+Potassium: 4.0 mmol/L
+Chloride: 104 mmol/L
+CO2: 26 mmol/L
+BUN: 18 mg/dL
+Creatinine: 1.1 mg/dL
+Glucose: 104 mg/dL (H)
+Calcium: 9.2 mg/dL

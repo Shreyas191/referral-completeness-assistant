@@ -76,7 +76,7 @@ src/referral/
   api.py                FastAPI backend for the review UI
 datagen/                synthetic case generator (only defect_plan.py exists so far)
 data/checklists/        checklist JSON (cardiology-v1.json is the only one so far)
-data/cases/<case_id>/   .pdf or .txt documents (pages split by \f) + gold.json; not committed
+data/cases/<case_id>/   .pdf or .txt documents (pages split by \f) + gold.json; not committed, except hand-001…005
 runs/<name>/            per-case predictions, <case_id>.trace.json, metrics.json; not committed
 tests/                  must pass without an API key; tests/fakes.py has FakeLLM for end-to-end runs
 ```

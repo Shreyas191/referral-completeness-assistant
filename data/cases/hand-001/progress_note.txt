@@ -1,0 +1,23 @@
+PROGRESS NOTE
+Date: 10/20/2026
+Patient Name: Margaret Ellison
+DOB: 03/14/1958
+MRN: MRN-48213
+Provider: Dr. Anita Rao
+
+SUBJECTIVE:
+68-year-old woman presents for follow-up of hypertension and new exertional chest tightness for approximately six weeks. Tightness occurs with stairs and brisk walking and resolves within a few minutes of rest. Denies orthopnea, leg swelling, or fainting.
+
+VITALS:
+BP 142/88, HR 78, RR 16, SpO2 98% on room air, weight 164 lb.
+
+EXAM:
+General: well appearing, no distress.
+Cardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.
+Lungs: clear to auscultation bilaterally.
+Extremities: no peripheral edema.
+
+ASSESSMENT AND PLAN:
+1. Exertional chest tightness, rule out stable angina. Refer to cardiology for further evaluation.
+2. Hypertension, above goal. Continue lisinopril and hydrochlorothiazide, recheck in 4 weeks.
+3. Hyperlipidemia. Continue atorvastatin.

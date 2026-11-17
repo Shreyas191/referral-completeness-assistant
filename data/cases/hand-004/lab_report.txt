@@ -1,0 +1,26 @@
+LABORATORY REPORT
+Date: 10/24/2026
+Patient Name: Harold Whitfield
+DOB: 02/09/1955
+MRN: MRN-37755
+Ordering provider: Dr. Priya Natarajan
+
+LIPID PANEL
+Total Cholesterol: 171 mg/dL
+LDL Cholesterol: 92 mg/dL
+HDL Cholesterol: 41 mg/dL
+Triglycerides: 190 mg/dL (H)
+
+BASIC METABOLIC PANEL
+Sodium: 140 mmol/L
+Potassium: 4.7 mmol/L
+Chloride: 104 mmol/L
+CO2: 23 mmol/L
+BUN: 26 mg/dL (H)
+Creatinine: 1.4 mg/dL (H)
+eGFR: 52 mL/min/1.73m2 (L)
+Glucose: 132 mg/dL (H)
+Calcium: 9.3 mg/dL
+
+OTHER
+Hemoglobin A1c: 7.1% (H)
