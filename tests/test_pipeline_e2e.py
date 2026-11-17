@@ -122,6 +122,39 @@ def test_harness_writes_traces_and_recall(case_dir, tmp_path):
     assert (tmp_path / "run" / "hand-000.trace.json").exists()
 
 
+def test_harness_writes_report_with_cis_slices_and_provenance(case_dir, tmp_path):
+    metrics = run_split("pipeline", "dev", tmp_path / "run", PipelineConfig(), FakeLLM(),
+                        cases_dir=case_dir.parent, checklists_dir=CHECKLISTS)
+    saved = json.loads((tmp_path / "run" / "metrics.json").read_text())
+    assert saved["git_commit"] and saved["case_ids"] == ["hand-000"] and saved["run"] == "run"
+    assert saved["ci95"]["gap_recall"] == [1.0, 1.0]
+    assert {r["slice"]: r["cases"] for r in saved["slices"]}["wrong_patient"] == 1
+    assert metrics["error_attribution"] == dict.fromkeys(metrics["error_attribution"], 0)
+    report = (tmp_path / "run" / "report.md").read_text(encoding="utf-8")
+    assert "## Slices" in report and "## Run-log row" in report
+
+
+def test_error_attribution_and_compare_on_a_retrieval_miss(case_dir, tmp_path):
+    from referral.eval.compare import compare
+    from referral.eval.errors import from_run_dir
+
+    kwargs = dict(cases_dir=case_dir.parent, checklists_dir=CHECKLISTS)
+    run_split("pipeline", "dev", tmp_path / "full", PipelineConfig(), FakeLLM(), **kwargs)
+    # k=1 with no absence check: the TTE result is never shown, so echo is a false Missing from retrieval.
+    weak = run_split("pipeline", "dev", tmp_path / "k1", PipelineConfig(top_k=1, absence_check=False),
+                     FakeLLM(), **kwargs)
+    assert weak["error_attribution"]["retrieval_miss"] >= 1
+    errors = json.loads((tmp_path / "k1" / "errors.json").read_text())
+    echo = next(r for r in errors if r["item_id"] == "echo")
+    assert echo["cause"] == "retrieval_miss" and echo["gold"] == "present" and echo["pred"] == "missing"
+    assert "retrieval_miss: examples" in (tmp_path / "k1" / "errors.md").read_text(encoding="utf-8")
+
+    assert from_run_dir(tmp_path / "k1") == weak["error_attribution"]  # rebuilt from the saved run alone
+
+    text = compare(tmp_path / "full", tmp_path / "k1")
+    assert "config.top_k | 5 | 1" in text and "| status correct |" in text
+
+
 def test_e2_global_scope_cites_other_patients(case_dir, tmp_path):
     # A second patient in the same split, with their own BMP and lipid values.
     other = case_dir.parent / "hand-001"
