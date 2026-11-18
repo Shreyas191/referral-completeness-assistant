@@ -76,7 +76,8 @@ src/referral/
                         report.py (report.md, cost, git hash), compare.py (two runs + McNemar),
                         errors.py (error attribution from traces)
   api.py                FastAPI backend for the review UI
-datagen/                synthetic case generator (only defect_plan.py exists so far)
+datagen/                synthetic cases: defect_plan.py → render.py (LLM prose, facts in code) → build.py
+                        (noise, PDFs, gold.json) → check_cases.py (gold, recency, identity, leaks)
 data/checklists/        checklist JSON (cardiology-v1.json is the only one so far)
 data/cases/<case_id>/   .pdf or .txt documents (pages split by \f) + gold.json; not committed, except hand-001…005
 runs/<name>/            per-case predictions, <case_id>.trace.json, metrics.json; not committed
