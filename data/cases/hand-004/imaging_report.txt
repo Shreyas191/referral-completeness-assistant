@@ -1,0 +1,11 @@
+TRANSTHORACIC ECHOCARDIOGRAM REPORT
+Date: 07/21/2026
+Patient Name: Harold Whitfield
+DOB: 02/09/1955
+MRN: MRN-37755
+Performing site: Buckeye Heart Imaging, Columbus, Ohio
+
+Indication: fatigue, hypertension, diabetes.
+
+Findings: Normal left ventricular size with mild concentric left ventricular hypertrophy. Left ventricular ejection fraction estimated at 55 to 60%. Grade 1 diastolic dysfunction. No significant valve disease. No pericardial effusion.
+Impression: Preserved left ventricular systolic function with mild left ventricular hypertrophy and grade 1 diastolic dysfunction.

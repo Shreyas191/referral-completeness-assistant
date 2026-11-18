@@ -1,0 +1,10 @@
+12-LEAD ECG REPORT
+Date: 10/28/2026
+Patient Name: Evelyn Brooks
+DOB: 05/30/1962
+MRN: MRN-71834
+
+Indication: new heart murmur.
+
+Findings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 158 ms, QRS 84 ms, QTc 418 ms. No chamber enlargement.
+Impression: Normal sinus rhythm, normal tracing.

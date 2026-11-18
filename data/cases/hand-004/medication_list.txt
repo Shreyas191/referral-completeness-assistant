@@ -1,0 +1,15 @@
+CURRENT MEDICATION LIST
+Date: 11/03/2026
+Patient Name: Harold Whitfield
+DOB: 02/09/1955
+MRN: MRN-37755
+
+Lisinopril 20 mg by mouth once daily
+Amlodipine 5 mg by mouth once daily
+Metformin 500 mg by mouth twice daily
+Atorvastatin 40 mg by mouth once daily
+Tamsulosin 0.4 mg by mouth at bedtime
+Fish oil 1000 mg by mouth once daily
+Acetaminophen 500 mg by mouth as needed for knee pain, up to twice weekly
+
+Allergies: sulfa drugs (hives).

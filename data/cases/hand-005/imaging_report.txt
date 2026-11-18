@@ -1,0 +1,11 @@
+TRANSTHORACIC ECHOCARDIOGRAM REPORT
+Date: 11/04/2026
+Patient Name: Evelyn Brooks
+DOB: 05/30/1962
+MRN: MRN-71834
+Ordering provider: Dr. Marcus Lee
+
+Indication: new systolic murmur.
+
+Findings: Normal left ventricular size and wall thickness. Left ventricular ejection fraction estimated at 62%. Mild aortic valve sclerosis without stenosis; peak velocity 1.8 m/s. Trace mitral regurgitation. No pericardial effusion.
+Impression: Normal left ventricular systolic function. Mild aortic sclerosis without stenosis, likely the source of the murmur.

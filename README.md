@@ -60,10 +60,13 @@ python -m referral.eval.compare runs/b1-dev runs/pipe-dev
 uvicorn referral.api:app --reload
 ```
 
-Cases live in `data/cases/<case_id>/` as PDFs plus `gold.json` (not committed). Each run folder gets
-`metrics.json` (with bootstrap CIs, slices, git commit and cost), a readable `report.md`, and for pipeline
-runs `errors.md`, which labels every wrong item as a retrieval miss, validator reject, reasoning error, etc.
-Set `LLM_PRICE_INPUT_PER_MTOK` / `LLM_PRICE_OUTPUT_PER_MTOK` in `.env` to get cost per case.
+Cases live in `data/cases/<case_id>/` as PDFs plus `gold.json` (not committed). The exception is the five
+hand-made cases `hand-001` to `hand-005` (adversarial split), which are committed so everyone has them.
+Check any case with `python datagen/check_cases.py`.
+
+Each run folder gets `metrics.json` (with bootstrap CIs, slices, git commit and cost), a readable `report.md`,
+and for pipeline runs `errors.md`, which labels every wrong item as a retrieval miss, validator reject,
+reasoning error, etc. Set `LLM_PRICE_INPUT_PER_MTOK` / `LLM_PRICE_OUTPUT_PER_MTOK` in `.env` to get cost per case.
 
 ## Workflow
 

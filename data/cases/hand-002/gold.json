@@ -1,0 +1,32 @@
+{
+  "case_id": "hand-002",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-05",
+  "split": "adversarial",
+  "slices": ["stale"],
+  "wrong_patient_docs": [],
+  "items": [
+    {"item_id": "reason", "status": "present", "evidence": [
+      {"doc_id": "referral_letter", "page": 1,
+       "text": "Reason for referral: Recurrent episodes of palpitations and lightheadedness over the past three months in a 75-year-old man with hypertension."}]},
+    {"item_id": "ecg", "status": "present", "evidence": [
+      {"doc_id": "ecg_report", "page": 1,
+       "text": "Findings: Sinus rhythm at 70 bpm with a single premature atrial complex. Normal axis. PR interval 172 ms, QRS 92 ms, QTc 430 ms.\nImpression: Sinus rhythm with one premature atrial complex, otherwise normal tracing."}]},
+    {"item_id": "echo", "status": "present", "evidence": [
+      {"doc_id": "imaging_report", "page": 1,
+       "text": "Findings: Normal left ventricular size and wall thickness. Left ventricular ejection fraction estimated at 60%. No regional wall motion abnormalities. Mild left atrial enlargement. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function with mild left atrial enlargement."}]},
+    {"item_id": "lipids", "status": "present", "evidence": [
+      {"doc_id": "lab_report_2", "page": 1,
+       "text": "LIPID PANEL\nTotal Cholesterol: 198 mg/dL\nLDL Cholesterol: 118 mg/dL (H)\nHDL Cholesterol: 46 mg/dL\nTriglycerides: 170 mg/dL (H)"}]},
+    {"item_id": "bmp", "status": "stale", "evidence": [
+      {"doc_id": "lab_report_1", "page": 1,
+       "text": "BASIC METABOLIC PANEL\nSodium: 141 mmol/L\nPotassium: 4.0 mmol/L\nChloride: 104 mmol/L\nCO2: 26 mmol/L\nBUN: 18 mg/dL\nCreatinine: 1.1 mg/dL\nGlucose: 104 mg/dL (H)\nCalcium: 9.2 mg/dL"}]},
+    {"item_id": "meds", "status": "present", "evidence": [
+      {"doc_id": "medication_list", "page": 1,
+       "text": "Lisinopril 10 mg by mouth once daily\nAmlodipine 5 mg by mouth once daily\nRosuvastatin 10 mg by mouth once daily"}]},
+    {"item_id": "progress_note", "status": "present", "evidence": [
+      {"doc_id": "progress_note", "page": 1,
+       "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: warm, no edema."}]},
+    {"item_id": "inr", "status": "not_applicable", "evidence": []}
+  ]
+}

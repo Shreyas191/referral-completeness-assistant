@@ -1,0 +1,24 @@
+PROGRESS NOTE
+Date: 10/27/2026
+Patient Name: Robert Kim
+DOB: 07/22/1951
+MRN: MRN-50917
+Provider: Dr. Samuel Okafor
+
+SUBJECTIVE:
+75-year-old man returns for follow-up of hypertension and reports intermittent palpitations for about three months. Episodes feel like a rapid, fluttering heartbeat, sometimes with lightheadedness. No chest pain, no fainting, no shortness of breath at rest. He drinks two cups of coffee daily.
+
+VITALS:
+BP 134/82, HR 72 and regular, RR 14, SpO2 97% on room air, weight 181 lb.
+
+EXAM:
+General: alert, no acute distress.
+Neck: no jugular venous distension.
+Cardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.
+Lungs: clear bilaterally.
+Extremities: warm, no edema.
+
+ASSESSMENT AND PLAN:
+1. Palpitations with lightheadedness. Resting tracing in clinic today without arrhythmia. Refer to cardiology for ambulatory monitoring and evaluation.
+2. Hypertension, controlled. Continue current regimen.
+3. Hyperlipidemia. Continue statin therapy.

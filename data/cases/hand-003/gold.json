@@ -1,0 +1,34 @@
+{
+  "case_id": "hand-003",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-09",
+  "split": "adversarial",
+  "slices": ["contradiction"],
+  "wrong_patient_docs": [],
+  "items": [
+    {"item_id": "reason", "status": "present", "evidence": [
+      {"doc_id": "referral_letter", "page": 1,
+       "text": "Reason for referral: Progressive exertional shortness of breath and ankle swelling over two months in a 77-year-old woman with hypertension and known coronary artery disease."}]},
+    {"item_id": "ecg", "status": "present", "evidence": [
+      {"doc_id": "ecg_report", "page": 1,
+       "text": "Findings: Sinus rhythm at 62 bpm. Left axis deviation. PR interval 180 ms, QRS 104 ms, QTc 446 ms. Q waves in leads II, III, and aVF.\nImpression: Sinus rhythm with left axis deviation and inferior Q waves consistent with prior inferior infarct."}]},
+    {"item_id": "echo", "status": "present", "evidence": [
+      {"doc_id": "imaging_report", "page": 1,
+       "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 45%. Hypokinesis of the inferior wall. Mild mitral regurgitation. Normal left atrial size. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function with inferior wall hypokinesis."}]},
+    {"item_id": "lipids", "status": "present", "evidence": [
+      {"doc_id": "lab_report", "page": 1,
+       "text": "LIPID PANEL\nTotal Cholesterol: 162 mg/dL\nLDL Cholesterol: 84 mg/dL\nHDL Cholesterol: 48 mg/dL\nTriglycerides: 150 mg/dL"}]},
+    {"item_id": "bmp", "status": "present", "evidence": [
+      {"doc_id": "lab_report", "page": 1,
+       "text": "BASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 101 mmol/L\nCO2: 24 mmol/L\nBUN: 22 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 101 mg/dL (H)\nCalcium: 9.1 mg/dL"}]},
+    {"item_id": "meds", "status": "contradictory", "evidence": [
+      {"doc_id": "medication_list", "page": 1,
+       "text": "Metoprolol tartrate 25 mg by mouth twice daily\nAmlodipine 10 mg by mouth once daily\nAtorvastatin 40 mg by mouth once daily\nAspirin 81 mg by mouth once daily"},
+      {"doc_id": "progress_note", "page": 1,
+       "text": "2. Coronary artery disease, stable without angina. Continue metoprolol tartrate 50 mg twice daily and aspirin."}]},
+    {"item_id": "progress_note", "status": "present", "evidence": [
+      {"doc_id": "progress_note", "page": 1,
+       "text": "EXAM:\nGeneral: comfortable at rest, mildly breathless when walking to the exam room.\nNeck: mild jugular venous distension at 45 degrees.\nCardiac exam: regular rhythm, normal S1 and S2, soft systolic murmur at the left sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."}]},
+    {"item_id": "inr", "status": "not_applicable", "evidence": []}
+  ]
+}

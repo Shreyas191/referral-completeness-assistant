@@ -1,0 +1,10 @@
+12-LEAD ECG REPORT
+Date: 09/14/2026
+Patient Name: Margaret Ellison
+DOB: 03/14/1958
+MRN: MRN-48213
+
+Indication: exertional chest tightness.
+
+Findings: Normal sinus rhythm at 76 bpm. Normal axis. PR interval 164 ms, QRS 88 ms, QTc 421 ms.
+Impression: Normal sinus rhythm with no acute ST-T wave changes.

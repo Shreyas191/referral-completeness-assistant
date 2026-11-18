@@ -1,0 +1,25 @@
+PROGRESS NOTE
+Date: 10/28/2026
+Patient Name: Evelyn Brooks
+DOB: 05/30/1962
+MRN: MRN-71834
+Provider: Dr. Marcus Lee
+
+SUBJECTIVE:
+64-year-old woman seen for her annual diabetes and blood pressure follow-up. She feels well. She walks 30 minutes most days without chest discomfort, breathlessness, or lightheadedness. No palpitations.
+
+VITALS:
+BP 136/80, HR 74, RR 14, SpO2 98% on room air, weight 149 lb.
+
+EXAM:
+General: well appearing, no distress.
+Neck: no carotid bruits.
+Cardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur at the upper sternal border, no radiation, no gallop.
+Lungs: clear to auscultation.
+Extremities: no edema.
+
+ASSESSMENT AND PLAN:
+1. New systolic murmur, asymptomatic. Imaging study ordered. Refer to cardiology.
+2. Type 2 diabetes, fair control. Continue current therapy.
+3. Hypertension, at goal. Continue current regimen.
+4. Hyperlipidemia. Continue statin therapy.

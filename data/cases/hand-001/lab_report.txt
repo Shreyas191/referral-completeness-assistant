@@ -1,0 +1,22 @@
+LABORATORY REPORT
+Date: 10/08/2026
+Patient Name: Margaret Ellison
+DOB: 03/14/1958
+MRN: MRN-48213
+Ordering provider: Dr. Anita Rao
+
+LIPID PANEL
+Total Cholesterol: 224 mg/dL (H)
+LDL Cholesterol: 141 mg/dL (H)
+HDL Cholesterol: 52 mg/dL
+Triglycerides: 155 mg/dL (H)
+
+BASIC METABOLIC PANEL
+Sodium: 139 mmol/L
+Potassium: 4.2 mmol/L
+Chloride: 103 mmol/L
+CO2: 25 mmol/L
+BUN: 16 mg/dL
+Creatinine: 0.9 mg/dL
+Glucose: 98 mg/dL
+Calcium: 9.4 mg/dL

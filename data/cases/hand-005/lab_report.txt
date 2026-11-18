@@ -1,0 +1,25 @@
+LABORATORY REPORT
+Date: 10/28/2026
+Patient Name: Evelyn Brooks
+DOB: 05/30/1962
+MRN: MRN-71834
+Ordering provider: Dr. Marcus Lee
+
+LIPID PANEL
+Total Cholesterol: 181 mg/dL
+LDL Cholesterol: 98 mg/dL
+HDL Cholesterol: 58 mg/dL
+Triglycerides: 125 mg/dL
+
+BASIC METABOLIC PANEL
+Sodium: 138 mmol/L
+Potassium: 4.1 mmol/L
+Chloride: 102 mmol/L
+CO2: 26 mmol/L
+BUN: 14 mg/dL
+Creatinine: 0.8 mg/dL
+Glucose: 142 mg/dL (H)
+Calcium: 9.5 mg/dL
+
+OTHER
+Hemoglobin A1c: 7.4% (H)

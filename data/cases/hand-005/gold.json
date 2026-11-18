@@ -1,0 +1,32 @@
+{
+  "case_id": "hand-005",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-10",
+  "split": "adversarial",
+  "slices": ["wrong_patient"],
+  "wrong_patient_docs": ["lab_report_2"],
+  "items": [
+    {"item_id": "reason", "status": "present", "evidence": [
+      {"doc_id": "referral_letter", "page": 1,
+       "text": "Reason for referral: Evaluation of a new systolic heart murmur found on routine examination in a 64-year-old woman with type 2 diabetes and hypertension."}]},
+    {"item_id": "ecg", "status": "present", "evidence": [
+      {"doc_id": "ecg_report", "page": 1,
+       "text": "Findings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 158 ms, QRS 84 ms, QTc 418 ms. No chamber enlargement.\nImpression: Normal sinus rhythm, normal tracing."}]},
+    {"item_id": "echo", "status": "present", "evidence": [
+      {"doc_id": "imaging_report", "page": 1,
+       "text": "Findings: Normal left ventricular size and wall thickness. Left ventricular ejection fraction estimated at 62%. Mild aortic valve sclerosis without stenosis; peak velocity 1.8 m/s. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function. Mild aortic sclerosis without stenosis, likely the source of the murmur."}]},
+    {"item_id": "lipids", "status": "present", "evidence": [
+      {"doc_id": "lab_report", "page": 1,
+       "text": "LIPID PANEL\nTotal Cholesterol: 181 mg/dL\nLDL Cholesterol: 98 mg/dL\nHDL Cholesterol: 58 mg/dL\nTriglycerides: 125 mg/dL"}]},
+    {"item_id": "bmp", "status": "present", "evidence": [
+      {"doc_id": "lab_report", "page": 1,
+       "text": "BASIC METABOLIC PANEL\nSodium: 138 mmol/L\nPotassium: 4.1 mmol/L\nChloride: 102 mmol/L\nCO2: 26 mmol/L\nBUN: 14 mg/dL\nCreatinine: 0.8 mg/dL\nGlucose: 142 mg/dL (H)\nCalcium: 9.5 mg/dL"}]},
+    {"item_id": "meds", "status": "present", "evidence": [
+      {"doc_id": "medication_list", "page": 1,
+       "text": "Metformin 1000 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nAtorvastatin 20 mg by mouth once daily"}]},
+    {"item_id": "progress_note", "status": "present", "evidence": [
+      {"doc_id": "progress_note", "page": 1,
+       "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur at the upper sternal border, no radiation, no gallop.\nLungs: clear to auscultation.\nExtremities: no edema."}]},
+    {"item_id": "inr", "status": "not_applicable", "evidence": []}
+  ]
+}

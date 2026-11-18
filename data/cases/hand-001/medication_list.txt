@@ -1,0 +1,12 @@
+CURRENT MEDICATION LIST
+Date: 10/20/2026
+Patient Name: Margaret Ellison
+DOB: 03/14/1958
+MRN: MRN-48213
+
+Lisinopril 20 mg by mouth once daily
+Hydrochlorothiazide 12.5 mg by mouth once daily
+Atorvastatin 20 mg by mouth once daily at bedtime
+Aspirin 81 mg by mouth once daily
+
+Allergies: no known drug allergies.

@@ -1,0 +1,32 @@
+{
+  "case_id": "hand-004",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-12",
+  "split": "adversarial",
+  "slices": ["buried"],
+  "wrong_patient_docs": [],
+  "items": [
+    {"item_id": "reason", "status": "present", "evidence": [
+      {"doc_id": "referral_letter", "page": 1,
+       "text": "Reason for referral: Evaluation of exertional dyspnea and reduced exercise tolerance over four months in a 71-year-old man with type 2 diabetes, chronic kidney disease stage 3a, hypertension, and a brother with a heart attack at age 66."}]},
+    {"item_id": "ecg", "status": "present", "evidence": [
+      {"doc_id": "progress_note", "page": 11,
+       "text": "A resting 12-lead ECG was obtained in the clinic today and showed sinus rhythm at 68 bpm, normal axis, first-degree AV block with a PR interval of 224 ms, QRS 96 ms, QTc 438 ms, and nonspecific T-wave flattening in the lateral leads. No prior tracing was available for comparison."}]},
+    {"item_id": "echo", "status": "present", "evidence": [
+      {"doc_id": "imaging_report", "page": 1,
+       "text": "Findings: Normal left ventricular size with mild concentric left ventricular hypertrophy. Left ventricular ejection fraction estimated at 55 to 60%. Grade 1 diastolic dysfunction. No significant valve disease. No pericardial effusion.\nImpression: Preserved left ventricular systolic function with mild left ventricular hypertrophy and grade 1 diastolic dysfunction."}]},
+    {"item_id": "lipids", "status": "present", "evidence": [
+      {"doc_id": "lab_report", "page": 1,
+       "text": "LIPID PANEL\nTotal Cholesterol: 171 mg/dL\nLDL Cholesterol: 92 mg/dL\nHDL Cholesterol: 41 mg/dL\nTriglycerides: 190 mg/dL (H)"}]},
+    {"item_id": "bmp", "status": "present", "evidence": [
+      {"doc_id": "lab_report", "page": 1,
+       "text": "BASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 104 mmol/L\nCO2: 23 mmol/L\nBUN: 26 mg/dL (H)\nCreatinine: 1.4 mg/dL (H)\neGFR: 52 mL/min/1.73m2 (L)\nGlucose: 132 mg/dL (H)\nCalcium: 9.3 mg/dL"}]},
+    {"item_id": "meds", "status": "present", "evidence": [
+      {"doc_id": "medication_list", "page": 1,
+       "text": "Lisinopril 20 mg by mouth once daily\nAmlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAtorvastatin 40 mg by mouth once daily\nTamsulosin 0.4 mg by mouth at bedtime\nFish oil 1000 mg by mouth once daily\nAcetaminophen 500 mg by mouth as needed for knee pain, up to twice weekly"}]},
+    {"item_id": "progress_note", "status": "present", "evidence": [
+      {"doc_id": "progress_note", "page": 8,
+       "text": "Cardiac exam: regular rate and rhythm, normal S1 and S2, soft S4 at the apex, no murmurs or rubs. Point of maximal impulse is not displaced."}]},
+    {"item_id": "inr", "status": "not_applicable", "evidence": []}
+  ]
+}

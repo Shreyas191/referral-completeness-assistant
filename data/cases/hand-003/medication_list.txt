@@ -1,0 +1,12 @@
+CURRENT MEDICATION LIST
+Date: 10/30/2026
+Patient Name: Dolores Martinez
+DOB: 11/03/1949
+MRN: MRN-62240
+
+Metoprolol tartrate 25 mg by mouth twice daily
+Amlodipine 10 mg by mouth once daily
+Atorvastatin 40 mg by mouth once daily
+Aspirin 81 mg by mouth once daily
+
+Allergies: no known drug allergies.

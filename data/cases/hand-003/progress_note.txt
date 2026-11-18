@@ -1,0 +1,25 @@
+PROGRESS NOTE
+Date: 10/30/2026
+Patient Name: Dolores Martinez
+DOB: 11/03/1949
+MRN: MRN-62240
+Provider: Dr. Helen Park
+
+SUBJECTIVE:
+77-year-old woman with coronary artery disease and hypertension presents with two months of worsening breathlessness on exertion. She now stops after one block and sleeps on two pillows. Both ankles swell by evening and improve overnight. No chest pain, no fainting.
+
+VITALS:
+BP 148/86, HR 64, RR 18, SpO2 95% on room air, weight 158 lb (up 5 lb since summer).
+
+EXAM:
+General: comfortable at rest, mildly breathless when walking to the exam room.
+Neck: mild jugular venous distension at 45 degrees.
+Cardiac exam: regular rhythm, normal S1 and S2, soft systolic murmur at the left sternal border, no gallop.
+Lungs: faint bibasilar crackles.
+Extremities: 1+ pitting edema of both ankles.
+
+ASSESSMENT AND PLAN:
+1. Exertional dyspnea with ankle edema, concern for heart failure. Refer to cardiology.
+2. Coronary artery disease, stable without angina. Continue metoprolol tartrate 50 mg twice daily and aspirin.
+3. Hypertension, above goal. Continue amlodipine.
+4. Hyperlipidemia. Continue atorvastatin.
