@@ -1,0 +1,211 @@
+{
+  "case_id": "cardiology-v1-dev-024",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-06",
+  "plan": {
+    "case_id": "cardiology-v1-dev-024",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": "omit"
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Kenneth",
+    "last_name": "Grant",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol succinate",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of recurrent palpitations in an 80-year-old man with atrial fibrillation.",
+    "history": "Reports intermittent fluttering sensations over the past several weeks, lasting a few minutes at a time. Denies dizziness, fainting, or chest discomfort during these episodes.",
+    "referring_physician": "Dr. William Morris",
+    "practice": "Brookside Family Practice",
+    "sex": "male",
+    "age": 80,
+    "dob": "1946-09-03",
+    "mrn": "MRN-40156"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-06",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/06/2026\nPatient Name: Kenneth Grant\nDOB: 09/03/1946\nMRN: MRN-40156\n\nTo: Cardiology Clinic Intake\nFrom: Dr. William Morris, Brookside Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of recurrent palpitations in an 80-year-old man with atrial fibrillation.\n\nI am referring Kenneth Grant, an 80-year-old man with atrial fibrillation, hypertension, and type 2 diabetes, for evaluation of recurrent palpitations.\n\nHe describes intermittent fluttering sensations over the past several weeks, lasting a few minutes at a time. He denies dizziness, fainting, or chest discomfort during these episodes. Please assess and advise on further care.\n\nWilliam Morris, MD, Brookside Family Practice\n\nThank you for seeing this patient.\n\nDr. William Morris\nBrookside Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-24",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/24/2026\nPatient Name: Kenneth Grant\nDOB: 09/03/1946\nMRN: MRN-40156\nProvider: Dr. William Morris\n\nSUBJECTIVE:\nKenneth Grant is an 80-year-old man with atrial fibrillation who reports intermittent fluttering sensations over the past several weeks, lasting a few minutes at a time. He denies dizziness, fainting, or chest discomfort during these episodes.\n\nVITALS:\nBP 137/85, HR 72, RR 15, SpO2 95% on room air, weight 153 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nMost recent echo showed an ejection fraction of 30%.\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Recurrent palpitations in the setting of atrial fibrillation. Arrange cardiology evaluation.\n2. Atrial fibrillation. Continue ongoing management and review symptoms at follow-up.\n3. Hypertension and type 2 diabetes mellitus. Continue routine follow-up for both conditions.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-24",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/24/2026\nPatient Name: Kenneth Grant\nDOB: 09/03/1946\nMRN: MRN-40156\n\nMetoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-04",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 10/04/2026\nPatient Name: Kenneth Grant\nDOB: 09/03/1946\nMRN: MRN-40156\nOrdering provider: Dr. William Morris\n\nFindings: Normal sinus rhythm at 85 bpm. Normal axis. PR interval 190 ms, QRS 95 ms, QTc 416 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-08-15",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/15/2026\nPatient Name: Kenneth Grant\nDOB: 09/03/1946\nMRN: MRN-40156\nOrdering provider: Dr. William Morris\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-13",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/13/2026\nPatient Name: Kenneth Grant\nDOB: 09/03/1946\nMRN: MRN-40156\nOrdering provider: Dr. William Morris\n\nLIPID PANEL\nTotal Cholesterol: 121 mg/dL\nLDL Cholesterol: 74 mg/dL\nHDL Cholesterol: 32 mg/dL (L)\nTriglycerides: 79 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 138 mmol/L\nPotassium: 4.0 mmol/L\nChloride: 99 mmol/L\nCO2: 25 mmol/L\nBUN: 18 mg/dL\nCreatinine: 1.1 mg/dL\nGlucose: 104 mg/dL (H)\nCalcium: 10.1 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of recurrent palpitations in an 80-year-old man with atrial fibrillation."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "Most recent echo showed an ejection fraction of 30%."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 85 bpm. Normal axis. PR interval 190 ms, QRS 95 ms, QTc 416 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 121 mg/dL\nLDL Cholesterol: 74 mg/dL\nHDL Cholesterol: 32 mg/dL (L)\nTriglycerides: 79 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 138 mmol/L\nPotassium: 4.0 mmol/L\nChloride: 99 mmol/L\nCO2: 25 mmol/L\nBUN: 18 mg/dL\nCreatinine: 1.1 mg/dL\nGlucose: 104 mg/dL (H)\nCalcium: 10.1 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "contradictory",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "missing"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 3,
+  "input_tokens": 1844,
+  "output_tokens": 1215
+}

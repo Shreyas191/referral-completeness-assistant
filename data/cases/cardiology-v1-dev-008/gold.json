@@ -1,0 +1,94 @@
+{
+  "case_id": "cardiology-v1-dev-008",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-27",
+  "split": "dev",
+  "slices": [
+    "complete"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of fatigue in the setting of a strong family history of\nearly heart disease."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 65 bpm. Normal axis.\nPR interval 157 ms, QRS 83 ms, QTc 422 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n55%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Nrmal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotaI Cholesterol: 256 mg/dL (H)\nLDL Cholcsterol: 180 mg/dL (H)\nHDL Cholesterol: 51 mg/dL\nTriglycerides: 125 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 98 mmol/L\nCO2: 23 mmol/L\nBUN: 16 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 126 mg/dL (H)\nCalcium: 9.3 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Metformin 500 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nLevothyroxine 75 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: cler bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "case_id": "cardiology-v1-dev-033",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-16",
+  "plan": {
+    "case_id": "cardiology-v1-dev-033",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "bury"
+      },
+      {
+        "item_id": "bmp",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "omit"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Diane",
+    "last_name": "Carter",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "furosemide",
+        "dose": 20.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of progressive leg swelling and breathlessness concerning for possible heart failure.",
+    "history": "Diane Carter is a 59-year-old woman with several weeks of progressive swelling in both legs and increasing breathlessness when walking. She now needs extra pillows at night and has reduced her usual activity; she denies chest pain or fainting.",
+    "referring_physician": "Dr. Michael Adams",
+    "practice": "Northside Internal Medicine",
+    "sex": "female",
+    "age": 59,
+    "dob": "1967-06-08",
+    "mrn": "MRN-35247"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-16",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/16/2026\nPatient Name: Diane Carter\nDOB: 06/08/1967\nMRN: MRN-35247\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Michael Adams, Northside Internal Medicine\n\nDear Colleague,\n\nReason for referral: Evaluation of progressive leg swelling and breathlessness concerning for possible heart failure.\n\nI am writing about Diane Carter, a 59-year-old woman with hypertension and type 2 diabetes, for cardiology evaluation. She has had several weeks of progressive swelling in both legs and increasing breathlessness with walking.\n\nShe now needs extra pillows at night and has reduced her usual activity. She denies chest pain or fainting. Her symptoms raise concern for possible heart failure; please assess and advise on further care.\n\nMost recent potassium is 3.2 mmol/L.\n\nThank you for seeing this patient.\n\nDr. Michael Adams\nNorthside Internal Medicine\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-11-07",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 11/07/2026\nPatient Name: Diane Carter\nDOB: 06/08/1967\nMRN: MRN-35247\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nFurosemide 20 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-11-13",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 11/13/2026\nPatient Name: Diane Carter\nDOB: 06/08/1967\nMRN: MRN-35247\nOrdering provider: Dr. Michael Adams\n\nFindings: Sinus bradycardia at 55 bpm. Normal axis. PR interval 176 ms, QRS 92 ms, QTc 446 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-11-12",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 11/12/2026\nPatient Name: Diane Carter\nDOB: 06/08/1967\nMRN: MRN-35247\nOrdering provider: Dr. Michael Adams\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 50%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-28",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/28/2026\nPatient Name: Diane Carter\nDOB: 06/08/1967\nMRN: MRN-35247\nOrdering provider: Dr. Michael Adams\n\nBASIC METABOLIC PANEL\nSodium: 138 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 99 mmol/L\nCO2: 26 mmol/L\nBUN: 16 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 80 mg/dL\nCalcium: 10.2 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-24",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/24/2026\nPatient Name: Diane Carter\nDOB: 06/08/1967\nMRN: MRN-35247\nAttending: Dr. Michael Adams\n\nADMISSION DIAGNOSIS:\nDiane Carter is a 59-year-old female admitted for acute diverticulitis with lower abdominal discomfort and reduced appetite. Her symptoms were significant enough to require inpatient observation and supportive treatment. The condition was managed without surgery. There was no operative intervention during this stay. Her known chronic conditions include hypertension and Type 2 diabetes mellitus. These were considered in planning her care and discharge. The admission plan focused on easing symptoms, allowing bowel rest initially, maintaining hydration, and observing her response to nonoperative care. The care team also reviewed warning signs that would require urgent reassessment. Her clinical course improved sufficiently for discharge home with ongoing outpatient follow-up. No calendar dates, specific test results, named medicines, or doses are included in this summary. The final diagnosis remained acute diverticulitis, improved with conservative inpatient management.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 2 of 12\n\nHISTORY:\nMs. Carter presented with several days of lower abdominal discomfort and diminished appetite. She reported that the discomfort had become persistent and had interfered with usual activities. She did not report ongoing vomiting, and she was able to describe her symptoms and participate in decisions about care. Her history is notable for hypertension and Type 2 diabetes mellitus. She reported no prior operation relevant to this admission. The team reviewed her usual home routine and chronic disease care while planning treatment. There was no reported history in the available account of a recent similar episode requiring surgery. Her family or support person was available to assist with planning after discharge. The history was consistent with an acute abdominal illness appropriate for inpatient observation and conservative management. This account does not include named medicines, doses, laboratory values, imaging findings, or calendar dates.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 3 of 12\n\nADMISSION EVALUATION:\nThe admitting team reviewed Ms. Carter's symptoms and relevant medical history. The overall clinical assessment supported acute diverticulitis as the reason for admission. She was considered appropriate for a nonoperative approach, with close observation and treatment directed at symptom relief and recovery of oral intake. The team discussed the expected course and the possibility that her plan could change if her condition worsened or failed to improve. Her hypertension and Type 2 diabetes were incorporated into the inpatient care plan. No specific laboratory values, named tests, or imaging findings are included in this summary. The evaluation did not lead to an operation or other invasive intervention. The patient understood the initial plan and agreed to proceed with supportive inpatient care. Her symptoms and ability to tolerate food and fluids were followed throughout the admission.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 4 of 12\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Ms. Carter remained under observation for acute diverticulitis. The team used a conservative approach with initial bowel rest, hydration, antimicrobial coverage, and measures to relieve discomfort. Her symptoms were reassessed during the day, and she was encouraged to report any new or worsening concerns. She did not require surgical treatment. Her oral intake was limited while the discomfort was being managed, with a plan to advance food gradually as she improved. Care also included attention to her established hypertension and Type 2 diabetes. The team reviewed how the inpatient plan related to her usual routine and worked to avoid unnecessary disruption of chronic care. She remained engaged in decisions and asked appropriate questions. No specific medicine names, doses, test names, values, or calendar dates are documented here.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 5 of 12\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, Ms. Carter reported that her abdominal discomfort was easing. She remained on the nonoperative plan and continued supportive treatment. As symptoms improved, the team began a gradual return to oral fluids and food, with instructions to advance only as tolerated. Her appetite was still below usual but had begun to recover. The team continued to observe her response and reviewed the importance of reporting recurrent pain, nausea, or inability to keep fluids down. Hypertension and Type 2 diabetes remained part of the care plan, without any complication requiring a change in the overall approach. The patient did not need an operation or invasive procedure. Her progress supported continued conservative management. This summary does not state named tests, test results, medicine names, doses, or dates.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 6 of 12\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Ms. Carter's discomfort had continued to improve, and she was able to take food and fluids by mouth without a significant return of symptoms. The team determined that further inpatient observation was no longer necessary. She remained on the conservative treatment pathway, with no surgery performed during the admission. Her chronic hypertension and Type 2 diabetes were considered in discharge planning, including the need to continue her established outpatient care. The team reviewed the expected gradual recovery and explained that mild residual discomfort may take time to settle. Ms. Carter expressed understanding of the plan and felt prepared to return home. Her improvement, ability to maintain oral intake, and understanding of return precautions supported discharge. No named medicines, doses, test results, or calendar dates are included.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 7 of 12\n\nCONSULTS:\nNo specialty team was asked to participate in Ms. Carter's care during this admission. The hospital team managed her diverticulitis nonoperatively and reviewed the case within the treating service. Surgery was not needed, and no operative recommendation was made. The patient and team discussed the reasons for continuing conservative treatment and the symptoms that would require renewed assessment. Her chronic hypertension and Type 2 diabetes were addressed as part of the general inpatient plan. Coordination focused on ensuring that she could continue her usual outpatient care after leaving the hospital. The team also considered whether additional support at home was needed; she reported having adequate help available. No separate specialty recommendations or consultant instructions were required at discharge. This section contains no named medicines, doses, tests, values, or dates.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 8 of 12\n\nPROCEDURES:\nNo procedure was performed during this admission. Ms. Carter's acute diverticulitis was treated without surgery or other invasive intervention. The care plan relied on observation, supportive measures, gradual return to oral intake, and reassessment of symptoms. The team did not identify a need for an operation during her stay. She understood that a change in symptoms after discharge could warrant prompt reassessment and a different plan. There were no procedure-related restrictions for home care. Her recovery was sufficient to allow discharge without arranging a wound care plan or postoperative follow-up. The absence of an intervention was reviewed with her before she left. This summary does not identify named tests, imaging findings, results, medicines, doses, or dates.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 9 of 12\n\nDISCHARGE DIAGNOSES:\nThe primary discharge diagnosis is acute diverticulitis, improved with conservative inpatient management. There was no surgery during the admission. Ms. Carter's known hypertension and Type 2 diabetes mellitus remain active chronic conditions and should continue to receive routine outpatient attention. No additional acute diagnosis requiring inpatient treatment was identified in the discharge plan. The patient was advised that recovery may continue after leaving the hospital and that she should follow the diet guidance provided by her care team. She was also instructed to seek urgent help for worsening abdominal discomfort, inability to keep fluids down, or other concerning changes. The discharge diagnoses reflect the reason for admission and the relevant chronic conditions considered during care. No test names, results, values, medicine names, doses, or calendar dates are stated here.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 10 of 12\n\nCONDITION AT DISCHARGE:\nAt discharge, Ms. Carter reported meaningful improvement in her abdominal discomfort and was able to take fluids and food by mouth. She did not require surgery or continued inpatient observation. She was considered ready to return home with support available from family or other household contacts. Her discharge plan included ongoing attention to hypertension and Type 2 diabetes through her established outpatient care. The team reviewed the course of recovery and made sure she understood the symptoms that should prompt immediate reassessment. She participated in the discussion and agreed with the plan. No specific vital signs, physical examination findings, laboratory values, named tests, medicine names, or doses are included in this summary. Her overall status was stable for discharge based on symptom improvement, oral intake, and ability to follow the home plan.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 11 of 12\n\nDISCHARGE INSTRUCTIONS:\nMs. Carter was instructed to continue a gradual return to her usual food choices as tolerated, following the dietary guidance provided by the hospital team. She should maintain adequate fluid intake and avoid rushing her recovery if discomfort returns with eating. She was advised to rest as needed and resume ordinary activities gradually. She should continue the established outpatient plan for hypertension and Type 2 diabetes, with any questions directed to her usual care team. She should seek urgent care for worsening or severe abdominal pain, repeated vomiting, inability to keep fluids down, faintness, or other sudden concerning symptoms. She should also seek help if she develops a new problem that makes it difficult to manage at home. She received an opportunity to ask questions and stated that she understood the instructions. No medicine names or doses are included.\n\nFasting lipid panel this admission: total cholesterol: 262 mg/dL, LDL: 176 mg/dL, HDL: 41 mg/dL, triglycerides: 229 mg/dL.\n",
+        "Diane Carter | MRN-35247 | Discharge summary | Page 12 of 12\n\nFOLLOW-UP:\nMs. Carter should arrange follow-up with her usual outpatient clinician after discharge to review recovery from diverticulitis and continue routine care for hypertension and Type 2 diabetes. She should contact the outpatient office if symptoms have not continued to improve or if she has questions about returning to her regular diet and activities. If abdominal discomfort worsens, oral intake becomes difficult, or new concerning symptoms occur, she should seek urgent assessment rather than wait for a routine appointment. Any follow-up timing should be arranged according to the instructions given by the discharging team and the availability of her usual clinician. She was encouraged to bring this discharge information to that appointment so the outpatient team can understand the inpatient course. No calendar dates, named tests, results, medicine names, or doses are provided in this summary.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of progressive leg swelling and breathlessness concerning for possible heart failure."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Most recent potassium is 3.2 mmol/L."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nFurosemide 20 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 55 bpm. Normal axis. PR interval 176 ms, QRS 92 ms, QTc 446 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 50%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 138 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 99 mmol/L\nCO2: 26 mmol/L\nBUN: 16 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 80 mg/dL\nCalcium: 10.2 mg/dL"
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "discharge_summary",
+      "page": 11,
+      "text": "Fasting lipid panel this admission: total cholesterol: 262 mg/dL, LDL: 176 mg/dL, HDL: 41 mg/dL, triglycerides: 229 mg/dL."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "contradictory",
+    "meds": "present",
+    "progress_note": "missing",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 3,
+  "input_tokens": 1840,
+  "output_tokens": 4339
+}

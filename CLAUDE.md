@@ -111,7 +111,8 @@ uvicorn referral.api:app --reload
   note style → OCR-style noise → PDF. Labels are known by construction and written to `gold.json`.
 - Target mix: 30% complete, 40% with 1–3 missing items, 25% abbreviation-only evidence, 20% contradictions,
   20% buried past page 10, 15% stale, 5% wrong-patient document. Packets 3–60 pages.
-- Splits: 40 dev, 110 held-out test, 15 hand-written adversarial.
+- Splits: 40 dev (`data/cases/cardiology-v1-dev-*`, committed), 110 held-out test (`data/test_cases/`,
+  gitignored, untouched until the freeze), 15 hand-written adversarial (5 so far: `hand-001`…`005`).
 
 ## Metrics and targets
 

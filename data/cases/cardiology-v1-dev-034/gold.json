@@ -1,0 +1,99 @@
+{
+  "case_id": "cardiology-v1-dev-034",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-11",
+  "split": "dev",
+  "slices": [
+    "abbreviation"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of persistently elevated blood pressure despite treatment."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 51 bpm. Normal axis. PR interval 180 ms, QRS 108 ms, QTc\n415 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 133 mg/dL\nLDL Cholesterol: 70 mg/dL\nHDL Cholesterol: 42 mg/dL\nTriglycerides: 107 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "BMP: Na 139, K 4.5, Cl 104, CO2 27, BUN 13, Cr 0.7, Glu 102."
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Amlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

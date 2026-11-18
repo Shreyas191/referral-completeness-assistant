@@ -1,0 +1,189 @@
+{
+  "case_id": "cardiology-v1-dev-014",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-10",
+  "plan": {
+    "case_id": "cardiology-v1-dev-014",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": "omit"
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "omit"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": true,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Liam",
+    "last_name": "Harris",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Obesity"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "amlodipine",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion.",
+    "history": "This 56-year-old male reports gradually worsening breathlessness when walking uphill or climbing stairs over the past three months. He denies breathlessness at rest and has reduced his usual activity because of these symptoms.",
+    "referring_physician": "Dr. Laura Evans",
+    "practice": "Lakeside Family Practice",
+    "sex": "male",
+    "age": 56,
+    "dob": "1970-04-17",
+    "mrn": "MRN-61104"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-10",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/10/2026\nPatient Name: Liam Harris\nDOB: 04/17/1970\nMRN: MRN-61104\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Laura Evans, Lakeside Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion.\n\nLiam Harris is a 56-year-old man with hypertension, type 2 diabetes mellitus, and obesity. He reports gradually worsening breathlessness when walking uphill or climbing stairs over the past three months. He denies breathlessness at rest and has reduced his usual activity because of these symptoms.\n\nI would appreciate your evaluation of his breathlessness on exertion and recommendations for further care.\n\nThank you for seeing this patient.\n\nDr. Laura Evans\nLakeside Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-05",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/05/2026\nPatient Name: Liam Harris\nDOB: 04/17/1970\nMRN: MRN-61104\nProvider: Dr. Laura Evans\n\nSUBJECTIVE:\nLiam Harris is a 56-year-old male with gradually worsening breathlessness when walking uphill or climbing stairs over the past three months. He denies breathlessness at rest and has reduced his usual activity because of these symptoms.\n\nVITALS:\nBP 114/71, HR 91, RR 13, SpO2 98% on room air, weight 159 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Breathlessness on exertion: Symptoms have gradually worsened and limit usual activity. Cardiology referral placed for evaluation.\n2. Hypertension: Continue routine follow-up with primary care.\n3. Type 2 diabetes mellitus: Continue routine follow-up with primary care.\n4. Obesity: Continue routine follow-up with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-05",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/05/2026\nPatient Name: Liam Harris\nDOB: 04/17/1970\nMRN: MRN-61104\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAmlodipine 5 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-10",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/10/2026\nPatient Name: Liam Harris\nDOB: 04/17/1970\nMRN: MRN-61104\nOrdering provider: Dr. Laura Evans\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_1",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-05",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/05/2026\nPatient Name: Evan Harris\nDOB: 04/19/1968\nMRN: MRN-16104\nOrdering provider: Dr. Angela Ruiz\n\nLIPID PANEL\nTotal Cholesterol: 155 mg/dL\nLDL Cholesterol: 67 mg/dL\nHDL Cholesterol: 70 mg/dL\nTriglycerides: 90 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.6 mmol/L\nChloride: 98 mmol/L\nCO2: 29 mmol/L\nBUN: 14 mg/dL\nCreatinine: 1.1 mg/dL\nGlucose: 149 mg/dL (H)\nCalcium: 10.2 mg/dL\n"
+      ],
+      "patient": "other"
+    },
+    {
+      "doc_id": "lab_report_2",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-03",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/03/2026\nPatient Name: Liam Harris\nDOB: 04/17/1970\nMRN: MRN-61104\nOrdering provider: Dr. Laura Evans\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 3.5 mmol/L\nChloride: 107 mmol/L\nCO2: 26 mmol/L\nBUN: 11 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 164 mg/dL (H)\nCalcium: 9.9 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAmlodipine 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report_2",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 3.5 mmol/L\nChloride: 107 mmol/L\nCO2: 26 mmol/L\nBUN: 11 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 164 mg/dL (H)\nCalcium: 9.9 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "missing",
+    "echo": "present",
+    "lipids": "missing",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [
+    "lab_report_1"
+  ],
+  "llm_calls": 3,
+  "input_tokens": 1823,
+  "output_tokens": 1193
+}

@@ -1,0 +1,169 @@
+{
+  "case_id": "cardiology-v1-dev-009",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-02",
+  "plan": {
+    "case_id": "cardiology-v1-dev-009",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "omit"
+      },
+      {
+        "item_id": "bmp",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "meds",
+        "defect": "omit"
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "omit"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Florence",
+    "last_name": "Wilson",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of a newly heard heart murmur.",
+    "history": "Florence Wilson is a 62-year-old woman whose primary care physician recently noted a new murmur during a routine visit. She reports no chest pain, shortness of breath, or fainting.",
+    "referring_physician": "Dr. Frank Dawson",
+    "practice": "Brookside Family Practice",
+    "sex": "female",
+    "age": 62,
+    "dob": "1963-12-25",
+    "mrn": "MRN-32549"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-02",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/02/2026\nPatient Name: Florence Wilson\nDOB: 12/25/1963\nMRN: MRN-32549\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Frank Dawson, Brookside Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of a newly heard heart murmur.\n\nI am sending Florence Wilson, a 62-year-old woman, to your cardiology clinic for evaluation of a newly heard murmur noted during a routine visit.\n\nShe reports no chest pain, shortness of breath, or fainting. Her medical history includes hypertension, type 2 diabetes mellitus, and hypothyroidism.\n\nMost recent potassium is 5.9 mmol/L.\n\nThank you for seeing this patient.\n\nDr. Frank Dawson\nBrookside Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-08",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/08/2026\nPatient Name: Florence Wilson\nDOB: 12/25/1963\nMRN: MRN-32549\nOrdering provider: Dr. Frank Dawson\n\nFindings: Normal sinus rhythm at 78 bpm. Normal axis. PR interval 190 ms, QRS 94 ms, QTc 408 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-02",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/02/2026\nPatient Name: Florence Wilson\nDOB: 12/25/1963\nMRN: MRN-32549\nOrdering provider: Dr. Frank Dawson\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-11",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/11/2026\nPatient Name: Florence Wilson\nDOB: 12/25/1963\nMRN: MRN-32549\nOrdering provider: Dr. Frank Dawson\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.2 mmol/L\nChloride: 100 mmol/L\nCO2: 27 mmol/L\nBUN: 14 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 113 mg/dL (H)\nCalcium: 8.9 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of a newly heard heart murmur."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Most recent potassium is 5.9 mmol/L."
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 78 bpm. Normal axis. PR interval 190 ms, QRS 94 ms, QTc 408 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.2 mmol/L\nChloride: 100 mmol/L\nCO2: 27 mmol/L\nBUN: 14 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 113 mg/dL (H)\nCalcium: 8.9 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "missing",
+    "bmp": "contradictory",
+    "meds": "missing",
+    "progress_note": "missing",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 2,
+  "input_tokens": 1333,
+  "output_tokens": 805
+}

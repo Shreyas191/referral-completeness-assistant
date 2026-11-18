@@ -11,6 +11,7 @@ import argparse
 import json
 import random
 import re
+from collections import Counter
 from pathlib import Path
 
 from pydantic import BaseModel
@@ -81,3 +82,52 @@ if __name__ == "__main__":
     rng = random.Random(args.seed)
     for n in range(args.n):
         print(make_plan(f"{args.checklist}-{n:03d}", checklist, rng).model_dump_json())
+
+
+# ---------------------------------------------------------------- quota selection (issue #10)
+
+def plan_features(plan: DefectPlan) -> set[str]:
+    """Mix properties of one plan, named like the keys of MIX."""
+    defects = {p.defect for p in plan.items if p.defect}
+    return defects | ({"complete"} if not defects else set()) | ({"wrong_patient"} if plan.wrong_patient_doc else set())
+
+
+def quota_targets(n: int) -> dict[str, int]:
+    return {k: round(share * n) for k, share in MIX.items()}
+
+
+def select_plans(checklist: dict, n: int, seed: int, prefix: str, pool_size: int = 5000,
+                 steps: int = 50_000) -> tuple[list[DefectPlan], dict[str, int], dict[str, int]]:
+    """Pick n plans whose mix matches MIX as closely as possible.
+
+    With few cases, independent random draws miss the targets badly (5% wrong-patient of 40 is often 0), so
+    draw a large pool (plans cost nothing) and swap plans in and out while the total distance from the
+    targets does not grow. Deterministic for a seed. Returns (plans renamed <prefix>-000..., targets, achieved).
+    """
+    rng = random.Random(seed)
+    pool = [make_plan(f"pool-{k}", checklist, rng) for k in range(pool_size)]
+    feats = [plan_features(p) for p in pool]
+    targets = quota_targets(n)
+
+    def loss(c: Counter) -> int:
+        return sum(abs(c[k] - t) for k, t in targets.items())
+
+    chosen = rng.sample(range(pool_size), n)
+    taken = set(chosen)
+    counts = Counter(f for i in chosen for f in feats[i])
+    best = loss(counts)
+    for _ in range(steps):
+        if best == 0:
+            break
+        slot, cand = rng.randrange(n), rng.randrange(pool_size)
+        if cand in taken:
+            continue
+        trial = counts.copy()
+        trial.subtract(feats[chosen[slot]])
+        trial.update(feats[cand])
+        if loss(trial) <= best:
+            taken.discard(chosen[slot])
+            taken.add(cand)
+            chosen[slot], counts, best = cand, trial, loss(trial)
+    plans = [pool[i].model_copy(update={"case_id": f"{prefix}-{k:03d}"}) for k, i in enumerate(sorted(chosen))]
+    return plans, targets, {k: counts[k] for k in targets}

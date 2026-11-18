@@ -1,0 +1,82 @@
+{
+  "case_id": "cardiology-v1-dev-038",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-17",
+  "split": "dev",
+  "slices": [
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n40%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Moderately reduced Ieft ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 274 mg/dL (H)\nLDL Cholesterol: 175 mg/dL (H)\nHDL Cholesterol: 50 mg/dL\nTriglycerides: 245 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCaardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "COAGULATION\nProthrombin Time: 22.7 sec\nINR: 2.0"
+        }
+      ]
+    }
+  ]
+}

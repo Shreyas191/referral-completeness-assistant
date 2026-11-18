@@ -8,7 +8,7 @@ from test_render import CHECKLIST, ScriptedLLM, plan_with
 
 from datagen.build import add_noise, build_case, layout, locate
 from datagen.check_cases import check_case
-from datagen.render import BURY_PAGE, render_case
+from datagen.render import BURY_PAGE, RenderedCase, render_case
 from referral.eval.gold import load_gold
 from referral.ingest.pdf_loader import load_case
 
@@ -113,3 +113,9 @@ def test_gold_page_follows_the_pdf_when_a_long_note_overflows(tmp_path):
     (exam,) = [e for i in load_gold(case_dir).items if i.item_id == "progress_note" for e in i.evidence
                if e.doc_id == note.doc_id]
     assert exam.page == 2  # one rendered page became two PDF pages
+
+
+def test_case_folder_carries_its_rendering(tmp_path):
+    case = render_case(plan_with("selfcontained"), CHECKLIST, ScriptedLLM())
+    case_dir = build_case(case, tmp_path, "dev")
+    assert RenderedCase.model_validate_json((case_dir / "rendered.json").read_text()) == case

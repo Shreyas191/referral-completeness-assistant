@@ -1,0 +1,214 @@
+{
+  "case_id": "cardiology-v1-dev-017",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-13",
+  "plan": {
+    "case_id": "cardiology-v1-dev-017",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Marcus",
+    "last_name": "Lewis",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of an episode of fainting.",
+    "history": "He is a 58-year-old man who briefly lost consciousness while standing in his kitchen. He awoke within a minute and felt tired afterward, but reports no injury or recurrence.",
+    "referring_physician": "Dr. Henry Reed",
+    "practice": "Green Valley Family Practice",
+    "sex": "male",
+    "age": 58,
+    "dob": "1968-06-04",
+    "mrn": "MRN-45861"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-13",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/13/2026\nPatient Name: Marcus Lewis\nDOB: 06/04/1968\nMRN: MRN-45861\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Henry Reed, Green Valley Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of an episode of fainting.\n\nMarcus Lewis is a 58-year-old man with hypertension, type 2 diabetes mellitus, and hypothyroidism. He briefly lost consciousness while standing in his kitchen, awoke within a minute, and felt tired afterward. He reports no injury or recurrence.\n\nPlease assess this episode of fainting and advise on further evaluation and care.\n\nThank you for seeing this patient.\n\nDr. Henry Reed\nGreen Valley Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-05-27",
+      "pages": [
+        "PROGRESS NOTE\nDate: 05/27/2026\nPatient Name: Marcus Lewis\nDOB: 06/04/1968\nMRN: MRN-45861\nProvider: Dr. Henry Reed\n\nSUBJECTIVE:\nMarcus Lewis is a 58-year-old male seen for routine follow-up of hypertension, type 2 diabetes mellitus, and hypothyroidism. He reports doing well and taking his prescribed treatment consistently, without adverse effects. He is working on maintaining a balanced diet and regular activity.\n\nVITALS:\nBP 127/94, HR 73, RR 16, SpO2 96% on room air, weight 188 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue the established treatment plan and reinforce dietary measures and regular activity.\n2. Type 2 diabetes mellitus is stable by history. Continue the established treatment plan and reinforce dietary consistency and regular activity.\n3. Hypothyroidism is stable by history. Continue the established treatment plan and monitor for changes in energy or other symptoms.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-04",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/04/2026\nPatient Name: Marcus Lewis\nDOB: 06/04/1968\nMRN: MRN-45861\nProvider: Dr. Henry Reed\n\nSUBJECTIVE:\nMarcus Lewis is a 58-year-old man who briefly lost consciousness while standing in his kitchen. He awoke within a minute and felt tired afterward. He reports no injury or recurrence.\n\nVITALS:\nBP 147/81, HR 58, RR 13, SpO2 94% on room air, weight 172 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nDATA REVIEWED:\n\nLipids: TC 282, LDL 169, HDL 63, TG 253.\n\nASSESSMENT AND PLAN:\n1. Syncope: Episode occurred while standing, with rapid recovery and no recurrence. Refer to cardiology for evaluation.\n2. Hypertension: Continue routine management and follow-up with primary care.\n3. Type 2 diabetes mellitus: Continue routine management and follow-up with primary care.\n4. Hypothyroidism: Continue routine management and follow-up with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-04",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/04/2026\nPatient Name: Marcus Lewis\nDOB: 06/04/1968\nMRN: MRN-45861\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-04",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/04/2026\nPatient Name: Marcus Lewis\nDOB: 06/04/1968\nMRN: MRN-45861\nOrdering provider: Dr. Henry Reed\n\nFindings: Normal sinus rhythm at 69 bpm. Normal axis. PR interval 162 ms, QRS 85 ms, QTc 400 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-31",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/31/2026\nPatient Name: Marcus Lewis\nDOB: 06/04/1968\nMRN: MRN-45861\nOrdering provider: Dr. Henry Reed\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 50%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-26",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/26/2026\nPatient Name: Marcus Lewis\nDOB: 06/04/1968\nMRN: MRN-45861\nOrdering provider: Dr. Henry Reed\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 5.2 mmol/L (H)\nChloride: 102 mmol/L\nCO2: 25 mmol/L\nBUN: 13 mg/dL\nCreatinine: 1.3 mg/dL (H)\nGlucose: 169 mg/dL (H)\nCalcium: 9.1 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of an episode of fainting."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "Lipids: TC 282, LDL 169, HDL 63, TG 253."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 69 bpm. Normal axis. PR interval 162 ms, QRS 85 ms, QTc 400 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 50%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 5.2 mmol/L (H)\nChloride: 102 mmol/L\nCO2: 25 mmol/L\nBUN: 13 mg/dL\nCreatinine: 1.3 mg/dL (H)\nGlucose: 169 mg/dL (H)\nCalcium: 9.1 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2275,
+  "output_tokens": 1509
+}

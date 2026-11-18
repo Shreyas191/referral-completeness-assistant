@@ -1,0 +1,99 @@
+{
+  "case_id": "cardiology-v1-dev-035",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-11",
+  "split": "dev",
+  "slices": [
+    "complete"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of persistently elevated blood pressure despite treatment."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 75 bpm. Normal axis. PR interval 172 ms, QRS 89 ms, QTc\n416 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 192 mg/dL\nLDL Cholesterol: 101 mg/dL\nHDL Cholesterol: 64 mg/dL\nTriglycerides: 138 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 98 mmol/L\nCO2: 28 mmol/L\nBUN: 30 mg/dL (H)\nCreatinine: 1.5 mg/dL (H)\nGlucose: 95 mg/dL\nCalcium: 9.6 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 40 mg by mouth once daily\nAmlodipine 10 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmrs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

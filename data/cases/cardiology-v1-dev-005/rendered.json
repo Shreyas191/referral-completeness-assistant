@@ -1,0 +1,205 @@
+{
+  "case_id": "cardiology-v1-dev-005",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-10",
+  "plan": {
+    "case_id": "cardiology-v1-dev-005",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Grace",
+    "last_name": "Ellis",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of exertional breathlessness that has gradually increased over the past three months.",
+    "history": "Grace Ellis is a 51-year-old woman who becomes short of breath when walking uphill or climbing one flight of stairs. Symptoms have gradually worsened over three months; she denies breathlessness at rest, chest discomfort, fainting, or leg swelling.",
+    "referring_physician": "Dr. George Chen",
+    "practice": "Maple Family Practice",
+    "sex": "female",
+    "age": 51,
+    "dob": "1975-06-08",
+    "mrn": "MRN-13812"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-10",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/10/2026\nPatient Name: Grace Ellis\nDOB: 06/08/1975\nMRN: MRN-13812\n\nTo: Cardiology Clinic Intake\nFrom: Dr. George Chen, Maple Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of exertional breathlessness that has gradually increased over the past three months.\n\nGrace Ellis is a 51-year-old woman with hypertension, type 2 diabetes mellitus, and hypothyroidism. She reports gradually worsening breathlessness over the past three months when walking uphill or climbing one flight of stairs.\n\nShe denies breathlessness at rest, chest discomfort, fainting, or leg swelling. Please assess her exertional breathlessness and advise on further evaluation and management.\n\nThank you for seeing this patient.\n\nDr. George Chen\nMaple Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-02-21",
+      "pages": [
+        "PROGRESS NOTE\nDate: 02/21/2026\nPatient Name: Grace Ellis\nDOB: 06/08/1975\nMRN: MRN-13812\nProvider: Dr. George Chen\n\nSUBJECTIVE:\nGrace Ellis is a 51-year-old woman seen for routine follow-up of hypertension, type 2 diabetes, and hypothyroidism. She reports feeling well and following her prescribed treatment consistently. She denies new concerns and reports no change in daily function.\n\nVITALS:\nBP 146/66, HR 87, RR 15, SpO2 98% on room air, weight 204 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue established therapy and encourage regular activity and home monitoring.\n2. Type 2 diabetes is stable by history. Continue established treatment and nutrition plan; encourage regular activity and routine monitoring.\n3. Hypothyroidism is stable by history. Continue thyroid replacement as prescribed.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-30",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/30/2026\nPatient Name: Grace Ellis\nDOB: 06/08/1975\nMRN: MRN-13812\nProvider: Dr. George Chen\n\nSUBJECTIVE:\nGrace Ellis is a 51-year-old woman with hypertension, type 2 diabetes mellitus, and hypothyroidism who reports gradually worsening shortness of breath with walking uphill or climbing one flight of stairs over the past three months. She denies breathlessness at rest, chest discomfort, fainting, or leg swelling.\n\nVITALS:\nBP 120/74, HR 87, RR 17, SpO2 99% on room air, weight 124 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nDATA REVIEWED:\n\nTTE: LVEF 45%, mildly reduced LV fxn, no sig valve dz.\n\nASSESSMENT AND PLAN:\n1. Exertional breathlessness, gradually worsening over three months. Refer to cardiology for further evaluation.\n2. Hypertension. Continue follow-up with primary care for ongoing management.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-30",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/30/2026\nPatient Name: Grace Ellis\nDOB: 06/08/1975\nMRN: MRN-13812\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-15",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/15/2026\nPatient Name: Grace Ellis\nDOB: 06/08/1975\nMRN: MRN-13812\nOrdering provider: Dr. George Chen\n\nFindings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 190 ms, QRS 97 ms, QTc 445 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-24",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/24/2026\nPatient Name: Grace Ellis\nDOB: 06/08/1975\nMRN: MRN-13812\nOrdering provider: Dr. George Chen\n\nLIPID PANEL\nTotal Cholesterol: 230 mg/dL (H)\nLDL Cholesterol: 152 mg/dL (H)\nHDL Cholesterol: 53 mg/dL\nTriglycerides: 129 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 98 mmol/L\nCO2: 21 mmol/L\nBUN: 20 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 161 mg/dL (H)\nCalcium: 9.1 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of exertional breathlessness that has gradually increased over the past three months."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "TTE: LVEF 45%, mildly reduced LV fxn, no sig valve dz."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 190 ms, QRS 97 ms, QTc 445 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 230 mg/dL (H)\nLDL Cholesterol: 152 mg/dL (H)\nHDL Cholesterol: 53 mg/dL\nTriglycerides: 129 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 98 mmol/L\nCO2: 21 mmol/L\nBUN: 20 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 161 mg/dL (H)\nCalcium: 9.1 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2319,
+  "output_tokens": 1725
+}

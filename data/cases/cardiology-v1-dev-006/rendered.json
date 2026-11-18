@@ -1,0 +1,226 @@
+{
+  "case_id": "cardiology-v1-dev-006",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-13",
+  "plan": {
+    "case_id": "cardiology-v1-dev-006",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Mara",
+    "last_name": "Garcia",
+    "conditions": [
+      "Essential hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "losartan",
+        "dose": 100.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "chlorthalidone",
+        "dose": 25.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies",
+    "referral_reason": "Evaluation of persistent hypertension despite treatment with three agents.",
+    "history": "Mara Garcia is a 59-year-old woman with longstanding hypertension whose home readings remain high despite adherence to three agents. She reports no recent treatment changes and requests further evaluation of her persistently elevated blood pressure.",
+    "referring_physician": "Dr. Elena Patel",
+    "practice": "Brookside Primary Care",
+    "sex": "female",
+    "age": 59,
+    "dob": "1966-11-20",
+    "mrn": "MRN-65604"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-13",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/13/2026\nPatient Name: Mara Garcia\nDOB: 11/20/1966\nMRN: MRN-65604\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Elena Patel, Brookside Primary Care\n\nDear Colleague,\n\nReason for referral: Evaluation of persistent hypertension despite treatment with three agents.\n\nMara Garcia is a 59-year-old woman with longstanding essential hypertension, type 2 diabetes mellitus, and hypothyroidism. Her home blood pressure readings remain elevated despite adherence to three agents. She reports no recent changes in her treatment.\n\nPlease evaluate her persistent hypertension and advise on further management.\n\nThank you for seeing this patient.\n\nDr. Elena Patel\nBrookside Primary Care\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-03-22",
+      "pages": [
+        "PROGRESS NOTE\nDate: 03/22/2026\nPatient Name: Mara Garcia\nDOB: 11/20/1966\nMRN: MRN-65604\nProvider: Dr. Elena Patel\n\nSUBJECTIVE:\nMara Garcia is a 59-year-old woman seen for routine follow-up. She reports feeling well and taking her treatments as directed. She has no new concerns.\n\nVITALS:\nBP 157/90, HR 63, RR 15, SpO2 98% on room air, weight 240 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Essential hypertension: Stable by history. Continue established treatment and home blood pressure tracking.\n2. Type 2 diabetes mellitus: Continue established treatment and nutrition plan. Reinforce routine self-care.\n3. Hypothyroidism: Stable by history. Continue established treatment and routine follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-08-14",
+      "pages": [
+        "PROGRESS NOTE\nDate: 08/14/2026\nPatient Name: Mara Garcia\nDOB: 11/20/1966\nMRN: MRN-65604\nProvider: Dr. Elena Patel\n\nSUBJECTIVE:\nMara Garcia is a 59-year-old woman with longstanding hypertension. Home readings remain high despite adherence to three agents. She reports no recent treatment changes and requests further evaluation of her persistently elevated blood pressure.\n\nVITALS:\nBP 135/81, HR 83, RR 13, SpO2 98% on room air, weight 175 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nLipids: TC 252, LDL 173, HDL 34, TG 226.\n\nASSESSMENT AND PLAN:\n1. Persistent essential hypertension despite treatment with three agents. Refer to cardiology for further evaluation and recommendations. Continue home monitoring and the established regimen.\n2. Type 2 diabetes mellitus. Continue routine management and follow-up with primary care.\n3. Hypothyroidism. Continue established management and routine follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-08-14",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 08/14/2026\nPatient Name: Mara Garcia\nDOB: 11/20/1966\nMRN: MRN-65604\n\nAmlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily\n\nAllergies: No known drug allergies\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-07",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/07/2026\nPatient Name: Mara Garcia\nDOB: 11/20/1966\nMRN: MRN-65604\nOrdering provider: Dr. Elena Patel\n\nFindings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 144 ms, QRS 93 ms, QTc 453 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-08-10",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/10/2026\nPatient Name: Mara Garcia\nDOB: 11/20/1966\nMRN: MRN-65604\nOrdering provider: Dr. Elena Patel\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-28",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/28/2026\nPatient Name: Mara Garcia\nDOB: 11/20/1966\nMRN: MRN-65604\nOrdering provider: Dr. Elena Patel\n\nBASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 104 mmol/L\nCO2: 29 mmol/L\nBUN: 15 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 125 mg/dL (H)\nCalcium: 10.0 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of persistent hypertension despite treatment with three agents."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "Lipids: TC 252, LDL 173, HDL 34, TG 226."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 144 ms, QRS 93 ms, QTc 453 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 104 mmol/L\nCO2: 29 mmol/L\nBUN: 15 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 125 mg/dL (H)\nCalcium: 10.0 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2315,
+  "output_tokens": 2039
+}

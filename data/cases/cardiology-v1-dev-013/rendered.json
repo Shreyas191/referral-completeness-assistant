@@ -1,0 +1,214 @@
+{
+  "case_id": "cardiology-v1-dev-013",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-04",
+  "plan": {
+    "case_id": "cardiology-v1-dev-013",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Edwin",
+    "last_name": "Avery",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of persistent fatigue in the setting of a strong family history of premature heart disease.",
+    "history": "Edwin Avery is a 79-year-old man with persistent fatigue that has gradually worsened over several months. His father had a heart attack in his early 50s, and his brother developed heart disease before age 55.",
+    "referring_physician": "Dr. Mark Harris",
+    "practice": "Maple Family Practice",
+    "sex": "male",
+    "age": 79,
+    "dob": "1947-09-18",
+    "mrn": "MRN-41509"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-04",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/04/2026\nPatient Name: Edwin Avery\nDOB: 09/18/1947\nMRN: MRN-41509\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Mark Harris, Maple Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of persistent fatigue in the setting of a strong family history of premature heart disease.\n\nEdwin Avery is a 79-year-old man with hypertension, type 2 diabetes mellitus, and hypothyroidism. He reports persistent fatigue that has gradually worsened over several months.\n\nI am requesting cardiology evaluation of his persistent fatigue given his strong family history of premature heart disease. His father had a heart attack in his early 50s, and his brother developed heart disease before age 55.\n\nThank you for seeing this patient.\n\nDr. Mark Harris\nMaple Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-06-04",
+      "pages": [
+        "PROGRESS NOTE\nDate: 06/04/2026\nPatient Name: Edwin Avery\nDOB: 09/18/1947\nMRN: MRN-41509\nProvider: Dr. Mark Harris\n\nSUBJECTIVE:\nEdwin Avery is a 79-year-old man seen for routine follow-up of hypertension, type 2 diabetes mellitus, and hypothyroidism. He reports stable health and adherence to his established treatment plan.\n\nVITALS:\nBP 138/90, HR 71, RR 14, SpO2 95% on room air, weight 207 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue established care and routine monitoring.\n2. Type 2 diabetes mellitus is stable by history. Continue established care and routine monitoring.\n3. Hypothyroidism is stable by history. Continue established care and routine monitoring.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-08-25",
+      "pages": [
+        "PROGRESS NOTE\nDate: 08/25/2026\nPatient Name: Edwin Avery\nDOB: 09/18/1947\nMRN: MRN-41509\nProvider: Dr. Mark Harris\n\nSUBJECTIVE:\nEdwin Avery is a 79-year-old man with fatigue that has persisted and gradually worsened over several months. His father had a heart attack in his early 50s, and his brother developed heart disease before age 55. His history includes hypertension, type 2 diabetes mellitus, and hypothyroidism.\n\nVITALS:\nBP 147/68, HR 69, RR 13, SpO2 96% on room air, weight 215 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Persistent fatigue with gradual worsening over several months. Referral to cardiology placed for evaluation.\n2. Strong family history of premature heart disease. Discussed cardiology evaluation in the context of his fatigue and family history.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-08-25",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 08/25/2026\nPatient Name: Edwin Avery\nDOB: 09/18/1947\nMRN: MRN-41509\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-07-19",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 07/19/2026\nPatient Name: Edwin Avery\nDOB: 09/18/1947\nMRN: MRN-41509\nOrdering provider: Dr. Mark Harris\n\nFindings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 167 ms, QRS 90 ms, QTc 450 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-08-16",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/16/2026\nPatient Name: Edwin Avery\nDOB: 09/18/1947\nMRN: MRN-41509\nOrdering provider: Dr. Mark Harris\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-29",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/29/2026\nPatient Name: Edwin Avery\nDOB: 09/18/1947\nMRN: MRN-41509\nOrdering provider: Dr. Mark Harris\n\nLIPID PANEL\nTotal Cholesterol: 270 mg/dL (H)\nLDL Cholesterol: 182 mg/dL (H)\nHDL Cholesterol: 49 mg/dL\nTriglycerides: 195 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 3.5 mmol/L\nChloride: 99 mmol/L\nCO2: 22 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 0.9 mg/dL\nGlucose: 110 mg/dL (H)\nCalcium: 8.7 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of persistent fatigue in the setting of a strong family history of premature heart disease."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 167 ms, QRS 90 ms, QTc 450 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 270 mg/dL (H)\nLDL Cholesterol: 182 mg/dL (H)\nHDL Cholesterol: 49 mg/dL\nTriglycerides: 195 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 3.5 mmol/L\nChloride: 99 mmol/L\nCO2: 22 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 0.9 mg/dL\nGlucose: 110 mg/dL (H)\nCalcium: 8.7 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2316,
+  "output_tokens": 1793
+}

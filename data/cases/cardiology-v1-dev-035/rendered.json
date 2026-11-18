@@ -1,0 +1,226 @@
+{
+  "case_id": "cardiology-v1-dev-035",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-11",
+  "plan": {
+    "case_id": "cardiology-v1-dev-035",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Wendy",
+    "last_name": "Morris",
+    "conditions": [
+      "Essential hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 40.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "amlodipine",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "chlorthalidone",
+        "dose": 25.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of persistently elevated blood pressure despite treatment.",
+    "history": "Wendy Morris is a 61-year-old woman whose blood pressure remains high despite taking prescribed therapy. She reports taking her treatment consistently but has not seen sustained improvement. She denies recent changes in her health.",
+    "referring_physician": "Dr. Peter Ross",
+    "practice": "Meridian Family Practice",
+    "sex": "female",
+    "age": 61,
+    "dob": "1965-05-06",
+    "mrn": "MRN-63934"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-11",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/11/2026\nPatient Name: Wendy Morris\nDOB: 05/06/1965\nMRN: MRN-63934\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Peter Ross, Meridian Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of persistently elevated blood pressure despite treatment.\n\nWendy Morris is a 61-year-old woman with essential hypertension, type 2 diabetes mellitus, and hypothyroidism.\n\nHer blood pressure remains elevated despite prescribed therapy. She reports consistent use of her treatment without sustained improvement and denies recent changes in her health.\n\nPlease evaluate her persistent blood pressure elevation and provide recommendations for further management.\n\nThank you for seeing this patient.\n\nDr. Peter Ross\nMeridian Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-01-11",
+      "pages": [
+        "PROGRESS NOTE\nDate: 01/11/2026\nPatient Name: Wendy Morris\nDOB: 05/06/1965\nMRN: MRN-63934\nProvider: Dr. Peter Ross\n\nSUBJECTIVE:\nWendy Morris is a 61-year-old woman returning for routine follow-up. She reports doing well overall and following her established care plan. She has no new concerns.\n\nVITALS:\nBP 135/73, HR 59, RR 13, SpO2 99% on room air, weight 156 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Essential hypertension is stable by history. Continue the established treatment plan and monitor blood pressure at home.\n2. Type 2 diabetes mellitus is followed with dietary measures and home glucose monitoring. Continue the established care plan and regular physical activity.\n3. Hypothyroidism is followed on the established regimen. Continue the care plan and report any new symptoms.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-07-29",
+      "pages": [
+        "PROGRESS NOTE\nDate: 07/29/2026\nPatient Name: Wendy Morris\nDOB: 05/06/1965\nMRN: MRN-63934\nProvider: Dr. Peter Ross\n\nSUBJECTIVE:\nWendy Morris is a 61-year-old woman with persistent high blood pressure despite consistent use of prescribed treatment. She has not seen sustained improvement and denies recent changes in her health.\n\nVITALS:\nBP 151/83, HR 70, RR 13, SpO2 94% on room air, weight 220 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Essential hypertension remains persistently elevated despite reported adherence to prescribed treatment. Place a referral to cardiology for further evaluation and recommendations. Continue to monitor blood pressure and adherence.\n2. Type 2 diabetes mellitus. No recent health changes reported. Continue established care and routine follow-up.\n3. Hypothyroidism. No recent health changes reported. Continue established care and routine follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-07-29",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 07/29/2026\nPatient Name: Wendy Morris\nDOB: 05/06/1965\nMRN: MRN-63934\n\nLisinopril 40 mg by mouth once daily\nAmlodipine 10 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-30",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/30/2026\nPatient Name: Wendy Morris\nDOB: 05/06/1965\nMRN: MRN-63934\nOrdering provider: Dr. Peter Ross\n\nFindings: Normal sinus rhythm at 75 bpm. Normal axis. PR interval 172 ms, QRS 89 ms, QTc 416 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-06-16",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 06/16/2026\nPatient Name: Wendy Morris\nDOB: 05/06/1965\nMRN: MRN-63934\nOrdering provider: Dr. Peter Ross\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-24",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/24/2026\nPatient Name: Wendy Morris\nDOB: 05/06/1965\nMRN: MRN-63934\nOrdering provider: Dr. Peter Ross\n\nLIPID PANEL\nTotal Cholesterol: 192 mg/dL\nLDL Cholesterol: 101 mg/dL\nHDL Cholesterol: 64 mg/dL\nTriglycerides: 138 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 98 mmol/L\nCO2: 28 mmol/L\nBUN: 30 mg/dL (H)\nCreatinine: 1.5 mg/dL (H)\nGlucose: 95 mg/dL\nCalcium: 9.6 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of persistently elevated blood pressure despite treatment."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 40 mg by mouth once daily\nAmlodipine 10 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 75 bpm. Normal axis. PR interval 172 ms, QRS 89 ms, QTc 416 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 192 mg/dL\nLDL Cholesterol: 101 mg/dL\nHDL Cholesterol: 64 mg/dL\nTriglycerides: 138 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 98 mmol/L\nCO2: 28 mmol/L\nBUN: 30 mg/dL (H)\nCreatinine: 1.5 mg/dL (H)\nGlucose: 95 mg/dL\nCalcium: 9.6 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2319,
+  "output_tokens": 1770
+}

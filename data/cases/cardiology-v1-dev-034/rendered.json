@@ -1,0 +1,221 @@
+{
+  "case_id": "cardiology-v1-dev-034",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-11",
+  "plan": {
+    "case_id": "cardiology-v1-dev-034",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Diane",
+    "last_name": "Miller",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism",
+      "Osteoarthritis"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "losartan",
+        "dose": 100.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of persistently elevated blood pressure despite treatment.",
+    "history": "Diane Miller is a 78-year-old woman whose blood pressure has remained high despite taking amlodipine and losartan. She reports taking both as directed and has not noticed a recent change in her routine.",
+    "referring_physician": "Dr. William Parker",
+    "practice": "Townsend Family Practice",
+    "sex": "female",
+    "age": 78,
+    "dob": "1948-05-21",
+    "mrn": "MRN-70977"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-11",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/11/2026\nPatient Name: Diane Miller\nDOB: 05/21/1948\nMRN: MRN-70977\n\nTo: Cardiology Clinic Intake\nFrom: Dr. William Parker, Townsend Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of persistently elevated blood pressure despite treatment.\n\nDiane Miller is a 78-year-old woman with hypertension, type 2 diabetes mellitus, hypothyroidism, and osteoarthritis. Her blood pressure has remained elevated despite prescribed treatment. She reports taking it as directed and has had no recent change in her routine.\n\nPlease evaluate her persistent blood pressure elevation and advise on further management.\n\nThank you for seeing this patient.\n\nDr. William Parker\nTownsend Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-04-07",
+      "pages": [
+        "PROGRESS NOTE\nDate: 04/07/2026\nPatient Name: Diane Miller\nDOB: 05/21/1948\nMRN: MRN-70977\nProvider: Dr. William Parker\n\nSUBJECTIVE:\nDiane Miller is a 78-year-old woman seen for routine follow-up of hypertension, type 2 diabetes, hypothyroidism, and osteoarthritis. She reports feeling well overall and remains active with her usual activities. She is following her established care plan and has no new concerns.\n\nVITALS:\nBP 152/93, HR 66, RR 18, SpO2 99% on room air, weight 148 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue the established care plan and periodic home monitoring.\n2. Type 2 diabetes is stable by history. Continue dietary guidance and ongoing self-management.\n3. Hypothyroidism is stable by history. Continue the established care plan and routine follow-up.\n4. Osteoarthritis is manageable. Continue pacing and low-impact activity as tolerated.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-08",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/08/2026\nPatient Name: Diane Miller\nDOB: 05/21/1948\nMRN: MRN-70977\nProvider: Dr. William Parker\n\nSUBJECTIVE:\nDiane Miller is a 78-year-old woman with persistently elevated blood pressure despite taking both prescribed agents as directed. She reports no recent change in her routine. Her history includes type 2 diabetes, hypothyroidism, and osteoarthritis.\n\nVITALS:\nBP 127/94, HR 87, RR 16, SpO2 95% on room air, weight 120 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nBMP: Na 139, K 4.5, Cl 104, CO2 27, BUN 13, Cr 0.7, Glu 102.\n\nASSESSMENT AND PLAN:\n1. Hypertension remains above goal despite adherence to prescribed treatment. Refer to cardiology for evaluation and recommendations.\n2. Type 2 diabetes mellitus. Continue routine management and follow-up.\n3. Hypothyroidism. Continue routine management and follow-up.\n4. Osteoarthritis. Continue supportive care and follow-up as needed.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-08",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/08/2026\nPatient Name: Diane Miller\nDOB: 05/21/1948\nMRN: MRN-70977\n\nAmlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-10",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/10/2026\nPatient Name: Diane Miller\nDOB: 05/21/1948\nMRN: MRN-70977\nOrdering provider: Dr. William Parker\n\nFindings: Sinus bradycardia at 51 bpm. Normal axis. PR interval 180 ms, QRS 108 ms, QTc 415 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-08-19",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/19/2026\nPatient Name: Diane Miller\nDOB: 05/21/1948\nMRN: MRN-70977\nOrdering provider: Dr. William Parker\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-07",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/07/2026\nPatient Name: Diane Miller\nDOB: 05/21/1948\nMRN: MRN-70977\nOrdering provider: Dr. William Parker\n\nLIPID PANEL\nTotal Cholesterol: 133 mg/dL\nLDL Cholesterol: 70 mg/dL\nHDL Cholesterol: 42 mg/dL\nTriglycerides: 107 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of persistently elevated blood pressure despite treatment."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "BMP: Na 139, K 4.5, Cl 104, CO2 27, BUN 13, Cr 0.7, Glu 102."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 51 bpm. Normal axis. PR interval 180 ms, QRS 108 ms, QTc 415 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 133 mg/dL\nLDL Cholesterol: 70 mg/dL\nHDL Cholesterol: 42 mg/dL\nTriglycerides: 107 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2311,
+  "output_tokens": 1725
+}

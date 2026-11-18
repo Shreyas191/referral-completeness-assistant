@@ -1,0 +1,181 @@
+{
+  "case_id": "cardiology-v1-dev-010",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-02",
+  "plan": {
+    "case_id": "cardiology-v1-dev-010",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": "omit"
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "omit"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Fiona",
+    "last_name": "Sullivan",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol tartrate",
+        "dose": 25.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of an irregular pulse noted during a routine visit.",
+    "history": "A 55-year-old woman was noted to have an irregular pulse during a routine visit with her primary care clinician. She reports occasional brief awareness of a skipped beat but denies fainting, chest discomfort, or shortness of breath.",
+    "referring_physician": "Dr. Frank Avery",
+    "practice": "Juniper Family Practice",
+    "sex": "female",
+    "age": 55,
+    "dob": "1971-09-01",
+    "mrn": "MRN-52702"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-02",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/02/2026\nPatient Name: Fiona Sullivan\nDOB: 09/01/1971\nMRN: MRN-52702\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Frank Avery, Juniper Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of an irregular pulse noted during a routine visit.\n\nFiona Sullivan is a 55-year-old woman with atrial fibrillation, hypertension, and hypothyroidism. An irregular pulse was noted during a routine visit at Juniper Family Practice.\n\nShe reports occasional brief awareness of a skipped beat but denies fainting, chest discomfort, or shortness of breath. I would appreciate your evaluation of the irregular pulse and recommendations for further management.\n\nPatient is on warfarin.\n\nThank you for seeing this patient.\n\nDr. Frank Avery\nJuniper Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-30",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/30/2026\nPatient Name: Fiona Sullivan\nDOB: 09/01/1971\nMRN: MRN-52702\nOrdering provider: Dr. Frank Avery\n\nFindings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 146 ms, QRS 81 ms, QTc 410 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-18",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/18/2026\nPatient Name: Fiona Sullivan\nDOB: 09/01/1971\nMRN: MRN-52702\nOrdering provider: Dr. Frank Avery\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 35%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-23",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/23/2026\nPatient Name: Fiona Sullivan\nDOB: 09/01/1971\nMRN: MRN-52702\nOrdering provider: Dr. Frank Avery\n\nLIPID PANEL\nTotal Cholesterol: 162 mg/dL\nLDL Cholesterol: 110 mg/dL\nHDL Cholesterol: 35 mg/dL (L)\nTriglycerides: 89 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 102 mmol/L\nCO2: 25 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 85 mg/dL\nCalcium: 9.3 mg/dL\n\nCOAGULATION\nProthrombin Time: 36.0 sec\nINR: 3.2\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of an irregular pulse noted during a routine visit."
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 146 ms, QRS 81 ms, QTc 410 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 35%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 162 mg/dL\nLDL Cholesterol: 110 mg/dL\nHDL Cholesterol: 35 mg/dL (L)\nTriglycerides: 89 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 102 mmol/L\nCO2: 25 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 85 mg/dL\nCalcium: 9.3 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 36.0 sec\nINR: 3.2"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "missing",
+    "progress_note": "missing",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 2,
+  "input_tokens": 1354,
+  "output_tokens": 1080
+}

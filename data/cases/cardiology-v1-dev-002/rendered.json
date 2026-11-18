@@ -1,0 +1,241 @@
+{
+  "case_id": "cardiology-v1-dev-002",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-17",
+  "plan": {
+    "case_id": "cardiology-v1-dev-002",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Grace",
+    "last_name": "Reed",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol succinate",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of chest pressure with exertion.",
+    "history": "She reports intermittent chest pressure when walking briskly or climbing stairs, which improves after she rests. Symptoms have occurred for several weeks and have led her to limit exertion.",
+    "referring_physician": "Dr. Thomas Carter",
+    "practice": "Harbor Family Practice",
+    "sex": "female",
+    "age": 49,
+    "dob": "1977-03-01",
+    "mrn": "MRN-60473"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-17",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/17/2026\nPatient Name: Grace Reed\nDOB: 03/01/1977\nMRN: MRN-60473\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Thomas Carter, Harbor Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of chest pressure with exertion.\n\nGrace Reed is a 49-year-old woman with atrial fibrillation, hypertension, and type 2 diabetes mellitus. For several weeks, she has experienced intermittent chest pressure when walking briskly or climbing stairs. It improves with rest and has led her to limit exertion.\n\nPlease evaluate her exertional chest pressure and advise on further care.\n\nThank you for seeing this patient.\n\nDr. Thomas Carter\nHarbor Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2025-10-28",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/28/2025\nPatient Name: Grace Reed\nDOB: 03/01/1977\nMRN: MRN-60473\nProvider: Dr. Thomas Carter\n\nSUBJECTIVE:\nGrace Reed is a 49-year-old woman seen for routine follow-up. She reports overall stability and good adherence to her treatment plan. She continues to work on diet and activity.\n\nVITALS:\nBP 118/75, HR 63, RR 12, SpO2 94% on room air, weight 217 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Atrial fibrillation is stable by history. Continue established management and stroke-risk reduction strategy. Report any change in symptoms.\n2. Hypertension is stable by history. Continue the established treatment plan and dietary measures; track blood pressure at home.\n3. Type 2 diabetes mellitus remains under ongoing management. Continue the established treatment plan and nutrition and activity efforts; maintain routine follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-04-26",
+      "pages": [
+        "PROGRESS NOTE\nDate: 04/26/2026\nPatient Name: Grace Reed\nDOB: 03/01/1977\nMRN: MRN-60473\nProvider: Dr. Thomas Carter\n\nSUBJECTIVE:\nGrace Reed is a 49-year-old woman seen for routine follow-up. She reports overall stability and good adherence to prescribed treatment. No new concerns.\n\nVITALS:\nBP 138/77, HR 79, RR 18, SpO2 94% on room air, weight 161 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Atrial fibrillation: Stable by history. Continue prescribed treatment and monitor for new symptoms.\n2. Hypertension: Stable by history. Continue prescribed treatment and routine home monitoring.\n3. Type 2 diabetes mellitus: Continue prescribed treatment and dietary measures. Reinforce routine foot care and ongoing follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_3",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-29",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/29/2026\nPatient Name: Grace Reed\nDOB: 03/01/1977\nMRN: MRN-60473\nProvider: Dr. Thomas Carter\n\nSUBJECTIVE:\nGrace Reed is a 49-year-old woman with atrial fibrillation, hypertension, and type 2 diabetes who reports intermittent chest pressure with brisk walking or climbing stairs for several weeks. The pressure improves with rest and has led her to limit exertion.\n\nVITALS:\nBP 140/79, HR 62, RR 12, SpO2 96% on room air, weight 153 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Exertional chest pressure. Symptoms improve with rest and are limiting activity. Cardiology referral placed for further evaluation. Advised not to push through symptoms and to seek urgent care for persistent or worsening pressure, symptoms at rest, or associated shortness of breath or fainting.\n2. Atrial fibrillation. Known history. Coordinate ongoing care with cardiology during evaluation of exertional symptoms.\n3. Hypertension. Continue routine follow-up and management with established care team.\n4. Type 2 diabetes mellitus. Continue routine follow-up and management with established care team.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-29",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/29/2026\nPatient Name: Grace Reed\nDOB: 03/01/1977\nMRN: MRN-60473\n\nMetoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-06",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/06/2026\nPatient Name: Grace Reed\nDOB: 03/01/1977\nMRN: MRN-60473\nOrdering provider: Dr. Thomas Carter\n\nFindings: Sinus rhythm with occasional premature atrial complexes at 64 bpm. Normal axis. PR interval 166 ms, QRS 97 ms, QTc 451 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-02",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/02/2026\nPatient Name: Grace Reed\nDOB: 03/01/1977\nMRN: MRN-60473\nOrdering provider: Dr. Thomas Carter\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-27",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/27/2026\nPatient Name: Grace Reed\nDOB: 03/01/1977\nMRN: MRN-60473\nOrdering provider: Dr. Thomas Carter\n\nLIPID PANEL\nTotal Cholesterol: 203 mg/dL (H)\nLDL Cholesterol: 118 mg/dL\nHDL Cholesterol: 56 mg/dL\nTriglycerides: 148 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 3.6 mmol/L\nChloride: 101 mmol/L\nCO2: 24 mmol/L\nBUN: 9 mg/dL\nCreatinine: 1.2 mg/dL\nGlucose: 96 mg/dL\nCalcium: 9.8 mg/dL\n\nCOAGULATION\nProthrombin Time: 35.3 sec\nINR: 3.1\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of chest pressure with exertion."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_3",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 64 bpm. Normal axis. PR interval 166 ms, QRS 97 ms, QTc 451 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 203 mg/dL (H)\nLDL Cholesterol: 118 mg/dL\nHDL Cholesterol: 56 mg/dL\nTriglycerides: 148 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 3.6 mmol/L\nChloride: 101 mmol/L\nCO2: 24 mmol/L\nBUN: 9 mg/dL\nCreatinine: 1.2 mg/dL\nGlucose: 96 mg/dL\nCalcium: 9.8 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 35.3 sec\nINR: 3.1"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 5,
+  "input_tokens": 2754,
+  "output_tokens": 2596
+}

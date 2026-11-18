@@ -1,0 +1,101 @@
+{
+  "case_id": "cardiology-v1-dev-022",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-09",
+  "split": "dev",
+  "slices": [
+    "buried",
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of a recent episode of fainting with transient loss of\nconsciousness."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 71 bpm. Normal axis. PR interval 174 ms, QRS 94 ms, QTc\n405 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary",
+          "page": 11,
+          "text": "Fasting lipid panel this admission: total cholesterol: 225 mg/dL, LDL: 131 mg/dL, HDL: 44\nmg/dL, triglycerides: 254 mg/dL."
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report_1",
+          "page": 1,
+          "text": "BASIC METABOLICPANEL\nSodium: 135 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 104 mmol/L\nCO2: 23 mmol/L\nBUN: 14 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 160 mg/dL (H)\nCalcium: 9.9 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Metoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "lab_report_2",
+          "page": 1,
+          "text": "COAGULATION\nProthrombin Time: 28.2 sec\nINR: 2.5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "case_id": "cardiology-v1-dev-025",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-26",
+  "plan": {
+    "case_id": "cardiology-v1-dev-025",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "bury"
+      },
+      {
+        "item_id": "lipids",
+        "defect": "omit"
+      },
+      {
+        "item_id": "bmp",
+        "defect": "omit"
+      },
+      {
+        "item_id": "meds",
+        "defect": "omit"
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Thomas",
+    "last_name": "Fowler",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of persistent fatigue with a strong family history of early heart disease.",
+    "history": "He reports several months of reduced energy that limits his usual activities. His father had a heart attack in his early 50s, and his older brother developed heart disease before age 55.",
+    "referring_physician": "Dr. Alan Carter",
+    "practice": "TriCounty Medical Practice",
+    "sex": "male",
+    "age": 84,
+    "dob": "1942-06-19",
+    "mrn": "MRN-43830"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-26",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/26/2026\nPatient Name: Thomas Fowler\nDOB: 06/19/1942\nMRN: MRN-43830\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Alan Carter, TriCounty Medical Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of persistent fatigue with a strong family history of early heart disease.\n\nThomas Fowler is an 84-year-old man followed at TriCounty Medical Practice. His history includes hypertension, type 2 diabetes mellitus, and hypothyroidism. For several months, he has had reduced energy that limits his usual activities.\n\nHis father had a heart attack in his early 50s, and his older brother developed heart disease before age 55. I would appreciate your assessment of his persistent fatigue in light of this strong family history of early heart disease.\n\nThank you for seeing this patient.\n\nDr. Alan Carter\nTriCounty Medical Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-05-24",
+      "pages": [
+        "PROGRESS NOTE\nDate: 05/24/2026\nPatient Name: Thomas Fowler\nDOB: 06/19/1942\nMRN: MRN-43830\nProvider: Dr. Alan Carter\n\nSUBJECTIVE:\nThomas Fowler returns for routine follow-up of hypertension, type 2 diabetes, and hypothyroidism. He reports taking his established treatment consistently and has no new concerns.\n\nVITALS:\nBP 143/81, HR 87, RR 14, SpO2 98% on room air, weight 163 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue established treatment, track blood pressure at home, limit dietary salt, and remain physically active.\n2. Type 2 diabetes is stable by history. Continue the established care plan, follow a balanced meal plan, stay active, and track glucose at home.\n3. Hypothyroidism is stable by history. Continue established treatment and report new fatigue, cold intolerance, or bowel changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-11-04",
+      "pages": [
+        "PROGRESS NOTE\nDate: 11/04/2026\nPatient Name: Thomas Fowler\nDOB: 06/19/1942\nMRN: MRN-43830\nProvider: Dr. Alan Carter\n\nSUBJECTIVE:\nThomas Fowler is an 84-year-old man who reports several months of reduced energy limiting his usual activities. His father had a heart attack in his early 50s, and his older brother developed heart disease before age 55.\n\nVITALS:\nBP 121/85, HR 73, RR 15, SpO2 98% on room air, weight 149 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Persistent fatigue with a strong family history of early heart disease. Will send a referral to cardiology for evaluation.\n2. Hypertension. Continue ongoing management and follow-up.\n3. Type 2 diabetes mellitus. Continue ongoing management and follow-up.\n4. Hypothyroidism. Continue ongoing management and follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-16",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/16/2026\nPatient Name: Thomas Fowler\nDOB: 06/19/1942\nMRN: MRN-43830\nOrdering provider: Dr. Alan Carter\n\nFindings: Sinus rhythm with occasional premature atrial complexes at 84 bpm. Normal axis. PR interval 180 ms, QRS 81 ms, QTc 459 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-18",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/18/2026\nPatient Name: Thomas Fowler\nDOB: 06/19/1942\nMRN: MRN-43830\nAttending: Dr. Alan Carter\n\nADMISSION DIAGNOSIS:\nThomas Fowler, an 84-year-old male, was admitted for acute diverticulitis with abdominal discomfort and reduced appetite. The working diagnosis was based on his symptoms and the overall clinical assessment. His illness was managed without an operation. At admission, the care team reviewed his known hypertension, type 2 diabetes mellitus, and hypothyroidism as part of planning supportive care. The immediate goals were to reduce abdominal symptoms, maintain hydration, and observe for any worsening or complication. He was able to participate in discussion of the plan, and his family was kept informed with his permission. The admission was limited to treatment of the acute intestinal illness and coordination of a safe transition home. No calendar dates, medication names, test names, or numerical results are included in this summary. The course described below reflects a gradual response to nonoperative care.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 2 of 12\n\nPRESENTING HISTORY:\nMr. Fowler came to the hospital after developing abdominal discomfort with decreased appetite. The symptoms raised concern for an acute intestinal process, and diverticulitis was selected as the admission diagnosis after clinical review. He reported no need for an operation during this admission, and the team pursued conservative treatment. The history available at admission included hypertension, type 2 diabetes mellitus, and hypothyroidism. These chronic conditions were considered when choosing the level of observation and planning dietary advancement. The patient and family were asked about his usual eating pattern, ability to manage daily needs, and available help at home. No calendar date, named medication, laboratory value, diagnostic test, or imaging finding is documented here. This account is limited to the information needed to explain the admission and subsequent hospital course, without including physical examination findings or vital signs.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 3 of 12\n\nRELEVANT MEDICAL HISTORY:\nHis medical history is notable for hypertension, type 2 diabetes mellitus, and hypothyroidism. These conditions were recognized during the admission and incorporated into the overall care plan. No additional chronic condition is required to explain the hospital stay. The patient’s baseline ability to eat, drink, and manage routine activities was reviewed with him and his family so that discharge planning could begin early. The team also considered whether the acute abdominal illness would interfere with his usual approach to chronic disease care. Chronic conditions were followed within the scope of the inpatient stay, with plans for ongoing management through his established outpatient clinicians. No medication names, doses, laboratory values, or diagnostic test results are stated. This summary does not include a physical examination or vital signs. The main reason for hospitalization remained diverticulitis, which improved with nonsurgical treatment and supportive care.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 4 of 12\n\nINITIAL MANAGEMENT:\nThe team began conservative treatment focused on bowel rest, hydration, symptom relief, and observation. Antimicrobial therapy was included as part of the treatment plan, without a need for an operation. Mr. Fowler was encouraged to report changes in pain, appetite, or ability to take fluids. Nursing staff supported comfort and assisted with routine needs while the team reassessed his progress over the course of the admission. His chronic hypertension, type 2 diabetes mellitus, and hypothyroidism were considered during care planning, and continuation of chronic disease management was coordinated with the appropriate inpatient team. The patient and family received an explanation of the expected course and the reasons for continued observation. No medication names, doses, named tests, imaging findings, numerical results, physical examination findings, or vital signs are included in this account.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 5 of 12\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Fowler remained under observation for diverticulitis and received conservative care. The focus was on comfort, hydration, and limiting intestinal strain while his symptoms were active. He was asked to report whether abdominal discomfort was changing and whether he could tolerate fluids. The care team reviewed the plan with him and answered questions about the expected recovery. His appetite remained reduced early in the course, so food intake was advanced cautiously rather than forced. The possibility of operative treatment was considered in the context of his overall progress, but there was no indication to proceed with surgery during this admission. His chronic conditions remained part of the care plan. No physical examination findings, vital signs, medication names, named tests, imaging results, or numerical values are provided in this daily account.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 6 of 12\n\nHOSPITAL COURSE, DAY TWO:\nBy the second hospital day, Mr. Fowler described improvement in his abdominal discomfort and was able to take fluids with less difficulty. Conservative treatment continued, with attention to hydration, comfort, and gradual return to oral intake. The team reviewed his progress and continued observation for a change that might require a different approach. No such change led to an operation during this stay. He and his family discussed the role of a gradual diet progression and the importance of reporting recurrent or worsening symptoms. His hypertension, type 2 diabetes mellitus, and hypothyroidism were kept in view as discharge planning proceeded. The patient remained engaged in decisions and understood that improvement should continue after leaving the hospital. This account does not include physical examination findings, vital signs, medication names, doses, named tests, imaging findings, or numerical results.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 7 of 12\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, Mr. Fowler continued to report overall improvement and tolerated oral intake sufficiently to support transition away from inpatient care. His abdominal symptoms were less disruptive, and he was able to discuss a practical plan for meals and fluids at home. The team concluded that continued nonsurgical management was appropriate. There was no operation during the admission. Discharge planning included review of warning symptoms, support available at home, and follow-up with his established clinicians. His chronic conditions were included in the handoff plan so they would remain part of routine care after discharge. The patient and family had an opportunity to ask questions and expressed understanding of the next steps. No physical examination findings, vital signs, medication names, named tests, imaging results, or numerical values are included in this hospital-day summary.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 8 of 12\n\nCONSULTATIONS:\nThe general surgery service reviewed the case and agreed that nonoperative management was appropriate while Mr. Fowler continued to improve. Their input supported ongoing observation and conservative treatment rather than an operation. The inpatient team coordinated care around the shared plan and kept the patient and family informed about what changes would require reassessment. No procedural intervention was recommended during the stay. Other members of the care team assisted with nutrition planning, mobility as tolerated, and preparation for a safe return home. The patient’s chronic hypertension, type 2 diabetes mellitus, and hypothyroidism were considered in discharge coordination, with routine ongoing care left to his established clinicians. No medication names, doses, named tests, imaging findings, numerical results, physical examination findings, or vital signs are recorded in this section. The consultation process did not alter the conclusion that he could recover without surgery.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 9 of 12\n\nPROCEDURES:\nNo operative procedure was performed during this admission. Mr. Fowler’s diverticulitis was managed with conservative measures, observation, hydration, symptom relief, and antimicrobial therapy. The decision to avoid surgery was consistent with his improving symptoms and the recommendations of the general surgery service. No invasive intervention was required to support the inpatient course. Care focused on allowing a gradual return to oral intake and maintaining a safe level of comfort while discharge arrangements were completed. The patient and family were informed that no procedure had been undertaken and were given guidance on seeking reassessment if symptoms returned or worsened. This section contains no named medication, dose, diagnostic test, imaging result, numerical value, physical examination finding, or vital sign. His recovery plan remained centered on supportive care and continued follow-up after leaving the hospital.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 10 of 12\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Fowler had improved abdominal symptoms and was taking fluids and food sufficiently to continue recovery at home. He did not require an operation during the admission. He was considered appropriate for discharge with family support and instructions for a gradual return to his usual routine. The patient understood that improvement may continue over several days and that a recurrence or worsening of symptoms should prompt contact with a clinician. His hypertension, type 2 diabetes mellitus, and hypothyroidism remained relevant chronic conditions for routine outpatient management. No physical examination findings or vital signs are included in this summary. No named medication, dose, test, imaging finding, laboratory value, or calendar date is stated. The discharge decision was based on his overall progress, ability to manage oral intake, and the availability of a follow-up plan.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 11 of 12\n\nDISCHARGE INSTRUCTIONS:\nMr. Fowler was advised to advance his diet gradually as tolerated and maintain regular fluid intake. He should avoid foods that clearly worsen his symptoms during the early recovery period and return to his usual eating pattern as comfort allows. He was asked to rest as needed while resuming ordinary activity in stages. He should seek prompt medical attention for worsening abdominal pain, persistent inability to eat or drink, repeated vomiting, new fever, faintness, or any other marked change. He and his family were instructed to contact his established care team if recovery does not continue as expected. Chronic care for hypertension, type 2 diabetes mellitus, and hypothyroidism should continue through the existing care plan. No medication names, doses, or changes are provided in this summary. The patient and family confirmed understanding of these instructions before leaving the hospital.\n\nTransthoracic echo this admission: LVEF 30%. Mild left atrial enlargement. Severely reduced left ventricular systolic function.\n",
+        "Thomas Fowler | MRN-43830 | Discharge summary | Page 12 of 12\n\nFOLLOW-UP:\nMr. Fowler should arrange follow-up with his established primary care clinician after discharge to review recovery from diverticulitis and continue routine care of hypertension, type 2 diabetes mellitus, and hypothyroidism. He should also follow any guidance provided by the general surgery service if symptoms recur or if further review is advised. The timing should be coordinated with his outpatient clinicians based on his progress and access to care. He should bring a summary of the hospitalization to those appointments and describe any ongoing abdominal discomfort, changes in appetite, or difficulty maintaining fluids. His family may assist with arranging transportation and keeping track of follow-up plans. If symptoms worsen before a scheduled appointment, he should seek prompt medical attention rather than wait. No calendar date, medication name, dose, test, imaging result, or numerical value is included. The plan is for continued recovery at home without an operation.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of persistent fatigue with a strong family history of early heart disease."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 84 bpm. Normal axis. PR interval 180 ms, QRS 81 ms, QTc 459 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "discharge_summary",
+      "page": 11,
+      "text": "Transthoracic echo this admission: LVEF 30%. Mild left atrial enlargement. Severely reduced left ventricular systolic function."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "missing",
+    "bmp": "missing",
+    "meds": "missing",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 5,
+  "input_tokens": 2796,
+  "output_tokens": 4876
+}

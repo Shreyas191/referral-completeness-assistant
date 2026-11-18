@@ -1,0 +1,95 @@
+{
+  "case_id": "cardiology-v1-dev-033",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-16",
+  "split": "dev",
+  "slices": [
+    "buried",
+    "contradiction",
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of progressiveleg swelling and breathlessness concerning\nfor possible heart failure."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 55 bpm. Normalaxis. PR interval 176 ms, QRS 92 ms, QTc 446\nms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n50%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary",
+          "page": 11,
+          "text": "Fasting lipid panel this admission: total cholesterol: 262 mg/dL, LDL: 176 mg/dL, HDL: 41\nmg/dL, triglycerides: 229 mg/dL."
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Most recent potassium is 3.2 mmol/L."
+        },
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 138 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 99 mmol/L\nCO2: 26 mmol/L\nBUN: 16 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 80 mg/dL\nCalcium: 10.2 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nFurosemide 20 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

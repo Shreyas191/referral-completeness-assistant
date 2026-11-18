@@ -1,0 +1,105 @@
+{
+  "case_id": "cardiology-v1-dev-023",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-26",
+  "split": "dev",
+  "slices": [
+    "abbreviation",
+    "contradiction"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of breathlessness on exertion."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 56 bpm. Normal axis. PR interval 198 ms, QRS 97 ms, QTc 453\nms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n30%. Grade 1 diasttolic dysfunction. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "Lipids: TC 214, LDL 136, HDL 44, TG 173."
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "Most recent potassium is 3.2 mmol/L."
+        },
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 5.1 mmol/L (H)\nChloride: 99 mmol/L\nCO2: 24 mmol/L\nBUN: 15 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 121 mg/dL (H)\nCalcium: 9.0 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Metformin 500 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nAmlodipine 5 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterallly.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

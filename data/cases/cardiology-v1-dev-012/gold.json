@@ -1,0 +1,97 @@
+{
+  "case_id": "cardiology-v1-dev-012",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-02",
+  "split": "dev",
+  "slices": [
+    "abbreviation",
+    "buried",
+    "contradiction",
+    "missing",
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of breathlessness on exertion in an 83-year-old man."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 62 bpm. Normal axis. PR interval 144 ms, QRS 81 ms, QTc\n428 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "Lipids: TC 189, LDL 103, HDL 43, TG 218."
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary",
+          "page": 11,
+          "text": "Basic metabolic panel on discharge: sodium: 134 mmol/L, potassium: 5.1 mmol/L, creatinine:\n1.4 mg/dL, BUN: 27 mg/dL, glucose: 118 mg/dL."
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "Continue tiotropium 36 mcg oncc daily."
+        },
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twicc daily\nTiotropium 18 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rae and rhythm, normalS1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "case_id": "cardiology-v1-dev-036",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-01",
+  "plan": {
+    "case_id": "cardiology-v1-dev-036",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": "omit"
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "omit"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Linda",
+    "last_name": "Miller",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Osteoarthritis"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "losartan",
+        "dose": 100.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "chlorthalidone",
+        "dose": 25.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of persistently high blood pressure despite treatment.",
+    "history": "Linda Miller is a 77-year-old woman whose blood pressure has remained high despite taking several prescribed agents. She reports taking them regularly and is concerned that her readings have not improved. She denies recent changes in her health.",
+    "referring_physician": "Dr. Kevin Ellis",
+    "practice": "Pinecrest Family Practice",
+    "sex": "female",
+    "age": 77,
+    "dob": "1949-09-24",
+    "mrn": "MRN-81050"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-01",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/01/2026\nPatient Name: Linda Miller\nDOB: 09/24/1949\nMRN: MRN-81050\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Kevin Ellis, Pinecrest Family Practice\n\nDear Colleague,\n\nLinda Miller is a 77-year-old woman followed at Pinecrest Family Practice. Her history includes hypertension, type 2 diabetes mellitus, and osteoarthritis.\n\nThank you for including her in your clinic’s care. Our office can provide additional background as needed.\n\nThank you for seeing this patient.\n\nDr. Kevin Ellis\nPinecrest Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-21",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/21/2026\nPatient Name: Linda Miller\nDOB: 09/24/1949\nMRN: MRN-81050\n\nAmlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-27",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/27/2026\nPatient Name: Linda Miller\nDOB: 09/24/1949\nMRN: MRN-81050\nOrdering provider: Dr. Kevin Ellis\n\nFindings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 181 ms, QRS 84 ms, QTc 407 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-28",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/28/2026\nPatient Name: Linda Miller\nDOB: 09/24/1949\nMRN: MRN-81050\nOrdering provider: Dr. Kevin Ellis\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 40%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-24",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/24/2026\nPatient Name: Linda Miller\nDOB: 09/24/1949\nMRN: MRN-81050\nOrdering provider: Dr. Kevin Ellis\n\nLIPID PANEL\nTotal Cholesterol: 227 mg/dL (H)\nLDL Cholesterol: 142 mg/dL (H)\nHDL Cholesterol: 41 mg/dL\nTriglycerides: 222 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 102 mmol/L\nCO2: 25 mmol/L\nBUN: 20 mg/dL\nCreatinine: 0.8 mg/dL\nGlucose: 148 mg/dL (H)\nCalcium: 8.9 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 181 ms, QRS 84 ms, QTc 407 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 40%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 227 mg/dL (H)\nLDL Cholesterol: 142 mg/dL (H)\nHDL Cholesterol: 41 mg/dL\nTriglycerides: 222 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 102 mmol/L\nCO2: 25 mmol/L\nBUN: 20 mg/dL\nCreatinine: 0.8 mg/dL\nGlucose: 148 mg/dL (H)\nCalcium: 8.9 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "missing",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "missing",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 2,
+  "input_tokens": 1305,
+  "output_tokens": 832
+}

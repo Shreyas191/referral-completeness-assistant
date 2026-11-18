@@ -8,6 +8,17 @@ One command does everything, reusing any case already rendered (so a rebuild cos
 python -m datagen.build --checklist cardiology-v1 --n 5 --seed 0 --split dev   # --noise 0 for clean text
 ```
 
+The splits (issue #10) use `--quota`, which picks plans so the split matches the dataset mix exactly:
+
+```bash
+python -m datagen.build --checklist cardiology-v1 --n 40  --seed 10 --split dev  --quota            # committed
+python -m datagen.build --checklist cardiology-v1 --n 110 --seed 20 --split test --quota --out data/test_cases
+```
+
+Dev cases (`data/cases/cardiology-v1-dev-*`) are committed. Test cases go to `data/test_cases/`, which is
+gitignored and must not be run before the freeze; the final run passes `--cases-dir data/test_cases`. Each
+case folder carries its `rendered.json`, so PDFs and gold can be rebuilt without the API.
+
 1. **Patient profile:** written by the LLM (`render.py`). Code fixes age, sex, DOB, MRN, the presenting
    problem and name initials, so cases differ and identities are exact. (Synthea was dropped for time.)
 2. **Defect plan:** `defect_plan.py` picks which items to omit, contradict, make stale, bury past page 10,

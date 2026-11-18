@@ -1,0 +1,220 @@
+{
+  "case_id": "cardiology-v1-dev-023",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-26",
+  "plan": {
+    "case_id": "cardiology-v1-dev-023",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "bmp",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Fiona",
+    "last_name": "Turner",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Osteoarthritis"
+    ],
+    "medications": [
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "amlodipine",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion.",
+    "history": "Fiona Turner is a 68-year-old woman with gradually increasing breathlessness when walking uphill or climbing stairs over the past three months. She denies breathlessness at rest and reports no recent respiratory illness. Her symptoms now limit her usual walks.",
+    "referring_physician": "Dr. Evan Smith",
+    "practice": "Kensington Family Practice",
+    "sex": "female",
+    "age": 68,
+    "dob": "1958-06-22",
+    "mrn": "MRN-63292"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-26",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/26/2026\nPatient Name: Fiona Turner\nDOB: 06/22/1958\nMRN: MRN-63292\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Evan Smith, Kensington Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion.\n\nFiona Turner is a 68-year-old woman at Kensington Family Practice with hypertension, type 2 diabetes mellitus, and osteoarthritis.\n\nOver the past three months, she has developed gradually increasing breathlessness when walking uphill or climbing stairs. This now limits her usual walks. She denies breathlessness at rest and reports no recent respiratory illness.\n\nI am writing to request cardiology assessment of her breathlessness on exertion.\n\nThank you for seeing this patient.\n\nDr. Evan Smith\nKensington Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-04-23",
+      "pages": [
+        "PROGRESS NOTE\nDate: 04/23/2026\nPatient Name: Fiona Turner\nDOB: 06/22/1958\nMRN: MRN-63292\nProvider: Dr. Evan Smith\n\nSUBJECTIVE:\nFiona Turner is a 68-year-old woman returning for routine follow-up. She reports doing well overall and feels her chronic conditions have remained stable. She is working on balanced meals and regular activity.\n\nVITALS:\nBP 124/69, HR 59, RR 16, SpO2 97% on room air, weight 152 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue the established care plan, limit dietary salt, and maintain regular activity. Follow up routinely.\n2. Type 2 diabetes mellitus is stable by history. Continue the nutrition and activity plan and maintain routine follow-up.\n3. Osteoarthritis remains manageable. Encourage low-impact activity, pacing, and joint-protection measures.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-11-11",
+      "pages": [
+        "PROGRESS NOTE\nDate: 11/11/2026\nPatient Name: Fiona Turner\nDOB: 06/22/1958\nMRN: MRN-63292\nProvider: Dr. Evan Smith\n\nSUBJECTIVE:\nFiona Turner is a 68-year-old woman with gradually worsening breathlessness when walking uphill or climbing stairs over the past three months. She denies breathlessness at rest and reports no recent respiratory illness. Symptoms now limit her usual walks.\n\nVITALS:\nBP 148/84, HR 63, RR 13, SpO2 96% on room air, weight 234 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nLipids: TC 214, LDL 136, HDL 44, TG 173.\n\nMost recent potassium is 3.2 mmol/L.\n\nASSESSMENT AND PLAN:\n1. Exertional breathlessness. Symptoms are progressive and limiting usual activity. Place cardiology referral for evaluation. Seek urgent care for new breathlessness at rest or sudden worsening.\n2. Hypertension. Chronic condition noted; continue routine primary care follow-up.\n3. Type 2 diabetes mellitus. Chronic condition noted; continue routine primary care follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-11-11",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 11/11/2026\nPatient Name: Fiona Turner\nDOB: 06/22/1958\nMRN: MRN-63292\n\nMetformin 500 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nAmlodipine 5 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-06",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 10/06/2026\nPatient Name: Fiona Turner\nDOB: 06/22/1958\nMRN: MRN-63292\nOrdering provider: Dr. Evan Smith\n\nFindings: Sinus bradycardia at 56 bpm. Normal axis. PR interval 198 ms, QRS 97 ms, QTc 453 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-20",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/20/2026\nPatient Name: Fiona Turner\nDOB: 06/22/1958\nMRN: MRN-63292\nOrdering provider: Dr. Evan Smith\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-12",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/12/2026\nPatient Name: Fiona Turner\nDOB: 06/22/1958\nMRN: MRN-63292\nOrdering provider: Dr. Evan Smith\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 5.1 mmol/L (H)\nChloride: 99 mmol/L\nCO2: 24 mmol/L\nBUN: 15 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 121 mg/dL (H)\nCalcium: 9.0 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "Lipids: TC 214, LDL 136, HDL 44, TG 173."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "Most recent potassium is 3.2 mmol/L."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metformin 500 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nAmlodipine 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 56 bpm. Normal axis. PR interval 198 ms, QRS 97 ms, QTc 453 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 5.1 mmol/L (H)\nChloride: 99 mmol/L\nCO2: 24 mmol/L\nBUN: 15 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 121 mg/dL (H)\nCalcium: 9.0 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "contradictory",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2295,
+  "output_tokens": 2172
+}

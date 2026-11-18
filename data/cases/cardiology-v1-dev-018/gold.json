@@ -1,0 +1,88 @@
+{
+  "case_id": "cardiology-v1-dev-018",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-21",
+  "split": "dev",
+  "slices": [
+    "abbreviation",
+    "buried",
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary",
+          "page": 11,
+          "text": "Transthoracic echo this admission: LVEF 45%. Mild left atrial enlargement. Mildly reduced\nleft ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_3",
+          "page": 1,
+          "text": "BMP: Na 140, K 3.9, Cl 98, CO2 23, BUN 21, Cr 1.2, Glu 152."
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Amlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daiIy"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: no peripheeral edema."
+        },
+        {
+          "doc_id": "progress_note_3",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

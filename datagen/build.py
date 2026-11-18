@@ -1,6 +1,7 @@
 """Steps 4-6 of the generator: noise, PDFs, gold.json and the leak check, in one command.
 
     python -m datagen.build --checklist cardiology-v1 --n 5 --seed 0 --split dev
+    python -m datagen.build --checklist cardiology-v1 --n 40 --seed 10 --split dev --quota   # the dev set
 
 For each plan (same case ids and seeds as `python -m datagen.render`): reuse
 data/rendered/<case_id>/rendered.json when it exists, otherwise render the case with the LLM; add OCR-style
@@ -26,7 +27,7 @@ import textwrap
 from pathlib import Path
 
 from datagen.check_cases import check_case
-from datagen.defect_plan import make_plan
+from datagen.defect_plan import make_plan, select_plans
 from datagen.render import LeakError, RenderedCase, render_case, write_case
 from referral.eval.gold import GoldCase, GoldEvidence, GoldItem
 from referral.ingest.pdf_loader import guess_doc_date, load_case
@@ -200,6 +201,7 @@ def build_case(case: RenderedCase, out_dir: Path, split: str, noise: float = NOI
                     items=[GoldItem(item_id=i, status=s, evidence=evidence.get(i, []))
                            for i, s in case.expected.items()])
     (case_dir / "gold.json").write_text(gold.model_dump_json(indent=2))
+    (case_dir / "rendered.json").write_text(case.model_dump_json(indent=2))  # lets anyone rebuild without the API
     return case_dir
 
 
@@ -214,14 +216,23 @@ def main() -> int:
     ap.add_argument("--noise", type=float, default=NOISE_RATE, help="per-word corruption rate; 0 = clean text")
     ap.add_argument("--rendered", type=Path, default=Path("data/rendered"))
     ap.add_argument("--out", type=Path, default=Path("data/cases"))
+    ap.add_argument("--quota", action="store_true",
+                    help="pick the n plans to match the dataset mix (ids <checklist>-<split>-000...)")
+    ap.add_argument("--first", type=int, help="only process the first K selected cases (render in batches)")
     args = ap.parse_args()
 
     raw = json.loads(Path(f"data/checklists/{args.checklist}.json").read_text())
     checklist = Checklist.model_validate(raw)
-    rng, llm = random.Random(args.seed), None
+    llm = None
+    if args.quota:
+        plans, targets, achieved = select_plans(raw, args.n, args.seed, f"{args.checklist}-{args.split}")
+        print("mix    " + "  ".join(f"{k} {achieved[k]}/{targets[k]}" for k in targets) + "  (achieved/target)\n")
+    else:
+        rng = random.Random(args.seed)
+        plans = [make_plan(f"{args.checklist}-{args.seed}-{n:03d}", raw, rng) for n in range(args.n)]
+    plans = plans[:args.first] if args.first else plans
     flagged = 0
-    for n in range(args.n):
-        plan = make_plan(f"{args.checklist}-{args.seed}-{n:03d}", raw, rng)
+    for plan in plans:
         cached = args.rendered / plan.case_id / "rendered.json"
         try:
             if cached.exists():
@@ -248,7 +259,8 @@ def main() -> int:
             print(f"        - {p}")
     if llm is not None:
         print(f"\nLLM: {llm.calls} calls, {llm.input_tokens} input / {llm.output_tokens} output tokens")
-    print(f"\n{args.n - flagged}/{args.n} cases built and passed every check into {args.out}/ (split={args.split})")
+    print(f"\n{len(plans) - flagged}/{len(plans)} cases built and passed every check "
+          f"into {args.out}/ (split={args.split})")
     return 1 if flagged else 0
 
 

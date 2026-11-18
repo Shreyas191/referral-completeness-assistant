@@ -1,0 +1,229 @@
+{
+  "case_id": "cardiology-v1-dev-020",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-15",
+  "plan": {
+    "case_id": "cardiology-v1-dev-020",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Liam",
+    "last_name": "Ellis",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty.",
+    "history": "He is scheduled for elective total knee arthroplasty in six weeks and requests cardiovascular risk assessment before surgery. He reports no chest discomfort, exertional dyspnea, or fainting and walks regularly.",
+    "referring_physician": "Dr. Aaron Cole",
+    "practice": "Cedar Grove Internal Medicine",
+    "sex": "male",
+    "age": 47,
+    "dob": "1979-06-07",
+    "mrn": "MRN-14876"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-15",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/15/2026\nPatient Name: Liam Ellis\nDOB: 06/07/1979\nMRN: MRN-14876\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Aaron Cole, Cedar Grove Internal Medicine\n\nDear Colleague,\n\nReason for referral: Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty.\n\nI am writing regarding Liam Ellis, a 47-year-old man with hypertension, type 2 diabetes mellitus, and hypothyroidism. He is scheduled for elective total knee arthroplasty in six weeks and requests cardiovascular risk assessment before surgery.\n\nHe reports no chest discomfort, exertional dyspnea, or fainting and walks regularly. Please assess his perioperative cardiovascular risk before the planned procedure.\n\nThank you for seeing this patient.\n\nDr. Aaron Cole\nCedar Grove Internal Medicine\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2025-08-08",
+      "pages": [
+        "PROGRESS NOTE\nDate: 08/08/2025\nPatient Name: Liam Ellis\nDOB: 06/07/1979\nMRN: MRN-14876\nProvider: Dr. Aaron Cole\n\nSUBJECTIVE:\nLiam Ellis is a 47-year-old male seen for routine follow-up of hypertension, type 2 diabetes, and hypothyroidism. He reports doing well and taking his prescribed treatment as directed. He has no new concerns.\n\nVITALS:\nBP 112/81, HR 83, RR 15, SpO2 94% on room air, weight 135 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable. Continue established treatment and lifestyle measures. Monitor blood pressure at home.\n2. Type 2 diabetes is stable. Continue established treatment and dietary measures. Encourage regular activity and routine monitoring.\n3. Hypothyroidism is stable. Continue established treatment and monitor for changes in symptoms.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-04-03",
+      "pages": [
+        "PROGRESS NOTE\nDate: 04/03/2026\nPatient Name: Liam Ellis\nDOB: 06/07/1979\nMRN: MRN-14876\nProvider: Dr. Aaron Cole\n\nSUBJECTIVE:\nLiam Ellis is a 47-year-old man seen for routine follow-up of hypertension, type 2 diabetes, and hypothyroidism. He reports doing well and following his established care plan.\n\nVITALS:\nBP 128/79, HR 92, RR 13, SpO2 95% on room air, weight 178 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension: Continue established treatment and home blood pressure monitoring. Reinforce dietary measures and regular activity.\n2. Type 2 diabetes mellitus: Continue established treatment and nutrition plan. Encourage regular activity and ongoing attention to blood sugar management.\n3. Hypothyroidism: Continue established treatment. Monitor for changes in energy, temperature tolerance, or weight.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_3",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-01",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/01/2026\nPatient Name: Liam Ellis\nDOB: 06/07/1979\nMRN: MRN-14876\nProvider: Dr. Aaron Cole\n\nSUBJECTIVE:\nLiam Ellis is a 47-year-old man with hypertension, type 2 diabetes mellitus, and hypothyroidism who requests cardiovascular risk assessment before elective total knee arthroplasty planned in six weeks. He reports no chest discomfort, exertional dyspnea, or fainting and walks regularly.\n\nVITALS:\nBP 147/77, HR 89, RR 16, SpO2 95% on room air, weight 154 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Perioperative cardiovascular risk: Refer to cardiology for risk assessment before planned elective total knee arthroplasty.\n2. Hypertension: Continue ongoing management and follow-up with primary care.\n3. Type 2 diabetes mellitus: Continue ongoing management and follow-up with primary care.\n4. Hypothyroidism: Continue ongoing management and follow-up with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-01",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/01/2026\nPatient Name: Liam Ellis\nDOB: 06/07/1979\nMRN: MRN-14876\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-07-12",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 07/12/2026\nPatient Name: Liam Ellis\nDOB: 06/07/1979\nMRN: MRN-14876\nOrdering provider: Dr. Aaron Cole\n\nFindings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 185 ms, QRS 81 ms, QTc 431 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-10",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/10/2026\nPatient Name: Liam Ellis\nDOB: 06/07/1979\nMRN: MRN-14876\nOrdering provider: Dr. Aaron Cole\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-28",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/28/2026\nPatient Name: Liam Ellis\nDOB: 06/07/1979\nMRN: MRN-14876\nOrdering provider: Dr. Aaron Cole\n\nLIPID PANEL\nTotal Cholesterol: 181 mg/dL\nLDL Cholesterol: 78 mg/dL\nHDL Cholesterol: 70 mg/dL\nTriglycerides: 165 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 100 mmol/L\nCO2: 23 mmol/L\nBUN: 9 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 143 mg/dL (H)\nCalcium: 10.2 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_3",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 185 ms, QRS 81 ms, QTc 431 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 181 mg/dL\nLDL Cholesterol: 78 mg/dL\nHDL Cholesterol: 70 mg/dL\nTriglycerides: 165 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 100 mmol/L\nCO2: 23 mmol/L\nBUN: 9 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 143 mg/dL (H)\nCalcium: 10.2 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 5,
+  "input_tokens": 2765,
+  "output_tokens": 2132
+}

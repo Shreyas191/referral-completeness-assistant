@@ -1,0 +1,99 @@
+{
+  "case_id": "cardiology-v1-dev-003",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-11",
+  "split": "dev",
+  "slices": [
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referraal: Evaluation of an episode of faining."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 81 bpm. Normal axis. PR interval 156 ms, QRS 82 ms, QTc\n416 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n60%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report_1",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 222 mg/dL (H)\nLDL Cholesterol: 151 mg/dL (H)\nHDL Cholesterol: 51 mg/dL\nTriglycerides: 103 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "lab_report_2",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 5.1 mmol/L (H)\nChloride: 107 mmol/L\nCO2: 29 mmol/L\nBUN: 18 mg/dL\nCreatinine: 1.4 mg/dL (H)\nGlucose: 81 mg/dL\nCalcium: 9.4 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouh once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "case_id": "cardiology-v1-dev-037",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-23",
+  "plan": {
+    "case_id": "cardiology-v1-dev-037",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": "omit"
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Janet",
+    "last_name": "Reed",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion.",
+    "history": "An 87-year-old woman reports breathlessness with exertion that has gradually worsened over the past several months. She now becomes short of breath while walking short distances and improves with rest. She denies chest pain or breathlessness at rest.",
+    "referring_physician": "Dr. Brian Moore",
+    "practice": "Summit Family Practice",
+    "sex": "female",
+    "age": 87,
+    "dob": "1939-04-10",
+    "mrn": "MRN-32549"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-23",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/23/2026\nPatient Name: Janet Reed\nDOB: 04/10/1939\nMRN: MRN-32549\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Brian Moore, Summit Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion.\n\nJanet Reed is an 87-year-old woman with hypertension and type 2 diabetes mellitus. She reports gradually worsening breathlessness with exertion over the past several months and now becomes short of breath when walking short distances. Symptoms improve with rest.\n\nShe denies chest pain or breathlessness at rest. Please evaluate her exertional breathlessness and advise on further care.\n\nThank you for seeing this patient.\n\nDr. Brian Moore\nSummit Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-04-07",
+      "pages": [
+        "PROGRESS NOTE\nDate: 04/07/2026\nPatient Name: Janet Reed\nDOB: 04/10/1939\nMRN: MRN-32549\nProvider: Dr. Brian Moore\n\nSUBJECTIVE:\nJanet Reed is an 87-year-old woman seen for routine follow-up of hypertension and type 2 diabetes. She reports feeling well and following her established treatment plan. She follows dietary guidance and remains active as tolerated. No new concerns reported.\n\nVITALS:\nBP 133/83, HR 75, RR 15, SpO2 96% on room air, weight 141 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Hypertension, stable by history. Continue the established care plan. Encourage reduced-salt eating and periodic home blood pressure tracking.\n2. Type 2 diabetes mellitus, stable by history. Continue the established care plan and dietary guidance. Encourage regular activity, home glucose tracking, and routine foot care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-09",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/09/2026\nPatient Name: Janet Reed\nDOB: 04/10/1939\nMRN: MRN-32549\nProvider: Dr. Brian Moore\n\nSUBJECTIVE:\nJanet Reed is an 87-year-old woman with hypertension and type 2 diabetes who reports gradually worsening breathlessness with exertion over several months. She now becomes short of breath while walking short distances and feels better with rest. She denies chest pain or breathlessness at rest.\n\nVITALS:\nBP 128/68, HR 67, RR 13, SpO2 95% on room air, weight 210 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Breathlessness with exertion, gradually worsening and limiting walking. Arrange cardiology evaluation.\n2. Hypertension. Continue routine management with her usual care team.\n3. Type 2 diabetes mellitus. Continue routine management with her usual care team.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-09",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/09/2026\nPatient Name: Janet Reed\nDOB: 04/10/1939\nMRN: MRN-32549\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-05",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/05/2026\nPatient Name: Janet Reed\nDOB: 04/10/1939\nMRN: MRN-32549\nOrdering provider: Dr. Brian Moore\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-07",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/07/2026\nPatient Name: Janet Reed\nDOB: 04/10/1939\nMRN: MRN-32549\nOrdering provider: Dr. Brian Moore\n\nLIPID PANEL\nTotal Cholesterol: 119 mg/dL\nLDL Cholesterol: 68 mg/dL\nHDL Cholesterol: 32 mg/dL (L)\nTriglycerides: 97 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.3 mmol/L\nChloride: 106 mmol/L\nCO2: 27 mmol/L\nBUN: 8 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 167 mg/dL (H)\nCalcium: 9.9 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 119 mg/dL\nLDL Cholesterol: 68 mg/dL\nHDL Cholesterol: 32 mg/dL (L)\nTriglycerides: 97 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.3 mmol/L\nChloride: 106 mmol/L\nCO2: 27 mmol/L\nBUN: 8 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 167 mg/dL (H)\nCalcium: 9.9 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "missing",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2272,
+  "output_tokens": 1536
+}

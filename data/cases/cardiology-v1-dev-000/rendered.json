@@ -1,0 +1,221 @@
+{
+  "case_id": "cardiology-v1-dev-000",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-05",
+  "plan": {
+    "case_id": "cardiology-v1-dev-000",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "stale"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Paula",
+    "last_name": "Bennett",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism",
+      "Osteoarthritis"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "acetaminophen",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "as needed"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of fatigue in a 78-year-old woman with a strong family history of premature heart disease.",
+    "history": "Paula Bennett is a 78-year-old woman reporting persistent fatigue. She is concerned because several close relatives developed heart disease at a young age. She would like an assessment of her symptoms and family risk.",
+    "referring_physician": "Dr. Alan Foster",
+    "practice": "Evergreen Family Practice",
+    "sex": "female",
+    "age": 78,
+    "dob": "1948-05-09",
+    "mrn": "MRN-83585"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-05",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/05/2026\nPatient Name: Paula Bennett\nDOB: 05/09/1948\nMRN: MRN-83585\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Alan Foster, Evergreen Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of fatigue in a 78-year-old woman with a strong family history of premature heart disease.\n\nPaula Bennett is a 78-year-old woman with hypertension, type 2 diabetes, hypothyroidism, and osteoarthritis who reports persistent fatigue.\n\nSeveral close relatives developed heart disease at a young age, and she is concerned about her own risk. Please assess her fatigue and family history of premature heart disease and advise on further evaluation.\n\nThank you for seeing this patient.\n\nDr. Alan Foster\nEvergreen Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2025-10-01",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/01/2025\nPatient Name: Paula Bennett\nDOB: 05/09/1948\nMRN: MRN-83585\nProvider: Dr. Alan Foster\n\nSUBJECTIVE:\nPaula Bennett is a 78-year-old woman seen for routine follow-up. She reports doing well overall and following her established care plans. No new concerns raised.\n\nVITALS:\nBP 123/84, HR 80, RR 13, SpO2 98% on room air, weight 156 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable. Continue the established plan and monitor blood pressure at home.\n2. Type 2 diabetes is stable. Continue the established plan and dietary measures.\n3. Hypothyroidism is stable. Continue the established thyroid treatment plan.\n4. Osteoarthritis is stable. Continue activity as tolerated and joint protection measures.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-05-03",
+      "pages": [
+        "PROGRESS NOTE\nDate: 05/03/2026\nPatient Name: Paula Bennett\nDOB: 05/09/1948\nMRN: MRN-83585\nProvider: Dr. Alan Foster\n\nSUBJECTIVE:\nPaula Bennett is a 78-year-old woman with persistent fatigue. She is concerned about her risk because several close relatives developed heart disease at a young age and would like an assessment.\n\nVITALS:\nBP 157/87, HR 91, RR 14, SpO2 97% on room air, weight 185 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Persistent fatigue. Arrange cardiology evaluation to assess her symptoms.\n2. Strong family history of premature heart disease. Discussed her concern and plan for cardiology evaluation.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-04",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/04/2026\nPatient Name: Paula Bennett\nDOB: 05/09/1948\nMRN: MRN-83585\n\nAmlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\nAcetaminophen 500 mg by mouth as needed\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-07-14",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 07/14/2026\nPatient Name: Paula Bennett\nDOB: 05/09/1948\nMRN: MRN-83585\nOrdering provider: Dr. Alan Foster\n\nFindings: Sinus bradycardia at 58 bpm. Normal axis. PR interval 176 ms, QRS 80 ms, QTc 449 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-06-15",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 06/15/2026\nPatient Name: Paula Bennett\nDOB: 05/09/1948\nMRN: MRN-83585\nOrdering provider: Dr. Alan Foster\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 45%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-19",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/19/2026\nPatient Name: Paula Bennett\nDOB: 05/09/1948\nMRN: MRN-83585\nOrdering provider: Dr. Alan Foster\n\nLIPID PANEL\nTotal Cholesterol: 155 mg/dL\nLDL Cholesterol: 64 mg/dL\nHDL Cholesterol: 51 mg/dL\nTriglycerides: 202 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 3.9 mmol/L\nChloride: 105 mmol/L\nCO2: 26 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 0.9 mg/dL\nGlucose: 159 mg/dL (H)\nCalcium: 9.5 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of fatigue in a 78-year-old woman with a strong family history of premature heart disease."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\nAcetaminophen 500 mg by mouth as needed"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 58 bpm. Normal axis. PR interval 176 ms, QRS 80 ms, QTc 449 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 45%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 155 mg/dL\nLDL Cholesterol: 64 mg/dL\nHDL Cholesterol: 51 mg/dL\nTriglycerides: 202 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 3.9 mmol/L\nChloride: 105 mmol/L\nCO2: 26 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 0.9 mg/dL\nGlucose: 159 mg/dL (H)\nCalcium: 9.5 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "stale",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2333,
+  "output_tokens": 1707
+}

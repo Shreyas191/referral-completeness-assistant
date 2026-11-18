@@ -1,0 +1,175 @@
+{
+  "case_id": "cardiology-v1-dev-032",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-08",
+  "plan": {
+    "case_id": "cardiology-v1-dev-032",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": "omit"
+      },
+      {
+        "item_id": "echo",
+        "defect": "omit"
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Clara",
+    "last_name": "Dawson",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Osteoarthritis"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "losartan",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "acetaminophen",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "as needed"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of perioperative cardiac risk before planned elective total knee replacement.",
+    "history": "Clara Dawson is a 76-year-old woman scheduled for elective total knee replacement in six weeks. Her primary clinician requests assessment of her cardiac risk before surgery; she reports no chest discomfort or shortness of breath with routine activity.",
+    "referring_physician": "Dr. Claire Anderson",
+    "practice": "Summit Internal Medicine",
+    "sex": "female",
+    "age": 76,
+    "dob": "1950-07-17",
+    "mrn": "MRN-48669"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-08",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/08/2026\nPatient Name: Clara Dawson\nDOB: 07/17/1950\nMRN: MRN-48669\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Claire Anderson, Summit Internal Medicine\n\nDear Colleague,\n\nReason for referral: Evaluation of perioperative cardiac risk before planned elective total knee replacement.\n\nClara Dawson is a 76-year-old woman with hypertension, type 2 diabetes mellitus, and osteoarthritis. She is scheduled for elective total knee replacement in six weeks.\n\nPlease assess her perioperative cardiac risk before surgery. She reports no chest discomfort or shortness of breath with routine activity.\n\nThank you for seeing this patient.\n\nDr. Claire Anderson\nSummit Internal Medicine\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-08-28",
+      "pages": [
+        "PROGRESS NOTE\nDate: 08/28/2026\nPatient Name: Clara Dawson\nDOB: 07/17/1950\nMRN: MRN-48669\nProvider: Dr. Claire Anderson\n\nSUBJECTIVE:\nClara Dawson is a 76-year-old woman with hypertension, type 2 diabetes, and osteoarthritis. She is scheduled for elective total knee replacement in six weeks. She denies chest discomfort or shortness of breath with routine activity.\n\nVITALS:\nBP 137/79, HR 90, RR 18, SpO2 96% on room air, weight 225 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Perioperative cardiac risk: Refer to cardiology for assessment before planned elective total knee replacement.\n2. Hypertension: Continue management with her primary clinician while awaiting cardiology assessment.\n3. Type 2 diabetes: Continue management with her primary clinician while awaiting cardiology assessment.\n4. Osteoarthritis: Elective total knee replacement is planned in six weeks; coordinate timing with the surgical team after cardiac assessment.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-08-28",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 08/28/2026\nPatient Name: Clara Dawson\nDOB: 07/17/1950\nMRN: MRN-48669\n\nAmlodipine 5 mg by mouth once daily\nLosartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAcetaminophen 500 mg by mouth as needed\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-20",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/20/2026\nPatient Name: Clara Dawson\nDOB: 07/17/1950\nMRN: MRN-48669\nOrdering provider: Dr. Claire Anderson\n\nLIPID PANEL\nTotal Cholesterol: 219 mg/dL (H)\nLDL Cholesterol: 138 mg/dL (H)\nHDL Cholesterol: 45 mg/dL\nTriglycerides: 184 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 101 mmol/L\nCO2: 27 mmol/L\nBUN: 28 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 175 mg/dL (H)\nCalcium: 10.1 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of perioperative cardiac risk before planned elective total knee replacement."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 5 mg by mouth once daily\nLosartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAcetaminophen 500 mg by mouth as needed"
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 219 mg/dL (H)\nLDL Cholesterol: 138 mg/dL (H)\nHDL Cholesterol: 45 mg/dL\nTriglycerides: 184 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 101 mmol/L\nCO2: 27 mmol/L\nBUN: 28 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 175 mg/dL (H)\nCalcium: 10.1 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "missing",
+    "echo": "missing",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2738,
+  "output_tokens": 2051
+}
