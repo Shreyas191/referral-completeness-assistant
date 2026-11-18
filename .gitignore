@@ -16,3 +16,6 @@ runs/
 # Frontend
 frontend/node_modules/
 frontend/dist/
+
+# Generator intermediate output (datagen/render.py)
+data/rendered/
