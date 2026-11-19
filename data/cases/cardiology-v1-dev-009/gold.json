@@ -1,0 +1,82 @@
+{
+  "case_id": "cardiology-v1-dev-009",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-02",
+  "split": "dev",
+  "slices": [
+    "contradiction",
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of a newly heard heart murmur."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinusrhythm at 78 bpm. Normal axis. PR interval 190 ms, QRS 94 ms, QTc\n408 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "bmp",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Most recent potassium is 5.9 mmol/L."
+        },
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.2 mmol/L\nChloride: 100 mmol/L\nCO2: 27 mmol/L\nBUN: 14 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 113 mg/dL (H)\nCalcium: 8.9 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

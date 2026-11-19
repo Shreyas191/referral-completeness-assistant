@@ -10,6 +10,9 @@ For every case:
   - present/stale labels agree with the item's recency window (same rule as pipeline/validator.py)
   - the identity check quarantines exactly the documents listed in wrong_patient_docs
   - no dose conflicts among kept documents, unless the case is in the contradiction slice
+  - leak check: a missing or not-applicable item's description and synonyms appear nowhere in the patient's
+    own documents (nor does a not-applicable item's condition word, e.g. "warfarin"), and a stale item's
+    terms appear only in its evidence documents, since a newer mention would make it present
 
 For the hand-made cases (issue #7), it also checks that the planted defect is the only place the item
 shows up, so a correct answer cannot come from somewhere else in the packet. Exits 1 if anything fails.
@@ -68,8 +71,31 @@ def check_case(case_dir: Path) -> list[str]:
         conflicts = dose_conflicts(chunk_case(kept))
         check(not conflicts, f"unplanned dose conflicts: {conflicts}")
 
+    problems += leaks(gold, docs, items)
     problems += check_planted(gold, docs, kept, items)
     return problems
+
+
+def leaks(gold: GoldCase, docs: list[Document], items: dict) -> list[str]:
+    """Places where an item the gold calls missing, not applicable or stale is mentioned anyway."""
+    own = [d for d in docs if d.doc_id not in gold.wrong_patient_docs]  # foreign documents are quarantined
+    found = []
+    for gi in gold.items:
+        item = items.get(gi.item_id)
+        if item is None:
+            continue
+        hits = term_hits(own, [item.description, *item.synonyms])
+        if gi.status.value in {"missing", "not_applicable"} and hits:
+            found.append(f"leak: {gi.item_id} is {gi.status.value} but its terms appear on {hits}")
+        if gi.status.value == "not_applicable" and item.condition:
+            key_hits = term_hits(own, [item.condition.split()[-1]])
+            if key_hits:
+                found.append(f"leak: {gi.item_id} is not_applicable but its condition word appears on {key_hits}")
+        if gi.status.value == "stale":
+            newer = sorted({doc for doc, _ in hits} - {e.doc_id for e in gi.evidence})
+            if newer:
+                found.append(f"leak: {gi.item_id} is stale but also mentioned in {newer}")
+    return found
 
 
 def check_planted(gold: GoldCase, docs: list[Document], kept: list[Document], items: dict) -> list[str]:

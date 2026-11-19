@@ -1,0 +1,178 @@
+{
+  "case_id": "cardiology-v1-dev-038",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-17",
+  "plan": {
+    "case_id": "cardiology-v1-dev-038",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": "omit"
+      },
+      {
+        "item_id": "ecg",
+        "defect": "omit"
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": "omit"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Lila",
+    "last_name": "Avery",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of a fainting episode with brief loss of consciousness.",
+    "history": "She briefly lost consciousness while standing in her kitchen and recovered within a minute. She recalls feeling lightheaded beforehand but denies chest discomfort or shortness of breath. She has had no further episodes.",
+    "referring_physician": "Dr. Sarah Allen",
+    "practice": "Westbrook Family Practice",
+    "sex": "female",
+    "age": 68,
+    "dob": "1958-04-20",
+    "mrn": "MRN-25742"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-17",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/17/2026\nPatient Name: Lila Avery\nDOB: 04/20/1958\nMRN: MRN-25742\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Sarah Allen, Westbrook Family Practice\n\nDear Colleague,\n\nLila Avery is a 68-year-old woman followed at Westbrook Family Practice. Her medical history includes atrial fibrillation, hypertension, and hypothyroidism.\n\nI am Dr. Sarah Allen, her primary care physician. She remains under our practice’s care.\n\nThank you for seeing this patient.\n\nDr. Sarah Allen\nWestbrook Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-05",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/05/2026\nPatient Name: Lila Avery\nDOB: 04/20/1958\nMRN: MRN-25742\nProvider: Dr. Sarah Allen\n\nSUBJECTIVE:\nLila Avery is a 68-year-old woman with a history of atrial fibrillation, hypertension, and hypothyroidism. She reports no interval changes and continues her established treatment.\n\nVITALS:\nBP 130/76, HR 67, RR 12, SpO2 94% on room air, weight 238 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Atrial fibrillation remains under ongoing management. Referral placed.\n2. Hypertension remains under ongoing management. Continue established care.\n3. Hypothyroidism remains under ongoing management. Continue established care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-05",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/05/2026\nPatient Name: Lila Avery\nDOB: 04/20/1958\nMRN: MRN-25742\n\nLisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-26",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/26/2026\nPatient Name: Lila Avery\nDOB: 04/20/1958\nMRN: MRN-25742\nOrdering provider: Dr. Sarah Allen\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 40%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-12",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/12/2026\nPatient Name: Lila Avery\nDOB: 04/20/1958\nMRN: MRN-25742\nOrdering provider: Dr. Sarah Allen\n\nLIPID PANEL\nTotal Cholesterol: 274 mg/dL (H)\nLDL Cholesterol: 175 mg/dL (H)\nHDL Cholesterol: 50 mg/dL\nTriglycerides: 245 mg/dL (H)\n\nCOAGULATION\nProthrombin Time: 22.7 sec\nINR: 2.0\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 40%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 274 mg/dL (H)\nLDL Cholesterol: 175 mg/dL (H)\nHDL Cholesterol: 50 mg/dL\nTriglycerides: 245 mg/dL (H)"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 22.7 sec\nINR: 2.0"
+    }
+  ],
+  "expected": {
+    "reason": "missing",
+    "ecg": "missing",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "missing",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 3,
+  "input_tokens": 1761,
+  "output_tokens": 1531
+}

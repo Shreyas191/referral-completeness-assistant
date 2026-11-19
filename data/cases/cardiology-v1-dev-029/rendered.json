@@ -1,0 +1,231 @@
+{
+  "case_id": "cardiology-v1-dev-029",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-07",
+  "plan": {
+    "case_id": "cardiology-v1-dev-029",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": "bury"
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Samuel",
+    "last_name": "Anderson",
+    "conditions": [
+      "Paroxysmal atrial fibrillation",
+      "Essential hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol succinate",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of an irregular pulse noted at a routine visit in a patient with paroxysmal atrial fibrillation.",
+    "history": "This 70-year-old man has a history of paroxysmal atrial fibrillation, hypertension, and type 2 diabetes. At a routine primary care visit, his clinician noted an irregular pulse, and he was unaware of any change in his heartbeat. He denies chest discomfort, shortness of breath, dizziness, or fainting.",
+    "referring_physician": "Dr. Robert Reynolds",
+    "practice": "Elm Family Practice",
+    "sex": "male",
+    "age": 70,
+    "dob": "1956-05-24",
+    "mrn": "MRN-40948"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-07",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/07/2026\nPatient Name: Samuel Anderson\nDOB: 05/24/1956\nMRN: MRN-40948\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Robert Reynolds, Elm Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of an irregular pulse noted at a routine visit in a patient with paroxysmal atrial fibrillation.\n\nI am sending Samuel Anderson, a 70-year-old man with paroxysmal atrial fibrillation, essential hypertension, and type 2 diabetes mellitus, for cardiology evaluation. An irregular pulse was noted during a routine primary care appointment; he was unaware of any change in his heartbeat.\n\nHe denies chest discomfort, shortness of breath, dizziness, or fainting. Please assess this finding in the setting of his paroxysmal atrial fibrillation.\n\nThank you for seeing this patient.\n\nDr. Robert Reynolds\nElm Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-01",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/01/2026\nPatient Name: Samuel Anderson\nDOB: 05/24/1956\nMRN: MRN-40948\nProvider: Dr. Robert Reynolds\n\nSUBJECTIVE:\nSamuel Anderson is a 70-year-old man with paroxysmal atrial fibrillation, hypertension, and type 2 diabetes. An irregular pulse was noted at a routine primary care appointment. He was unaware of any change in his heartbeat and denies chest discomfort, shortness of breath, dizziness, or fainting.\n\nVITALS:\nBP 117/79, HR 75, RR 13, SpO2 95% on room air, weight 148 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Paroxysmal atrial fibrillation with an irregular pulse noted at primary care. He is unaware of a change in his heartbeat and has no associated symptoms. Refer to cardiology for evaluation and recommendations.\n2. Essential hypertension. Continue routine follow-up with primary care.\n3. Type 2 diabetes mellitus. Continue routine follow-up with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-01",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/01/2026\nPatient Name: Samuel Anderson\nDOB: 05/24/1956\nMRN: MRN-40948\n\nMetoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-11",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 10/11/2026\nPatient Name: Samuel Anderson\nDOB: 05/24/1956\nMRN: MRN-40948\nOrdering provider: Dr. Robert Reynolds\n\nFindings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 198 ms, QRS 88 ms, QTc 416 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-10-29",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 10/29/2026\nPatient Name: Samuel Anderson\nDOB: 05/24/1956\nMRN: MRN-40948\nOrdering provider: Dr. Robert Reynolds\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 40%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-05",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/05/2026\nPatient Name: Samuel Anderson\nDOB: 05/24/1956\nMRN: MRN-40948\nOrdering provider: Dr. Robert Reynolds\n\nLIPID PANEL\nTotal Cholesterol: 172 mg/dL\nLDL Cholesterol: 93 mg/dL\nHDL Cholesterol: 50 mg/dL\nTriglycerides: 148 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 5.0 mmol/L\nChloride: 102 mmol/L\nCO2: 29 mmol/L\nBUN: 14 mg/dL\nCreatinine: 1.1 mg/dL\nGlucose: 135 mg/dL (H)\nCalcium: 9.9 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-22",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/22/2026\nPatient Name: Samuel Anderson\nDOB: 05/24/1956\nMRN: MRN-40948\nAttending: Dr. Robert Reynolds\n\nADMISSION DIAGNOSIS:\nSamuel Anderson is a 70-year-old man admitted for acute diverticulitis with abdominal discomfort and reduced tolerance of meals. The episode was managed without surgery. His relevant chronic conditions include paroxysmal atrial fibrillation, essential hypertension, and type 2 diabetes mellitus. The immediate goals were to treat the abdominal illness, maintain oral intake as tolerated, and observe for a change that might require a different level of care. He remained in the hospital for supportive treatment and reassessment of symptoms. No operative intervention was performed during this admission. The discharge plan includes a gradual return to usual food choices, attention to hydration, and timely outpatient follow-up. He was advised to seek urgent care if symptoms worsen or if new concerning symptoms develop.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 2 of 12\n\nHISTORY OF PRESENT ILLNESS:\nMr. Anderson presented after developing abdominal discomfort with reduced appetite and difficulty maintaining his usual intake. The symptoms were considered consistent with an acute episode of diverticulitis. He did not undergo surgery during the admission. The history was reviewed for prior similar episodes, changes in bowel habits, and symptoms that could suggest progression of the illness. His course was followed closely while supportive care was provided. Oral intake was initially limited by discomfort, then advanced as tolerated. He was able to participate in planning for recovery at home. The details of symptom onset and progression were reviewed with him during the stay. He received instructions to contact a clinician promptly for worsening abdominal symptoms, persistent inability to eat or drink, or other new concerns.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 3 of 12\n\nRELEVANT MEDICAL HISTORY:\nHis known chronic conditions are paroxysmal atrial fibrillation, essential hypertension, and type 2 diabetes mellitus. These conditions were considered in planning his inpatient care and transition home. No specific drug names or doses are included in this summary. He was encouraged to resume his established chronic care plan as directed by the clinicians who manage those conditions. The acute admission was for diverticulitis, and the primary focus remained symptom improvement and safe oral intake. His chronic illnesses did not lead to an operative approach during this stay. He received education about continuing routine follow-up for these conditions after recovery from the abdominal illness. He was also advised to tell his outpatient care team about the hospitalization and any changes in his eating, activity, or general well-being.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 4 of 12\n\nINITIAL INPATIENT MANAGEMENT:\nInitial care focused on bowel rest as needed, hydration, symptom relief, and antibiotic therapy for diverticulitis. Oral intake was limited at first according to tolerance, with a plan to advance gradually as discomfort improved. The care team observed for worsening symptoms or other signs that might require surgical evaluation. His chronic atrial fibrillation, hypertension, and type 2 diabetes were included in routine inpatient planning. No surgery was undertaken. The patient was kept informed about the nonoperative approach and the importance of reporting changes in symptoms. Supportive care was continued while he regained the ability to take food and fluids by mouth. Discharge planning began early and included home instructions, return precautions, and outpatient follow-up after the acute episode.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 5 of 12\n\nHOSPITAL COURSE, FIRST DAY:\nDuring the first day of the admission, Mr. Anderson received supportive care and antibiotic therapy for diverticulitis. He was encouraged to rest and take fluids and food according to tolerance. Abdominal discomfort remained the principal symptom addressed by the care team. The plan was to avoid surgery unless his condition worsened or failed to improve with nonoperative care. His paroxysmal atrial fibrillation, essential hypertension, and type 2 diabetes were considered during routine care without changing the main focus of treatment. He communicated with the team about his symptoms and his ability to take oral intake. Discharge was deferred while his response was observed. He was reminded that a prompt report of increasing discomfort, vomiting, or inability to drink would help the team reassess the plan.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 6 of 12\n\nHOSPITAL COURSE, SECOND DAY:\nOn the second day, the team continued nonoperative treatment and reviewed his symptom trend and tolerance of oral intake. Supportive measures and antibiotic therapy were continued. Food and fluids were advanced as tolerated, with attention to whether eating led to a return of significant discomfort. No surgical procedure was required. Mr. Anderson took part in discussions about the next steps and the signs that would require urgent reassessment. His chronic conditions remained part of the overall care plan, while diverticulitis remained the reason for hospitalization. The team continued to consider whether he could safely complete recovery at home. Discharge planning included clear instructions about hydration, gradual dietary advancement, activity as tolerated, and follow-up with his usual care team.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 7 of 12\n\nHOSPITAL COURSE, THIRD DAY:\nBy the third day, Mr. Anderson reported improvement sufficient to continue recovery outside the hospital. He was able to take oral food and fluids with less difficulty and did not require an operative approach. The team reviewed his response to supportive care and antibiotic therapy and discussed completion of the planned treatment after discharge. He was given an opportunity to ask questions about home care and warning symptoms. His chronic atrial fibrillation, essential hypertension, and type 2 diabetes remained relevant to outpatient follow-up. The plan was for continued recovery at home, gradual return to his usual diet, and contact with his established clinicians. He agreed with the plan and understood that worsening symptoms or inability to maintain intake should prompt urgent evaluation.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 8 of 12\n\nCONSULTATIONS AND CARE COORDINATION:\nNo specialty consultation was required during this admission. The inpatient team coordinated care around nonoperative treatment of diverticulitis and the patient’s established chronic conditions. Mr. Anderson participated in decisions about symptom monitoring, advancing oral intake, and planning for discharge. The team reviewed the expected recovery course and made clear that a change in symptoms could require reassessment. Coordination also addressed the transition from hospital care to his usual outpatient clinicians, who can continue management of paroxysmal atrial fibrillation, essential hypertension, and type 2 diabetes mellitus. No outside referral is described in this summary. The patient was asked to share the discharge information with his regular care team and to arrange follow-up after returning home. He was provided with instructions for obtaining urgent help if recovery does not continue as expected.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 9 of 12\n\nPROCEDURES:\nNo surgical or other invasive procedure was performed during this hospitalization. Diverticulitis was managed with supportive care and antibiotic therapy, with observation for symptom progression and assessment of oral intake. The patient improved without a need for operative treatment. This section records the nonprocedural course and does not include testing details or results. The care plan emphasized a cautious transition from limited intake to food and fluids as tolerated. Mr. Anderson received an explanation that continued improvement at home would be expected, while new or worsening symptoms should not be ignored. The absence of a procedure does not replace follow-up; he was advised to keep contact with his outpatient care team and discuss any recurrence or persistent abdominal concerns.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 10 of 12\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Anderson was considered appropriate to continue recovery at home after nonoperative treatment of diverticulitis. His symptoms had improved, and he was able to take oral food and fluids more comfortably. No surgery was required during the admission. He understood the home plan and the need to seek prompt care if abdominal discomfort increases, if he cannot keep fluids down, or if new concerning symptoms arise. His chronic diagnoses of paroxysmal atrial fibrillation, essential hypertension, and type 2 diabetes mellitus remain part of his ongoing outpatient care. He was encouraged to resume his established care arrangements and to inform his usual clinicians about this admission. The discharge plan was reviewed with him before he left the hospital.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 11 of 12\n\nDISCHARGE INSTRUCTIONS:\nAt home, Mr. Anderson should increase food intake gradually as tolerated and maintain adequate fluids. He should follow the treatment plan provided by the discharging team and should not make changes to his established chronic care plan without speaking with a clinician. Rest is reasonable during the early recovery period, followed by a gradual return to usual activity as symptoms permit. He should seek urgent medical attention for worsening or persistent abdominal discomfort, repeated vomiting, inability to maintain fluids, new feverishness, blood in stool, fainting, or any other abrupt change in condition. If he is unsure whether a symptom is serious, he should contact a clinician promptly. He should keep a copy of this discharge information and share it with his usual care team.\n\nCoagulation on discharge: INR 3.0.\n",
+        "Samuel Anderson | MRN-40948 | Discharge summary | Page 12 of 12\n\nFOLLOW-UP PLAN:\nMr. Anderson should arrange follow-up with his usual outpatient clinician after discharge to review recovery from diverticulitis and the ongoing care of paroxysmal atrial fibrillation, essential hypertension, and type 2 diabetes mellitus. He should bring this discharge summary to that appointment and describe any remaining abdominal symptoms, changes in appetite, or difficulty maintaining oral intake. Further follow-up may be arranged by his outpatient team according to his recovery and prior care plan. He should not wait for a scheduled appointment if symptoms worsen or if he develops a new urgent concern. If he is unable to reach his usual clinician, he should seek care through an appropriate urgent service. Continued communication with his outpatient team will support a safe transition after this hospital stay.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of an irregular pulse noted at a routine visit in a patient with paroxysmal atrial fibrillation."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 198 ms, QRS 88 ms, QTc 416 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 40%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 172 mg/dL\nLDL Cholesterol: 93 mg/dL\nHDL Cholesterol: 50 mg/dL\nTriglycerides: 148 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 5.0 mmol/L\nChloride: 102 mmol/L\nCO2: 29 mmol/L\nBUN: 14 mg/dL\nCreatinine: 1.1 mg/dL\nGlucose: 135 mg/dL (H)\nCalcium: 9.9 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "discharge_summary",
+      "page": 11,
+      "text": "Coagulation on discharge: INR 3.0."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2442,
+  "output_tokens": 4201
+}

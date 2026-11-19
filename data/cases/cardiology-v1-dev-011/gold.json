@@ -1,0 +1,104 @@
+{
+  "case_id": "cardiology-v1-dev-011",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-07",
+  "split": "dev",
+  "slices": [
+    "complete"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of perioperative cardiac risk before planned elective\ntotal knee arthroplasty."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 87 bpm. Normal axis. PR interval 152 ms, QRS 101 ms, QTc\n433 ms.\nImpression: Normal sinus rhythm with no acute ST-T wavechanges."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n50%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 191 mg/dL\nLDL Cholesterol: 96 mg/dL\nHDL Cholesterol: 49 mg/dL\nTriglycerides: 232 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.2 mmol/L\nChloride: 98 mmol/L\nCO2: 21 mmol/L\nBUN: 25 mg/dL (H)\nCreatinine: 1.4 mg/dL (H)\nGlucose: 117 mg/dL (H)\nCalcium: 10.2 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Amlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supplc, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+        },
+        {
+          "doc_id": "progress_note_3",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

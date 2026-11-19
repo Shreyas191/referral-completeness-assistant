@@ -9,6 +9,9 @@ __pycache__/
 # Generated data and run outputs. Hand-made cases (issue #7) are small and shared, so they are committed.
 data/cases/*
 !data/cases/hand-*/
+!data/cases/*-dev-*/
+# Held-out test split: generated with the same generator, never committed or run before the freeze.
+data/test_cases/
 data/chroma/
 data/synthea/
 runs/

@@ -1,0 +1,210 @@
+{
+  "case_id": "cardiology-v1-dev-018",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-21",
+  "plan": {
+    "case_id": "cardiology-v1-dev-018",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": "omit"
+      },
+      {
+        "item_id": "ecg",
+        "defect": "omit"
+      },
+      {
+        "item_id": "echo",
+        "defect": "bury"
+      },
+      {
+        "item_id": "lipids",
+        "defect": "omit"
+      },
+      {
+        "item_id": "bmp",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Calvin",
+    "last_name": "Carter",
+    "conditions": [
+      "Essential hypertension",
+      "Type 2 diabetes mellitus",
+      "Obstructive sleep apnea"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "losartan",
+        "dose": 100.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "chlorthalidone",
+        "dose": 25.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of persistently elevated blood pressure despite treatment with multiple agents.",
+    "history": "Calvin Carter is a 55-year-old man whose blood pressure has remained high despite taking several prescribed agents. He reports taking them consistently and denies recent changes in his routine. He is seeking further assessment and guidance on improving blood pressure control.",
+    "referring_physician": "Dr. William Clark",
+    "practice": "Northside Medical Practice",
+    "sex": "male",
+    "age": 55,
+    "dob": "1971-06-30",
+    "mrn": "MRN-27612"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-21",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/21/2026\nPatient Name: Calvin Carter\nDOB: 06/30/1971\nMRN: MRN-27612\n\nTo: Cardiology Clinic Intake\nFrom: Dr. William Clark, Northside Medical Practice\n\nDear Colleague,\n\nCalvin Carter is a 55-year-old man followed at Northside Medical Practice. His medical history includes essential hypertension, type 2 diabetes mellitus, and obstructive sleep apnea.\n\nHe continues follow-up at our practice for these chronic conditions.\n\nThank you for seeing this patient.\n\nDr. William Clark\nNorthside Medical Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2025-07-22",
+      "pages": [
+        "PROGRESS NOTE\nDate: 07/22/2025\nPatient Name: Calvin Carter\nDOB: 06/30/1971\nMRN: MRN-27612\nProvider: Dr. William Clark\n\nSUBJECTIVE:\nCalvin Carter is a 55-year-old man seen for routine follow-up. He reports overall stability and adherence to his established care plans. He notes no interval changes in health or daily function. Sleep is restorative with regular use of nighttime therapy.\n\nVITALS:\nBP 146/68, HR 64, RR 18, SpO2 99% on room air, weight 230 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Essential hypertension is stable by history. Continue the established care plan, monitor at home, limit salt, and maintain regular activity.\n2. Type 2 diabetes mellitus is stable by report. Continue the established care plan, follow dietary guidance, remain active, and practice routine foot care.\n3. Obstructive sleep apnea is stable with regular use of prescribed nighttime therapy. Continue routine use and maintain healthy sleep habits.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-02-12",
+      "pages": [
+        "PROGRESS NOTE\nDate: 02/12/2026\nPatient Name: Calvin Carter\nDOB: 06/30/1971\nMRN: MRN-27612\nProvider: Dr. William Clark\n\nSUBJECTIVE:\nCalvin Carter is a 55-year-old male who returns for routine follow-up. He reports doing well overall, with consistent use of prescribed treatment and no interval changes. He continues to work on healthy eating and regular activity.\n\nVITALS:\nBP 139/70, HR 74, RR 17, SpO2 99% on room air, weight 138 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Essential hypertension: Stable by report. Continue the established treatment plan and home monitoring.\n2. Type 2 diabetes mellitus: Continue the established care plan. Reinforced balanced nutrition, regular activity, and routine monitoring.\n3. Obstructive sleep apnea: Continue nightly positive airway pressure therapy and maintain consistent sleep habits.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_3",
+      "doc_type": "progress_note",
+      "doc_date": "2026-08-21",
+      "pages": [
+        "PROGRESS NOTE\nDate: 08/21/2026\nPatient Name: Calvin Carter\nDOB: 06/30/1971\nMRN: MRN-27612\nProvider: Dr. William Clark\n\nSUBJECTIVE:\nCalvin Carter is a 55-year-old male with essential hypertension, type 2 diabetes mellitus, and obstructive sleep apnea. He reports adherence to his established treatment plans and ongoing attention to diet and daily routines.\n\nVITALS:\nBP 112/81, HR 87, RR 14, SpO2 96% on room air, weight 159 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nBMP: Na 140, K 3.9, Cl 98, CO2 23, BUN 21, Cr 1.2, Glu 152.\n\nASSESSMENT AND PLAN:\n1. Essential hypertension: Continue established management and home blood pressure tracking. Reinforce lifestyle measures and routine follow-up.\n2. Type 2 diabetes mellitus: Continue established management, dietary measures, and regular activity. Maintain routine follow-up.\n3. Obstructive sleep apnea: Continue established therapy and sleep hygiene measures. Follow up routinely.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-08-21",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 08/21/2026\nPatient Name: Calvin Carter\nDOB: 06/30/1971\nMRN: MRN-27612\n\nAmlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-16",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 09/16/2026\nPatient Name: Calvin Carter\nDOB: 06/30/1971\nMRN: MRN-27612\nAttending: Dr. William Clark\n\nADMISSION DIAGNOSIS:\nCalvin Carter is a 55-year-old male admitted for community-acquired pneumonia after several days of worsening cough, feverishness, fatigue, and shortness of breath. His symptoms had limited ordinary activity and oral intake. The working diagnosis was pneumonia acquired outside a healthcare setting, with respiratory symptoms requiring inpatient observation and treatment. His history of essential hypertension, type 2 diabetes mellitus, and obstructive sleep apnea was considered in planning care. He had not reported a recent hospital stay or a known exposure that changed the initial approach. The admission goal was to treat the infection, support breathing and hydration, and monitor his response over time. The expected plan included transition to home care once symptoms were improving and he could manage daily needs safely. No other acute diagnosis was identified as the primary reason for this admission.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 2 of 12\n\nHISTORY OF PRESENT ILLNESS:\nMr. Carter described a gradually worsening cough with feverish episodes, reduced energy, and increasing breathlessness before arrival. He noted less interest in food and fluids but remained able to communicate his symptoms and participate in planning. He denied a clear recent aspiration event and did not report a similar illness in the household. The symptoms had progressed despite his usual home routine, prompting hospital care. He did not describe chest discomfort, fainting, or confusion. His account was consistent with an acute respiratory infection and supported the working diagnosis of community-acquired pneumonia. The team reviewed the course and expected recovery with him in plain language. He was willing to remain for treatment and observation, and he identified improvement in breathing, energy, and ability to eat as important goals for discharge.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 3 of 12\n\nRELEVANT MEDICAL AND SOCIAL HISTORY:\nHis history includes essential hypertension, type 2 diabetes mellitus, and obstructive sleep apnea. He reported using his usual nighttime breathing support at home and was encouraged to continue his established sleep routine during recovery when feasible. His chronic conditions were stable by history before this illness, though reduced intake and infection could temporarily affect his usual self-care. He lives independently and usually manages household activities without assistance. He did not report tobacco use during the admission history, and no alcohol-related concern affected care. There was no known history of recurrent pneumonia or a chronic lung disorder. The team considered his baseline function when planning discharge and discussed gradual return to normal activity. His family was available to assist if needed. He understood that lingering fatigue and cough can persist after the acute infection begins to improve.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 4 of 12\n\nADMISSION ASSESSMENT AND PLAN:\nThe admitting team accepted Mr. Carter for inpatient care because of progressive respiratory symptoms, reduced intake, and the need for close observation while treating suspected community-acquired pneumonia. The plan emphasized antimicrobial treatment directed at a typical community-acquired infection, supportive breathing care, hydration, rest, and reassessment of symptoms. His chronic conditions were included in daily planning, with attention to maintaining his usual routines as safely as possible during acute illness. Staff reviewed warning symptoms with him and explained that the plan could change according to his response. He was encouraged to report worsening breathlessness, new confusion, inability to drink, or other concerning changes promptly. Discharge planning began on arrival and focused on a safe return home, continuity of his established chronic care, and clear instructions for follow-up after the infection.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 5 of 12\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Carter began inpatient antimicrobial treatment for community-acquired pneumonia and received supportive care for cough, breathlessness, and reduced intake. He remained engaged in discussion and could describe whether the symptoms were improving or worsening. The team encouraged regular fluids and rest, while staff monitored his ability to breathe comfortably during routine activity. His nighttime sleep apnea support was continued as part of his usual care when appropriate. Chronic hypertension and diabetes were kept in view while the acute illness was treated, without changing the focus from the respiratory infection. He was advised to ask for help before activity if breathlessness increased. No new complaint suggested a separate urgent condition. The team planned ongoing reassessment and explained that discharge would depend on sustained improvement, adequate oral intake, and a workable home plan.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 6 of 12\n\nHOSPITAL COURSE, DAY TWO:\nBy the second hospital day, Mr. Carter reported that his breathing felt less difficult at rest and that his energy was beginning to return. Cough remained present, but it was less disruptive to conversation and rest. He was able to take more fluids and food than on admission. The inpatient antimicrobial course and supportive measures continued, with attention to comfort and safe activity. Staff encouraged him to sit up, move as tolerated, and pause when tired. His sleep apnea routine was discussed again, and he planned to resume his home pattern after discharge. No additional acute issue altered the treatment plan. The team reviewed progress with him and began discussing a transition to oral intake, home recovery, and outpatient follow-up. He expressed understanding that cough and fatigue may take longer to resolve than the initial feverishness and breathlessness.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 7 of 12\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, Mr. Carter continued to describe gradual improvement in breathing, appetite, and general energy. He was taking fluids and food more reliably and could manage routine activity with fewer pauses. A residual cough remained, but he felt able to continue recovery at home. The team completed the planned inpatient treatment phase and determined that continued hospital observation was no longer needed. Discharge planning was reviewed with him, including completion of the prescribed course of treatment and return precautions. His chronic conditions remained part of the plan for continued care after the acute infection. He was reminded to rest, increase activity gradually, and maintain adequate fluid intake. He agreed with the transition home and understood whom to contact if symptoms failed to improve or became worse.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 8 of 12\n\nMANAGEMENT OF CHRONIC CONDITIONS:\nEssential hypertension, type 2 diabetes mellitus, and obstructive sleep apnea were considered throughout the admission. Mr. Carter was asked to continue the routine he follows for his chronic conditions as directed by his established outpatient clinicians, with adjustments only as specifically provided at discharge. The team discussed that infection, reduced appetite, and disrupted sleep can make usual self-care more difficult for a short period. He was encouraged to maintain regular meals and fluids as tolerated and to seek advice if he could not follow his usual plan. His home sleep support was incorporated into the inpatient routine when appropriate, and he planned to resume it consistently after returning home. No new long-term diagnosis was made during this stay. Follow-up with his regular care team was advised to review recovery and ongoing management of his chronic conditions.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 9 of 12\n\nCONSULTATIONS:\nNo specialty consultation was required during this admission. The hospital team managed the community-acquired pneumonia and coordinated care for Mr. Carter’s known hypertension, diabetes, and sleep apnea. His questions were addressed during daily discussions, and he participated in decisions about symptom support and discharge readiness. The team reviewed his usual home routines and considered whether added assistance would be needed after discharge. He reported that he could return to his home setting and had access to family support if fatigue continued. The care team also emphasized communication with his established outpatient clinicians after leaving the hospital. No separate specialty plan or additional follow-up service was arranged during the stay. The absence of a consultation did not limit his treatment; his progress and ability to continue recovery at home were reviewed directly with him.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 10 of 12\n\nPROCEDURES AND SUPPORTIVE CARE:\nNo invasive procedure was performed during this admission. Care consisted of inpatient antimicrobial treatment, support for breathing and oral intake, rest, and repeated review of reported symptoms and daily function. Mr. Carter was encouraged to move as tolerated and to ask for assistance if activity increased his breathlessness or fatigue. His usual nighttime support for obstructive sleep apnea was accommodated when feasible. Staff discussed coughing etiquette, hand hygiene, and avoiding close contact with others while he remained acutely ill. Fluids and food were encouraged as his appetite returned. The team also reviewed how to pace household activity after discharge and explained that recovery may be gradual. He did not require a procedure before leaving the hospital. No special equipment beyond his established home sleep support was planned for ongoing care.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 11 of 12\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Carter described clear overall improvement compared with arrival. His breathing was more comfortable, his intake had increased, and he felt able to manage basic activity at home. A cough and some fatigue persisted, but he understood these could continue during recovery. He was able to discuss his home plan and the circumstances that should prompt urgent help. Community-acquired pneumonia remained the diagnosis being treated, with no separate acute issue requiring continued hospital care. His established chronic conditions were included in the discharge plan, and he was instructed to follow the directions provided for their usual management. He was considered suitable for discharge home with support available from family if needed. He voiced understanding of the plan and agreed to seek help if breathing or overall condition worsened.\n\nTransthoracic echo this admission: LVEF 45%. Mild left atrial enlargement. Mildly reduced left ventricular systolic function.\n",
+        "Calvin Carter | MRN-27612 | Discharge summary | Page 12 of 12\n\nDISCHARGE INSTRUCTIONS AND FOLLOW-UP:\nMr. Carter was instructed to complete the full course of treatment as directed on his discharge paperwork and not to stop early simply because symptoms were improving. He should rest, drink fluids, eat as tolerated, and return to normal activity gradually. He should continue his established sleep apnea routine and follow the directions given for his chronic conditions. He was advised to contact his regular care team for follow-up after discharge and to discuss any persistent cough, fatigue, or difficulty resuming ordinary activities. He should seek urgent care for worsening breathlessness, inability to keep fluids down, new confusion, fainting, or a marked decline in his general condition. He should avoid close contact with others while acutely unwell and practice hand hygiene and cough etiquette. He confirmed that he understood these instructions and had a plan for getting home.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_3",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "progress_note_3",
+      "page": 1,
+      "text": "BMP: Na 140, K 3.9, Cl 98, CO2 23, BUN 21, Cr 1.2, Glu 152."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "discharge_summary",
+      "page": 11,
+      "text": "Transthoracic echo this admission: LVEF 45%. Mild left atrial enlargement. Mildly reduced left ventricular systolic function."
+    }
+  ],
+  "expected": {
+    "reason": "missing",
+    "ecg": "missing",
+    "echo": "present",
+    "lipids": "missing",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 6,
+  "input_tokens": 3204,
+  "output_tokens": 5374
+}

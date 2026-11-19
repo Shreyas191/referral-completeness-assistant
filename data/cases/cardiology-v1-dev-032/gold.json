@@ -1,0 +1,82 @@
+{
+  "case_id": "cardiology-v1-dev-032",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-08",
+  "split": "dev",
+  "slices": [
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of perioperative cardiac risk before planned elective\ntotal knee replacement."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "echo",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 219 mg/dL (H)\nLDL Cholesterol: 138 mg/dL (H)\nHDL Cholesterol: 45 mg/dL\nTriglycerides: 184 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 101 mmol/L\nCO2: 27 mmol/L\nBUN: 28 mg/dL (H)\nCreatininc: 0.7 mg/dL\nGlucose: 175 mg/dL (H)\nCalcium: 10.1 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Amlodipine 5 mg by mouth once daily\nLosartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAcetaminophen 500 mg by mouth as needed"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systoIic murmur at the\nsternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

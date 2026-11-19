@@ -1,0 +1,79 @@
+{
+  "case_id": "cardiology-v1-dev-039",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-10",
+  "split": "dev",
+  "slices": [
+    "abbreviation",
+    "buried",
+    "missing",
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 142 ms, QRS 92 ms, QTc 451\nms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary",
+          "page": 11,
+          "text": "Transthoracic echo this admission: LVEF 60%. Grade 1 diastolic dysfunction. Normal left\nventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 229 mg/dL (H)\nLDL Cholesterol: 124 mg/dL\nHDL Cholesterol: 65 mg/dL\nTriglycerides: 204 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "BMP: Na 139, K 3.6, Cl 101, CO2 26, BUN 25, Cr 1.1, Glu 95."
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

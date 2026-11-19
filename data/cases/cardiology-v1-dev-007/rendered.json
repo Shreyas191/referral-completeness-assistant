@@ -1,0 +1,222 @@
+{
+  "case_id": "cardiology-v1-dev-007",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-22",
+  "plan": {
+    "case_id": "cardiology-v1-dev-007",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "bury"
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Caleb",
+    "last_name": "Hayes",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol tartrate",
+        "dose": 25.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of chest pressure with exertion.",
+    "history": "48-year-old male reports chest pressure when walking uphill or climbing stairs, relieved after several minutes of rest. Symptoms began about two months ago and have become more frequent. He denies discomfort at rest.",
+    "referring_physician": "Dr. Alan Morgan",
+    "practice": "Apex Family Practice",
+    "sex": "male",
+    "age": 48,
+    "dob": "1978-10-22",
+    "mrn": "MRN-28329"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-22",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/22/2026\nPatient Name: Caleb Hayes\nDOB: 10/22/1978\nMRN: MRN-28329\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Alan Morgan, Apex Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of chest pressure with exertion.\n\nI am sending Caleb Hayes, a 48-year-old man with atrial fibrillation, hypertension, and type 2 diabetes mellitus, to your clinic for evaluation of chest pressure with exertion.\n\nFor about two months, he has experienced chest pressure when walking uphill or climbing stairs. It resolves after several minutes of rest and has become more frequent. He denies discomfort at rest.\n\nThank you for seeing this patient.\n\nDr. Alan Morgan\nApex Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-11-09",
+      "pages": [
+        "PROGRESS NOTE\nDate: 11/09/2026\nPatient Name: Caleb Hayes\nDOB: 10/22/1978\nMRN: MRN-28329\nProvider: Dr. Alan Morgan\n\nSUBJECTIVE:\nCaleb Hayes is a 48-year-old man with atrial fibrillation, hypertension, and type 2 diabetes mellitus. For about two months, he has had chest pressure when walking uphill or climbing stairs. Episodes have become more frequent and resolve after several minutes of rest. He denies discomfort at rest.\n\nVITALS:\nBP 125/91, HR 67, RR 12, SpO2 95% on room air, weight 223 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Exertional chest pressure: Increasing episodes with activity, relieved by rest, without discomfort at rest. Refer to cardiology for evaluation. Advised urgent assessment for persistent discomfort or symptoms at rest.\n2. Atrial fibrillation: Known history. Continue routine follow-up and coordinate care with cardiology.\n3. Hypertension: Continue routine monitoring and follow-up with primary care.\n4. Type 2 diabetes mellitus: Continue routine diabetes care with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-11-09",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 11/09/2026\nPatient Name: Caleb Hayes\nDOB: 10/22/1978\nMRN: MRN-28329\n\nMetoprolol tartrate 25 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-10",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/10/2026\nPatient Name: Caleb Hayes\nDOB: 10/22/1978\nMRN: MRN-28329\nOrdering provider: Dr. Alan Morgan\n\nFindings: Normal sinus rhythm at 77 bpm. Normal axis. PR interval 182 ms, QRS 80 ms, QTc 445 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-18",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/18/2026\nPatient Name: Caleb Hayes\nDOB: 10/22/1978\nMRN: MRN-28329\nOrdering provider: Dr. Alan Morgan\n\nLIPID PANEL\nTotal Cholesterol: 174 mg/dL\nLDL Cholesterol: 104 mg/dL\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 153 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 107 mmol/L\nCO2: 26 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.9 mg/dL\nGlucose: 172 mg/dL (H)\nCalcium: 10.1 mg/dL\n\nCOAGULATION\nProthrombin Time: 26.7 sec\nINR: 2.4\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-17",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/17/2026\nPatient Name: Caleb Hayes\nDOB: 10/22/1978\nMRN: MRN-28329\nAttending: Dr. Alan Morgan\n\nADMISSION DIAGNOSIS:\nCaleb Hayes is a 48-year-old man admitted for elective total knee replacement because of chronic knee pain and impaired mobility despite nonoperative care. The planned admission was for operative treatment, postoperative recovery, and initiation of a safe mobility program. His relevant chronic conditions include atrial fibrillation, hypertension, and type 2 diabetes mellitus. The surgical plan and expected recovery were reviewed with him before the procedure, including the need for temporary assistance with walking and home activity. He understood the anticipated benefits and limitations and agreed to proceed. There was no acute complaint prompting admission. His care team considered his chronic conditions in perioperative planning and arranged continued observation during recovery. The admission goal was discharge home once pain was manageable, mobility was safe with an assistive device, and a reliable home support plan was in place.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 2 of 12\n\nRELEVANT HISTORY:\nThe patient has a history of atrial fibrillation, hypertension, and type 2 diabetes mellitus. These conditions were reviewed during admission planning because they can affect perioperative care and recovery. His knee symptoms had limited walking and routine activities, and he elected joint replacement after discussion of available treatment approaches. He reported no new concern that changed the operative plan. The team reviewed his usual treatment routine and made a perioperative plan for continuation or temporary adjustment as clinically appropriate. He was advised that any changes would be communicated before discharge. His history was also reviewed for prior difficulties with anesthesia, pain control, mobility aids, and home support. He described a home setting where family assistance could be available during the first part of recovery. No specific medication names, test results, or calendar dates are included in this summary.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 3 of 12\n\nADMISSION AND PREOPERATIVE PLANNING:\nOn admission, the patient was oriented to the planned surgical stay and the expected sequence of care. The team confirmed the elective nature of the operation, reviewed his chronic conditions, and discussed the goals for early recovery. Perioperative planning included observation for symptoms related to atrial fibrillation, attention to blood pressure management, and support for diabetes care during reduced oral intake and activity. The patient received instructions about the surgical process, postoperative pain expectations, fall prevention, and early participation in mobility training. Discharge planning began before the operation, with attention to transportation, help at home, and access to an assistive device. The patient had an opportunity to ask questions and expressed understanding of the plan. No medication names, doses, laboratory values, named tests, imaging findings, or calendar dates are stated here.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 4 of 12\n\nPROCEDURE:\nThe patient underwent elective total knee replacement under the planned anesthetic approach. The procedure was completed without an intraoperative complication reported in the available narrative. He was transferred to the recovery area for routine observation and subsequent transition to the inpatient unit. The operative team provided instructions for wound protection, activity progression, and postoperative mobility. A structured pain plan was established without listing individual agents or doses in this summary. The patient was encouraged to begin assisted movement as tolerated and to participate in therapy after arrival on the unit. Perioperative care also included attention to his atrial fibrillation, hypertension, and type 2 diabetes mellitus. The procedure and immediate recovery were consistent with the intended elective admission, and no unplanned additional operation or higher level of care was required.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 5 of 12\n\nPOSTOPERATIVE DAY ONE:\nOn the first postoperative day, the patient continued recovery on the inpatient unit. He reported expected discomfort around the operated knee, with relief sufficient to participate in care and mobility training. The wound care plan was reviewed, and staff reinforced safe transfers, use of the assistive device, and fall precautions. Therapy focused on standing, short-distance walking, and beginning the prescribed home exercise routine. His oral intake and activity were advanced as tolerated. The care team continued observation for symptoms associated with atrial fibrillation and supported ongoing management of hypertension and diabetes. No new acute complaint was documented. Discharge planning was updated with the patient and his family, including the need for help during early recovery. The day’s goals were continued mobility, adequate symptom control, and preparation for a safe transition home.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 6 of 12\n\nPOSTOPERATIVE DAY TWO:\nOn the second postoperative day, the patient continued to make functional progress with therapy. He practiced transfers and walking with an assistive device and reviewed safety strategies for moving around the home. Knee discomfort remained manageable with the established plan, and he was able to take part in routine recovery activities. Staff reinforced wound protection and instructions for gradually increasing activity. His chronic conditions continued to be addressed through the established inpatient plan, without a reported acute event. The patient and family reviewed the anticipated discharge arrangements and confirmed that assistance would be available at home. Therapy considered his mobility appropriate for discharge with continued services and use of the recommended device. The team reviewed warning symptoms that should prompt contact with the surgical service or urgent evaluation. Discharge readiness was based on functional progress, symptom control, and a workable support plan.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 7 of 12\n\nCONSULTATIONS AND CARE COORDINATION:\nThe orthopedic service directed the operative and postoperative plan. Physical and occupational therapy worked with the patient on transfers, walking, daily activities, use of an assistive device, and precautions for the home setting. Nursing staff reinforced the wound care plan, fall prevention, symptom reporting, and participation in recovery activities. Care coordination reviewed transportation, family support, and arrangements for continued therapy after discharge. The team discussed his chronic atrial fibrillation, hypertension, and type 2 diabetes mellitus as part of routine perioperative planning, with no specialty intervention documented as necessary during this stay. Communication among the involved services focused on readiness for discharge and continuity of the established treatment plan. The patient and family were included in planning and had an opportunity to clarify instructions. No separate outside referral is described in this summary.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 8 of 12\n\nPAIN CONTROL AND MOBILITY:\nPostoperative discomfort was managed with the established treatment plan, and the patient reported adequate relief to participate in therapy and basic daily activities. Specific agents and doses are omitted. He was encouraged to use the recommended assistive device, move carefully during transfers, and request help when needed. Therapy addressed walking, balance during routine tasks, and safe movement in the home. The patient reviewed the home exercise program and the importance of gradual activity progression. Staff discussed pacing activity, allowing time for rest, and avoiding movements restricted by the surgical team. He demonstrated improving confidence with mobility and accepted the need for temporary assistance. Continued therapy after discharge was planned to build strength and function. The patient was advised to contact the surgical team if pain became uncontrolled or if new concerns developed.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 9 of 12\n\nCHRONIC CONDITIONS DURING ADMISSION:\nAtrial fibrillation, hypertension, and type 2 diabetes mellitus were recognized throughout the admission and incorporated into perioperative care. The team continued observation for new symptoms and maintained the established management approach, with adjustments made as clinically appropriate during the surgical stay. Diabetes care was considered alongside changes in diet and activity during recovery. The patient was asked to follow the individualized instructions provided by his treating clinicians after discharge. No medication names, doses, laboratory values, or specific test findings are included in this summary. No acute complication related to these chronic conditions was reported during the admission. The patient was reminded that routine follow-up for these conditions remains important while he recovers from joint surgery. Questions about any changes to his usual treatment routine were directed to the clinician responsible for that care.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 10 of 12\n\nCOMPLICATIONS AND SAFETY:\nNo intraoperative complication or unplanned escalation of care was reported. During the inpatient recovery, the patient did not develop a documented acute event requiring additional surgery or prolonged hospital treatment. Staff maintained fall precautions and reinforced the need for assistance with mobility until he was safe using the recommended device. The patient was instructed to protect the operative site and to follow the activity limits provided by the surgical team. He was also advised to report new or worsening symptoms, including fever, drainage, increasing redness, sudden swelling, chest discomfort, breathing difficulty, faintness, or a new change in his usual rhythm-related symptoms. These precautions were reviewed with him and his family as part of discharge planning. The available narrative supports discharge with routine outpatient recovery and continued observation by his treating teams.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 11 of 12\n\nCONDITION AT DISCHARGE:\nAt discharge, the patient was considered appropriate for continued recovery at home with support. His postoperative discomfort was manageable under the established plan, and he had participated in mobility training using an assistive device. He understood the need to follow the surgical team’s activity and wound care instructions and to continue therapy after leaving the hospital. No acute complication was reported during the stay. His atrial fibrillation, hypertension, and type 2 diabetes mellitus remained part of the ongoing care plan, with no new issue requiring continued inpatient treatment. The patient and family reviewed the discharge arrangements and stated that they could follow the instructions. He was discharged with written guidance regarding recovery, safety, and whom to contact if concerns arose. The transition plan included continued help at home and follow-up with the orthopedic service.\n\nTransthoracic echo this admission: LVEF 45%. Trace mitral regurgitation. Mildly reduced left ventricular systolic function.\n",
+        "Caleb Hayes | MRN-28329 | Discharge summary | Page 12 of 12\n\nDISCHARGE INSTRUCTIONS AND FOLLOW-UP:\nThe patient was instructed to keep the operative site protected and follow the wound care directions supplied by the surgical team. He should use the assistive device as directed, avoid activities restricted by the surgeon, and increase activity gradually with therapy guidance. He should continue the individualized treatment instructions provided at discharge; specific agents and doses are not listed here. He was advised to contact the orthopedic service for increasing pain, wound changes, fever, or other unexpected concerns. Urgent evaluation is appropriate for chest discomfort, difficulty breathing, fainting, or a sudden change in his usual symptoms. Follow-up with the orthopedic service should occur as arranged in the separate discharge paperwork. He should also maintain routine care with the clinicians managing atrial fibrillation, hypertension, and type 2 diabetes mellitus. Family support is recommended during early recovery, especially for walking and household tasks.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of chest pressure with exertion."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol tartrate 25 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 77 bpm. Normal axis. PR interval 182 ms, QRS 80 ms, QTc 445 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 174 mg/dL\nLDL Cholesterol: 104 mg/dL\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 153 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 107 mmol/L\nCO2: 26 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.9 mg/dL\nGlucose: 172 mg/dL (H)\nCalcium: 10.1 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 26.7 sec\nINR: 2.4"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "discharge_summary",
+      "page": 11,
+      "text": "Transthoracic echo this admission: LVEF 45%. Trace mitral regurgitation. Mildly reduced left ventricular systolic function."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2342,
+  "output_tokens": 4670
+}

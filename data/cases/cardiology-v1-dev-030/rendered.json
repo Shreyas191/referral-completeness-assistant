@@ -1,0 +1,195 @@
+{
+  "case_id": "cardiology-v1-dev-030",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-27",
+  "plan": {
+    "case_id": "cardiology-v1-dev-030",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": "omit"
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "omit"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": "omit"
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Gabrielle",
+    "last_name": "Brooks",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      }
+    ],
+    "allergies": "No known allergies",
+    "referral_reason": "Evaluation of a newly heard heart murmur.",
+    "history": "Gabrielle Brooks is a 49-year-old woman whose primary clinician recently noted a new heart murmur. She denies chest pain, shortness of breath, dizziness, or fainting. She has a history of hypertension and type 2 diabetes.",
+    "referring_physician": "Dr. Robert Brown",
+    "practice": "Kendall Family Practice",
+    "sex": "female",
+    "age": 49,
+    "dob": "1976-12-22",
+    "mrn": "MRN-58561"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-27",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/27/2026\nPatient Name: Gabrielle Brooks\nDOB: 12/22/1976\nMRN: MRN-58561\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Robert Brown, Kendall Family Practice\n\nDear Colleague,\n\nGabrielle Brooks is a 49-year-old woman followed at Kendall Family Practice. Her medical history includes hypertension and type 2 diabetes mellitus.\n\nPlease accept her for care at your cardiology clinic.\n\nThank you for seeing this patient.\n\nDr. Robert Brown\nKendall Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2025-09-22",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/22/2025\nPatient Name: Gabrielle Brooks\nDOB: 12/22/1976\nMRN: MRN-58561\nProvider: Dr. Robert Brown\n\nSUBJECTIVE:\nGabrielle Brooks is a 49-year-old woman seen for routine follow-up of hypertension and type 2 diabetes. She reports doing well and taking her prescribed treatment consistently. She is working on dietary changes and staying active. No new concerns.\n\nVITALS:\nBP 116/74, HR 78, RR 16, SpO2 97% on room air, weight 212 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension: Continue established treatment. Encourage a balanced diet, regular activity, and periodic home blood pressure checks.\n2. Type 2 diabetes: Continue established treatment. Reinforce nutrition and activity goals and routine foot care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-04-15",
+      "pages": [
+        "PROGRESS NOTE\nDate: 04/15/2026\nPatient Name: Gabrielle Brooks\nDOB: 12/22/1976\nMRN: MRN-58561\nProvider: Dr. Robert Brown\n\nSUBJECTIVE:\nGabrielle Brooks is a 49-year-old woman seen for routine follow-up of hypertension and type 2 diabetes. She reports taking her established treatment consistently and working on dietary choices and activity. She denies headaches, dizziness, vision changes, increased thirst or urination, and has no new concerns.\n\nVITALS:\nBP 146/81, HR 67, RR 14, SpO2 97% on room air, weight 135 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue established treatment and home monitoring. Encourage a reduced-salt diet and regular activity.\n2. Type 2 diabetes is stable by history. Continue established treatment and dietary measures. Encourage regular activity and follow-up as planned.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_3",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-12",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/12/2026\nPatient Name: Gabrielle Brooks\nDOB: 12/22/1976\nMRN: MRN-58561\nProvider: Dr. Robert Brown\n\nSUBJECTIVE:\nGabrielle Brooks is a 49-year-old female with hypertension and type 2 diabetes. Referral arrangements were discussed, and she is agreeable to the plan.\n\nVITALS:\nBP 155/78, HR 92, RR 15, SpO2 94% on room air, weight 239 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension. Continue current treatment and monitor blood pressure at home.\n2. Type 2 diabetes. Continue current treatment and follow dietary and activity recommendations.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-26",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/26/2026\nPatient Name: Gabrielle Brooks\nDOB: 12/22/1976\nMRN: MRN-58561\nOrdering provider: Dr. Robert Brown\n\nFindings: Normal sinus rhythm at 86 bpm. Normal axis. PR interval 186 ms, QRS 92 ms, QTc 423 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-21",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/21/2026\nPatient Name: Gabrielle Brooks\nDOB: 12/22/1976\nMRN: MRN-58561\nOrdering provider: Dr. Robert Brown\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-14",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/14/2026\nPatient Name: Gabrielle Brooks\nDOB: 12/22/1976\nMRN: MRN-58561\nOrdering provider: Dr. Robert Brown\n\nBASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 103 mmol/L\nCO2: 21 mmol/L\nBUN: 14 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 89 mg/dL\nCalcium: 9.1 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_3",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 86 bpm. Normal axis. PR interval 186 ms, QRS 92 ms, QTc 423 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 103 mmol/L\nCO2: 21 mmol/L\nBUN: 14 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 89 mg/dL\nCalcium: 9.1 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "missing",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "missing",
+    "bmp": "present",
+    "meds": "missing",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 5,
+  "input_tokens": 2649,
+  "output_tokens": 2391
+}

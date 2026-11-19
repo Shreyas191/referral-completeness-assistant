@@ -1,0 +1,222 @@
+{
+  "case_id": "cardiology-v1-dev-004",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-06",
+  "plan": {
+    "case_id": "cardiology-v1-dev-004",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Lucas",
+    "last_name": "Nolan",
+    "conditions": [
+      "Essential hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion.",
+    "history": "47-year-old male with several months of breathlessness when walking uphill or climbing stairs. Symptoms improve with rest and have gradually become more noticeable. Denies breathlessness at rest.",
+    "referring_physician": "Dr. Gregory Green",
+    "practice": "Brighton Family Practice",
+    "sex": "male",
+    "age": 47,
+    "dob": "1979-08-27",
+    "mrn": "MRN-28559"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-06",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/06/2026\nPatient Name: Lucas Nolan\nDOB: 08/27/1979\nMRN: MRN-28559\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Gregory Green, Brighton Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion.\n\nLucas Nolan is a 47-year-old man with essential hypertension and type 2 diabetes mellitus.\n\nHe reports several months of breathlessness when walking uphill or climbing stairs. It improves with rest and has gradually become more noticeable. He denies breathlessness at rest.\n\nI would appreciate your assessment of his exertional breathlessness.\n\nThank you for seeing this patient.\n\nDr. Gregory Green\nBrighton Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2025-10-09",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/09/2025\nPatient Name: Lucas Nolan\nDOB: 08/27/1979\nMRN: MRN-28559\nProvider: Dr. Gregory Green\n\nSUBJECTIVE:\nLucas Nolan is a 47-year-old man seen for routine follow-up of hypertension and type 2 diabetes. He reports consistent adherence to his established treatment plans and has no new concerns. He is working on healthy food choices and regular physical activity.\n\nVITALS:\nBP 132/91, HR 65, RR 17, SpO2 94% on room air, weight 160 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Essential hypertension is stable by report. Continue the established treatment plan and home blood pressure monitoring. Reinforce limiting dietary salt and maintaining regular activity.\n2. Type 2 diabetes is stable by report. Continue the established treatment plan. Encourage balanced meals, regular activity, and home blood sugar monitoring.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-05-17",
+      "pages": [
+        "PROGRESS NOTE\nDate: 05/17/2026\nPatient Name: Lucas Nolan\nDOB: 08/27/1979\nMRN: MRN-28559\nProvider: Dr. Gregory Green\n\nSUBJECTIVE:\nLucas Nolan is a 47-year-old man seen for routine follow-up of hypertension and type 2 diabetes. He reports consistent adherence to his prescribed treatment and ongoing attention to diet and activity. He has no new concerns.\n\nVITALS:\nBP 131/80, HR 83, RR 15, SpO2 99% on room air, weight 120 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Essential hypertension is stable by history. Continue established treatment, home blood pressure monitoring, a reduced-salt diet, and regular activity.\n2. Type 2 diabetes mellitus is followed routinely. Continue established treatment and home glucose monitoring. Reinforce balanced nutrition and regular physical activity.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_3",
+      "doc_type": "progress_note",
+      "doc_date": "2026-11-03",
+      "pages": [
+        "PROGRESS NOTE\nDate: 11/03/2026\nPatient Name: Lucas Nolan\nDOB: 08/27/1979\nMRN: MRN-28559\nProvider: Dr. Gregory Green\n\nSUBJECTIVE:\nLucas Nolan is a 47-year-old male with several months of breathlessness when walking uphill or climbing stairs. Symptoms improve with rest and have gradually become more noticeable. He denies breathlessness at rest.\n\nVITALS:\nBP 155/91, HR 89, RR 13, SpO2 99% on room air, weight 206 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Progressive breathlessness with exertion. Refer to cardiology for further evaluation.\n2. Essential hypertension. Continue routine follow-up and management.\n3. Type 2 diabetes mellitus. Continue routine follow-up and management.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-11-03",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 11/03/2026\nPatient Name: Lucas Nolan\nDOB: 08/27/1979\nMRN: MRN-28559\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-23",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/23/2026\nPatient Name: Lucas Nolan\nDOB: 08/27/1979\nMRN: MRN-28559\nOrdering provider: Dr. Gregory Green\n\nFindings: Sinus rhythm with occasional premature atrial complexes at 79 bpm. Normal axis. PR interval 144 ms, QRS 86 ms, QTc 452 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-10-07",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 10/07/2026\nPatient Name: Lucas Nolan\nDOB: 08/27/1979\nMRN: MRN-28559\nOrdering provider: Dr. Gregory Green\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 40%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-24",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/24/2026\nPatient Name: Lucas Nolan\nDOB: 08/27/1979\nMRN: MRN-28559\nOrdering provider: Dr. Gregory Green\n\nLIPID PANEL\nTotal Cholesterol: 241 mg/dL (H)\nLDL Cholesterol: 142 mg/dL (H)\nHDL Cholesterol: 62 mg/dL\nTriglycerides: 187 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 99 mmol/L\nCO2: 22 mmol/L\nBUN: 18 mg/dL\nCreatinine: 0.6 mg/dL\nGlucose: 133 mg/dL (H)\nCalcium: 9.6 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_3",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 79 bpm. Normal axis. PR interval 144 ms, QRS 86 ms, QTc 452 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 40%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 241 mg/dL (H)\nLDL Cholesterol: 142 mg/dL (H)\nHDL Cholesterol: 62 mg/dL\nTriglycerides: 187 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 99 mmol/L\nCO2: 22 mmol/L\nBUN: 18 mg/dL\nCreatinine: 0.6 mg/dL\nGlucose: 133 mg/dL (H)\nCalcium: 9.6 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 5,
+  "input_tokens": 2698,
+  "output_tokens": 2027
+}

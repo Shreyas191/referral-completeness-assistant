@@ -1,0 +1,205 @@
+{
+  "case_id": "cardiology-v1-dev-031",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-03",
+  "plan": {
+    "case_id": "cardiology-v1-dev-031",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": "omit"
+      },
+      {
+        "item_id": "echo",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "lipids",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "bmp",
+        "defect": "omit"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Daniel",
+    "last_name": "Avery",
+    "conditions": [
+      "Paroxysmal atrial fibrillation",
+      "Hypertension",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of intermittent palpitations in a patient with paroxysmal atrial fibrillation.",
+    "history": "The 76-year-old man reports episodes of a fast, irregular heartbeat occurring several times per week over the past month. Episodes last a few minutes and resolve spontaneously; he denies chest discomfort or fainting.",
+    "referring_physician": "Dr. Grant Avery",
+    "practice": "Jasper Family Practice",
+    "sex": "male",
+    "age": 76,
+    "dob": "1950-05-03",
+    "mrn": "MRN-98881"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-03",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/03/2026\nPatient Name: Daniel Avery\nDOB: 05/03/1950\nMRN: MRN-98881\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Grant Avery, Jasper Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of intermittent palpitations in a patient with paroxysmal atrial fibrillation.\n\nDaniel Avery is a 76-year-old man with paroxysmal atrial fibrillation, hypertension, and hypothyroidism. Over the past month, he has had episodes of a fast, irregular heartbeat several times per week. They last a few minutes and resolve on their own. He denies chest discomfort or fainting.\n\nPlease evaluate his intermittent palpitations in the setting of paroxysmal atrial fibrillation.\n\nThank you for seeing this patient.\n\nDr. Grant Avery\nJasper Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-05-12",
+      "pages": [
+        "PROGRESS NOTE\nDate: 05/12/2026\nPatient Name: Daniel Avery\nDOB: 05/03/1950\nMRN: MRN-98881\nProvider: Dr. Grant Avery\n\nSUBJECTIVE:\nDaniel Avery is a 76-year-old man seen for routine follow-up. He reports doing well overall and tolerating his established treatment without difficulty. No new concerns reported.\n\nVITALS:\nBP 148/72, HR 72, RR 14, SpO2 96% on room air, weight 145 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Paroxysmal atrial fibrillation is stable by history. Continue established management and monitor for recurrence of symptoms.\n2. Hypertension remains under ongoing management. Continue established plan and follow clinically.\n3. Hypothyroidism is stable by history. Continue established management and monitor clinically.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-11",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/11/2026\nPatient Name: Daniel Avery\nDOB: 05/03/1950\nMRN: MRN-98881\nProvider: Dr. Grant Avery\n\nSUBJECTIVE:\nDaniel Avery is a 76-year-old man with episodes of a fast, irregular heartbeat several times per week over the past month. Episodes last a few minutes and resolve spontaneously. He denies chest discomfort or fainting.\n\nVITALS:\nBP 112/86, HR 73, RR 17, SpO2 98% on room air, weight 165 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nMost recent echo showed an ejection fraction of 30%.\n\nLipids: TC 241, LDL 151, HDL 63, TG 138.\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Paroxysmal atrial fibrillation with recurrent intermittent palpitations. Refer to cardiology for evaluation.\n2. Hypertension. Continue routine management and follow-up.\n3. Hypothyroidism. Continue routine management and follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-11",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/11/2026\nPatient Name: Daniel Avery\nDOB: 05/03/1950\nMRN: MRN-98881\n\nLisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-28",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/28/2026\nPatient Name: Daniel Avery\nDOB: 05/03/1950\nMRN: MRN-98881\nOrdering provider: Dr. Grant Avery\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-29",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/29/2026\nPatient Name: Daniel Avery\nDOB: 05/03/1950\nMRN: MRN-98881\nOrdering provider: Dr. Grant Avery\n\nCOAGULATION\nProthrombin Time: 39.1 sec\nINR: 3.4\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of intermittent palpitations in a patient with paroxysmal atrial fibrillation."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "Most recent echo showed an ejection fraction of 30%."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "Lipids: TC 241, LDL 151, HDL 63, TG 138."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 39.1 sec\nINR: 3.4"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "missing",
+    "echo": "contradictory",
+    "lipids": "present",
+    "bmp": "missing",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2311,
+  "output_tokens": 1590
+}

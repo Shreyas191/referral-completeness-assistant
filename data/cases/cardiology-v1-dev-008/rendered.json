@@ -1,0 +1,199 @@
+{
+  "case_id": "cardiology-v1-dev-008",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-27",
+  "plan": {
+    "case_id": "cardiology-v1-dev-008",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Ryan",
+    "last_name": "Grant",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of fatigue in the setting of a strong family history of early heart disease.",
+    "history": "The patient is a 45-year-old man reporting several months of persistent fatigue. His father had heart disease at an early age, and a brother also developed heart disease before age 50. He denies chest discomfort or shortness of breath.",
+    "referring_physician": "Dr. Grace Allen",
+    "practice": "Kestrel Family Practice",
+    "sex": "male",
+    "age": 45,
+    "dob": "1981-05-05",
+    "mrn": "MRN-18588"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-27",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/27/2026\nPatient Name: Ryan Grant\nDOB: 05/05/1981\nMRN: MRN-18588\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Grace Allen, Kestrel Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of fatigue in the setting of a strong family history of early heart disease.\n\nRyan Grant is a 45-year-old man with hypertension, type 2 diabetes mellitus, and hypothyroidism.\n\nHe reports several months of persistent fatigue. His father had heart disease at an early age, and his brother developed heart disease before age 50. He denies chest discomfort or shortness of breath.\n\nI am asking your cardiology team to evaluate his fatigue in the setting of this strong family history of early heart disease.\n\nThank you for seeing this patient.\n\nDr. Grace Allen\nKestrel Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-05",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/05/2026\nPatient Name: Ryan Grant\nDOB: 05/05/1981\nMRN: MRN-18588\nProvider: Dr. Grace Allen\n\nSUBJECTIVE:\nRyan Grant is a 45-year-old man with several months of persistent fatigue. His father developed heart disease at an early age, and his brother developed heart disease before age 50. He denies chest discomfort or shortness of breath.\n\nVITALS:\nBP 138/74, HR 74, RR 16, SpO2 97% on room air, weight 161 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Persistent fatigue for several months. Refer to cardiology for evaluation in light of his strong family history of early heart disease.\n2. Strong family history of early heart disease in his father and brother. Discussed cardiology evaluation to assess fatigue and family risk.\n3. Hypertension. Continue routine follow-up with his usual clinician.\n4. Type 2 diabetes mellitus and hypothyroidism. Continue routine follow-up with his usual clinician.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-05",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/05/2026\nPatient Name: Ryan Grant\nDOB: 05/05/1981\nMRN: MRN-18588\n\nMetformin 500 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nLevothyroxine 75 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-07-02",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 07/02/2026\nPatient Name: Ryan Grant\nDOB: 05/05/1981\nMRN: MRN-18588\nOrdering provider: Dr. Grace Allen\n\nFindings: Sinus rhythm with occasional premature atrial complexes at 65 bpm. Normal axis. PR interval 157 ms, QRS 83 ms, QTc 422 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-13",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/13/2026\nPatient Name: Ryan Grant\nDOB: 05/05/1981\nMRN: MRN-18588\nOrdering provider: Dr. Grace Allen\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-03",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/03/2026\nPatient Name: Ryan Grant\nDOB: 05/05/1981\nMRN: MRN-18588\nOrdering provider: Dr. Grace Allen\n\nLIPID PANEL\nTotal Cholesterol: 256 mg/dL (H)\nLDL Cholesterol: 180 mg/dL (H)\nHDL Cholesterol: 51 mg/dL\nTriglycerides: 125 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 98 mmol/L\nCO2: 23 mmol/L\nBUN: 16 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 126 mg/dL (H)\nCalcium: 9.3 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of fatigue in the setting of a strong family history of early heart disease."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metformin 500 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nLevothyroxine 75 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 65 bpm. Normal axis. PR interval 157 ms, QRS 83 ms, QTc 422 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 256 mg/dL (H)\nLDL Cholesterol: 180 mg/dL (H)\nHDL Cholesterol: 51 mg/dL\nTriglycerides: 125 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 98 mmol/L\nCO2: 23 mmol/L\nBUN: 16 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 126 mg/dL (H)\nCalcium: 9.3 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 3,
+  "input_tokens": 1862,
+  "output_tokens": 1390
+}

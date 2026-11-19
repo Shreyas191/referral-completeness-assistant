@@ -1,0 +1,86 @@
+{
+  "case_id": "cardiology-v1-dev-030",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-27",
+  "split": "dev",
+  "slices": [
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 86 bpm. Normal axis. PR interval 186 ms, QRS 92 ms, QTc\n423 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n30%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 103 mmol/L\nCO2: 21 mmol/L\nBUN: 14 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 89 mg/dL\nCalcium: 9.1 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneraI: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: clear bilateraly.\nExtremities: 1+ pitting edema of both ankles."
+        },
+        {
+          "doc_id": "progress_note_3",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardac exam: regular rate and rhythm, normal S1 and S2, sot systolic murmur at the sternal\nborder, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

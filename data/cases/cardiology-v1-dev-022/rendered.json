@@ -1,0 +1,233 @@
+{
+  "case_id": "cardiology-v1-dev-022",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-09",
+  "plan": {
+    "case_id": "cardiology-v1-dev-022",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "bury"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": "stale"
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Brian",
+    "last_name": "Sullivan",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol succinate",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of a recent episode of fainting with transient loss of consciousness.",
+    "history": "This 48-year-old male with atrial fibrillation and hypertension reports one episode of fainting. He briefly lost consciousness and recovered without ongoing symptoms.",
+    "referring_physician": "Dr. Henry Taylor",
+    "practice": "Fairview Family Practice",
+    "sex": "male",
+    "age": 48,
+    "dob": "1978-07-13",
+    "mrn": "MRN-71198"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-09",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/09/2026\nPatient Name: Brian Sullivan\nDOB: 07/13/1978\nMRN: MRN-71198\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Henry Taylor, Fairview Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of a recent episode of fainting with transient loss of consciousness.\n\nBrian Sullivan is a 48-year-old man with atrial fibrillation and hypertension. He recently had one episode of fainting with brief loss of consciousness and recovered without ongoing symptoms.\n\nPlease evaluate him for this episode of transient loss of consciousness and advise on further care.\n\nThank you for seeing this patient.\n\nDr. Henry Taylor\nFairview Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-07-29",
+      "pages": [
+        "PROGRESS NOTE\nDate: 07/29/2026\nPatient Name: Brian Sullivan\nDOB: 07/13/1978\nMRN: MRN-71198\nProvider: Dr. Henry Taylor\n\nSUBJECTIVE:\nBrian Sullivan is a 48-year-old man with atrial fibrillation and hypertension who reports one episode of fainting with brief loss of consciousness. He recovered without ongoing symptoms.\n\nVITALS:\nBP 117/84, HR 87, RR 15, SpO2 98% on room air, weight 191 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nDATA REVIEWED:\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Syncope with transient loss of consciousness. Refer to cardiology for evaluation of the episode. Seek urgent care if fainting recurs or new symptoms develop.\n2. Atrial fibrillation. Include this history in the cardiology evaluation and continue routine follow-up.\n3. Hypertension. Continue routine management and follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-07-29",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 07/29/2026\nPatient Name: Brian Sullivan\nDOB: 07/13/1978\nMRN: MRN-71198\n\nMetoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-06-05",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 06/05/2026\nPatient Name: Brian Sullivan\nDOB: 07/13/1978\nMRN: MRN-71198\nOrdering provider: Dr. Henry Taylor\n\nFindings: Normal sinus rhythm at 71 bpm. Normal axis. PR interval 174 ms, QRS 94 ms, QTc 405 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-15",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/15/2026\nPatient Name: Brian Sullivan\nDOB: 07/13/1978\nMRN: MRN-71198\nOrdering provider: Dr. Henry Taylor\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_1",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-31",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/31/2026\nPatient Name: Brian Sullivan\nDOB: 07/13/1978\nMRN: MRN-71198\nOrdering provider: Dr. Henry Taylor\n\nBASIC METABOLIC PANEL\nSodium: 135 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 104 mmol/L\nCO2: 23 mmol/L\nBUN: 14 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 160 mg/dL (H)\nCalcium: 9.9 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_2",
+      "doc_type": "lab_report",
+      "doc_date": "2026-06-21",
+      "pages": [
+        "LABORATORY REPORT\nDate: 06/21/2026\nPatient Name: Brian Sullivan\nDOB: 07/13/1978\nMRN: MRN-71198\nOrdering provider: Dr. Henry Taylor\n\nCOAGULATION\nProthrombin Time: 28.2 sec\nINR: 2.5\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-12",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 08/12/2026\nPatient Name: Brian Sullivan\nDOB: 07/13/1978\nMRN: MRN-71198\nAttending: Dr. Henry Taylor\n\nADMISSION DIAGNOSIS:\nBrian Sullivan is a 48-year-old male admitted with community-acquired pneumonia after developing cough, feverishness, fatigue, and shortness of breath over several days. The illness had limited his usual activity and oral intake. He was admitted for inpatient treatment because symptoms were persistent and required ongoing observation and supportive care. His history includes atrial fibrillation and hypertension. The pneumonia was considered the primary cause of the acute respiratory symptoms. He had no reported recent travel or known exposure to a person with a similar illness. The admitting team discussed the working diagnosis and the expected course of care with him. Treatment focused on antimicrobial therapy, rest, hydration, and monitoring for worsening breathing or other complications. His chronic conditions were considered during the admission plan. He remained engaged in discussions about his care and agreed with the plan for inpatient management.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 2 of 12\n\nHISTORY OF PRESENT ILLNESS:\nMr. Sullivan reported a gradually worsening cough accompanied by fatigue, reduced appetite, and intermittent feverishness before admission. He described shortness of breath with routine activity but did not report severe chest discomfort, fainting, or confusion. He had attempted to rest at home, but his symptoms continued to interfere with sleep and daily tasks. There was no reported episode of choking or aspiration. His history was obtained from him, and he was able to provide a consistent account. The symptoms were felt to fit an acute community-acquired respiratory infection. He had not recently traveled and did not identify a clear sick contact. The admitting team reviewed the expected inpatient course, including treatment, supportive care, and observation for improvement. He expressed understanding and wished to proceed with the recommended plan.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 3 of 12\n\nRELEVANT MEDICAL AND SOCIAL HISTORY:\nHis medical history is notable for atrial fibrillation and hypertension. He reported no prior admission for pneumonia and no history of chronic lung disease. His usual activity before this illness included independent self-care and routine household tasks. During the days before admission, cough and fatigue reduced his activity and appetite. He lives independently and has access to help from family if needed after discharge. He did not report tobacco use during the history obtained for this admission. No additional chronic condition was identified as a major barrier to recovery. The team considered his history of atrial fibrillation and hypertension while planning care and discharge. He was advised to continue follow-up with the clinicians who manage those conditions. His understanding of the proposed plan was reviewed in conversation, and he was able to describe the main reasons to seek help if symptoms worsened.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 4 of 12\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, care was directed toward treatment of the community-acquired pneumonia and relief of cough, fatigue, and breathing discomfort. Antimicrobial therapy and supportive measures were started. Oral fluids and rest were encouraged as tolerated. The team observed his respiratory symptoms and ability to complete basic activities without undue difficulty. He remained alert and participated in discussions about his care. His atrial fibrillation and hypertension were taken into account in the overall plan, without a new complication attributed to either condition. He had no reported episode of acute confusion, fainting, or severe chest discomfort during this period. The team reviewed the anticipated duration of inpatient care and the milestones needed before discharge, including sustained symptom improvement, adequate intake, and a workable plan for continued care at home. His questions about the illness and recovery were answered.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 5 of 12\n\nHOSPITAL COURSE, DAY TWO:\nBy the second hospital day, Mr. Sullivan described less fatigue and a gradual reduction in breathing discomfort. His cough continued but was less disruptive, and he was able to rest more comfortably. He tolerated oral intake and participated in routine activity with less limitation than at admission. Antimicrobial therapy and supportive care continued, with observation for any return or worsening of symptoms. No new concern related to atrial fibrillation or hypertension was reported during this interval. The team discussed the importance of completing the planned course of treatment after leaving the hospital and following instructions for hydration and gradual return to activity. He was also reminded to avoid strenuous exertion until his stamina improved. Discharge planning began, including confirmation that he could return to a supportive home setting and arrange follow-up with his usual clinician.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 6 of 12\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, he continued to report improvement in cough, energy, and breathing comfort. He was eating and drinking adequately and felt prepared to continue recovery outside the hospital. He remained able to manage routine personal needs and did not describe a new symptom requiring a change in the plan. The inpatient team reviewed the treatment course and discussed the expected gradual resolution of respiratory symptoms. Antimicrobial therapy was transitioned to a plan suitable for completion after discharge, without naming the specific agent in this summary. Supportive care and gradual resumption of usual activities were reviewed. His chronic atrial fibrillation and hypertension remained part of the discharge planning, with continued follow-up advised through his established care team. He agreed with discharge once the remaining instructions and return precautions had been reviewed.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 7 of 12\n\nCONSULTATIONS:\nThe hospital medicine team directed the inpatient care. A respiratory care clinician reviewed practical measures to support comfortable breathing and reinforce gradual activity as tolerated. The bedside team also provided education about cough management, hydration, and recognizing a change in breathing that would require prompt attention. No separate specialist consultation was required during this admission. The team considered his history of atrial fibrillation and hypertension while coordinating the plan, but no acute issue related to those conditions prompted additional specialist involvement. Discussions were kept focused on the pneumonia, recovery goals, and a safe transition home. Mr. Sullivan had opportunities to ask questions and demonstrated an understanding of the plan. Communication among the inpatient team and nursing staff supported continuity of care. Follow-up with his usual clinicians was recommended for ongoing management of his chronic conditions and review of his recovery after the acute illness.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 8 of 12\n\nPROCEDURES:\nNo invasive procedure was performed during this admission. His care was managed with antimicrobial treatment, supportive measures, and observation of his clinical progress. Respiratory support was not escalated to an invasive level. The team focused on symptom relief, maintaining oral intake, encouraging rest, and increasing activity gradually as he felt able. No procedure-related complication occurred. Before discharge, the purpose of continuing treatment at home was reviewed, along with the need to follow the instructions provided by the inpatient team. He was advised to seek timely care if he developed worsening shortness of breath, inability to maintain fluids, or a marked decline in function. The absence of a procedure did not change the need for follow-up, completion of the planned treatment course, and attention to his chronic health conditions after the pneumonia had begun to improve.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 9 of 12\n\nDISCHARGE DIAGNOSES:\nThe principal discharge diagnosis is community-acquired pneumonia, improving after inpatient treatment. Associated symptoms at presentation included cough, fatigue, feverishness, reduced appetite, and shortness of breath with activity. These symptoms improved sufficiently for continued recovery at home. His chronic diagnoses include atrial fibrillation and hypertension, which were considered in the care plan and should remain under follow-up with his usual clinicians. No additional acute diagnosis requiring continued hospitalization was identified at discharge. The pneumonia remains in a recovery phase, and cough or reduced stamina may persist for a time despite improvement. He was advised to follow the treatment instructions provided at discharge and to contact a clinician if his course does not continue to improve. He voiced understanding of the diagnoses and the reason that follow-up remains important.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 10 of 12\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Sullivan reported that his breathing was more comfortable and that his energy and appetite had improved compared with admission. His cough had lessened but had not fully resolved. He was able to take fluids and food and manage routine personal needs. He felt ready to continue recovery at home and understood that stamina may return gradually. No new concern was reported that required continued inpatient care. His atrial fibrillation and hypertension did not present an acute barrier to discharge. The team reviewed the plan for continued pneumonia treatment and follow-up, and he was able to restate the main instructions. He will return to a supportive home setting. Discharge was considered appropriate with outpatient care, attention to symptoms, and timely contact with a clinician if improvement stalls or a concerning change develops.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 11 of 12\n\nDISCHARGE INSTRUCTIONS:\nContinue the pneumonia treatment exactly as directed in the separate discharge paperwork, and complete the full planned course unless a clinician advises otherwise. Drink fluids regularly and eat as tolerated. Rest as needed, then increase activity gradually according to comfort; avoid strenuous exertion until breathing and stamina have returned near baseline. Cough and tiredness can take time to resolve, but the overall trend should continue to improve. Seek urgent care for worsening shortness of breath, confusion, fainting, inability to keep fluids down, or a sudden decline in daily function. Contact a clinician promptly for renewed feverishness or a cough that becomes substantially worse. Continue the established care plan for atrial fibrillation and hypertension, and do not make changes without guidance from the clinician who oversees those conditions. Keep a copy of the discharge instructions available and share them with the clinicians involved in follow-up.\n\nFasting lipid panel this admission: total cholesterol: 225 mg/dL, LDL: 131 mg/dL, HDL: 44 mg/dL, triglycerides: 254 mg/dL.\n",
+        "Brian Sullivan | MRN-71198 | Discharge summary | Page 12 of 12\n\nFOLLOW-UP:\nArrange follow-up with the usual primary care clinician after discharge to review recovery from pneumonia and confirm that symptoms continue to improve. Follow-up should also address ongoing care for atrial fibrillation and hypertension. If an appointment cannot be arranged promptly, contact the clinic to ask about the appropriate timing rather than waiting until symptoms worsen. Bring the discharge paperwork and be ready to describe the course of cough, breathing discomfort, appetite, and activity since leaving the hospital. Contact the care team sooner for symptoms that fail to improve, return after improving, or interfere with eating, drinking, or routine self-care. Use urgent services for severe breathing difficulty, fainting, new confusion, or another rapidly worsening problem. The hospital team has not scheduled a specific calendar date in this summary. Mr. Sullivan indicated that he understood the need for follow-up and planned to contact his usual clinician.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of a recent episode of fainting with transient loss of consciousness."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 71 bpm. Normal axis. PR interval 174 ms, QRS 94 ms, QTc 405 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report_1",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 135 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 104 mmol/L\nCO2: 23 mmol/L\nBUN: 14 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 160 mg/dL (H)\nCalcium: 9.9 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report_2",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 28.2 sec\nINR: 2.5"
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "discharge_summary",
+      "page": 11,
+      "text": "Fasting lipid panel this admission: total cholesterol: 225 mg/dL, LDL: 131 mg/dL, HDL: 44 mg/dL, triglycerides: 254 mg/dL."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "stale"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2305,
+  "output_tokens": 4089
+}

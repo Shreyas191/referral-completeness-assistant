@@ -1,0 +1,244 @@
+{
+  "case_id": "cardiology-v1-dev-028",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-25",
+  "plan": {
+    "case_id": "cardiology-v1-dev-028",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "lipids",
+        "defect": "stale"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": true,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Laura",
+    "last_name": "Reed",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol tartrate",
+        "dose": 25.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of a recent fainting episode with transient loss of consciousness.",
+    "history": "This 62-year-old female had a brief fainting episode while standing in her kitchen and regained awareness within a minute. She reports no recurrence since the episode.",
+    "referring_physician": "Dr. Paul Lane",
+    "practice": "Tidewater Family Practice",
+    "sex": "female",
+    "age": 62,
+    "dob": "1964-06-18",
+    "mrn": "MRN-86360"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-25",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/25/2026\nPatient Name: Laura Reed\nDOB: 06/18/1964\nMRN: MRN-86360\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Paul Lane, Tidewater Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of a recent fainting episode with transient loss of consciousness.\n\nI am sending Laura Reed, a 62-year-old woman followed at Tidewater Family Practice, to your cardiology clinic for evaluation of a recent fainting episode with transient loss of consciousness. Her history includes atrial fibrillation, hypertension, type 2 diabetes mellitus, and hypothyroidism.\n\nShe briefly lost consciousness while standing in her kitchen and regained awareness within a minute. She reports no recurrence since the episode.\n\nThank you for seeing this patient.\n\nDr. Paul Lane\nTidewater Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-11",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/11/2026\nPatient Name: Laura Reed\nDOB: 06/18/1964\nMRN: MRN-86360\nProvider: Dr. Paul Lane\n\nSUBJECTIVE:\nLaura Reed is a 62-year-old woman with atrial fibrillation, hypertension, type 2 diabetes, and hypothyroidism. She briefly fainted while standing in her kitchen and regained awareness within a minute. She reports no recurrence.\n\nVITALS:\nBP 122/76, HR 67, RR 17, SpO2 99% on room air, weight 164 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nMost recent echo showed an ejection fraction of 40%.\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Transient loss of consciousness: Cardiology referral placed for evaluation of the episode. She reports no recurrence.\n2. Atrial fibrillation: Cardiology evaluation requested in the context of the fainting episode.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-11",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/11/2026\nPatient Name: Laura Reed\nDOB: 06/18/1964\nMRN: MRN-86360\n\nMetoprolol tartrate 25 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-13",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 10/13/2026\nPatient Name: Laura Reed\nDOB: 06/18/1964\nMRN: MRN-86360\nOrdering provider: Dr. Paul Lane\n\nFindings: Normal sinus rhythm at 70 bpm. Normal axis. PR interval 151 ms, QRS 108 ms, QTc 417 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-08-27",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/27/2026\nPatient Name: Laura Reed\nDOB: 06/18/1964\nMRN: MRN-86360\nOrdering provider: Dr. Paul Lane\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_1",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-05",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/05/2026\nPatient Name: Laura Reed\nDOB: 06/18/1964\nMRN: MRN-86360\nOrdering provider: Dr. Paul Lane\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 5.0 mmol/L\nChloride: 106 mmol/L\nCO2: 28 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 101 mg/dL (H)\nCalcium: 9.9 mg/dL\n\nCOAGULATION\nProthrombin Time: 35.4 sec\nINR: 3.1\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_2",
+      "doc_type": "lab_report",
+      "doc_date": "2025-07-18",
+      "pages": [
+        "LABORATORY REPORT\nDate: 07/18/2025\nPatient Name: Laura Reed\nDOB: 06/18/1964\nMRN: MRN-86360\nOrdering provider: Dr. Paul Lane\n\nLIPID PANEL\nTotal Cholesterol: 221 mg/dL (H)\nLDL Cholesterol: 137 mg/dL (H)\nHDL Cholesterol: 54 mg/dL\nTriglycerides: 154 mg/dL (H)\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_3",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-18",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/18/2026\nPatient Name: Ross Reed\nDOB: 04/02/1963\nMRN: MRN-68360\nOrdering provider: Dr. Angela Ruiz\n\nLIPID PANEL\nTotal Cholesterol: 190 mg/dL\nLDL Cholesterol: 115 mg/dL\nHDL Cholesterol: 33 mg/dL (L)\nTriglycerides: 211 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 3.6 mmol/L\nChloride: 106 mmol/L\nCO2: 27 mmol/L\nBUN: 30 mg/dL (H)\nCreatinine: 1.3 mg/dL (H)\nGlucose: 147 mg/dL (H)\nCalcium: 10.2 mg/dL\n"
+      ],
+      "patient": "other"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of a recent fainting episode with transient loss of consciousness."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "Most recent echo showed an ejection fraction of 40%."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol tartrate 25 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 70 bpm. Normal axis. PR interval 151 ms, QRS 108 ms, QTc 417 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report_1",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 5.0 mmol/L\nChloride: 106 mmol/L\nCO2: 28 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 101 mg/dL (H)\nCalcium: 9.9 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report_1",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 35.4 sec\nINR: 3.1"
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report_2",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 221 mg/dL (H)\nLDL Cholesterol: 137 mg/dL (H)\nHDL Cholesterol: 54 mg/dL\nTriglycerides: 154 mg/dL (H)"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "contradictory",
+    "lipids": "stale",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [
+    "lab_report_3"
+  ],
+  "llm_calls": 3,
+  "input_tokens": 1851,
+  "output_tokens": 1274
+}

@@ -1,0 +1,229 @@
+{
+  "case_id": "cardiology-v1-dev-011",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-07",
+  "plan": {
+    "case_id": "cardiology-v1-dev-011",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Paula",
+    "last_name": "Keller",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of perioperative cardiac risk before planned elective total knee arthroplasty.",
+    "history": "She is scheduled for elective total knee arthroplasty and requests risk assessment before surgery. She reports no chest discomfort, breathlessness, fainting, or palpitations with routine activity. Her primary clinician requests guidance on perioperative planning.",
+    "referring_physician": "Dr. Frank Foster",
+    "practice": "Harborview Internal Medicine",
+    "sex": "female",
+    "age": 50,
+    "dob": "1976-05-12",
+    "mrn": "MRN-37727"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-07",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/07/2026\nPatient Name: Paula Keller\nDOB: 05/12/1976\nMRN: MRN-37727\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Frank Foster, Harborview Internal Medicine\n\nDear Colleague,\n\nReason for referral: Evaluation of perioperative cardiac risk before planned elective total knee arthroplasty.\n\nPaula Keller is a 50-year-old woman with hypertension, type 2 diabetes mellitus, and hypothyroidism. She is scheduled for elective total knee arthroplasty and requests an assessment of perioperative cardiac risk.\n\nShe reports no chest discomfort, breathlessness, fainting, or palpitations with routine activity. Please evaluate her risk before surgery and provide guidance on perioperative planning.\n\nThank you for seeing this patient.\n\nDr. Frank Foster\nHarborview Internal Medicine\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-05-25",
+      "pages": [
+        "PROGRESS NOTE\nDate: 05/25/2026\nPatient Name: Paula Keller\nDOB: 05/12/1976\nMRN: MRN-37727\nProvider: Dr. Frank Foster\n\nSUBJECTIVE:\nPaula Keller is a 50-year-old woman seen for routine follow-up of hypertension, type 2 diabetes mellitus, and hypothyroidism. She reports feeling well and has no new concerns. She continues her established care routine.\n\nVITALS:\nBP 136/86, HR 85, RR 15, SpO2 95% on room air, weight 189 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue the established regimen and lifestyle measures.\n2. Type 2 diabetes mellitus is stable by history. Continue the established care plan, with attention to nutrition and regular activity.\n3. Hypothyroidism is stable by history. Continue the established treatment and monitor for changes in symptoms.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-01",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/01/2026\nPatient Name: Paula Keller\nDOB: 05/12/1976\nMRN: MRN-37727\nProvider: Dr. Frank Foster\n\nSUBJECTIVE:\nPaula Keller is a 50-year-old female seen for routine follow-up. She feels well overall and reports consistent adherence to her treatment plan. She has no new concerns and is maintaining her usual diet and activity routine.\n\nVITALS:\nBP 152/83, HR 71, RR 13, SpO2 95% on room air, weight 164 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Hypertension remains stable by history. Continue the established plan and encourage regular activity and mindful dietary choices.\n2. Type 2 diabetes mellitus remains stable by report. Continue the established plan, encourage balanced meals and routine activity, and continue home glucose tracking.\n3. Hypothyroidism is controlled by history. Continue the established thyroid treatment plan and monitor for changes in energy, temperature tolerance, or bowel habits.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_3",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-31",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/31/2026\nPatient Name: Paula Keller\nDOB: 05/12/1976\nMRN: MRN-37727\nProvider: Dr. Frank Foster\n\nSUBJECTIVE:\nPaula Keller is a 50-year-old woman scheduled for elective total knee arthroplasty who requests preoperative cardiac risk assessment. She denies chest discomfort, breathlessness, fainting, or palpitations with routine activity. Her primary clinician requests guidance on perioperative planning.\n\nVITALS:\nBP 144/76, HR 79, RR 18, SpO2 96% on room air, weight 205 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Perioperative cardiac risk: Arrange cardiology evaluation before planned elective knee surgery. Defer perioperative cardiac risk recommendations until that evaluation.\n2. Hypertension: This chronic condition is relevant to perioperative risk. Continue routine management with her primary clinician and include it in the cardiology assessment.\n3. Type 2 diabetes mellitus: This chronic condition is relevant to perioperative risk. Continue routine management with her primary clinician and include it in the cardiology assessment.\n4. Hypothyroidism: Include this chronic condition in perioperative planning. Continue routine management with her primary clinician.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-31",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/31/2026\nPatient Name: Paula Keller\nDOB: 05/12/1976\nMRN: MRN-37727\n\nAmlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-08",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 10/08/2026\nPatient Name: Paula Keller\nDOB: 05/12/1976\nMRN: MRN-37727\nOrdering provider: Dr. Frank Foster\n\nFindings: Normal sinus rhythm at 87 bpm. Normal axis. PR interval 152 ms, QRS 101 ms, QTc 433 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-10-14",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 10/14/2026\nPatient Name: Paula Keller\nDOB: 05/12/1976\nMRN: MRN-37727\nOrdering provider: Dr. Frank Foster\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 50%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-01",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/01/2026\nPatient Name: Paula Keller\nDOB: 05/12/1976\nMRN: MRN-37727\nOrdering provider: Dr. Frank Foster\n\nLIPID PANEL\nTotal Cholesterol: 191 mg/dL\nLDL Cholesterol: 96 mg/dL\nHDL Cholesterol: 49 mg/dL\nTriglycerides: 232 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.2 mmol/L\nChloride: 98 mmol/L\nCO2: 21 mmol/L\nBUN: 25 mg/dL (H)\nCreatinine: 1.4 mg/dL (H)\nGlucose: 117 mg/dL (H)\nCalcium: 10.2 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of perioperative cardiac risk before planned elective total knee arthroplasty."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_3",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 87 bpm. Normal axis. PR interval 152 ms, QRS 101 ms, QTc 433 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 50%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 191 mg/dL\nLDL Cholesterol: 96 mg/dL\nHDL Cholesterol: 49 mg/dL\nTriglycerides: 232 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.2 mmol/L\nChloride: 98 mmol/L\nCO2: 21 mmol/L\nBUN: 25 mg/dL (H)\nCreatinine: 1.4 mg/dL (H)\nGlucose: 117 mg/dL (H)\nCalcium: 10.2 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 5,
+  "input_tokens": 2779,
+  "output_tokens": 2606
+}

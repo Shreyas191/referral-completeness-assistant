@@ -1,0 +1,82 @@
+{
+  "case_id": "cardiology-v1-dev-036",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-01",
+  "split": "dev",
+  "slices": [
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 181 ms, QRS 84 ms, QTc 407\nms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n40%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 227 mg/dL (H)\nLDL Cholesterol: 142 mg/dL (H)\nHDL Cholesterol: 41 mg/dL\nTriglycerides: 222 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 4.5 mmol/L\nChloride: 102 mmol/L\nCO2: 25 mmol/L\nBUN: 20 mg/dL\nCreatinine: 0.8 mg/dL\nGlucose: 148 mg/dL (H)\nCalcium: 8.9 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Amlodipine 10 mg by mouth once daily\nLosartan 100 mg by mouth once daily\nChlorthalidone 25 mg by mouth once daily\nMetformin 500 mg by mouth twice daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "case_id": "cardiology-v1-dev-012",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-02",
+  "plan": {
+    "case_id": "cardiology-v1-dev-012",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": "stale"
+      },
+      {
+        "item_id": "echo",
+        "defect": "omit"
+      },
+      {
+        "item_id": "lipids",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "bmp",
+        "defect": "bury"
+      },
+      {
+        "item_id": "meds",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Nathan",
+    "last_name": "Ellis",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Chronic obstructive pulmonary disease",
+      "Osteoarthritis"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "tiotropium",
+        "dose": 18.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion in an 83-year-old man.",
+    "history": "Nathan Ellis is an 83-year-old man with several months of gradually increasing breathlessness when walking uphill or more than a short distance. He has no breathlessness at rest and reports no recent respiratory illness. His activity has decreased because of these symptoms.",
+    "referring_physician": "Dr. Daniel Norris",
+    "practice": "Northside Family Practice",
+    "sex": "male",
+    "age": 83,
+    "dob": "1943-05-12",
+    "mrn": "MRN-20236"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-02",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/02/2026\nPatient Name: Nathan Ellis\nDOB: 05/12/1943\nMRN: MRN-20236\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Daniel Norris, Northside Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion in an 83-year-old man.\n\nI am requesting cardiology assessment of Nathan Ellis, an 83-year-old man, for several months of gradually increasing breathlessness with exertion. He becomes short of breath walking uphill or after a short distance, but not at rest. He reports no recent respiratory illness, and his activity has decreased because of these symptoms.\n\nHis medical history includes hypertension, type 2 diabetes mellitus, chronic obstructive pulmonary disease, and osteoarthritis.\n\nThank you for seeing this patient.\n\nDr. Daniel Norris\nNorthside Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-22",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/22/2026\nPatient Name: Nathan Ellis\nDOB: 05/12/1943\nMRN: MRN-20236\nProvider: Dr. Daniel Norris\n\nSUBJECTIVE:\nNathan Ellis is an 83-year-old man with several months of gradually increasing breathlessness when walking uphill or more than a short distance. He has no breathlessness at rest and reports no recent respiratory illness. His activity has decreased because of these symptoms.\n\nVITALS:\nBP 114/84, HR 77, RR 18, SpO2 97% on room air, weight 224 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nLipids: TC 189, LDL 103, HDL 43, TG 218.\n\nContinue tiotropium 36 mcg once daily.\n\nASSESSMENT AND PLAN:\n1. Breathlessness on exertion: Gradually worsening and limiting activity. Refer to cardiology for evaluation.\n2. Chronic obstructive pulmonary disease: No resting breathlessness or recent respiratory illness reported. Monitor symptoms and seek care for worsening breathlessness.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-22",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/22/2026\nPatient Name: Nathan Ellis\nDOB: 05/12/1943\nMRN: MRN-20236\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2025-11-08",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 11/08/2025\nPatient Name: Nathan Ellis\nDOB: 05/12/1943\nMRN: MRN-20236\nOrdering provider: Dr. Daniel Norris\n\nFindings: Normal sinus rhythm at 62 bpm. Normal axis. PR interval 144 ms, QRS 81 ms, QTc 428 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-22",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 09/22/2026\nPatient Name: Nathan Ellis\nDOB: 05/12/1943\nMRN: MRN-20236\nAttending: Dr. Daniel Norris\n\nADMISSION DIAGNOSIS:\nNathan Ellis, an 83-year-old man, was admitted for cellulitis of the lower leg. The infection was associated with increasing discomfort and difficulty managing routine activity at home. His history includes hypertension, type 2 diabetes mellitus, chronic obstructive pulmonary disease, and osteoarthritis. The admitting team determined that hospital care was appropriate for treatment of the leg infection and observation of his response. The plan included antimicrobial treatment, attention to comfort and mobility, and review of his chronic conditions during the stay. Mr. Ellis participated in discussions about the plan and was able to describe his symptoms and concerns. The infection improved during the admission, and he became appropriate for continued care at home. This summary describes the inpatient course and the instructions reviewed before discharge. No procedure was required, and no specialty service was asked to evaluate him during this stay.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 2 of 12\n\nHISTORY OF PRESENT ILLNESS:\nMr. Ellis reported that symptoms in his lower leg had progressed before admission, with increasing discomfort that interfered with walking and usual household activities. He did not describe a specific injury as the cause. The illness was assessed as cellulitis, and inpatient antimicrobial treatment was started. He was able to provide a history and take part in decisions throughout the admission. His chronic conditions were considered when arranging care, particularly his diabetes and chronic lung disease. His osteoarthritis also affected his comfort with movement. He had no additional acute concern that changed the treatment plan. During the stay, staff encouraged him to report changes in discomfort, appetite, breathing, or ability to move about. The history was reviewed with him, and he agreed with the goal of completing the acute treatment and returning home with clear instructions and ongoing support.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 3 of 12\n\nRELEVANT MEDICAL HISTORY:\nHis established medical history includes hypertension, type 2 diabetes mellitus, chronic obstructive pulmonary disease, and osteoarthritis. These conditions were taken into account while treating the leg infection and planning for a safe return home. Diabetes was recognized as a factor that could affect recovery, so the team reinforced the importance of following his usual care routine and promptly reporting concerns. Chronic obstructive pulmonary disease was monitored through his reported breathing and activity tolerance; no new respiratory complaint altered the course. Osteoarthritis contributed to baseline limitations with walking and required attention to comfort and safe mobility. Hypertension remained part of the ongoing care plan. Mr. Ellis was asked about his baseline function and the support available to him. His history did not identify a need for an invasive intervention during this admission. Continued attention to these chronic conditions was included in the discharge plan, with follow-up through his established outpatient care.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 4 of 12\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, the team reviewed the history of progressive lower-leg symptoms and accepted cellulitis as the reason for admission. Antimicrobial treatment was initiated, with observation of his reported discomfort and overall ability to participate in daily activities. The care plan also addressed hydration, nutrition, and safe movement, while limiting unnecessary strain from his osteoarthritis. Staff reviewed his diabetes and chronic lung disease as relevant background conditions and asked him to report any change in symptoms. Mr. Ellis understood the initial plan and remained engaged in discussions. He did not require a procedure, and no specialty service was involved. The immediate goal was to control the infection, maintain comfort, and determine whether the treatment could be continued safely outside the hospital. Discharge planning began early, including discussion of home support and the importance of completing the prescribed course after leaving the hospital.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 5 of 12\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, Mr. Ellis continued treatment for cellulitis of the lower leg. He reported that discomfort was becoming more manageable and that he could participate more comfortably in routine movement. The team continued to assess his response through discussion of symptoms and his ability to carry out basic activities. His diabetes remained an important consideration in the recovery plan, and staff reinforced the need to keep following his established routine. His chronic obstructive pulmonary disease and osteoarthritis were also considered when setting expectations for activity. No procedure was needed, and there was no new concern requiring specialty involvement. The team reviewed practical steps for continuing care at home, including protection of the affected area and asking for help if mobility became difficult. Discharge remained dependent on continued clinical improvement and his ability to manage the plan with available support.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 6 of 12\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Mr. Ellis described continued improvement in the discomfort that had brought him to the hospital. Antimicrobial treatment was continued, and the team discussed how to complete the course after discharge. His mobility and comfort were considered in planning a gradual return to usual activity, with allowance for his baseline osteoarthritis. He did not report a new breathing concern related to chronic obstructive pulmonary disease. Staff continued to account for diabetes in the recovery plan and reviewed the need to report any worsening symptoms promptly. No procedure or specialty assessment was required. The care team also discussed the home setting, available assistance, and his ability to follow written instructions. The plan was to continue observation and make sure he understood warning signs, self-care measures, and the need for timely follow-up. Mr. Ellis agreed with this approach.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 7 of 12\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, the inpatient team considered Mr. Ellis's progress sufficient to prepare for discharge planning, while continuing the treatment course for cellulitis. He reported that the leg discomfort was less disruptive to rest and movement than it had been at admission. He remained able to discuss his needs and participate in decisions. The team revisited the care plan in light of diabetes, chronic obstructive pulmonary disease, hypertension, and osteoarthritis. Particular attention was given to making the home plan practical and avoiding activities that could increase discomfort or create a fall risk. No procedure was required, and no specialty service was asked to see him. Staff reviewed how to continue the prescribed treatment and when to seek help if symptoms worsened. The remaining plan focused on a safe transition, support at home, and follow-up with his usual outpatient clinician.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 8 of 12\n\nHOSPITAL COURSE, DAY FIVE:\nOn the fifth hospital day, Mr. Ellis continued to report improvement and expressed readiness to return home. The team confirmed that the remaining antimicrobial course could be completed outside the hospital and reviewed the written plan with him. His ability to move about and manage routine needs was discussed in the context of osteoarthritis and the recent leg infection. Diabetes and chronic lung disease were included in the counseling, with instructions to continue his usual chronic care routine and report any new concern. He had no new issue that required a procedure or a specialty service. Discharge arrangements were reviewed with Mr. Ellis, including access to support and the importance of keeping follow-up. He was advised not to delay seeking care if the infection appeared to worsen or if he developed a significant new symptom. He stated that he understood the plan.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 9 of 12\n\nCONSULTS AND PROCEDURES:\nNo specialty consultation was needed during this admission. The inpatient team managed the cellulitis and coordinated the care plan with nursing and discharge planning staff. No invasive procedure was performed. Treatment was provided without a surgical intervention, and the course did not require transfer to another service. The team discussed Mr. Ellis's chronic conditions as part of routine inpatient planning, including diabetes, hypertension, chronic obstructive pulmonary disease, and osteoarthritis. Discharge planning focused on whether he could continue treatment safely at home and whether practical support was available. Staff reviewed the instructions with him and allowed time for questions. He understood that completing the treatment course and monitoring for a return or worsening of symptoms were important. The absence of a procedure or specialty service did not change the need for follow-up with his established outpatient care team after discharge.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 10 of 12\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Ellis was considered improved from the condition that led to admission. He reported less discomfort in the lower leg and felt prepared to continue recovery at home. He was able to participate in the discharge discussion and repeat the main elements of the plan. Continued care outside the hospital was considered appropriate, with completion of the prescribed antimicrobial course and attention to changes in symptoms. His chronic conditions remained part of his ongoing care needs, but none required an additional inpatient intervention before departure. He was reminded to pace activity according to comfort and to seek help if he could not manage safely. The team reviewed available home support and follow-up arrangements. He left with written instructions and an understanding that worsening leg symptoms, a new concern, or a decline in his ability to function should prompt timely contact with a clinician.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 11 of 12\n\nDISCHARGE INSTRUCTIONS:\nMr. Ellis was instructed to complete the antimicrobial course exactly as directed in the separate discharge paperwork and not to stop early without speaking with a clinician. He should keep the affected leg protected, avoid activities that cause increased discomfort, and gradually return to his usual routine as tolerated. He was encouraged to maintain his established care routines for diabetes, hypertension, chronic obstructive pulmonary disease, and osteoarthritis. He should seek prompt medical advice if discomfort increases, symptoms spread, drainage develops, or he feels generally worse. New breathing difficulty, confusion, inability to take fluids, or inability to walk safely also warrants urgent attention. He should use available support at home and avoid unnecessary strain while recovering. The written instructions were reviewed with him before departure, and he was given an opportunity to ask questions. He indicated that he understood the directions and knew how to obtain help if needed.\n\nBasic metabolic panel on discharge: sodium: 134 mmol/L, potassium: 5.1 mmol/L, creatinine: 1.4 mg/dL, BUN: 27 mg/dL, glucose: 118 mg/dL.\n",
+        "Nathan Ellis | MRN-20236 | Discharge summary | Page 12 of 12\n\nFOLLOW-UP AND DISPOSITION:\nMr. Ellis was discharged to his home with the plan for continued recovery and completion of the prescribed antimicrobial course. He should arrange follow-up with his usual outpatient clinician after leaving the hospital, using the timing provided in the discharge paperwork. That visit should include review of his response to treatment, ongoing leg symptoms, and care of his chronic conditions. He should bring the written discharge instructions and share any new concerns that arise at home. If symptoms worsen before the planned follow-up, he should contact a clinician promptly rather than waiting. Emergency help is appropriate for a severe change in his condition or inability to remain safe at home. Family or other support may assist with transportation and daily tasks while he regains his usual activity. Mr. Ellis agreed with the disposition and understood the importance of follow-up and completing the home care plan.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion in an 83-year-old man."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "Lipids: TC 189, LDL 103, HDL 43, TG 218."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "Continue tiotropium 36 mcg once daily."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 62 bpm. Normal axis. PR interval 144 ms, QRS 81 ms, QTc 428 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "discharge_summary",
+      "page": 11,
+      "text": "Basic metabolic panel on discharge: sodium: 134 mmol/L, potassium: 5.1 mmol/L, creatinine: 1.4 mg/dL, BUN: 27 mg/dL, glucose: 118 mg/dL."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "stale",
+    "echo": "missing",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "contradictory",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2370,
+  "output_tokens": 4113
+}

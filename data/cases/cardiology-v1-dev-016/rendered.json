@@ -1,0 +1,199 @@
+{
+  "case_id": "cardiology-v1-dev-016",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-01",
+  "plan": {
+    "case_id": "cardiology-v1-dev-016",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Mara",
+    "last_name": "Jennings",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion.",
+    "history": "Mara Jennings is a 53-year-old woman with gradually worsening breathlessness when climbing stairs or walking uphill over the past six months. She now pauses after one flight of stairs, with relief after several minutes of rest. She denies fainting, cough, or recent respiratory illness.",
+    "referring_physician": "Dr. Felix Moore",
+    "practice": "Summit Internal Medicine",
+    "sex": "female",
+    "age": 53,
+    "dob": "1973-02-16",
+    "mrn": "MRN-10625"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-01",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/01/2026\nPatient Name: Mara Jennings\nDOB: 02/16/1973\nMRN: MRN-10625\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Felix Moore, Summit Internal Medicine\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion.\n\nMara Jennings is a 53-year-old woman with hypertension, type 2 diabetes mellitus, and hypothyroidism. Over the past six months, she has had gradually worsening breathlessness when climbing stairs or walking uphill. She now pauses after one flight of stairs, with relief after several minutes of rest. She denies fainting, cough, or recent respiratory illness.\n\nI am sending her to your cardiology clinic for evaluation of breathlessness on exertion. Please assess her symptoms and advise on further care.\n\nDr. Felix Moore\nSummit Internal Medicine\n\nThank you for seeing this patient.\n\nDr. Felix Moore\nSummit Internal Medicine\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-07",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/07/2026\nPatient Name: Mara Jennings\nDOB: 02/16/1973\nMRN: MRN-10625\nProvider: Dr. Felix Moore\n\nSUBJECTIVE:\nMara Jennings is a 53-year-old woman with gradually worsening breathlessness when climbing stairs or walking uphill over the past six months. She now pauses after one flight of stairs, with relief after several minutes of rest. She denies fainting, cough, or recent respiratory illness.\n\nVITALS:\nBP 150/76, HR 87, RR 15, SpO2 94% on room air, weight 231 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Progressive breathlessness with exertion. Referral to cardiology placed for evaluation.\n2. Hypertension. Continue ongoing management with primary care.\n3. Type 2 diabetes mellitus. Continue ongoing management with primary care.\n4. Hypothyroidism. Continue ongoing management with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-07",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/07/2026\nPatient Name: Mara Jennings\nDOB: 02/16/1973\nMRN: MRN-10625\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-15",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/15/2026\nPatient Name: Mara Jennings\nDOB: 02/16/1973\nMRN: MRN-10625\nOrdering provider: Dr. Felix Moore\n\nFindings: Normal sinus rhythm at 72 bpm. Normal axis. PR interval 178 ms, QRS 95 ms, QTc 436 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-08-10",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/10/2026\nPatient Name: Mara Jennings\nDOB: 02/16/1973\nMRN: MRN-10625\nOrdering provider: Dr. Felix Moore\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-09",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/09/2026\nPatient Name: Mara Jennings\nDOB: 02/16/1973\nMRN: MRN-10625\nOrdering provider: Dr. Felix Moore\n\nLIPID PANEL\nTotal Cholesterol: 141 mg/dL\nLDL Cholesterol: 64 mg/dL\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 185 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 99 mmol/L\nCO2: 27 mmol/L\nBUN: 13 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 101 mg/dL (H)\nCalcium: 8.8 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 72 bpm. Normal axis. PR interval 178 ms, QRS 95 ms, QTc 436 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 141 mg/dL\nLDL Cholesterol: 64 mg/dL\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 185 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 99 mmol/L\nCO2: 27 mmol/L\nBUN: 13 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 101 mg/dL (H)\nCalcium: 8.8 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 3,
+  "input_tokens": 1854,
+  "output_tokens": 1515
+}

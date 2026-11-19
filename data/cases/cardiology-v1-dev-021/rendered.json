@@ -1,0 +1,205 @@
+{
+  "case_id": "cardiology-v1-dev-021",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-14",
+  "plan": {
+    "case_id": "cardiology-v1-dev-021",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Marlene",
+    "last_name": "Sullivan",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of intermittent palpitations with increasing frequency.",
+    "history": "She is an 83-year-old woman who reports intermittent episodes of a rapid, irregular heartbeat over the past several weeks. Episodes last several minutes and occur at rest, without chest discomfort or fainting.",
+    "referring_physician": "Dr. Thomas Reed",
+    "practice": "Alder Family Practice",
+    "sex": "female",
+    "age": 83,
+    "dob": "1943-10-13",
+    "mrn": "MRN-29902"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-14",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/14/2026\nPatient Name: Marlene Sullivan\nDOB: 10/13/1943\nMRN: MRN-29902\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Thomas Reed, Alder Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of intermittent palpitations with increasing frequency.\n\nMarlene Sullivan is an 83-year-old woman with atrial fibrillation, hypertension, and hypothyroidism. Over the past several weeks, she has had intermittent episodes of a rapid, irregular heartbeat, lasting several minutes and occurring at rest. She denies chest discomfort or fainting.\n\nPlease evaluate her palpitations, which are increasing in frequency, and provide recommendations for further care.\n\nThank you for seeing this patient.\n\nDr. Thomas Reed\nAlder Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-19",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/19/2026\nPatient Name: Marlene Sullivan\nDOB: 10/13/1943\nMRN: MRN-29902\nProvider: Dr. Thomas Reed\n\nSUBJECTIVE:\nMarlene Sullivan is an 83-year-old woman with atrial fibrillation, hypertension, and hypothyroidism. She reports intermittent episodes of a rapid, irregular heartbeat over the past several weeks, lasting several minutes and occurring at rest. Episodes are becoming more frequent. She denies chest discomfort or fainting.\n\nVITALS:\nBP 124/71, HR 60, RR 15, SpO2 95% on room air, weight 238 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Intermittent palpitations: Arrange cardiology referral for evaluation given increasing frequency.\n2. Atrial fibrillation: Discussed cardiology evaluation of the intermittent episodes.\n3. Hypertension: Continue routine follow-up with primary care.\n4. Hypothyroidism: Continue routine follow-up with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-19",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/19/2026\nPatient Name: Marlene Sullivan\nDOB: 10/13/1943\nMRN: MRN-29902\n\nLisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-03",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/03/2026\nPatient Name: Marlene Sullivan\nDOB: 10/13/1943\nMRN: MRN-29902\nOrdering provider: Dr. Thomas Reed\n\nFindings: Sinus bradycardia at 55 bpm. Normal axis. PR interval 172 ms, QRS 106 ms, QTc 440 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-21",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/21/2026\nPatient Name: Marlene Sullivan\nDOB: 10/13/1943\nMRN: MRN-29902\nOrdering provider: Dr. Thomas Reed\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 35%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-31",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/31/2026\nPatient Name: Marlene Sullivan\nDOB: 10/13/1943\nMRN: MRN-29902\nOrdering provider: Dr. Thomas Reed\n\nLIPID PANEL\nTotal Cholesterol: 176 mg/dL\nLDL Cholesterol: 89 mg/dL\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 92 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 99 mmol/L\nCO2: 23 mmol/L\nBUN: 10 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 102 mg/dL (H)\nCalcium: 8.8 mg/dL\n\nCOAGULATION\nProthrombin Time: 26.8 sec\nINR: 2.4\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of intermittent palpitations with increasing frequency."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 55 bpm. Normal axis. PR interval 172 ms, QRS 106 ms, QTc 440 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 35%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 176 mg/dL\nLDL Cholesterol: 89 mg/dL\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 92 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 99 mmol/L\nCO2: 23 mmol/L\nBUN: 10 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 102 mg/dL (H)\nCalcium: 8.8 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 26.8 sec\nINR: 2.4"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 3,
+  "input_tokens": 1826,
+  "output_tokens": 1356
+}

@@ -1,0 +1,223 @@
+{
+  "case_id": "cardiology-v1-dev-003",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-11",
+  "plan": {
+    "case_id": "cardiology-v1-dev-003",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": "stale"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Calvin",
+    "last_name": "Morris",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of an episode of fainting.",
+    "history": "Calvin Morris is a 59-year-old man who fainted briefly after standing from a chair. He recalls feeling lightheaded beforehand and returned to his usual state shortly afterward. He reports no prior episodes.",
+    "referring_physician": "Dr. Paul Ellis",
+    "practice": "Riverside Family Practice",
+    "sex": "male",
+    "age": 59,
+    "dob": "1966-12-12",
+    "mrn": "MRN-59395"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-11",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/11/2026\nPatient Name: Calvin Morris\nDOB: 12/12/1966\nMRN: MRN-59395\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Paul Ellis, Riverside Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of an episode of fainting.\n\nI am sending Calvin Morris, a 59-year-old man with hypertension, type 2 diabetes mellitus, and hypothyroidism, to your clinic for evaluation of a brief fainting episode.\n\nHe felt lightheaded after standing from a chair, then briefly lost consciousness. He returned to his usual state shortly afterward and reports no prior episodes.\n\nThank you for seeing this patient.\n\nDr. Paul Ellis\nRiverside Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-06-05",
+      "pages": [
+        "PROGRESS NOTE\nDate: 06/05/2026\nPatient Name: Calvin Morris\nDOB: 12/12/1966\nMRN: MRN-59395\nProvider: Dr. Paul Ellis\n\nSUBJECTIVE:\nCalvin Morris is a 59-year-old male seen for routine follow-up of hypertension, type 2 diabetes, and hypothyroidism. He reports doing well and following his usual care plan. No new concerns reported.\n\nVITALS:\nBP 117/84, HR 69, RR 15, SpO2 97% on room air, weight 240 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue the established treatment plan and home monitoring.\n2. Type 2 diabetes is stable by history. Continue the established care plan and focus on consistent nutrition and activity.\n3. Hypothyroidism is stable by history. Continue thyroid replacement therapy and routine follow-up.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-07",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/07/2026\nPatient Name: Calvin Morris\nDOB: 12/12/1966\nMRN: MRN-59395\nProvider: Dr. Paul Ellis\n\nSUBJECTIVE:\nCalvin Morris is a 59-year-old man with hypertension, type 2 diabetes mellitus, and hypothyroidism who briefly fainted after standing from a chair. He felt lightheaded beforehand and returned to his usual state shortly afterward. He reports no prior episodes.\n\nVITALS:\nBP 135/92, HR 89, RR 16, SpO2 99% on room air, weight 132 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Transient fainting after standing, preceded by lightheadedness. Refer to cardiology for evaluation. Advise him to rise slowly and seek urgent care for recurrent fainting, chest discomfort, shortness of breath, or worsening symptoms.\n2. Hypertension, type 2 diabetes mellitus, and hypothyroidism. Continue routine follow-up with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-07",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/07/2026\nPatient Name: Calvin Morris\nDOB: 12/12/1966\nMRN: MRN-59395\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-06-06",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 06/06/2026\nPatient Name: Calvin Morris\nDOB: 12/12/1966\nMRN: MRN-59395\nOrdering provider: Dr. Paul Ellis\n\nFindings: Normal sinus rhythm at 81 bpm. Normal axis. PR interval 156 ms, QRS 82 ms, QTc 416 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-21",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/21/2026\nPatient Name: Calvin Morris\nDOB: 12/12/1966\nMRN: MRN-59395\nOrdering provider: Dr. Paul Ellis\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_1",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-19",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/19/2026\nPatient Name: Calvin Morris\nDOB: 12/12/1966\nMRN: MRN-59395\nOrdering provider: Dr. Paul Ellis\n\nLIPID PANEL\nTotal Cholesterol: 222 mg/dL (H)\nLDL Cholesterol: 151 mg/dL (H)\nHDL Cholesterol: 51 mg/dL\nTriglycerides: 103 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_2",
+      "doc_type": "lab_report",
+      "doc_date": "2026-04-11",
+      "pages": [
+        "LABORATORY REPORT\nDate: 04/11/2026\nPatient Name: Calvin Morris\nDOB: 12/12/1966\nMRN: MRN-59395\nOrdering provider: Dr. Paul Ellis\n\nBASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 5.1 mmol/L (H)\nChloride: 107 mmol/L\nCO2: 29 mmol/L\nBUN: 18 mg/dL\nCreatinine: 1.4 mg/dL (H)\nGlucose: 81 mg/dL\nCalcium: 9.4 mg/dL\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of an episode of fainting."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 81 bpm. Normal axis. PR interval 156 ms, QRS 82 ms, QTc 416 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report_1",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 222 mg/dL (H)\nLDL Cholesterol: 151 mg/dL (H)\nHDL Cholesterol: 51 mg/dL\nTriglycerides: 103 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report_2",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 5.1 mmol/L (H)\nChloride: 107 mmol/L\nCO2: 29 mmol/L\nBUN: 18 mg/dL\nCreatinine: 1.4 mg/dL (H)\nGlucose: 81 mg/dL\nCalcium: 9.4 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "stale",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2284,
+  "output_tokens": 1281
+}

@@ -1,0 +1,214 @@
+{
+  "case_id": "cardiology-v1-dev-027",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-09",
+  "plan": {
+    "case_id": "cardiology-v1-dev-027",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Teresa",
+    "last_name": "Sullivan",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty.",
+    "history": "She is scheduled for elective total knee arthroplasty in six weeks and was sent for preoperative risk assessment. She reports no chest discomfort, shortness of breath, fainting, or recent decline in activity tolerance. Her hypertension and type 2 diabetes are managed with ongoing therapy.",
+    "referring_physician": "Dr. Daniel Thompson",
+    "practice": "Dover Primary Care",
+    "sex": "female",
+    "age": 70,
+    "dob": "1956-04-12",
+    "mrn": "MRN-23717"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-09",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/09/2026\nPatient Name: Teresa Sullivan\nDOB: 04/12/1956\nMRN: MRN-23717\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Daniel Thompson, Dover Primary Care\n\nDear Colleague,\n\nReason for referral: Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty.\n\nTeresa Sullivan is a 70-year-old woman with hypertension, type 2 diabetes mellitus, and hypothyroidism. She is scheduled for elective total knee arthroplasty in six weeks and needs preoperative cardiovascular risk assessment.\n\nShe reports no chest discomfort, shortness of breath, fainting, or recent decline in activity tolerance. Her hypertension and type 2 diabetes are managed with ongoing therapy. I am requesting cardiology evaluation of her perioperative cardiovascular risk before surgery.\n\nThank you for seeing this patient.\n\nDr. Daniel Thompson\nDover Primary Care\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-05-10",
+      "pages": [
+        "PROGRESS NOTE\nDate: 05/10/2026\nPatient Name: Teresa Sullivan\nDOB: 04/12/1956\nMRN: MRN-23717\nProvider: Dr. Daniel Thompson\n\nSUBJECTIVE:\nTeresa Sullivan is a 70-year-old woman seen for routine follow-up of hypertension, type 2 diabetes, and hypothyroidism. She reports stable health, consistent use of prescribed therapy, and continued attention to diet and activity. She has no new concerns.\n\nVITALS:\nBP 131/66, HR 58, RR 14, SpO2 98% on room air, weight 176 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by report. Continue prescribed therapy and lifestyle measures; continue home monitoring.\n2. Type 2 diabetes is stable by report. Continue prescribed therapy and dietary measures; reinforce regular activity and foot care.\n3. Hypothyroidism is stable by report. Continue prescribed therapy and monitor for changes in energy or temperature tolerance.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-08-27",
+      "pages": [
+        "PROGRESS NOTE\nDate: 08/27/2026\nPatient Name: Teresa Sullivan\nDOB: 04/12/1956\nMRN: MRN-23717\nProvider: Dr. Daniel Thompson\n\nSUBJECTIVE:\nTeresa Sullivan is a 70-year-old woman seen for preoperative risk assessment before elective total knee arthroplasty planned in six weeks. She denies chest discomfort, shortness of breath, fainting, or recent decline in activity tolerance. Her hypertension and type 2 diabetes are managed with ongoing therapy.\n\nVITALS:\nBP 113/79, HR 75, RR 12, SpO2 99% on room air, weight 230 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nBMP: Na 144, K 3.6, Cl 101, CO2 29, BUN 8, Cr 0.7, Glu 101.\n\nASSESSMENT AND PLAN:\n1. Perioperative cardiovascular risk: She has no reported cardiac symptoms or recent decline in activity tolerance. Arrange cardiology evaluation before planned knee arthroplasty.\n2. Hypertension: Continue ongoing therapy.\n3. Type 2 diabetes mellitus: Continue ongoing therapy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-08-27",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 08/27/2026\nPatient Name: Teresa Sullivan\nDOB: 04/12/1956\nMRN: MRN-23717\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-25",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/25/2026\nPatient Name: Teresa Sullivan\nDOB: 04/12/1956\nMRN: MRN-23717\nOrdering provider: Dr. Daniel Thompson\n\nFindings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 182 ms, QRS 90 ms, QTc 431 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-06-18",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 06/18/2026\nPatient Name: Teresa Sullivan\nDOB: 04/12/1956\nMRN: MRN-23717\nOrdering provider: Dr. Daniel Thompson\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-23",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/23/2026\nPatient Name: Teresa Sullivan\nDOB: 04/12/1956\nMRN: MRN-23717\nOrdering provider: Dr. Daniel Thompson\n\nLIPID PANEL\nTotal Cholesterol: 252 mg/dL (H)\nLDL Cholesterol: 180 mg/dL (H)\nHDL Cholesterol: 32 mg/dL (L)\nTriglycerides: 201 mg/dL (H)\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "BMP: Na 144, K 3.6, Cl 101, CO2 29, BUN 8, Cr 0.7, Glu 101."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 182 ms, QRS 90 ms, QTc 431 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 252 mg/dL (H)\nLDL Cholesterol: 180 mg/dL (H)\nHDL Cholesterol: 32 mg/dL (L)\nTriglycerides: 201 mg/dL (H)"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 4,
+  "input_tokens": 2337,
+  "output_tokens": 1864
+}

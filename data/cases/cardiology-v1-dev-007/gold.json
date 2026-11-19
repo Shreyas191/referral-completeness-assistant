@@ -1,0 +1,100 @@
+{
+  "case_id": "cardiology-v1-dev-007",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-22",
+  "split": "dev",
+  "slices": [
+    "buried"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of chest pressure with exertion."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 77 bpm. Normal axis. PR interval 182 ms, QRS 80 ms, QTc\n445 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary",
+          "page": 11,
+          "text": "Transthoracic echo this admission: LVEF 45%. Trace mitral regurgitation. Mildly reduced\nleft ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 174 mg/dL\nLDL Cholesterol: 104 mg/dL\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 153 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 143 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 107 mmol/L\nCO2: 26 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.9 mg/dL\nGlucose: 172 mg/dL (H)\nCalcium: 10.1 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Metoprolol tartrate 25 mg by mouth twice daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "COAGULATION\nProthrombin Time: 26.7 sec\nINR: 2.4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "case_id": "cardiology-v1-dev-028",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-25",
+  "split": "dev",
+  "slices": [
+    "contradiction",
+    "stale",
+    "wrong_patient"
+  ],
+  "wrong_patient_docs": [
+    "lab_report_3"
+  ],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of a recent fainting episode with transient loss of\nconsciousness."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 70 bpm. Normal axis. PR interval 151 ms, QRS 108 ms, QTc\n417 ms.\nImpression: Normal sinuus rhythm with no acute ST-T wave changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "Most recent echo showed an ejection fraction of 40%."
+        },
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n65%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "lab_report_2",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 221 mg/dL (H)\nLDL Cholesterol: 137 mg/dL (H)\nHDL Cholesterol: 54 mg/dL\nTriglycerides: 154 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report_1",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 5.0 mmol/L\nChloride: 106 mmol/L\nCO2: 28 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 101 mg/dL (H)\nCalcium: 9.9 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Metoprolol tartrate 25 mg by mouth twice daily\nLisinopril 10 mg by rnouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, norrnal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: trace ankle ederna."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report_1",
+          "page": 1,
+          "text": "COAGULATION\nProthrombin Time: 35.4 sec\nINR: 3.1"
+        }
+      ]
+    }
+  ]
+}

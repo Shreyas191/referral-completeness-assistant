@@ -1,0 +1,180 @@
+{
+  "case_id": "cardiology-v1-dev-039",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-10",
+  "plan": {
+    "case_id": "cardiology-v1-dev-039",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": "omit"
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "bury"
+      },
+      {
+        "item_id": "lipids",
+        "defect": "stale"
+      },
+      {
+        "item_id": "bmp",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "meds",
+        "defect": "omit"
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "omit"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Clara",
+    "last_name": "Morris",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "losartan",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion.",
+    "history": "This 84-year-old woman reports gradually worsening breathlessness when walking or climbing stairs over the past several months. She has no breathlessness at rest and denies chest discomfort.",
+    "referring_physician": "Dr. Karen Chen",
+    "practice": "Kensington Family Practice",
+    "sex": "female",
+    "age": 84,
+    "dob": "1942-05-08",
+    "mrn": "MRN-92249"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-10",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/10/2026\nPatient Name: Clara Morris\nDOB: 05/08/1942\nMRN: MRN-92249\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Karen Chen, Kensington Family Practice\n\nDear Colleague,\n\nI am writing regarding Clara Morris, an 84-year-old woman followed at Kensington Family Practice.\n\nHer history includes hypertension, type 2 diabetes mellitus, and hypothyroidism. Thank you for receiving her in your clinic.\n\nBMP: Na 139, K 3.6, Cl 101, CO2 26, BUN 25, Cr 1.1, Glu 95.\n\nThank you for seeing this patient.\n\nDr. Karen Chen\nKensington Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-06-05",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 06/05/2026\nPatient Name: Clara Morris\nDOB: 05/08/1942\nMRN: MRN-92249\nOrdering provider: Dr. Karen Chen\n\nFindings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 142 ms, QRS 92 ms, QTc 451 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2025-07-07",
+      "pages": [
+        "LABORATORY REPORT\nDate: 07/07/2025\nPatient Name: Clara Morris\nDOB: 05/08/1942\nMRN: MRN-92249\nOrdering provider: Dr. Karen Chen\n\nLIPID PANEL\nTotal Cholesterol: 229 mg/dL (H)\nLDL Cholesterol: 124 mg/dL\nHDL Cholesterol: 65 mg/dL\nTriglycerides: 204 mg/dL (H)\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-09",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 08/09/2026\nPatient Name: Clara Morris\nDOB: 05/08/1942\nMRN: MRN-92249\nAttending: Dr. Karen Chen\n\nADMISSION DIAGNOSIS:\nClara Morris, an 84-year-old woman, was admitted with an acute ureteral stone causing urinary obstruction. Her established conditions include hypertension, type 2 diabetes mellitus, and hypothyroidism. The immediate goals were to relieve the obstruction, control discomfort, support oral intake, and monitor her response during the admission. The diagnosis was based on the clinical assessment completed at presentation. Urology was involved early in planning care. The team reviewed the available management options with Ms. Morris and her family, including temporary drainage and later definitive stone treatment. She agreed with the plan to relieve the obstruction during this stay. The admission also included attention to her chronic conditions and baseline support needs. No additional acute diagnosis was identified as the primary reason for hospitalization. She remained under inpatient care for procedural treatment and observation before discharge planning.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 2 of 12\n\nRELEVANT HISTORY:\nMs. Morris is an 84-year-old woman with hypertension, type 2 diabetes mellitus, and hypothyroidism. These chronic conditions were considered in selecting a safe plan for an acute obstructing urinary stone. She lives with family support, who participated in discussions and helped clarify her usual routines. She reported new discomfort associated with the stone and reduced comfort with normal activity. There was no history supplied of a recent similar admission requiring inpatient drainage. Her care team reviewed her reported health background and usual level of independence. The family was asked to share any concerns affecting recovery at home, including mobility, access to fluids, and ability to attend follow-up. She was able to take part in discussions and express her preferences. No additional chronic diagnosis materially changed the treatment plan during this admission.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 3 of 12\n\nPRESENTATION AND INITIAL EVALUATION:\nMs. Morris came to the hospital after developing acute discomfort attributed to a urinary stone. The clinical assessment supported an obstructing ureteral stone, and inpatient treatment was recommended because the obstruction required prompt relief. The team reviewed her symptoms, relevant health history, and goals of care with her and her family. The plan prioritized pain relief and timely drainage, with observation for improvement afterward. Her established hypertension, type 2 diabetes mellitus, and hypothyroidism were included in the care plan. The team also considered her age and the importance of a clear transition home after treatment. Urology reviewed the case and recommended temporary internal drainage, followed by outpatient planning for definitive stone management. Ms. Morris and her family understood the proposed approach and agreed to proceed. The evaluation did not identify another acute issue requiring a separate inpatient treatment pathway.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 4 of 12\n\nHOSPITAL COURSE, FIRST DAY:\nDuring the first hospital day, the team focused on stabilizing Ms. Morris’s symptoms and coordinating relief of the urinary obstruction. Supportive care was provided while urology arranged temporary drainage. Her discomfort was reassessed over the course of the day, and the treatment plan was adjusted to maintain comfort and allow her to rest. Staff encouraged oral fluids as tolerated and assisted her with routine needs. Her chronic conditions were considered throughout care, without introducing a new treatment goal unrelated to the admission. The procedure and expected recovery were explained in plain language to Ms. Morris and her family. They were advised that temporary drainage would address the immediate obstruction but would not necessarily complete stone treatment. The patient remained engaged in decisions, and the team continued to plan for home discharge once recovery and follow-up arrangements were satisfactory.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 5 of 12\n\nHOSPITAL COURSE, SECOND DAY:\nOn the second hospital day, Ms. Morris underwent placement of a temporary ureteral stent to relieve the obstruction. The procedure was completed without a reported complication. Afterward, she was observed for recovery and reassessed for discomfort, ability to take fluids, and readiness to resume routine activity. Her symptoms improved sufficiently for the team to continue planning discharge. Urology discussed the purpose of the stent and the need for a separate plan to address the stone definitively. Ms. Morris and her family were told that the stent was temporary and must not be left without follow-up. Staff reinforced the importance of contacting the urology team if symptoms worsened or if she could not maintain oral intake. Her chronic conditions remained part of routine care. Discharge planning proceeded with attention to family support and transportation for follow-up.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 6 of 12\n\nHOSPITAL COURSE, FINAL DAY:\nOn the final hospital day, Ms. Morris continued to recover after stent placement. Her discomfort remained manageable, and she was able to take fluids and participate in discharge planning. The inpatient team reviewed the purpose of the temporary stent, the need for later stone treatment, and the importance of keeping the arranged urology follow-up. Her family confirmed that support would be available at home. The team reviewed warning symptoms and the appropriate route for urgent reassessment. No additional inpatient procedure was planned. The plan was to continue recovery at home with follow-up coordinated through urology and ongoing care for her established chronic conditions through her usual clinicians. Ms. Morris and her family stated that they understood the plan and had an opportunity to ask questions. She was discharged once the team considered home care appropriate.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 7 of 12\n\nCONSULTATIONS:\nUrology participated in management from early in the admission. The service reviewed the acute obstructing stone and recommended temporary ureteral drainage to relieve the immediate problem. The urology team discussed the expected role of the stent, the possibility of urinary discomfort while it remained in place, and the need for further planning to treat the stone. Urology also reviewed follow-up needs with Ms. Morris and her family. The inpatient team coordinated the procedure and discharge plan with that service. No other specialty service was required to direct treatment of the acute condition. The primary team continued to address her established hypertension, type 2 diabetes mellitus, and hypothyroidism as part of routine inpatient care. The patient and family were encouraged to raise questions with the urology team after discharge, particularly about the timing and approach for definitive stone management.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 8 of 12\n\nPROCEDURES:\nMs. Morris underwent placement of a temporary ureteral stent during this admission. The purpose was to establish drainage past the obstructing stone and relieve the acute obstruction. The procedure was completed without a reported complication, and she was observed afterward. No definitive stone removal was performed during the stay. The urology team explained that a temporary stent does not replace follow-up and may require later removal or exchange as part of the planned stone treatment. Ms. Morris and her family were asked to keep the stent information provided at discharge and to contact urology if they were uncertain about the next step. The procedural plan was reviewed before discharge, including the need to attend follow-up even if symptoms continued to improve. No other procedure was required during this hospitalization.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 9 of 12\n\nCONDITION AT DISCHARGE:\nAt discharge, Ms. Morris had recovered sufficiently from temporary ureteral stent placement to continue care at home. Her discomfort had improved and was manageable under the plan reviewed with the team. She was able to take fluids and participate in discussion of the next steps. The urinary obstruction had been addressed with temporary drainage, while definitive stone treatment remained for outpatient planning. Her family confirmed that they could assist with transportation and routine support. The patient and family demonstrated understanding that the stent was temporary and required urology follow-up. Her established hypertension, type 2 diabetes mellitus, and hypothyroidism remained relevant to ongoing care, but no new inpatient issue related to those conditions changed the discharge plan. She left with written instructions and a clear pathway for seeking help if symptoms worsened or new concerns arose.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 10 of 12\n\nDISCHARGE INSTRUCTIONS:\nAt home, Ms. Morris should follow the written care plan provided by the hospital and keep the temporary stent information available. She should attend the urology appointment arranged for continued stone management and should not assume that improvement means the stent can be left without review. She may resume usual activity gradually as comfort allows and should maintain oral fluid intake as directed in her discharge paperwork. She should contact the urology team promptly for worsening discomfort, difficulty passing urine, new fever or chills, persistent nausea, or inability to keep fluids down. For severe symptoms or a sudden decline, she should seek urgent care. Her family should assist with transportation and help track the follow-up plan. She should continue routine care for her chronic conditions through her established clinicians, using the instructions provided at discharge.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 11 of 12\n\nFOLLOW-UP:\nUrology follow-up is needed to review recovery, determine the next step for definitive stone treatment, and plan removal or exchange of the temporary stent. The appointment details were provided to Ms. Morris and her family before discharge. They were asked to contact the urology office if they do not receive confirmation or if they need to reschedule, rather than allowing follow-up to lapse. Her usual clinicians should continue management of hypertension, type 2 diabetes mellitus, and hypothyroidism after the acute episode. The hospital team shared the discharge plan so that ongoing care can be coordinated. Ms. Morris should bring her discharge paperwork to follow-up and report any new or worsening symptoms. Family support is available to help her attend appointments and follow written instructions. Continued outpatient review is important even if her discomfort remains improved.\n\nTransthoracic echo this admission: LVEF 60%. Grade 1 diastolic dysfunction. Normal left ventricular systolic function.\n",
+        "Clara Morris | MRN-92249 | Discharge summary | Page 12 of 12\n\nDISCHARGE PLANNING AND COMMUNICATION:\nThe discharge plan was reviewed with Ms. Morris and her family in plain language. The team explained that the hospital stay relieved the immediate urinary obstruction through temporary stent placement, but that further urology care remains necessary. The family confirmed understanding of the follow-up plan and agreed to assist with transportation and home support. Written instructions included the stent information, symptoms requiring prompt contact, and the route for urgent evaluation. The patient was encouraged to keep copies of the discharge paperwork and share them with her usual clinicians. Her chronic conditions were included in the transition plan, with routine outpatient care to continue after discharge. Questions were addressed before she left, and the family was reminded to contact the urology team if the appointment plan was unclear. Discharge home was considered appropriate with this support in place.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "bmp",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "BMP: Na 139, K 3.6, Cl 101, CO2 26, BUN 25, Cr 1.1, Glu 95."
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 142 ms, QRS 92 ms, QTc 451 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 229 mg/dL (H)\nLDL Cholesterol: 124 mg/dL\nHDL Cholesterol: 65 mg/dL\nTriglycerides: 204 mg/dL (H)"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "discharge_summary",
+      "page": 11,
+      "text": "Transthoracic echo this admission: LVEF 60%. Grade 1 diastolic dysfunction. Normal left ventricular systolic function."
+    }
+  ],
+  "expected": {
+    "reason": "missing",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "stale",
+    "bmp": "present",
+    "meds": "missing",
+    "progress_note": "missing",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "llm_calls": 3,
+  "input_tokens": 1806,
+  "output_tokens": 4178
+}

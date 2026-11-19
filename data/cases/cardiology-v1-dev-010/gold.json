@@ -1,0 +1,88 @@
+{
+  "case_id": "cardiology-v1-dev-010",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-02",
+  "split": "dev",
+  "slices": [
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of an irregular pulse noted during a routine visit."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 74 bpm. Normal axis. PR interval 146 ms, QRS 81 ms, QTc\n410 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n35%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic funtion."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 162 mg/dL\nLDL Cholcsterol: 110 mg/dL\nHDL Cholesterol: 35 mg/dL (L)\nTriglycerides: 89 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodiium: 136 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 102 mmol/L\nCO2: 25 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 85 mg/dL\nCalcium: 9.3 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "COAGULATION\nProthrombin Time: 36.0 sec\nINR: 3.2"
+        }
+      ]
+    }
+  ]
+}

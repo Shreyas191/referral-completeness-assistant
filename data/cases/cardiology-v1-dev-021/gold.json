@@ -1,0 +1,100 @@
+{
+  "case_id": "cardiology-v1-dev-021",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-14",
+  "split": "dev",
+  "slices": [
+    "complete"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of intermittent palpitations with inreasing frequency."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 55 bpm. Normal axis. PR interval 172 ms, QRS 106 ms, QTc\n440 ms.\nImpression: Sinus bradycardia, otherwise normaltracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n35%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 176 mg/dL\nLDL Cholesterol: 89 mg/dL\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 92 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 3.8 mmol/L\nChloride: 99 mmol/L\nCO2: 23 mmol/L\nBUN: 10 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 102 mg/dL (H)\nCalcium: 8.8 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\nWarfarin 5 mg by mouth once daiIy"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "COAGULATION\nProthrombin Time: 26.8 sec\nINR: 2.4"
+        }
+      ]
+    }
+  ]
+}
