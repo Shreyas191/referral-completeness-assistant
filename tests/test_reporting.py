@@ -159,3 +159,28 @@ def test_rule_based_conflict_is_charged_to_the_conflict_checker():
 def test_hallucinated_present_is_a_reasoning_error():
     r = attribute(S.MISSING, S.PRESENT, shown=["c0/note:p1:0"])
     assert r["cause"] == "reasoning_error" and r["details"] == ["missing->present"]
+
+
+def test_citation_levels_separate_document_page_and_passage():
+    # Gold evidence: the creatinine line on page 1 of "labs".
+    header = Citation(chunk_id="c0/labs:p1:0", doc_id="labs", page=1, quote="BASIC METABOLIC PANEL")
+    other_page = Citation(chunk_id="c0/labs:p2:0", doc_id="labs", page=2, quote="Date: 10/02/2026")
+    other_doc = Citation(chunk_id="c0/note:p1:0", doc_id="note", page=1, quote="Labs reviewed.")
+    g = [gold("c0", [S.PRESENT], evidence={"i0": [EV]})]
+    p = [pred("c0", [S.PRESENT], {"i0": [GOOD, header, other_page, other_doc]})]
+    m = summarize(g, p)
+    assert m["citation_doc_precision"] == 0.75   # all but the other document
+    assert m["citation_page_precision"] == 0.5   # the passage and the header share the gold page
+    assert m["citation_precision"] == 0.25       # only the passage itself
+    assert set(bootstrap_cis(g, p)) >= {"citation_doc_precision", "citation_page_precision"}
+
+
+def test_citation_on_item_without_gold_evidence_fails_every_level():
+    m = summarize([gold("c0", [S.MISSING])], [pred("c0", [S.PRESENT], {"i0": [GOOD]})])
+    assert m["citation_doc_precision"] == m["citation_page_precision"] == m["citation_precision"] == 0.0
+
+
+def test_another_patients_document_is_not_the_right_document():
+    # Same doc_id and page as the gold evidence, but the chunk belongs to case c9.
+    m = summarize([gold("c0", [S.PRESENT], evidence={"i0": [EV]})], [pred("c0", [S.PRESENT], {"i0": [FOREIGN]})])
+    assert m["citation_doc_precision"] == m["citation_page_precision"] == 0.0
