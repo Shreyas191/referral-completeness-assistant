@@ -173,6 +173,22 @@ class MisquotesReason(FakeLLM):
         return out
 
 
+def test_elided_quotes_flag_reaches_the_validator(case_dir):
+    class Elides(FakeLLM):
+        def structured(self, system, user, schema):
+            out = super().structured(system, user, schema)
+            if isinstance(out, VerifierOutput) and out.item_id == "progress_note" and out.evidence:
+                # Two verbatim pieces of the one-sentence chunk, out of order: not contiguous, each piece real.
+                ev = out.evidence[0]
+                out.evidence = [Evidence(chunk_id=ev.chunk_id, quote="no murmur. ... Progress note.")]
+            return out
+
+    off, _, trace = run(case_dir, Elides())
+    assert off["progress_note"].status == Status.NEEDS_REVIEW and trace.item("progress_note").rejected_quotes
+    on, _, trace = run(case_dir, Elides(), elided_quotes=True)
+    assert on["progress_note"].status == Status.PRESENT and trace.item("progress_note").rejected_quotes == []
+
+
 def test_rejected_quotes_are_saved_in_the_trace(case_dir):
     items, _, trace = run(case_dir, MisquotesReason())
     assert items["reason"].status == Status.NEEDS_REVIEW

@@ -133,6 +133,8 @@ def main() -> None:
     ap.add_argument("--no-conflict-checker", action="store_true", help="E5 ablation")
     ap.add_argument("--no-strict-long-context", action="store_true",
                     help="let the final read overturn Missing without a quote naming the item")
+    ap.add_argument("--elided-quotes", action="store_true",
+                    help="validator accepts quotes joined with '...' when each piece is in the cited chunk")
     ap.add_argument("--no-value-expansion", action="store_true",
                     help="drop value-term expansion (contradiction recall)")
     args = ap.parse_args()
@@ -147,6 +149,7 @@ def main() -> None:
         absence_long_context=not (args.no_absence_check or args.no_long_context),
         validator=not args.no_validator, conflict_checker=not args.no_conflict_checker,
         value_expansion=not args.no_value_expansion, strict_long_context=not args.no_strict_long_context,
+        elided_quotes=args.elided_quotes,
     )
     llm = LLM() if args.system != "b0" else None
     metrics = run_split(args.system, args.split, Path("runs") / args.name, cfg, llm, cases_dir=args.cases_dir)
