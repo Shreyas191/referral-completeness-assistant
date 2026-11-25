@@ -26,7 +26,7 @@ class PipelineConfig:
     absence_long_context: bool = True  # whole-packet final read for items still Missing (#4)
     validator: bool = True           # (E5)
     conflict_checker: bool = True    # (E5)
-    value_expansion: bool = False    # add other documents' values for the top chunk's terms
+    value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
 
 
 def run_case(

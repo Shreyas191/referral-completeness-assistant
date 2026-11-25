@@ -8,7 +8,8 @@ Observed failure (dev, every run): a contradiction is missed when only one of th
 
 Change: take the terms that carry a value in the top-ranked chunk ("Potassium: 4.2", "Tiotropium 18 mcg") and
 add up to `max_extra` chunks from other documents of the same case that state a value for any of those terms.
-Matching is on words, not BM25 scores, so it does not depend on IDF. Switch: PipelineConfig.value_expansion.
+Matching is on words, not BM25 scores, so it does not depend on IDF. On by default since the vexp-dev runs;
+switch off with PipelineConfig.value_expansion=False or --no-value-expansion.
 """
 import re
 
