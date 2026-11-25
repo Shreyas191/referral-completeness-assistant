@@ -167,6 +167,9 @@ class MisquotesReason(FakeLLM):
         if isinstance(out, VerifierOutput) and out.item_id == "reason" and out.evidence:
             out.evidence = [Evidence(chunk_id=out.evidence[0].chunk_id, quote="Referred for syncope after a fall."),
                             Evidence(chunk_id="hand-000/nowhere:p1:0", quote="anything")]
+        if isinstance(out, VerifierOutput) and out.item_id == "inr":
+            # A Not applicable proposal with a quote: never checked, so never listed as rejected.
+            out.evidence = [Evidence(chunk_id="hand-000/nowhere:p1:0", quote="no warfarin")]
         return out
 
 
@@ -177,6 +180,7 @@ def test_rejected_quotes_are_saved_in_the_trace(case_dir):
     assert [q["quote"] for q in rejected] == ["Referred for syncope after a fall.", "anything"]
     assert rejected[0]["score"] < 90 and rejected[1]["score"] is None
     assert trace.item("echo").rejected_quotes == []  # accepted quotes are not listed
+    assert items["inr"].status == Status.NOT_APPLICABLE and trace.item("inr").rejected_quotes == []
 
 
 def test_error_report_shows_rejected_quotes(case_dir, tmp_path):
