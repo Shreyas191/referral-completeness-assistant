@@ -76,18 +76,24 @@ NOTE = make_chunk("PROGRESS NOTE\nDate: 11/03/2026\nPatient Name: Jane Doe\nSUBJ
 ELIDED = "Date: 11/03/2026\n...\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs."
 
 
-def test_elided_quote_rejected_by_default_and_accepted_with_the_flag(bmp_item):
+def test_joined_quote_rejected_by_default_and_accepted_piecewise(bmp_item):
     # rq-dev: the model joined two lines of a note with "...", and a correct Present went to Needs review.
     p = proposal("present", (NOTE.chunk_id, ELIDED))
     assert decide(bmp_item, p, {NOTE.chunk_id: NOTE}, REF).status == Status.NEEDS_REVIEW
-    result = decide(bmp_item, p, {NOTE.chunk_id: NOTE}, REF, allow_elision=True)
+    result = decide(bmp_item, p, {NOTE.chunk_id: NOTE}, REF, piecewise_quotes=True)
     assert result.status == Status.PRESENT and result.citations[0].quote == ELIDED
 
 
-def test_elision_still_needs_every_piece_in_the_chunk(bmp_item):
+def test_piecewise_still_needs_every_piece_in_the_chunk(bmp_item):
     from referral.pipeline.validator import quote_supported
 
     invented = "Date: 11/03/2026 ... Cardiac exam: irregularly irregular rhythm with a loud diastolic rumble."
-    assert not quote_supported(invented, NOTE, allow_elision=True)
-    assert not quote_supported("... and ...", NOTE, allow_elision=True)        # no piece long enough
-    assert quote_supported("Date: 11/03/2026 … Fatigue for months.", NOTE, allow_elision=True)  # unicode ellipsis
+    assert not quote_supported(invented, NOTE, piecewise=True)
+    assert not quote_supported("... and ...", NOTE, piecewise=True)        # no piece long enough
+    assert quote_supported("Date: 11/03/2026 … Fatigue for months.", NOTE, piecewise=True)  # unicode ellipsis
+    # elide-dev: non-adjacent lines joined by line breaks, with no ellipsis
+    joined = "PROGRESS NOTE\nFatigue for months.\nCardiac exam: regular rate"
+    assert not quote_supported(joined, NOTE)
+    assert quote_supported(joined, NOTE, piecewise=True)
+    # one long invented line still fails, even if another line is real
+    assert not quote_supported("PROGRESS NOTE\nEjection fraction 25% on today's echo.", NOTE, piecewise=True)

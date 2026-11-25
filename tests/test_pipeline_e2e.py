@@ -173,7 +173,7 @@ class MisquotesReason(FakeLLM):
         return out
 
 
-def test_elided_quotes_flag_reaches_the_validator(case_dir):
+def test_piecewise_quotes_flag_reaches_the_validator(case_dir):
     class Elides(FakeLLM):
         def structured(self, system, user, schema):
             out = super().structured(system, user, schema)
@@ -185,7 +185,7 @@ def test_elided_quotes_flag_reaches_the_validator(case_dir):
 
     off, _, trace = run(case_dir, Elides())
     assert off["progress_note"].status == Status.NEEDS_REVIEW and trace.item("progress_note").rejected_quotes
-    on, _, trace = run(case_dir, Elides(), elided_quotes=True)
+    on, _, trace = run(case_dir, Elides(), piecewise_quotes=True)
     assert on["progress_note"].status == Status.PRESENT and trace.item("progress_note").rejected_quotes == []
 
 

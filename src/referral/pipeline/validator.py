@@ -25,25 +25,26 @@ def quote_score(quote: str, chunk: Chunk) -> float:
     return fuzz.partial_ratio(" ".join(quote.lower().split()), " ".join(chunk.text.lower().split()))
 
 
-_ELLIPSIS = re.compile(r"\.{3,}|\u2026|\[\s*\.\.\.\s*\]")
+_PIECE_BREAK = re.compile(r"\.{3,}|\u2026|\[\s*\.\.\.\s*\]|\n")  # ellipses and line breaks
 MIN_PIECE_CHARS = 8  # shorter pieces ("and", "...") are skipped; they carry no evidence
 
 
 def quote_supported(quote: str, chunk: Chunk, threshold: int = settings.quote_match_threshold,
-                    allow_elision: bool = False) -> bool:
-    """The quote appears in the chunk. With allow_elision, a quote with "..." passes if every piece does.
+                    piecewise: bool = False) -> bool:
+    """The quote appears in the chunk. With piecewise, a quote also passes if every line or "..." piece does.
 
-    Observed failure (rq-dev): the model joins two lines of a note, e.g. "Date: 11/03/2026 ... Cardiac exam:
-    regular rate and rhythm, ...". Each piece is verbatim, but the joined quote scores 84 and 87.9 against 90,
-    and a correct Present goes to Needs review. Each piece must still match on its own, so nothing invented
-    passes; a quote with no piece of MIN_PIECE_CHARS or more fails.
+    Observed failure (rq-dev, elide-dev): the model joins non-adjacent lines of the cited chunk into one quote,
+    with or without an ellipsis: "Date: 11/03/2026 ... Cardiac exam: ...", or "CURRENT MEDICATION LIST\n
+    Date: 10/05/2026\nLisinopril 10 mg ..." skipping the name, DOB and MRN lines. Each line is verbatim, but the
+    joined quote scores 82-89.5 against 90, and a correct Present goes to Needs review. Each piece must still
+    match on its own, so nothing invented passes; a quote with no piece of MIN_PIECE_CHARS or more fails.
     """
     if quote_score(quote, chunk) >= threshold:
         return True
-    if not allow_elision or not _ELLIPSIS.search(quote):
+    if not piecewise:
         return False
-    pieces = [p.strip() for p in _ELLIPSIS.split(quote) if len(p.strip()) >= MIN_PIECE_CHARS]
-    return bool(pieces) and all(quote_score(p, chunk) >= threshold for p in pieces)
+    pieces = [p.strip() for p in _PIECE_BREAK.split(quote) if len(p.strip()) >= MIN_PIECE_CHARS]
+    return len(pieces) > 1 and all(quote_score(p, chunk) >= threshold for p in pieces)
 
 
 def decide(
@@ -51,7 +52,7 @@ def decide(
     proposal: VerifierOutput,
     chunks_by_id: dict[str, Chunk],
     reference_date: date,
-    allow_elision: bool = False,
+    piecewise_quotes: bool = False,
 ) -> ItemResult:
     flags: list[str] = []
     proposed = Status(proposal.status)
@@ -62,7 +63,7 @@ def decide(
     citations: list[Citation] = []
     for ev in proposal.evidence:
         chunk = chunks_by_id.get(ev.chunk_id)
-        if chunk and quote_supported(ev.quote, chunk, allow_elision=allow_elision):
+        if chunk and quote_supported(ev.quote, chunk, piecewise=piecewise_quotes):
             citations.append(
                 Citation(chunk_id=chunk.chunk_id, doc_id=chunk.doc_id, page=chunk.page,
                          quote=ev.quote, doc_date=chunk.doc_date)
