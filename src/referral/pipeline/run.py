@@ -9,7 +9,7 @@ from referral.llm import LLM
 from referral.pipeline.absence import candidates_for_recheck, final_read, names_item
 from referral.pipeline.conflicts import dose_conflicts, laterality_conflict
 from referral.pipeline.trace import TRACE_DEPTH, CaseTrace, ItemTrace
-from referral.pipeline.validator import decide
+from referral.pipeline.validator import decide, quote_score
 from referral.pipeline.verifier import VerifierOutput, verify_item
 from referral.retrieval.expansion import value_expansion
 from referral.retrieval.hybrid import CaseRetriever, DenseRetriever
@@ -105,6 +105,13 @@ def run_case(
         result = (decide(item, proposal, chunks_by_id, reference_date) if cfg.validator
                   else _unvalidated(item, proposal, chunks_by_id))
         result.flags.extend(flags[item.item_id])
+        if cfg.validator:
+            kept = {(c.chunk_id, c.quote) for c in result.citations}
+            trace.item(item.item_id).rejected_quotes = [
+                {"chunk_id": e.chunk_id, "quote": e.quote,
+                 "score": round(quote_score(e.quote, chunks_by_id[e.chunk_id]), 1) if e.chunk_id in chunks_by_id
+                 else None}
+                for e in proposal.evidence if (e.chunk_id, e.quote) not in kept]
 
         if cfg.conflict_checker and result.status == Status.PRESENT:
             cited = [chunks_by_id[c.chunk_id] for c in result.citations if c.chunk_id in chunks_by_id]

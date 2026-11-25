@@ -16,6 +16,9 @@ class ItemTrace(BaseModel):
     absence_status: str | None = None
     long_context_status: str | None = None
     final_status: str = ""
+    # Quotes the validator rejected: {"chunk_id", "quote", "score"}, score = match against the cited chunk
+    # (0-100, accepted at settings.quote_match_threshold), or None if the chunk id does not exist.
+    rejected_quotes: list[dict] = []
 
 
 class CaseTrace(BaseModel):

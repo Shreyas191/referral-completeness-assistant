@@ -17,10 +17,15 @@ from referral.pipeline.verifier import VerifierOutput
 from referral.schemas import ChecklistItem, Chunk, Citation, ItemResult, Status
 
 
-def quote_supported(quote: str, chunk: Chunk, threshold: int = settings.quote_match_threshold) -> bool:
+def quote_score(quote: str, chunk: Chunk) -> float:
+    """How well the quote matches somewhere in the chunk (rapidfuzz partial_ratio, 0-100, whitespace-normalized)."""
     if not quote.strip():
-        return False
-    return fuzz.partial_ratio(" ".join(quote.lower().split()), " ".join(chunk.text.lower().split())) >= threshold
+        return 0.0
+    return fuzz.partial_ratio(" ".join(quote.lower().split()), " ".join(chunk.text.lower().split()))
+
+
+def quote_supported(quote: str, chunk: Chunk, threshold: int = settings.quote_match_threshold) -> bool:
+    return quote_score(quote, chunk) >= threshold
 
 
 def decide(
