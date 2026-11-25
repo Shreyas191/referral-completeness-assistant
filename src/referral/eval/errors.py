@@ -43,7 +43,8 @@ def _hits(evidence: list[GoldEvidence], chunks: list[Chunk]) -> set[str]:
 
 def _deciding_stage(t: ItemTrace, flags: list[str]) -> str:
     """Which model call produced the proposal the validator received."""
-    if "long_context_overturned" in flags or t.long_context_status is not None:
+    if "long_context_overturned" in flags or (t.long_context_status is not None
+                                              and "long_context_rejected" not in flags):
         return "long_context"
     if "absence_check_overturned" in flags or t.absence_status is not None:
         return "absence_recheck"

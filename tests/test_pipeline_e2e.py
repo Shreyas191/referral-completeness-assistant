@@ -5,14 +5,14 @@ from datetime import date
 from pathlib import Path
 
 import pytest
-from fakes import FakeLLM
+from fakes import PASSAGE_RE, FakeLLM
 
 from referral.eval.harness import load_checklist, run_split
 from referral.ingest.pdf_loader import load_case
-from referral.pipeline.absence import windows
+from referral.pipeline.absence import LongContextOutput, windows
 from referral.pipeline.run import PipelineConfig, run_case
 from referral.pipeline.trace import CaseTrace
-from referral.pipeline.verifier import VerifierOutput
+from referral.pipeline.verifier import Evidence, VerifierOutput
 from referral.schemas import Status
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -128,6 +128,35 @@ def test_long_context_read_overturns_when_per_item_looks_fail(case_dir):
     assert "long_context_overturned" in items["echo"].flags
     assert llm.long_context_calls == 1  # one call per case, covering every still-missing item
     assert trace.item("echo").long_context_status == "present"
+
+
+class FinalReadOverreaches(FakeLLM):
+    """The whole-packet read calls the never-mentioned ECG Present from a quote that does not name it,
+    as gpt-6-luna did with "Patient is on warfarin." for the medication list (dev-010)."""
+
+    def structured(self, system, user, schema):
+        out = super().structured(system, user, schema)
+        if isinstance(out, LongContextOutput):
+            letter = next(m for m in PASSAGE_RE.finditer(user) if "chest pain" in m["text"])
+            overreach = VerifierOutput(item_id="ecg", status="present", rationale="fake: overreach",
+                                       evidence=[Evidence(chunk_id=letter["id"], quote=letter["text"].strip())])
+            out.items = [overreach if o.item_id == "ecg" else o for o in out.items]
+        return out
+
+
+def test_strict_long_context_rejects_a_present_without_an_item_term(case_dir):
+    loose, _, _ = run(case_dir, FinalReadOverreaches())
+    assert loose["ecg"].status == Status.PRESENT
+    items, _, trace = run(case_dir, FinalReadOverreaches(), strict_long_context=True)
+    assert items["ecg"].status == Status.MISSING and items["ecg"].flags == ["long_context_rejected"]
+    assert trace.item("ecg").long_context_status == "present"  # the read's proposal is still traced
+    assert items["inr"].status == Status.NOT_APPLICABLE  # condition calls are untouched
+
+
+def test_strict_long_context_keeps_a_rescue_that_names_the_item(case_dir):
+    # Echo evidence is the abbreviation "TTE", a listed synonym, so the final read's rescue stands.
+    items, _, _ = run(case_dir, FakeLLM(miss_per_item={"echo"}), strict_long_context=True)
+    assert items["echo"].status == Status.PRESENT and "long_context_overturned" in items["echo"].flags
 
 
 def test_ablation_without_long_context_leaves_false_missing(case_dir):

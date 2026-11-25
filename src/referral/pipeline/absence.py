@@ -18,10 +18,26 @@ from referral.schemas import ChecklistItem, Chunk
 WINDOW_CHARS = 300_000
 
 
-def synonym_scan(item: ChecklistItem, chunks: list[Chunk]) -> list[Chunk]:
+def _item_patterns(item: ChecklistItem) -> list[re.Pattern]:
     terms = [t.lower() for t in [item.description, *item.synonyms] if t.strip()]
-    patterns = [re.compile(rf"\b{re.escape(t)}\b") for t in terms]
+    return [re.compile(rf"\b{re.escape(t)}\b") for t in terms]
+
+
+def synonym_scan(item: ChecklistItem, chunks: list[Chunk]) -> list[Chunk]:
+    patterns = _item_patterns(item)
     return [c for c in chunks if any(p.search(c.text.lower()) for p in patterns)]
+
+
+def names_item(item: ChecklistItem, proposal: VerifierOutput) -> bool:
+    """Does any quoted evidence name the item, by its description or a synonym?
+
+    Used to hold the long-context read to item-specific evidence (PipelineConfig.strict_long_context).
+    Observed failure (dev): its only Missing -> Present overturns quoted text that does not name the item,
+    e.g. "Patient is on warfarin." for the medication list and "Please accept her for care at your cardiology
+    clinic." for the reason for referral. Condition calls (not_applicable) are not affected.
+    """
+    patterns = _item_patterns(item)
+    return any(p.search(e.quote.lower()) for e in proposal.evidence for p in patterns)
 
 
 def candidates_for_recheck(

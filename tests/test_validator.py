@@ -54,3 +54,17 @@ def test_contradiction_needs_two_documents(bmp_item):
 
 def test_missing_passes_through(bmp_item):
     assert decide(bmp_item, proposal("missing"), {}, REF).status == Status.MISSING
+
+
+def test_names_item_matches_description_or_synonym_in_quotes(bmp_item):
+    from referral.pipeline.absence import names_item
+    from referral.pipeline.verifier import Evidence, VerifierOutput
+
+    def prop(quote):
+        return VerifierOutput(item_id="bmp", status="present", rationale="",
+                              evidence=[Evidence(chunk_id="labs:p1:0", quote=quote)])
+
+    assert names_item(bmp_item, prop("Creatinine 1.1 mg/dL"))
+    assert names_item(bmp_item, prop("Basic metabolic panel resulted."))
+    assert not names_item(bmp_item, prop("Labs were reviewed with the patient."))
+    assert not names_item(bmp_item, VerifierOutput(item_id="bmp", status="present", rationale=""))
