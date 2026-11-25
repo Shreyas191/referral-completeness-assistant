@@ -99,7 +99,7 @@ score is lower mostly because quotes are header or date lines ("BASIC METABOLIC 
 | Absence check (M2 feedback) | Gap precision 1.000 vs 0.597 without it, from INR condition calls, not retrieval misses. Kept. |
 | Identity check (M2 feedback) | Off (2 cases): one Missing item called Present from another patient's lab. Kept. |
 | Stale vs Needs review rule, recency windows (M2 feedback) | Stale items correct: 6 and 6 of 6 now, 0 of 6 without the validator. Per-clinic windows untested. |
-| Value-term expansion | Contradictions caught 6, 8, 8, 6 of 8 in four runs, then 8 and 8 in the current runs, vs 5, 6, 6 without. Kept. |
+| Value-term expansion | Contradictions caught 6, 8, 8, 6, 8, 8 of 8 in six runs, vs 5, 6, 6 without. Kept. |
 | Stricter long-context read | Fired once live and blocked a wrong overturn; replayed on six earlier runs it rejects all 4 wrong overturns and nothing else. Kept. |
 | Piecewise quote check | Citation-caused Needs review 0 and 0, vs 2, 1, 2 in three runs without; wrong items 1 and 1 vs 3, 4, 4 (McNemar p = 0.25 to 0.5). Kept. |
 | Macro-F1 over gold classes | Two runs with equal accuracy (0.991): 0.967 and 0.827 on the old metric, 0.967 and 0.993 on the new. |
