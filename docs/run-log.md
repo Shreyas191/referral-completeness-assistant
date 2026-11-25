@@ -62,3 +62,32 @@ default, so later pipeline runs include it and `--no-value-expansion` is the abl
 Nov 25 strict long-context runs (`strict-dev`, `strict-dev-r2`): commit `18e02d0` on `shreyas/strict-long-context`,
 value expansion on, $0.13 in total. They used the opt-in flag `--strict-long-context`; the rule is now on by
 default, so `--no-strict-long-context` is the ablation.
+
+## Macro-F1 over gold classes (rescored Nov 25)
+
+`status_macro_f1_gold` averages per-class F1 only over statuses that occur in gold, so a status gold never uses
+(Needs review, on dev) cannot add a class scoring 0.0. A stray prediction still lowers recall of the item's true
+class. `status_macro_f1` is unchanged and still reported. Earlier runs' `metrics.json` predate the new metric, so
+these values were computed from each run's saved predictions with the same code (2000 bootstrap resamples over
+cases); no model was called.
+
+| Run | Accuracy | Macro-F1 (all classes) | Macro-F1 (gold classes) | 95% CI |
+| --- | --- | --- | --- | --- |
+| `b0-dev` | 0.850 | 0.323 | 0.323 | [0.294, 0.343] |
+| `b1-dev` | 0.959 | 0.780 | 0.936 | [0.856, 0.981] |
+| `b1-dev-r2` | 0.963 | 0.793 | 0.951 | [0.888, 0.986] |
+| `pipe-dev` | 0.978 | 0.770 | 0.924 | [0.823, 0.978] |
+| `pipe-dev-r2` | 0.978 | 0.802 | 0.962 | [0.901, 0.995] |
+| `abl-no-absence` | 0.909 | 0.752 | 0.752 | [0.672, 0.812] |
+| `abl-no-long-context` | 0.903 | 0.754 | 0.754 | [0.682, 0.807] |
+| `abl-no-validator` | 0.972 | 0.765 | 0.765 | [0.704, 0.798] |
+| `abl-no-conflict-checker` | 0.988 | 0.806 | 0.967 | [0.905, 1.000] |
+| `e2-global` | 0.753 | 0.212 | 0.255 | [0.209, 0.304] |
+| `vexp-dev` | 0.991 | 0.967 | 0.967 | [0.907, 1.000] |
+| `vexp-dev-r2` | 0.991 | 0.827 | 0.993 | [0.982, 1.000] |
+| `strict-dev` | 0.991 | 0.815 | 0.978 | [0.926, 1.000] |
+| `strict-dev-r2` | 0.988 | 0.806 | 0.967 | [0.906, 1.000] |
+
+The two metrics differ only for runs that predicted a status gold never uses. The ablations that remove a
+whole correct behavior (no absence check, no long-context read, no validator) score the same on both, because
+their errors fall in gold classes: not applicable called Missing, or Stale called Present.
