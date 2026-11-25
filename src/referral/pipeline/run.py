@@ -28,7 +28,7 @@ class PipelineConfig:
     conflict_checker: bool = True    # (E5)
     value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
     strict_long_context: bool = True   # final read may overturn Missing only with a quote naming the item
-    piecewise_quotes: bool = False   # validator accepts quotes whose lines / "..." pieces each match the chunk
+    piecewise_quotes: bool = True    # validator accepts quotes whose lines / "..." pieces each match (pw-dev runs)
 
 
 def run_case(

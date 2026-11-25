@@ -183,9 +183,9 @@ def test_piecewise_quotes_flag_reaches_the_validator(case_dir):
                 out.evidence = [Evidence(chunk_id=ev.chunk_id, quote="no murmur. ... Progress note.")]
             return out
 
-    off, _, trace = run(case_dir, Elides())
+    off, _, trace = run(case_dir, Elides(), piecewise_quotes=False)
     assert off["progress_note"].status == Status.NEEDS_REVIEW and trace.item("progress_note").rejected_quotes
-    on, _, trace = run(case_dir, Elides(), piecewise_quotes=True)
+    on, _, trace = run(case_dir, Elides())  # on by default
     assert on["progress_note"].status == Status.PRESENT and trace.item("progress_note").rejected_quotes == []
 
 
