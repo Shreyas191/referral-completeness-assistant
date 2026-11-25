@@ -55,7 +55,12 @@ Key design decisions and why (several answer professor feedback, so keep them):
   or have no identifiers, are quarantined and flagged, so a wrongly merged document can't create false
   Contradictory labels.
 - **Absence check** (`pipeline/absence.py`): a retrieval miss looks like a missing item, so Missing is only
-  accepted after a wider search plus a synonym scan over every chunk, then re-verification.
+  accepted after a wider search plus a synonym scan over every chunk, then re-verification, then a
+  whole-packet read. That read may change Missing to Present or Contradictory only with a quote that names
+  the item (description or synonym); otherwise the item stays Missing, flagged `long_context_rejected`.
+- **Value-term expansion** (`retrieval/expansion.py`): chunks from other documents that give a value for a
+  term the top chunk gives a value for ("Potassium: 4.2") are shown too, so both sides of a contradiction
+  reach the verifier.
 - **The LLM only proposes** present / missing / contradictory / not_applicable. Stale and Needs review are
   decided in code (`pipeline/validator.py`) in a fixed order: verify citations → check date → check window.
 - **Recency windows live in the checklist JSON** (`recency_days` per item), owned by the receiving clinic.
@@ -95,7 +100,8 @@ python -m referral.eval.harness --system b0 --split dev --name b0-dev
 python -m referral.eval.harness --system b1 --split dev --name b1-dev
 python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --retrieval bm25
 # ablations: --scope global (E2), --no-absence-check, --no-long-context, --no-validator,
-#            --no-conflict-checker, --no-identity-check, --no-value-expansion, --top-k N, --cases-dir PATH
+#            --no-conflict-checker, --no-identity-check, --no-value-expansion,
+#            --no-strict-long-context, --top-k N, --cases-dir PATH
 # each run folder gets metrics.json (CIs, slices, commit, cost), report.md, and for the pipeline errors.md
 python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + paired McNemar
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run
@@ -141,7 +147,8 @@ Not written yet, roughly in priority order:
 3. React review UI (last)
 
 Known behavior worth reporting: the wide re-check only shows the verifier chunks it has not seen, so it fixes
-retrieval misses; a misjudged chunk that was already shown is left to the long-context final read.
+retrieval misses; a misjudged chunk that was already shown is left to the long-context final read, which can
+only overturn it with a quote naming the item.
 
 ## Workflow
 

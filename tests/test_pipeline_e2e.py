@@ -145,7 +145,7 @@ class FinalReadOverreaches(FakeLLM):
 
 
 def test_strict_long_context_rejects_a_present_without_an_item_term(case_dir):
-    loose, _, _ = run(case_dir, FinalReadOverreaches())
+    loose, _, _ = run(case_dir, FinalReadOverreaches(), strict_long_context=False)
     assert loose["ecg"].status == Status.PRESENT
     items, _, trace = run(case_dir, FinalReadOverreaches(), strict_long_context=True)
     assert items["ecg"].status == Status.MISSING and items["ecg"].flags == ["long_context_rejected"]

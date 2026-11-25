@@ -27,7 +27,7 @@ class PipelineConfig:
     validator: bool = True           # (E5)
     conflict_checker: bool = True    # (E5)
     value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
-    strict_long_context: bool = False  # final read may overturn Missing only with a quote naming the item
+    strict_long_context: bool = True   # final read may overturn Missing only with a quote naming the item
 
 
 def run_case(
