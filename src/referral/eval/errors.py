@@ -68,7 +68,7 @@ def attribute_item(gold: GoldCase, gi: GoldItem, pred: ItemResult | None, t: Ite
     stage = _deciding_stage(t, flags)
     record["stage"] = stage
     # Everything the model read before its final proposal: first pass, absence extras, or the whole case.
-    viewed_ids = [*t.shown, *t.absence_extra]
+    viewed_ids = [*t.shown, *t.expansion, *t.absence_extra]
     if t.long_context_status is not None:
         viewed_ids += [cid for cid, ch in chunks_by_id.items()
                        if ch.case_id == gold.case_id and ch.doc_id not in trace.quarantined_docs]
@@ -80,7 +80,7 @@ def attribute_item(gold: GoldCase, gi: GoldItem, pred: ItemResult | None, t: Ite
     needed = min(2, len(evidence_docs)) if gold_status == Status.CONTRADICTORY else 1
     first_rank = next((rank for rank, ch in enumerate(ranked, start=1) if _hits(evidence, [ch])), None)
     record.update(gold_evidence=[ge.text for ge in evidence], first_gold_rank=first_rank,
-                  shown=t.shown, absence_extra=t.absence_extra,
+                  shown=t.shown, expansion=t.expansion, absence_extra=t.absence_extra,
                   citations=[{"doc_id": c.doc_id, "quote": c.quote} for c in (pred.citations if pred else [])],
                   rationale=pred.rationale if pred else "", flags=flags)
     if pred and any(c.doc_id in gold.wrong_patient_docs for c in pred.citations):

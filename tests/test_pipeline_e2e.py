@@ -98,6 +98,13 @@ def test_ablation_without_validator_keeps_checklist_item_ids_and_chunk_pages(cas
     assert echo.citations and all(c.page > 0 and c.doc_date for c in echo.citations)
 
 
+def test_value_expansion_is_traced_and_changes_no_status_here(case_dir):
+    items, _, trace = run(case_dir, FakeLLM(), value_expansion=True)
+    assert {k: v.status for k, v in items.items()} == EXPECTED
+    assert all(not set(t.expansion) & set(t.shown) for t in trace.items)
+    assert all("other_patient_lab" not in c for t in trace.items for c in t.expansion)  # quarantined stays out
+
+
 def test_wide_recheck_recovers_a_retrieval_miss(case_dir):
     # With k=1 the verifier only sees the imaging order, so the real TTE result is a retrieval miss.
     items, _, trace = run(case_dir, FakeLLM(), top_k=1)
