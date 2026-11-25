@@ -1,5 +1,6 @@
 """End-to-end runs of the pipeline and harness on one text-file case, with a fake LLM (no API key)."""
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -11,6 +12,7 @@ from referral.ingest.pdf_loader import load_case
 from referral.pipeline.absence import windows
 from referral.pipeline.run import PipelineConfig, run_case
 from referral.pipeline.trace import CaseTrace
+from referral.pipeline.verifier import VerifierOutput
 from referral.schemas import Status
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -75,6 +77,25 @@ def test_full_pipeline_gets_every_item_right(case_dir):
     assert result.quarantined_docs == ["other_patient_lab"]
     assert {f.item_id for f in result.followups} == {"ecg", "lipids", "meds"}
     assert trace.item("echo").final_status == "present" and trace.item("echo").ranked
+
+
+class EchoesDescription(FakeLLM):
+    """A model that returns the item's description as its item_id, as gpt-6-luna did for `reason`."""
+
+    def structured(self, system, user, schema):
+        out = super().structured(system, user, schema)
+        if isinstance(out, VerifierOutput):
+            out.item_id = re.search(r"Checklist item \S+: (.*)", user)[1].split("\n")[0]
+        return out
+
+
+def test_ablation_without_validator_keeps_checklist_item_ids_and_chunk_pages(case_dir):
+    # Regression: with the validator off, a model-written item_id reached draft_followups and raised KeyError.
+    items, result, _ = run(case_dir, EchoesDescription(), validator=False)
+    assert set(items) == set(EXPECTED)
+    assert {f.item_id for f in result.followups} <= set(EXPECTED)
+    echo = items["echo"]
+    assert echo.citations and all(c.page > 0 and c.doc_date for c in echo.citations)
 
 
 def test_wide_recheck_recovers_a_retrieval_miss(case_dir):

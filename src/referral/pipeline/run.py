@@ -12,7 +12,7 @@ from referral.pipeline.trace import TRACE_DEPTH, CaseTrace, ItemTrace
 from referral.pipeline.validator import decide
 from referral.pipeline.verifier import VerifierOutput, verify_item
 from referral.retrieval.hybrid import CaseRetriever, DenseRetriever
-from referral.schemas import CaseResult, Checklist, Chunk, Document, FollowUp, ItemResult, Status
+from referral.schemas import CaseResult, Checklist, ChecklistItem, Chunk, Document, FollowUp, ItemResult, Status
 
 
 @dataclass
@@ -90,7 +90,8 @@ def run_case(
     results: list[ItemResult] = []
     for item in checklist.items:
         proposal = proposals[item.item_id]
-        result = decide(item, proposal, chunks_by_id, reference_date) if cfg.validator else _unvalidated(proposal)
+        result = (decide(item, proposal, chunks_by_id, reference_date) if cfg.validator
+                  else _unvalidated(item, proposal, chunks_by_id))
         result.flags.extend(flags[item.item_id])
 
         if cfg.conflict_checker and result.status == Status.PRESENT:
@@ -110,16 +111,27 @@ def run_case(
     )
 
 
-def _unvalidated(proposal: VerifierOutput) -> ItemResult:
-    """E5 ablation: take the LLM's word, keeping its quotes as citations without checking them."""
+def _unvalidated(item: ChecklistItem, proposal: VerifierOutput, chunks_by_id: dict[str, Chunk]) -> ItemResult:
+    """E5 ablation: take the LLM's status and quotes without checking them.
+
+    The item id comes from the checklist, not the model, which sometimes echoes the description instead.
+    Citation metadata (document, page, date) is read from the cited chunk when it exists, so citation metrics
+    stay comparable with validated runs; the quote itself is still not checked.
+    """
     from referral.schemas import Citation
 
+    def citation(chunk_id: str, quote: str) -> Citation:
+        chunk = chunks_by_id.get(chunk_id)
+        if chunk:
+            return Citation(chunk_id=chunk_id, doc_id=chunk.doc_id, page=chunk.page, quote=quote,
+                            doc_date=chunk.doc_date)
+        return Citation(chunk_id=chunk_id, doc_id=chunk_id.split("/")[-1].split(":")[0], page=0, quote=quote)
+
     return ItemResult(
-        item_id=proposal.item_id,
+        item_id=item.item_id,
         status=Status(proposal.status),
         rationale=proposal.rationale,
-        citations=[Citation(chunk_id=e.chunk_id, doc_id=e.chunk_id.split("/")[-1].split(":")[0], page=0,
-                            quote=e.quote) for e in proposal.evidence],
+        citations=[citation(e.chunk_id, e.quote) for e in proposal.evidence],
     )
 
 
