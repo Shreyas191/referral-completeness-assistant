@@ -87,3 +87,14 @@ def test_gives_up_after_the_retry():
     llm = stub(["not json", "still not json"])
     with pytest.raises((ValidationError, ValueError)):
         llm.structured("sys", "user", VerifierOutput)
+
+
+@pytest.mark.parametrize("provider,key", [("openai", "OPENAI_API_KEY"), ("anthropic", "ANTHROPIC_API_KEY")])
+def test_clients_have_a_request_timeout(monkeypatch, provider, key):
+    # Regression: with no timeout, one stalled response blocked a dev run for ~50 minutes (pw-dev-r2).
+    from referral.config import settings
+
+    monkeypatch.setenv(key, "test-key-not-real")
+    client = LLM(provider=provider)._client
+    assert client.timeout == settings.llm_timeout_s == 120
+    assert client.max_retries == settings.llm_max_retries == 2

@@ -40,10 +40,10 @@ class LLM:
         if self.provider == "anthropic":
             import anthropic
 
-            return anthropic.Anthropic()
+            return anthropic.Anthropic(timeout=settings.llm_timeout_s, max_retries=settings.llm_max_retries)
         import openai
 
-        return openai.OpenAI()
+        return openai.OpenAI(timeout=settings.llm_timeout_s, max_retries=settings.llm_max_retries)
 
     @property
     def name(self) -> str:
