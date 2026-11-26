@@ -113,7 +113,7 @@ python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + p
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run
 python -m referral.eval.retrieval_sweep --chunk-sizes 1200 600 300 --sentence-cuts   # E3 recall@k, no LLM calls
 python -m referral.eval.position runs/b1-hard runs/pipe-hard --cases-dir data/hard_cases   # E4 by position
-uvicorn referral.api:app --reload
+uvicorn referral.api:app --reload    # then: curl -X POST localhost:8000/samples/cardiology-v1-dev-012/check
 ```
 
 ## Dataset
@@ -149,7 +149,9 @@ Tested end to end offline (FakeLLM + text-file case): full pipeline, both absenc
 validator, conflict checker, harness with per-item traces, recall@k, foreign-citation rate (E2), bootstrap
 CIs, slice table, run comparison, error attribution, and the LLM wrapper's JSON repair. Not yet run against the real API or real generated cases.
 
-Untested: the API. Dense and hybrid retrieval ran on dev (E3, Nov 26); BM25 stays the default.
+Dense and hybrid retrieval ran on dev (E3, Nov 26); BM25 stays the default. The API (`api.py`) is tested offline
+(`tests/test_api.py`) and was run live on dev cases: `/samples` lists stored dev, hard and hand-written cases (never
+test), `/samples/{case_id}/check` runs one with gold for comparison, `/cases` takes uploaded PDFs.
 
 Not written yet, roughly in priority order:
 1. Data generator after the defect plan: render documents, add noise, write PDFs and `gold.json`, leak check
