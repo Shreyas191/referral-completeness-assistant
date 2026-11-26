@@ -96,6 +96,21 @@ def citation_precision(golds: list[GoldCase], preds: list[CaseResult]) -> float:
     return good / total if total else 0.0
 
 
+def citation_levels(golds: list[GoldCase], preds: list[CaseResult]) -> dict[str, float]:
+    """How close each citation lands to the gold evidence, at three levels of strictness.
+
+    document  the cited document holds gold evidence for that item
+    page      the cited document and page hold gold evidence for that item
+    passage   the quote itself matches a gold evidence passage (this is `citation_precision`)
+    All three share one denominator, every citation made, so the gaps between them show where citations
+    go wrong: right document but wrong page, or right page but a header or date line instead of the value.
+    """
+    by_case = {p.case_id: p for p in preds}
+    m = metrics_from_counts(_total([case_counts(g, by_case.get(g.case_id)) for g in golds]))
+    return {"citation_doc_precision": m["citation_doc_precision"],
+            "citation_page_precision": m["citation_page_precision"]}
+
+
 def recall_at_k(gold_evidence: list[GoldEvidence], retrieved: list[Chunk]) -> bool:
     """Trajectory: did retrieval surface at least one gold evidence passage?"""
     return any(ch.doc_id == ge.doc_id and _evidence_hit(ch.text, ge) for ge in gold_evidence for ch in retrieved)
@@ -155,7 +170,7 @@ def bootstrap_ci(per_case_values: list[float], n: int = 2000, seed: int = 0) -> 
 
 PRESENT_LIKE = {Status.PRESENT, Status.STALE, Status.CONTRADICTORY}
 CI_METRICS = ("gap_recall", "gap_precision", "gap_f1", "status_macro_f1", "status_accuracy",
-              "citation_precision", "false_missing_rate")
+              "citation_precision", "citation_doc_precision", "citation_page_precision", "false_missing_rate")
 # Slices from the dataset plan; always listed so tables line up across runs. Others found in gold are appended.
 REPORT_SLICES = ("buried", "contradiction", "stale", "wrong_patient", "abbreviation")
 
@@ -189,6 +204,10 @@ def case_counts(gold: GoldCase, pred: CaseResult | None) -> Counter:
         for cit in pi.citations if pi else []:
             c["cite_total"] += 1
             c["cite_good"] += any(cit.doc_id == ge.doc_id and _evidence_hit(cit.quote, ge) for ge in gi.evidence)
+            # doc_ids repeat across cases ("lab_report"), so another patient's document never counts (E2).
+            own = cit.chunk_id.startswith(f"{gold.case_id}/")
+            c["cite_doc"] += own and any(cit.doc_id == ge.doc_id for ge in gi.evidence)
+            c["cite_page"] += own and any(cit.doc_id == ge.doc_id and cit.page == ge.page for ge in gi.evidence)
     if pred:
         for item in pred.items:
             for cit in item.citations:
@@ -222,6 +241,8 @@ def metrics_from_counts(c: Counter, undefined: float | None = 0.0) -> dict[str, 
         "status_macro_f1": sum(f1s) / len(f1s) if f1s else undefined,
         "status_accuracy": ratio("correct", "items"),
         "citation_precision": ratio("cite_good", "cite_total"),
+        "citation_doc_precision": ratio("cite_doc", "cite_total"),
+        "citation_page_precision": ratio("cite_page", "cite_total"),
         "false_missing_rate": ratio("fm_wrong", "fm_total"),
         "false_contradictory_wrong_patient": ratio("fc_wrong", "fc_total"),
         "foreign_citation_rate": ratio("foreign", "foreign_total"),
@@ -281,6 +302,7 @@ def summarize(golds: list[GoldCase], preds: list[CaseResult]) -> dict[str, float
         "status_macro_f1": status_macro_f1(golds, preds),
         "status_accuracy": status_accuracy(golds, preds),
         "citation_precision": citation_precision(golds, preds),
+        **citation_levels(golds, preds),
         "false_missing_rate": false_missing_rate(golds, preds),
         "false_contradictory_wrong_patient": false_contradictory_rate(golds, preds, "wrong_patient"),
         "foreign_citation_rate": foreign_citation_rate(preds),

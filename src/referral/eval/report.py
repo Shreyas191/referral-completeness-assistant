@@ -17,6 +17,7 @@ TARGETS = {
     "mean_latency_s": ("<=", 60.0),
 }
 HEADLINE = ("gap_recall", "gap_precision", "gap_f1", "status_macro_f1", "status_accuracy", "citation_precision",
+            "citation_doc_precision", "citation_page_precision",
             "false_missing_rate", "false_contradictory_wrong_patient", "foreign_citation_rate")
 
 
