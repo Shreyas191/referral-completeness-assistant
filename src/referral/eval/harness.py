@@ -135,6 +135,8 @@ def main() -> None:
                     help="let the final read overturn Missing without a quote naming the item")
     ap.add_argument("--no-piecewise-quotes", action="store_true",
                     help="validator requires each quote to match the cited chunk as one piece")
+    ap.add_argument("--no-quote-length-check", action="store_true",
+                    help="let a quote longer than its chunk pass if it contains the chunk (old behaviour)")
     ap.add_argument("--no-value-expansion", action="store_true",
                     help="drop value-term expansion (contradiction recall)")
     args = ap.parse_args()
@@ -150,6 +152,7 @@ def main() -> None:
         validator=not args.no_validator, conflict_checker=not args.no_conflict_checker,
         value_expansion=not args.no_value_expansion, strict_long_context=not args.no_strict_long_context,
         piecewise_quotes=not args.no_piecewise_quotes,
+        quote_length_check=not args.no_quote_length_check,
     )
     llm = LLM() if args.system != "b0" else None
     metrics = run_split(args.system, args.split, Path("runs") / args.name, cfg, llm, cases_dir=args.cases_dir)

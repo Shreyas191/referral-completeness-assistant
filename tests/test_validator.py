@@ -97,3 +97,31 @@ def test_piecewise_still_needs_every_piece_in_the_chunk(bmp_item):
     assert quote_supported(joined, NOTE, piecewise=True)
     # one long invented line still fails, even if another line is real
     assert not quote_supported("PROGRESS NOTE\nEjection fraction 25% on today's echo.", NOTE, piecewise=True)
+
+
+def test_quote_longer_than_its_chunk_must_match_the_whole_chunk(bmp_item):
+    # dev-021: a page-break remnant "f 1" is a chunk of its own; partial_ratio gave any quote containing it 100.
+    from referral.pipeline.validator import quote_score, quote_supported
+
+    remnant = make_chunk("f 1")
+    padded = "Echo shows LVEF of 15% with severe MR."
+    assert quote_score(padded, remnant, length_check=False) == 100       # the old hole
+    assert not quote_supported(padded, remnant)
+    assert quote_supported(padded, remnant, length_check=False)
+    p = proposal("present", (remnant.chunk_id, padded))
+    assert decide(bmp_item, p, {remnant.chunk_id: remnant}, REF).status == Status.NEEDS_REVIEW
+    assert decide(bmp_item, p, {remnant.chunk_id: remnant}, REF, quote_length_check=False).status == Status.PRESENT
+
+
+def test_length_check_keeps_whole_chunk_quotes_and_ocr_noise(bmp_item):
+    from referral.pipeline.validator import quote_supported
+
+    short = make_chunk("Allergies: penicillin (rash).")
+    assert quote_supported("Allergies: penicillin (rash).", short)      # the whole chunk, exactly
+    assert quote_supported("Allergies:  Penicillin (rash). ", short)    # case and whitespace differ
+    assert quote_supported("Allergies: penicilin (rash).", short)       # one OCR-style slip, still shorter
+    assert quote_supported("Allergies: penicillin (rash)..", short)     # one extra character
+    assert not quote_supported("Allergies: penicillin (rash). No known drug interactions.", short)
+    # piecewise pieces are held to the same rule
+    assert not quote_supported("Fatigue for months.\nAllergies: penicillin (rash) and sulfa (hives).", short,
+                               piecewise=True)

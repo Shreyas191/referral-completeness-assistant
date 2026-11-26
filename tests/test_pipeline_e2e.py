@@ -283,3 +283,24 @@ def test_windows_split_long_packets():
     from conftest import make_chunk
     chunks = [make_chunk("x" * 100, doc_id=f"d{n}") for n in range(5)]
     assert [len(w) for w in windows(chunks, max_chars=250)] == [2, 2, 1]
+
+
+def test_quote_length_check_flag_reaches_the_validator(case_dir):
+    class PadsQuote(FakeLLM):
+        def structured(self, system, user, schema):
+            out = super().structured(system, user, schema)
+            if isinstance(out, VerifierOutput) and out.item_id == "progress_note" and out.evidence:
+                ev = out.evidence[0]
+                out.evidence = [Evidence(chunk_id=ev.chunk_id, quote=_chunk_text(case_dir, ev.chunk_id)
+                                         + " Ejection fraction 20% on today's echo, severe aortic stenosis.")]
+            return out
+
+    on, _, trace = run(case_dir, PadsQuote())
+    assert on["progress_note"].status == Status.NEEDS_REVIEW and trace.item("progress_note").rejected_quotes
+    off, _, _ = run(case_dir, PadsQuote(), quote_length_check=False)
+    assert off["progress_note"].status == Status.PRESENT
+
+
+def _chunk_text(case_dir, chunk_id):
+    from referral.ingest.chunker import chunk_case
+    return next(c.text for c in chunk_case(load_case(case_dir)) if c.chunk_id == chunk_id)
