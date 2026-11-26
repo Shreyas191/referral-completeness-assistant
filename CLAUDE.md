@@ -85,7 +85,7 @@ src/referral/
   eval/                 gold.py (label format), metrics.py (incl. bootstrap CIs, slices), harness.py (CLI),
                         report.py (report.md, cost, git hash), compare.py (two runs + McNemar),
                         errors.py (error attribution from traces), retrieval_sweep.py (E3 recall, no LLM)
-  api.py                FastAPI backend for the review UI
+  api.py                FastAPI backend; static/review.html is the review page it serves at /
 datagen/                synthetic cases: defect_plan.py → render.py (LLM prose, facts in code) → build.py
                         (noise, PDFs, gold.json) → check_cases.py (gold, recency, identity, leaks)
 data/checklists/        checklist JSON (cardiology-v1.json is the only one so far)
@@ -113,7 +113,7 @@ python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + p
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run
 python -m referral.eval.retrieval_sweep --chunk-sizes 1200 600 300 --sentence-cuts   # E3 recall@k, no LLM calls
 python -m referral.eval.position runs/b1-hard runs/pipe-hard --cases-dir data/hard_cases   # E4 by position
-uvicorn referral.api:app --reload    # then: curl -X POST localhost:8000/samples/cardiology-v1-dev-012/check
+uvicorn referral.api:app --reload    # review page at http://localhost:8000/ (sample cases or upload)
 ```
 
 ## Dataset
@@ -156,7 +156,7 @@ test), `/samples/{case_id}/check` runs one with gold for comparison, `/cases` ta
 Not written yet, roughly in priority order:
 1. Data generator after the defect plan: render documents, add noise, write PDFs and `gold.json`, leak check
 2. Other three checklists; LLM judge for citations; referral reason and handoff summary
-3. React review UI (last)
+3. Review UI: a single-page review screen is served by the API (`static/review.html`); a React version (#16) is optional
 
 Known behavior worth reporting: the wide re-check only shows the verifier chunks it has not seen, so it fixes
 retrieval misses; a misjudged chunk that was already shown is left to the long-context final read, which can

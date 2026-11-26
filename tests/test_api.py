@@ -36,7 +36,9 @@ def samples(tmp_path, monkeypatch):
     _case(root, "demo-dev-001", "dev")
     _case(root, "demo-test-001", "test")
     monkeypatch.setattr(api, "SAMPLE_DIRS", [root, tmp_path / "missing"])
-    return root
+    api._samples.cache_clear()
+    yield root
+    api._samples.cache_clear()
 
 
 def test_health_and_checklists(client):
@@ -78,3 +80,14 @@ def test_upload_runs_the_pipeline_and_validates_input(client):
     assert bad_list.status_code == 404
     exe = client.post("/cases", data=form, files=[("files", ("run.sh", "echo hi", "text/plain"))])
     assert exe.status_code == 400
+
+
+def test_review_page_and_checklist_endpoint(client):
+    page = client.get("/")
+    assert page.status_code == 200 and page.headers["content-type"].startswith("text/html")
+    for hook in ('id="sample-form"', 'id="upload-form"', 'id="items"', 'id="followups"', "/samples/"):
+        assert hook in page.text
+    cl = client.get("/checklists/cardiology-v1").json()
+    assert {i["item_id"] for i in cl["items"]} >= {"meds", "inr"}
+    assert next(i for i in cl["items"] if i["item_id"] == "meds")["definition"]
+    assert client.get("/checklists/nope").status_code == 404

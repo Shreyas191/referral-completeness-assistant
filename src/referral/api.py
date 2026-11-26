@@ -3,8 +3,10 @@
     uvicorn referral.api:app --reload
 
 Endpoints:
+  GET  /                            review page for intake staff (static/review.html)
   GET  /health                      liveness and the configured model
   GET  /checklists                  checklist ids
+  GET  /checklists/{checklist_id}   one checklist (item descriptions, windows, definitions)
   GET  /samples                     stored synthetic cases the demo can run (dev, hand-written, hard; never test)
   POST /samples/{case_id}/check     run the pipeline on a stored case; returns the result, the gold labels and cost
   POST /cases                       run the pipeline on uploaded PDFs (multipart: checklist_id, referral_date, files)
@@ -16,9 +18,11 @@ follow-ups are drafts in the response, for intake staff to review.
 import tempfile
 import time
 from datetime import date
+from functools import lru_cache
 from pathlib import Path
 
 from fastapi import Depends, FastAPI, File, Form, HTTPException, UploadFile
+from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 from referral.eval.gold import load_gold
@@ -27,11 +31,12 @@ from referral.eval.report import cost_usd
 from referral.ingest.pdf_loader import load_case
 from referral.llm import LLM
 from referral.pipeline.run import run_case
-from referral.schemas import CaseResult, Status
+from referral.schemas import CaseResult, Checklist, Status
 
 HARD_CASES = Path("data/hard_cases")
 SAMPLE_DIRS = [CASES, HARD_CASES]  # data/test_cases is never listed: the held-out split stays untouched
 UPLOAD_SUFFIXES = {".pdf", ".txt"}
+PAGE = Path(__file__).parent / "static" / "review.html"
 
 app = FastAPI(title="Referral Completeness Assistant")
 
@@ -84,6 +89,11 @@ def _run(docs, checklist, referral_date: date, llm, gold=None) -> CheckResponse:
     )
 
 
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
+def review_page() -> str:
+    return PAGE.read_text(encoding="utf-8")
+
+
 @app.get("/health")
 def health() -> dict:
     from referral.config import settings
@@ -94,6 +104,11 @@ def health() -> dict:
 @app.get("/checklists")
 def list_checklists() -> list[str]:
     return sorted(p.stem for p in CHECKLISTS.glob("*.json"))
+
+
+@app.get("/checklists/{checklist_id}")
+def get_checklist(checklist_id: str) -> Checklist:
+    return _checklist(checklist_id)
 
 
 def _sample_dirs() -> dict[str, Path]:
@@ -107,14 +122,33 @@ def _sample_dirs() -> dict[str, Path]:
     return out
 
 
-@app.get("/samples")
-def list_samples() -> list[Sample]:
+def _page_counts(case_dir: Path) -> list[int]:
+    """Pages per document without extracting text (listing 63 cases with full text extraction took 19 s)."""
+    import pdfplumber
+
+    counts = []
+    for path in sorted(case_dir.iterdir()):
+        if path.suffix.lower() == ".pdf":
+            with pdfplumber.open(path) as pdf:
+                counts.append(len(pdf.pages))
+        elif path.suffix.lower() == ".txt":
+            counts.append(len(path.read_text(encoding="utf-8").split("\f")))
+    return counts
+
+
+@lru_cache(maxsize=1)
+def _samples() -> tuple[Sample, ...]:
     out = []
     for case_id, d in _sample_dirs().items():
-        gold, docs = load_gold(d), load_case(d)
+        gold, pages = load_gold(d), _page_counts(d)
         out.append(Sample(case_id=case_id, split=gold.split, referral_date=gold.reference_date,
-                          documents=len(docs), pages=sum(len(x.pages) for x in docs)))
-    return out
+                          documents=len(pages), pages=sum(pages)))
+    return tuple(out)
+
+
+@app.get("/samples")
+def list_samples() -> list[Sample]:
+    return list(_samples())
 
 
 @app.post("/samples/{case_id}/check")
