@@ -31,7 +31,7 @@ class PipelineConfig:
     value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
     strict_long_context: bool = True   # final read may overturn Missing only with a quote naming the item
     piecewise_quotes: bool = True    # validator accepts quotes whose lines / "..." pieces each match (pw-dev runs)
-    condition_check: bool = False   # re-verify a Not applicable with chunks that mention the condition
+    condition_check: bool = True    # re-verify a Not applicable with chunks naming the condition (dev-024 replay)
     quote_length_check: bool = True  # a quote longer than its chunk must match the whole chunk, not contain it
 
 

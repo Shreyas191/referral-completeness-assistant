@@ -321,9 +321,9 @@ def test_condition_check_recovers_a_missed_condition(case_dir):
     # Not applicable, and nothing re-checked it. The note shares no word with the INR query.
     note = f"Date: 10/27/2026\n{HEADER}\n\nAnticoagulation: on warfarin 5 mg daily."
     (case_dir / "anticoag_note.txt").write_text(note)
-    off, _, trace = run(case_dir, FakeLLM())
+    off, _, trace = run(case_dir, FakeLLM(), condition_check=False)
     assert off["inr"].status == Status.NOT_APPLICABLE and trace.item("inr").condition_extra == []
-    on, _, trace = run(case_dir, FakeLLM(), condition_check=True)
+    on, _, trace = run(case_dir, FakeLLM())  # on by default
     t = trace.item("inr")
     assert [c.split("/")[1].split(":")[0] for c in t.condition_extra] == ["anticoag_note"]
     assert t.condition_status == "missing" and "condition_check_overturned" in on["inr"].flags
@@ -332,7 +332,7 @@ def test_condition_check_recovers_a_missed_condition(case_dir):
 
 def test_condition_check_adds_no_call_when_the_condition_is_never_mentioned(case_dir):
     on, off = FakeLLM(), FakeLLM()
-    _, _, trace = run(case_dir, on, condition_check=True)
-    run(case_dir, off)
+    _, _, trace = run(case_dir, on)
+    run(case_dir, off, condition_check=False)
     assert trace.item("inr").condition_extra == [] and trace.item("inr").condition_status is None
     assert on.calls == off.calls
