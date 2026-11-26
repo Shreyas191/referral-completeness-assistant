@@ -6,7 +6,7 @@ from referral.config import settings
 from referral.ingest.chunker import chunk_case
 from referral.ingest.identity import quarantine
 from referral.llm import LLM
-from referral.pipeline.absence import candidates_for_recheck, final_read
+from referral.pipeline.absence import candidates_for_recheck, final_read, names_item
 from referral.pipeline.conflicts import dose_conflicts, laterality_conflict
 from referral.pipeline.trace import TRACE_DEPTH, CaseTrace, ItemTrace
 from referral.pipeline.validator import decide
@@ -27,6 +27,7 @@ class PipelineConfig:
     validator: bool = True           # (E5)
     conflict_checker: bool = True    # (E5)
     value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
+    strict_long_context: bool = True   # final read may overturn Missing only with a quote naming the item
 
 
 def run_case(
@@ -86,11 +87,17 @@ def run_case(
 
     if cfg.absence_check and cfg.absence_long_context:
         still_missing = [i for i in checklist.items if proposals[i.item_id].status == "missing"]
+        by_id = {i.item_id: i for i in still_missing}
         for item_id, proposal in final_read(llm, still_missing, chunks).items():
             trace.item(item_id).long_context_status = proposal.status
-            if proposal.status != "missing":
-                proposals[item_id] = proposal
-                flags[item_id].append("long_context_overturned")
+            if proposal.status == "missing":
+                continue
+            if (cfg.strict_long_context and proposal.status in {"present", "contradictory"}
+                    and not names_item(by_id[item_id], proposal)):
+                flags[item_id].append("long_context_rejected")  # stays Missing; staff see the flag
+                continue
+            proposals[item_id] = proposal
+            flags[item_id].append("long_context_overturned")
 
     results: list[ItemResult] = []
     for item in checklist.items:
