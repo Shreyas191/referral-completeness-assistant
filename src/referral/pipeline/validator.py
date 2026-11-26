@@ -8,6 +8,7 @@ Order of decisions (answers the Present / Stale / Needs review question):
   5. Otherwise -> PRESENT.
 Stale is certain about the age; Needs review means the evidence itself could not be verified.
 """
+import re
 from datetime import date
 
 from rapidfuzz import fuzz
@@ -24,8 +25,26 @@ def quote_score(quote: str, chunk: Chunk) -> float:
     return fuzz.partial_ratio(" ".join(quote.lower().split()), " ".join(chunk.text.lower().split()))
 
 
-def quote_supported(quote: str, chunk: Chunk, threshold: int = settings.quote_match_threshold) -> bool:
-    return quote_score(quote, chunk) >= threshold
+_PIECE_BREAK = re.compile(r"\.{3,}|\u2026|\[\s*\.\.\.\s*\]|\n")  # ellipses and line breaks
+MIN_PIECE_CHARS = 8  # shorter pieces ("and", "...") are skipped; they carry no evidence
+
+
+def quote_supported(quote: str, chunk: Chunk, threshold: int = settings.quote_match_threshold,
+                    piecewise: bool = False) -> bool:
+    """The quote appears in the chunk. With piecewise, a quote also passes if every line or "..." piece does.
+
+    Observed failure (rq-dev, elide-dev): the model joins non-adjacent lines of the cited chunk into one quote,
+    with or without an ellipsis: "Date: 11/03/2026 ... Cardiac exam: ...", or "CURRENT MEDICATION LIST\n
+    Date: 10/05/2026\nLisinopril 10 mg ..." skipping the name, DOB and MRN lines. Each line is verbatim, but the
+    joined quote scores 82-89.5 against 90, and a correct Present goes to Needs review. Each piece must still
+    match on its own, so nothing invented passes; a quote with no piece of MIN_PIECE_CHARS or more fails.
+    """
+    if quote_score(quote, chunk) >= threshold:
+        return True
+    if not piecewise:
+        return False
+    pieces = [p.strip() for p in _PIECE_BREAK.split(quote) if len(p.strip()) >= MIN_PIECE_CHARS]
+    return len(pieces) > 1 and all(quote_score(p, chunk) >= threshold for p in pieces)
 
 
 def decide(
@@ -33,6 +52,7 @@ def decide(
     proposal: VerifierOutput,
     chunks_by_id: dict[str, Chunk],
     reference_date: date,
+    piecewise_quotes: bool = False,
 ) -> ItemResult:
     flags: list[str] = []
     proposed = Status(proposal.status)
@@ -43,7 +63,7 @@ def decide(
     citations: list[Citation] = []
     for ev in proposal.evidence:
         chunk = chunks_by_id.get(ev.chunk_id)
-        if chunk and quote_supported(ev.quote, chunk):
+        if chunk and quote_supported(ev.quote, chunk, piecewise=piecewise_quotes):
             citations.append(
                 Citation(chunk_id=chunk.chunk_id, doc_id=chunk.doc_id, page=chunk.page,
                          quote=ev.quote, doc_date=chunk.doc_date)

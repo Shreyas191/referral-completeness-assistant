@@ -28,6 +28,7 @@ class PipelineConfig:
     conflict_checker: bool = True    # (E5)
     value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
     strict_long_context: bool = True   # final read may overturn Missing only with a quote naming the item
+    piecewise_quotes: bool = True    # validator accepts quotes whose lines / "..." pieces each match (pw-dev runs)
 
 
 def run_case(
@@ -102,7 +103,8 @@ def run_case(
     results: list[ItemResult] = []
     for item in checklist.items:
         proposal = proposals[item.item_id]
-        result = (decide(item, proposal, chunks_by_id, reference_date) if cfg.validator
+        result = (decide(item, proposal, chunks_by_id, reference_date, piecewise_quotes=cfg.piecewise_quotes)
+                  if cfg.validator
                   else _unvalidated(item, proposal, chunks_by_id))
         result.flags.extend(flags[item.item_id])
         if cfg.validator and proposal.status in {"present", "contradictory"}:
@@ -112,7 +114,8 @@ def run_case(
                  "score": round(quote_score(e.quote, chunks_by_id[e.chunk_id]), 1) if e.chunk_id in chunks_by_id
                  else None}
                 for e in proposal.evidence
-                if e.chunk_id not in chunks_by_id or not quote_supported(e.quote, chunks_by_id[e.chunk_id])]
+                if e.chunk_id not in chunks_by_id
+                or not quote_supported(e.quote, chunks_by_id[e.chunk_id], piecewise=cfg.piecewise_quotes)]
 
         if cfg.conflict_checker and result.status == Status.PRESENT:
             cited = [chunks_by_id[c.chunk_id] for c in result.citations if c.chunk_id in chunks_by_id]
