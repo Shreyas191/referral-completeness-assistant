@@ -82,7 +82,7 @@ src/referral/
   baselines/            b0_keywords.py (lower bound), b1_long_context.py (primary baseline)
   eval/                 gold.py (label format), metrics.py (incl. bootstrap CIs, slices), harness.py (CLI),
                         report.py (report.md, cost, git hash), compare.py (two runs + McNemar),
-                        errors.py (error attribution from traces)
+                        errors.py (error attribution from traces), retrieval_sweep.py (E3 recall, no LLM)
   api.py                FastAPI backend for the review UI
 datagen/                synthetic cases: defect_plan.py → render.py (LLM prose, facts in code) → build.py
                         (noise, PDFs, gold.json) → check_cases.py (gold, recency, identity, leaks)
@@ -109,6 +109,7 @@ python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --
 # each run folder gets metrics.json (CIs, slices, commit, cost), report.md, and for the pipeline errors.md
 python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + paired McNemar
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run
+python -m referral.eval.retrieval_sweep --chunk-sizes 1200 600 300   # E3 recall@k by mode, no LLM calls
 uvicorn referral.api:app --reload
 ```
 
@@ -143,7 +144,7 @@ Tested end to end offline (FakeLLM + text-file case): full pipeline, both absenc
 validator, conflict checker, harness with per-item traces, recall@k, foreign-citation rate (E2), bootstrap
 CIs, slice table, run comparison, error attribution, and the LLM wrapper's JSON repair. Not yet run against the real API or real generated cases.
 
-Untested: B1 against a real model, dense/hybrid retrieval (chromadb), API.
+Untested: the API. Dense and hybrid retrieval ran on dev (E3, Nov 26); BM25 stays the default.
 
 Not written yet, roughly in priority order:
 1. Data generator after the defect plan: render documents, add noise, write PDFs and `gold.json`, leak check

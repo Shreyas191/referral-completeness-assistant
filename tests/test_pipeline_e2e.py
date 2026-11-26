@@ -304,3 +304,13 @@ def test_quote_length_check_flag_reaches_the_validator(case_dir):
 def _chunk_text(case_dir, chunk_id):
     from referral.ingest.chunker import chunk_case
     return next(c.text for c in chunk_case(load_case(case_dir)) if c.chunk_id == chunk_id)
+
+
+def test_retrieval_sweep_runs_offline_with_bm25(case_dir):
+    from referral.eval.retrieval_sweep import render, sweep
+
+    res = sweep([case_dir], "cardiology-v1", chunk_size=1200, modes=("bm25",))
+    r = res["modes"]["bm25"]
+    assert res["findable"] == 1.0 and r["items"] == 1 and r["multi_doc_items"] == 0
+    assert r["any@10"] == r["all@10"]                     # one passage: any and all agree
+    assert "| 1200 |" in render([res])
