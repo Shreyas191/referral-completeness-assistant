@@ -112,6 +112,7 @@ python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --
 python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + paired McNemar
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run
 python -m referral.eval.retrieval_sweep --chunk-sizes 1200 600 300 --sentence-cuts   # E3 recall@k, no LLM calls
+python -m referral.eval.position runs/b1-hard runs/pipe-hard --cases-dir data/hard_cases   # E4 by position
 uvicorn referral.api:app --reload
 ```
 
@@ -126,6 +127,8 @@ uvicorn referral.api:app --reload
   20% buried past page 10, 15% stale, 5% wrong-patient document. Packets 3–60 pages.
 - Splits: 40 dev (`data/cases/cardiology-v1-dev-*`, committed), 110 held-out test (`data/test_cases/`,
   gitignored, untouched until the freeze), 15 hand-written adversarial (5 so far: `hand-001`…`005`).
+- Hard set for E3 / E4: 18 cases in `data/hard_cases/` (`datagen.build --profile hard`, 43–46 pages, split
+  `dev`, committed); run with `--cases-dir data/hard_cases`. `--doc-order reverse` moves evidence to the front.
 
 ## Metrics and targets
 
