@@ -64,7 +64,8 @@ Key design decisions and why (several answer professor feedback, so keep them):
 - **The LLM only proposes** present / missing / contradictory / not_applicable. Stale and Needs review are
   decided in code (`pipeline/validator.py`) in a fixed order: verify citations → check date → check window.
   A quote that joins non-adjacent lines (with a line break or "...") passes if every piece of 8+ characters
-  matches the cited chunk on its own (`piecewise_quotes`).
+  matches the cited chunk on its own (`piecewise_quotes`). A quote longer than its chunk must match the whole chunk, not
+  merely contain it (`quote_length_check`): partial_ratio would score it 100.
 - **Recency windows live in the checklist JSON** (`recency_days` per item), owned by the receiving clinic.
   Age is measured from the referral date.
 
@@ -103,7 +104,8 @@ python -m referral.eval.harness --system b1 --split dev --name b1-dev
 python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --retrieval bm25
 # ablations: --scope global (E2), --no-absence-check, --no-long-context, --no-validator,
 #            --no-conflict-checker, --no-identity-check, --no-value-expansion,
-#            --no-strict-long-context, --no-piecewise-quotes, --top-k N, --cases-dir PATH
+#            --no-strict-long-context, --no-piecewise-quotes, --no-quote-length-check,
+#            --top-k N, --cases-dir PATH
 # each run folder gets metrics.json (CIs, slices, commit, cost), report.md, and for the pipeline errors.md
 python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + paired McNemar
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run

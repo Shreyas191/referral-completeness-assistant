@@ -29,6 +29,7 @@ class PipelineConfig:
     value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
     strict_long_context: bool = True   # final read may overturn Missing only with a quote naming the item
     piecewise_quotes: bool = True    # validator accepts quotes whose lines / "..." pieces each match (pw-dev runs)
+    quote_length_check: bool = True  # a quote longer than its chunk must match the whole chunk, not contain it
 
 
 def run_case(
@@ -103,7 +104,8 @@ def run_case(
     results: list[ItemResult] = []
     for item in checklist.items:
         proposal = proposals[item.item_id]
-        result = (decide(item, proposal, chunks_by_id, reference_date, piecewise_quotes=cfg.piecewise_quotes)
+        result = (decide(item, proposal, chunks_by_id, reference_date, piecewise_quotes=cfg.piecewise_quotes,
+                         quote_length_check=cfg.quote_length_check)
                   if cfg.validator
                   else _unvalidated(item, proposal, chunks_by_id))
         result.flags.extend(flags[item.item_id])
@@ -111,11 +113,12 @@ def run_case(
             # Only these proposals have their quotes checked; Missing and Not applicable keep no citations.
             trace.item(item.item_id).rejected_quotes = [
                 {"chunk_id": e.chunk_id, "quote": e.quote,
-                 "score": round(quote_score(e.quote, chunks_by_id[e.chunk_id]), 1) if e.chunk_id in chunks_by_id
-                 else None}
+                 "score": round(quote_score(e.quote, chunks_by_id[e.chunk_id], cfg.quote_length_check), 1)
+                 if e.chunk_id in chunks_by_id else None}
                 for e in proposal.evidence
                 if e.chunk_id not in chunks_by_id
-                or not quote_supported(e.quote, chunks_by_id[e.chunk_id], piecewise=cfg.piecewise_quotes)]
+                or not quote_supported(e.quote, chunks_by_id[e.chunk_id], piecewise=cfg.piecewise_quotes,
+                                       length_check=cfg.quote_length_check)]
 
         if cfg.conflict_checker and result.status == Status.PRESENT:
             cited = [chunks_by_id[c.chunk_id] for c in result.citations if c.chunk_id in chunks_by_id]
