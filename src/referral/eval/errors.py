@@ -46,6 +46,8 @@ def _deciding_stage(t: ItemTrace, flags: list[str]) -> str:
     if "long_context_overturned" in flags or (t.long_context_status is not None
                                               and "long_context_rejected" not in flags):
         return "long_context"
+    if "condition_check_overturned" in flags or t.condition_status is not None:
+        return "condition_recheck"
     if "absence_check_overturned" in flags or t.absence_status is not None:
         return "absence_recheck"
     return "first_pass"

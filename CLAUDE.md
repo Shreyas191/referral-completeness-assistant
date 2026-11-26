@@ -58,6 +58,8 @@ Key design decisions and why (several answer professor feedback, so keep them):
   accepted after a wider search plus a synonym scan over every chunk, then re-verification, then a
   whole-packet read. That read may change Missing to Present or Contradictory only with a quote that names
   the item (description or synonym); otherwise the item stays Missing, flagged `long_context_rejected`.
+  With `condition_check` (on by default), a Not applicable call is re-verified with unseen chunks that mention the item's
+  condition ("warfarin"), since retrieval only searches for the item itself.
 - **Value-term expansion** (`retrieval/expansion.py`): chunks from other documents that give a value for a
   term the top chunk gives a value for ("Potassium: 4.2") are shown too, so both sides of a contradiction
   reach the verifier.
@@ -105,7 +107,7 @@ python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --
 # ablations: --scope global (E2), --no-absence-check, --no-long-context, --no-validator,
 #            --no-conflict-checker, --no-identity-check, --no-value-expansion,
 #            --no-strict-long-context, --no-piecewise-quotes, --no-quote-length-check,
-#            --top-k N, --chunk-size N, --sentence-cuts (E3), --cases-dir PATH
+#            --no-condition-check, --top-k N, --chunk-size N, --sentence-cuts (E3), --cases-dir PATH
 # each run folder gets metrics.json (CIs, slices, commit, cost), report.md, and for the pipeline errors.md
 python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + paired McNemar
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run

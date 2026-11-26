@@ -12,6 +12,8 @@ from pydantic import BaseModel
 
 from referral.llm import LLM
 from referral.pipeline.verifier import SYSTEM, VerifierOutput, format_passages
+from referral.retrieval.expansion import STOP
+from referral.retrieval.hybrid import BM25Retriever
 from referral.schemas import ChecklistItem, Chunk
 
 # ~75k tokens of packet text per call; longer packets are read in several windows.
@@ -54,6 +56,33 @@ def candidates_for_recheck(
             seen.add(chunk.chunk_id)
             out.append(chunk)
     return out
+
+
+CONDITION_TOP_K = 3
+_FILLER = STOP | {"is", "on", "a", "an", "of", "to", "in", "or", "not", "taking", "takes", "currently", "uses"}
+
+
+def condition_terms(item: ChecklistItem) -> set[str]:
+    """Content words of the item's condition: "patient is on warfarin" -> {"warfarin"}."""
+    return {w for w in re.findall(r"[a-z0-9]+", (item.condition or "").lower()) if w not in _FILLER and len(w) > 2}
+
+
+def condition_candidates(item: ChecklistItem, first_pass: list[Chunk], all_chunks: list[Chunk],
+                         k: int = CONDITION_TOP_K) -> list[Chunk]:
+    """Unseen chunks that mention the item's condition, best BM25 match first.
+
+    Observed failure (sent600-dev, dev-024 inr): retrieval searches for the item ("INR result"), not its
+    condition, so neither chunk saying "warfarin" was shown, and the verifier called INR Not applicable. The
+    absence check only re-examines Missing, so nothing caught it. A chunk qualifies only if it contains a
+    content word of the condition, so a case with no mention costs no extra call.
+    """
+    terms = condition_terms(item)
+    if not terms:
+        return []
+    seen = {c.chunk_id for c in first_pass}
+    pattern = re.compile(r"\b(" + "|".join(map(re.escape, sorted(terms))) + r")\b")
+    pool = [c for c in all_chunks if c.chunk_id not in seen and pattern.search(c.text.lower())]
+    return BM25Retriever(pool).search(" ".join(sorted(terms)), k) if len(pool) > 2 else pool[:k]
 
 
 class LongContextOutput(BaseModel):

@@ -159,10 +159,11 @@ def foreign_citation_rate(preds: list[CaseResult]) -> float:
 
 
 def overturn_counts(preds: list[CaseResult]) -> dict[str, int]:
-    """How often each absence stage rescued an item from a wrong Missing."""
+    """How often each re-check stage changed an item (absence stages: Missing; condition check: Not applicable)."""
     flags = Counter(f for p in preds for item in p.items for f in item.flags)
     return {name: flags[name] for name in ("absence_check_overturned", "long_context_overturned",
-                                           "long_context_rejected", "conflict_checker")}
+                                           "long_context_rejected", "condition_check_overturned",
+                                           "conflict_checker")}
 
 
 def bootstrap_ci(per_case_values: list[float], n: int = 2000, seed: int = 0) -> tuple[float, float]:
