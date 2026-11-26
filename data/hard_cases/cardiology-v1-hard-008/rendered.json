@@ -1,0 +1,235 @@
+{
+  "case_id": "cardiology-v1-hard-008",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-31",
+  "plan": {
+    "case_id": "cardiology-v1-hard-008",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": "omit"
+      },
+      {
+        "item_id": "ecg",
+        "defect": "omit"
+      },
+      {
+        "item_id": "echo",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "lipids",
+        "defect": "stale"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "omit"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "James",
+    "last_name": "Foster",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Osteoarthritis"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "acetaminophen",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "as needed"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of intermittent palpitations.",
+    "history": "This 75-year-old man reports brief episodes of a racing or fluttering heartbeat over the past month. Episodes occur several times a week and resolve on their own; he denies chest discomfort, fainting, or shortness of breath.",
+    "referring_physician": "Dr. Peter Lewis",
+    "practice": "Arbor Family Practice",
+    "sex": "male",
+    "age": 75,
+    "dob": "1950-12-25",
+    "mrn": "MRN-38058"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-31",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/31/2026\nPatient Name: James Foster\nDOB: 12/25/1950\nMRN: MRN-38058\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Peter Lewis, Arbor Family Practice\n\nDear Colleague,\n\nI am Dr. Peter Lewis of Arbor Family Practice. James Foster is a 75-year-old man with hypertension, type 2 diabetes mellitus, and osteoarthritis.\n\nPlease contact our practice if additional background is needed.\n\nMost recent echo showed an ejection fraction of 30%.\n\nThank you for seeing this patient.\n\nDr. Peter Lewis\nArbor Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-19",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/19/2026\nPatient Name: James Foster\nDOB: 12/25/1950\nMRN: MRN-38058\n\nAmlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAcetaminophen 500 mg by mouth as needed\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-13",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/13/2026\nPatient Name: James Foster\nDOB: 12/25/1950\nMRN: MRN-38058\nOrdering provider: Dr. Peter Lewis\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_1",
+      "doc_type": "lab_report",
+      "doc_date": "2025-09-01",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/01/2025\nPatient Name: James Foster\nDOB: 12/25/1950\nMRN: MRN-38058\nOrdering provider: Dr. Peter Lewis\n\nLIPID PANEL\nTotal Cholesterol: 157 mg/dL\nLDL Cholesterol: 77 mg/dL\nHDL Cholesterol: 33 mg/dL (L)\nTriglycerides: 237 mg/dL (H)\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_2",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-18",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/18/2026\nPatient Name: James Foster\nDOB: 12/25/1950\nMRN: MRN-38058\nOrdering provider: Dr. Peter Lewis\n\nBASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 99 mmol/L\nCO2: 29 mmol/L\nBUN: 27 mg/dL (H)\nCreatinine: 0.8 mg/dL\nGlucose: 133 mg/dL (H)\nCalcium: 8.8 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-04-12",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 04/12/2026\nPatient Name: James Foster\nDOB: 12/25/1950\nMRN: MRN-38058\nAttending: Dr. Peter Lewis\n\nADMISSION DIAGNOSIS:\nJames Foster, a 75-year-old man, was admitted with community-acquired pneumonia after several days of cough, feverishness, fatigue, and worsening breathlessness. The symptoms had reduced his ability to eat, drink, and manage usual activities at home. The admitting team considered the illness an acute lower respiratory infection acquired outside a health care facility. His history of hypertension, type 2 diabetes mellitus, and osteoarthritis was recorded as relevant background. He required inpatient care for respiratory support, antimicrobial treatment, and observation of his clinical response. The admission plan included reassessment of breathing, intake, mobility, and general tolerance of care. No other acute diagnosis was established during this admission. The patient and family were advised that the expected course depended on steady improvement in symptoms and ability to resume care safely at home.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 2 of 20\n\nREASON FOR ADMISSION:\nMr. Foster came to the hospital because his cough and breathing difficulty had progressed despite rest at home. He described low energy and reduced appetite, with less fluid intake than usual. His family noted that he was not keeping up with ordinary household activities and was becoming more limited by the illness. The combination of respiratory symptoms, age, and chronic conditions made home observation alone an unsuitable plan. The decision was made to admit him for treatment and monitoring, with attention to his breathing and ability to maintain oral intake. The suspected source was community acquired, and no recent institutional exposure was reported in the history available to the admitting team. He agreed with inpatient care and understood that discharge would depend on improvement and a safe plan for continued recovery.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 3 of 20\n\nHISTORY OF PRESENT ILLNESS:\nThe patient reported a gradual onset of cough followed by increasing fatigue and shortness of breath over several days. He also described feeling feverish and having a reduced appetite. There was no history of a choking event or recent hospital stay given in the admission account. He had tried to rest at home but continued to feel weaker and had difficulty completing routine tasks. His family encouraged evaluation when his breathing symptoms became more noticeable. The history was consistent with an acute respiratory illness, and the treating team diagnosed community-acquired pneumonia. No additional cause for the presentation was identified during the stay. Symptoms were followed through his reports, participation in care, and ability to tolerate meals and activity. The account remained consistent during the admission, with gradual improvement after inpatient treatment began.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 4 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Foster has hypertension, type 2 diabetes mellitus, and osteoarthritis. These chronic conditions were considered in planning his inpatient care and transition home. His diabetes made attention to regular meals and ongoing chronic disease care important during the acute illness. His osteoarthritis can limit movement, so staff encouraged activity that matched his comfort and energy. Hypertension was part of the history reviewed by the admitting team. The patient described living at home and managing his usual routine before this respiratory illness, with support from family available when needed. No additional chronic condition was identified as a major contributor to the admission. His prior level of function and his current symptoms were considered when planning discharge needs. He was encouraged to resume routine chronic disease follow-up after recovery from the pneumonia.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 5 of 20\n\nADMISSION ASSESSMENT:\nAt admission, the working diagnosis was community-acquired pneumonia with cough, breathing difficulty, fatigue, and reduced oral intake. The team considered his age and chronic conditions when choosing inpatient observation and treatment. The initial plan focused on antimicrobial therapy, support for breathing as needed, hydration by mouth as tolerated, and gradual return to activity. Staff monitored his reported symptoms and his ability to eat, drink, rest, and participate in routine care. The plan was to reassess daily and adjust support according to his progress. The patient was informed that recovery could take time and that cough and fatigue might persist beyond the acute phase. He was asked to alert staff if breathing worsened, intake declined, or new concerns developed. The team also began planning for a safe discharge home once his symptoms had improved.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY 1:\nOn the first hospital day, Mr. Foster remained under inpatient care for community-acquired pneumonia. He continued to report cough, fatigue, and shortness of breath with activity. Antimicrobial treatment was started, and supportive care was provided according to his symptoms and intake. He was encouraged to drink regularly and to take meals as tolerated. Periods of rest were balanced with brief activity to reduce unnecessary loss of strength. Staff reviewed his chronic conditions and considered them while planning meals, mobility, and the transition home. He participated in discussions about the treatment plan and voiced understanding of the need for continued observation. No procedure was required. The day’s plan was to continue treatment, follow symptoms over time, and reassess whether he could manage basic activities with less assistance.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY 2:\nOn the second hospital day, Mr. Foster described modest improvement in his breathing at rest, though he remained tired and still had a cough. He continued the planned antimicrobial treatment and supportive care. Oral intake was encouraged, and staff checked in about his appetite and ability to drink. He was able to spend more time out of bed, with activity paced around fatigue and joint discomfort. The team continued to consider his diabetes, hypertension, and osteoarthritis as part of routine inpatient planning. He remained engaged in discussion and could describe the symptoms that would need prompt attention. There was no need for a procedure or specialty input. The plan was to continue inpatient care for another interval, encourage gradual activity, and determine whether symptom improvement would support transition to home.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY 3:\nBy the third hospital day, Mr. Foster reported that breathing was easier and that his energy was beginning to return. Cough persisted but was less disruptive to rest. He continued the treatment plan without a new concern requiring a change in level of care. Intake had improved, and he was encouraged to keep drinking and eating at regular intervals. He increased activity in short periods and took rest breaks when tired or limited by osteoarthritis. The team discussed the difference between expected residual cough and symptoms that would warrant urgent reassessment. He demonstrated understanding and remained interested in returning home when the plan was safe. Staff began reviewing home support and follow-up needs. Continued improvement in symptoms and ability to manage routine tasks were the main discharge considerations.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY 4:\nOn the fourth hospital day, Mr. Foster continued to make progress. He reported less shortness of breath during routine activity and improved appetite. A mild cough and some fatigue remained, but both were manageable with rest and supportive care. He was able to spend more time moving about and to complete basic tasks with less assistance than earlier in the stay. The team reviewed his home situation and the availability of family support. He remained willing to continue recovery at home and understood the importance of completing the planned treatment. No procedure was needed, and no specialty consultation became necessary. Discharge planning focused on clear instructions, continued oral intake, gradual return to activity, and timely follow-up with his usual clinician.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, DAY 5:\nOn the fifth hospital day, Mr. Foster’s overall course remained favorable. His breathing symptoms had continued to ease, and he was more comfortable with ordinary movement. Cough and low energy had not fully resolved, but he felt able to manage them at home with rest and support. He tolerated food and fluids and was able to discuss his ongoing care needs. The team reviewed when to seek urgent help, including worsening breathing, inability to maintain intake, confusion, or a return of marked feverishness. His chronic conditions were included in the discharge discussion, with routine care to continue after the acute illness. He and his family agreed with the plan to leave the hospital once arrangements were complete. No further inpatient intervention was planned.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 11 of 20\n\nANTIMICROBIAL TREATMENT:\nThe admitting team treated the community-acquired pneumonia with an empiric antimicrobial course. The choice and duration were managed by the hospital team, with a plan for continued treatment after discharge as appropriate. No specific drug or dose is included in this summary. Mr. Foster was instructed to follow the treatment directions supplied at discharge and not to stop early unless a clinician advised him to do so. He was also told to contact a clinician if he developed a concerning reaction or could not continue the course. The patient and family were encouraged to keep the written discharge materials available and to bring them to follow-up. His symptoms improved during treatment, including breathing comfort and appetite. The plan was to complete the course and seek reassessment if respiratory symptoms worsened or failed to continue improving.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 12 of 20\n\nRESPIRATORY AND SUPPORTIVE CARE:\nSupportive care during the admission was directed toward breathing comfort, rest, hydration, nutrition, and gradual activity. Respiratory support was provided as needed while he was in the hospital, and the plan was to avoid unnecessary exertion during the worst of his symptoms. Staff encouraged regular drinks and meals as tolerated. Mr. Foster was asked to report any worsening breathlessness, new difficulty with intake, or change in how he felt. Rest periods were balanced with short periods of movement as his energy improved. Cough and fatigue were discussed as symptoms that can linger after the acute infection, even when recovery is progressing. No specific test or imaging result is included in this summary. At discharge, he was able to continue supportive measures at home and understood when further care would be needed.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 13 of 20\n\nCHRONIC CONDITIONS DURING ADMISSION:\nHypertension, type 2 diabetes mellitus, and osteoarthritis were reviewed throughout the admission as part of routine planning. The acute respiratory illness reduced Mr. Foster’s usual activity and appetite, so the team emphasized regular food and fluid intake and a gradual return to his established routine. His diabetes care was to continue according to his existing outpatient plan, with follow-up after recovery. Hypertension was included in the handoff to his usual clinician. Osteoarthritis was considered when encouraging mobility; he was advised to increase activity in small steps and rest when needed. No new chronic diagnosis was added during this stay. The discharge plan did not replace his usual long-term care arrangements. He was encouraged to contact his regular clinician if the illness interfered with management of any chronic condition after returning home.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 14 of 20\n\nNUTRITION AND MOBILITY:\nMr. Foster’s appetite and activity were reduced at admission in the setting of cough, fatigue, and breathing difficulty. During the stay, staff encouraged him to take fluids regularly and eat according to tolerance. His intake improved as his symptoms eased. He was advised to continue small, regular meals if his appetite remained below normal after discharge and to seek help if he could not maintain fluids. Mobility was increased gradually, with attention to fatigue and discomfort from osteoarthritis. He was encouraged to walk short distances at first, take breaks, and increase activity as his breathing and energy allowed. Family support was available to assist with routine tasks during early recovery. The team discussed avoiding prolonged bed rest while also avoiding overexertion. He understood that recovery should be paced and guided by symptoms.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 15 of 20\n\nCONSULTATIONS:\nNo specialty consultation was required during this admission. The inpatient team managed the pneumonia and coordinated care for Mr. Foster’s chronic conditions. Nursing staff supported daily routines, intake, rest, and gradual activity, and shared changes in his reported symptoms with the treating team. Discharge planning included the patient and his family so that home support and follow-up needs could be reviewed before he left. The patient was able to take part in these discussions and describe the plan in his own words. No outside service was asked to assume care during the hospital stay. If his recovery becomes more complicated after discharge, his usual clinician may determine whether additional specialty input is appropriate. At the time of discharge, the team considered ongoing care manageable through routine outpatient follow-up and the written home instructions.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 16 of 20\n\nPROCEDURES AND INPATIENT TESTING:\nNo procedure was performed during this admission. This summary does not include named tests, laboratory values, or imaging findings. The diagnosis and inpatient plan were managed by the treating team based on the clinical course and information available to them. Mr. Foster did not require an invasive intervention or a procedure to support recovery. Care remained focused on antimicrobial treatment, breathing support as needed, hydration, nutrition, rest, and increasing activity gradually. He and his family were advised to rely on the discharge paperwork for any additional details that may have been provided separately. No procedure-related restrictions were necessary at the time he left the hospital. If a new concern develops at home, he should contact his usual clinician or seek urgent care according to the instructions provided.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Foster reported improved breathing, better appetite, and increased ability to move about compared with admission. Some cough and fatigue remained, but he felt these symptoms could be managed at home. He was able to eat and drink and to participate in planning for continued recovery. He understood that complete recovery might take longer than the inpatient stay and that symptoms should continue to improve. His family was aware of the plan and available to provide support as needed. The treating team considered him appropriate for discharge with continued treatment and follow-up outside the hospital. No procedure or new chronic diagnosis was part of the discharge plan. He was given written instructions and advised to seek care promptly if his breathing worsened or he could not maintain intake.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 18 of 20\n\nDISCHARGE PLAN:\nMr. Foster was discharged home to continue recovery from community-acquired pneumonia. He was instructed to complete the antimicrobial course according to the written directions supplied by the hospital. He should continue supportive care with regular fluids, meals as tolerated, rest, and gradual increases in activity. His established care for hypertension, type 2 diabetes mellitus, and osteoarthritis should continue as directed by his usual clinician. Family assistance may be used for routine tasks while fatigue and cough persist. He was advised to keep the discharge paperwork available and share it with the clinician who follows him after hospitalization. If his symptoms fail to improve or begin to worsen, he should arrange prompt reassessment. Emergency care is appropriate for severe breathing difficulty, inability to stay awake, or another rapidly worsening concern.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 19 of 20\n\nINSTRUCTIONS FOR HOME:\nAt home, Mr. Foster should finish the prescribed course as directed in the discharge paperwork and should not make changes without speaking with a clinician. He should drink regularly and eat meals as tolerated. Rest is appropriate while fatigue persists, but short periods of walking and routine movement are encouraged as symptoms allow. He should increase activity gradually and avoid pushing through significant breathlessness or exhaustion. Cough and reduced energy may continue for a period after discharge, but they should trend toward improvement. He should contact a clinician if he cannot keep fluids down, has worsening breathing, develops new confusion, or feels substantially worse. He should seek emergency help for severe or sudden breathing difficulty. Family members were encouraged to review these instructions with him and help arrange follow-up and transportation if needed.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP:\nMr. Foster should arrange follow-up with his usual clinician after returning home to review recovery from pneumonia and ongoing care for hypertension, type 2 diabetes mellitus, and osteoarthritis. The appointment should occur soon after discharge, with timing guided by the written instructions and access to care. He should bring the discharge paperwork and describe any persistent cough, fatigue, appetite change, or breathing limitation. The clinician can determine whether further assessment or adjustment of his long-term care is needed. He should not wait for the planned follow-up if symptoms become substantially worse. The hospital team advised him to seek prompt care for increasing breathlessness, inability to maintain food or fluids, new confusion, or other urgent concerns. Family support can assist with arranging the appointment and monitoring his progress during early recovery.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-06-09",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 06/09/2026\nPatient Name: James Foster\nDOB: 12/25/1950\nMRN: MRN-38058\nAttending: Dr. Peter Lewis\n\nADMISSION DIAGNOSIS:\nJames Foster is a 75-year-old male admitted for planned replacement of the left hip because of advanced osteoarthritis with persistent pain and loss of useful movement. His associated conditions are hypertension and type 2 diabetes mellitus. The admission was elective, and the goal was to improve comfort, transfers, and walking ability after recovery. The patient reviewed the operative plan with the treating team and elected to proceed. There was no reported acute illness leading to admission. His longstanding conditions were considered in the perioperative plan, including strategies for safe recovery and return to his usual living setting. He was admitted to the orthopedic service for joint replacement, postoperative support, mobility training, and discharge planning. The anticipated stay included gradual progression from assisted movement to a safe home plan.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 2 of 20\n\nREASON FOR ELECTIVE ADMISSION:\nMr. Foster described longstanding hip discomfort and increasing difficulty with routine activities related to osteoarthritis. Symptoms had limited walking, transfers, and participation in normal daily tasks despite prior nonoperative care. He chose elective joint replacement after discussion of expected benefits, recovery demands, and potential risks. The stated purpose of admission was surgical treatment rather than evaluation of a new medical complaint. He understood that early postoperative mobility would require assistance and that recovery would continue after leaving the hospital. Planning addressed pain control, fall prevention, safe use of a walking aid, and coordination with family or other support. His hypertension and type 2 diabetes mellitus were included in perioperative planning. The patient agreed with the planned course and was admitted in stable circumstances for the scheduled procedure.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nThe documented medical history includes hypertension, type 2 diabetes mellitus, and osteoarthritis affecting the hip. No additional chronic condition was identified as a primary issue during this admission. Prior treatment for the hip had not provided adequate lasting relief, and the patient elected definitive surgical management. His medical history was reviewed before the operation to guide perioperative care and planning for return home. The team discussed the expected change in activity during early recovery and the need to follow mobility precautions. Mr. Foster participated in discussion of the plan and was able to describe the intended goals of surgery. The record does not identify an acute medical event during the admission. Chronic disease care was continued in a manner appropriate to the hospital setting, with ongoing attention to safe recovery.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 4 of 20\n\nPREOPERATIVE PLANNING:\nBefore surgery, the orthopedic team reviewed the indication for hip replacement, the anticipated recovery, and the usual risks associated with major joint surgery. Mr. Foster had an opportunity to ask questions and confirmed his wish to proceed. Planning also considered his hypertension and type 2 diabetes mellitus, as well as the need for pain relief and early movement after the operation. The team reviewed the expected role of nursing support and therapy in transfers, walking, and self-care. Home needs were considered, including access to a walking aid and assistance during the first part of recovery. The patient was instructed to report new concerns before the procedure. No new complaint altered the planned course. The elective operation proceeded after the preparation process was completed.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 5 of 20\n\nOPERATIVE PROCEDURE:\nMr. Foster underwent elective left total hip replacement for osteoarthritis. The procedure was completed by the orthopedic service during this admission. The operative goal was to address the damaged joint and improve pain and function over time. He received routine perioperative support and was transferred to postoperative care after the procedure. The available account describes no unexpected event that required a change in the planned course. The operative team communicated the recovery plan to the inpatient staff, including gradual mobilization, attention to comfort, and protection of the new joint during routine activity. The patient remained under orthopedic care after surgery. Further recovery and discharge planning were based on his ability to participate in therapy and complete essential activities with appropriate assistance.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 6 of 20\n\nIMMEDIATE POSTOPERATIVE COURSE:\nAfter the operation, Mr. Foster was monitored in the postoperative setting and then continued care on the orthopedic unit. Support focused on comfort, safe positioning, and readiness to begin movement with staff assistance. The team reviewed the joint precautions and the importance of following directions during transfers and walking. No acute complication was reported in the immediate recovery period. His established hypertension and type 2 diabetes mellitus remained part of the ongoing care plan. Nursing staff assisted with routine needs and encouraged participation in the recovery process as tolerated. The patient was kept informed about the expected stages of recovery, including therapy and evaluation of home readiness. The first postoperative period was uncomplicated, and care proceeded toward progressive activity rather than prolonged bed rest.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, POSTOPERATIVE DAY ONE:\nOn the first day after surgery, Mr. Foster began structured mobility with the therapy team and nursing staff. He worked on getting out of bed, transferring safely, and taking initial steps with an appropriate walking aid. Staff reinforced the precautions given by the orthopedic team and encouraged him to request help before changing position. Pain was addressed through the hospital's routine postoperative plan, with attention to allowing useful participation in therapy. He continued to receive support for his chronic conditions without a reported acute change. Discharge planning began with discussion of the assistance and equipment that might be needed at home. His progress was measured by practical activity and tolerance of the planned rehabilitation, rather than by a single task. No new complication was reported during this stage.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, POSTOPERATIVE DAY TWO:\nOn the second postoperative day, the focus remained on increasing walking distance and improving independence with transfers and basic self-care. Mr. Foster continued working with therapy and followed instructions for safe use of the walking aid. Staff reviewed fall prevention and reminded him to seek assistance when needed. Comfort planning continued so that he could take part in activity and rest between sessions. His recovery remained consistent with the expected course after elective hip replacement. The team continued to account for hypertension and type 2 diabetes mellitus in routine inpatient care. The patient and staff discussed whether his home setting could support a safe transition and what help would be available. No new acute issue was documented, and the plan remained discharge after adequate functional progress and completion of teaching.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, POSTOPERATIVE DAY THREE:\nBy the third postoperative day, Mr. Foster had continued to advance with mobility and routine activities. Therapy reviewed safe transfers, walking with the prescribed aid, and adherence to joint precautions. He demonstrated understanding of the need to avoid unsupported movement while recovering. The team revisited the home plan and confirmed that ongoing assistance could be arranged as needed. Comfort care remained directed toward activity and rest, without naming a specific product or dose in this summary. His chronic conditions did not prompt a change in the orthopedic plan. There was no reported new complication that prevented discharge planning. The patient was considered ready to continue recovery outside the hospital once the final teaching and arrangements were complete. He remained engaged and cooperative with the transition plan.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 10 of 20\n\nPAIN AND COMFORT MANAGEMENT:\nPostoperative discomfort was managed through the hospital's general pain-control approach, adjusted to support rest and participation in therapy. No individual product or dose is recorded in this summary. Mr. Foster was encouraged to communicate when discomfort interfered with walking, transfers, or sleep, and staff considered those reports when planning activity. Comfort measures were paired with gradual movement and periods of rest. The team explained that some soreness is expected after joint replacement and may continue during recovery at home. He was advised to follow the written instructions supplied at discharge and to contact the treating team if discomfort became severe, changed suddenly, or prevented ordinary recovery activities. The goal was functional relief rather than complete absence of sensation. By discharge, he was able to continue the planned mobility program.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 11 of 20\n\nMOBILITY AND THERAPY:\nPhysical and occupational therapy addressed safe movement after hip replacement. Training included getting in and out of bed, standing, transferring, walking with a suitable aid, and completing basic daily tasks while observing the joint precautions. Mr. Foster was reminded to use assistance until he could perform activities safely and consistently. The therapy plan emphasized gradual progress rather than pushing through excessive discomfort or fatigue. Staff discussed fall prevention and safe arrangement of commonly used items at home. He was encouraged to continue the exercises and walking plan provided by the therapy team after discharge. Further improvement is expected over time, and the inpatient period was only the beginning of rehabilitation. The patient understood that activity should increase according to the instructions of his treating clinicians and therapy providers.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 12 of 20\n\nHYPERTENSION MANAGEMENT:\nHypertension was included in the inpatient care plan throughout the surgical admission. The team continued routine management appropriate to the hospital setting and considered the condition during recovery planning. No specific product, dose, or measurement is included in this summary. Mr. Foster was advised to continue the care plan provided by his usual clinician after discharge and to bring any questions about changes in his routine to that clinician. The hospitalization did not identify a new hypertension-related complaint requiring a different discharge destination or delay in rehabilitation. He was encouraged to pace activity, follow therapy guidance, and seek help if he developed a concerning new symptom. Follow-up with his established care team remains appropriate as part of ongoing management of this chronic condition.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 13 of 20\n\nTYPE 2 DIABETES CARE:\nType 2 diabetes mellitus was considered during the perioperative and recovery period. The inpatient team maintained routine supportive care appropriate to the surgical setting and encouraged regular meals consistent with the patient's usual care plan. No specific product, dose, test, or result is included in this summary. Mr. Foster was instructed to resume the chronic disease plan as directed by the clinician who normally manages it and to ask that clinician about any changes made during the hospital stay. Diabetes did not prevent participation in therapy or alter the overall orthopedic discharge plan. He was reminded that maintaining usual follow-up is important while activity and daily routines change during recovery. Any concern about his chronic condition after returning home should be discussed promptly with his established care team.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 14 of 20\n\nNUTRITION AND ROUTINE ACTIVITIES:\nMr. Foster resumed oral intake as tolerated after surgery and was encouraged to maintain regular meals and fluids consistent with his usual care plan. Routine support included assistance with personal care, clothing, and safe movement between the bed, chair, and bathroom. Staff reviewed how to reduce fall risk by keeping a walking aid within reach and avoiding rushed transfers. The patient was encouraged to ask for help when fatigue or discomfort made an activity unsafe. His return to ordinary routines is expected to be gradual, with temporary limits on heavier tasks and prolonged activity. The team discussed arranging frequently used items within easy reach at home. These measures were intended to support independence while reducing strain during early recovery. No specific dietary product or named treatment is included here.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 15 of 20\n\nCOMPLICATIONS AND OTHER ISSUES:\nThe hospital course was uncomplicated based on the available inpatient documentation. No new acute medical issue was reported that changed the planned recovery after hip replacement. The patient continued to participate in nursing care and therapy, and no unexpected event prevented progression toward discharge. The team remained attentive to comfort, safe mobility, and his chronic hypertension and type 2 diabetes mellitus. Mr. Foster was advised to report new or worsening concerns promptly after leaving the hospital, including a sudden change in comfort, new difficulty moving, or a problem with the surgical area. The absence of a reported complication during this stay does not remove the need to follow discharge instructions and keep planned follow-up. The patient and care team agreed that recovery could continue in the planned setting.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 16 of 20\n\nINTERDISCIPLINARY CARE:\nThe orthopedic service coordinated the admission and postoperative plan with nursing staff and rehabilitation professionals. Therapy input addressed mobility, transfers, daily activities, use of a walking aid, and precautions for the new joint. Nursing support reinforced safety teaching, assisted with routine care, and helped prepare the patient for transition home. The team also considered the patient's hypertension and type 2 diabetes mellitus when planning a safe recovery. Discharge discussions included the level of assistance available and the need to continue rehabilitation after leaving the hospital. Mr. Foster took part in these discussions and received explanations of the next steps. The services involved shared a consistent goal of safe mobility and continued recovery outside the hospital. No outside specialty evaluation was required to change the plan described in this summary.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Foster had completed the planned inpatient recovery period after elective left hip replacement and was ready to continue rehabilitation outside the hospital. He had participated in mobility training and received teaching on transfers, walking aid use, and joint precautions. The inpatient course had no reported acute complication, and his chronic conditions did not require a change in the discharge setting. He was able to continue the care plan with appropriate support and follow-up. The patient understood that further improvement in strength, comfort, and walking ability would take time. He was instructed to use assistance as needed and not to exceed activity limits provided by the treating team. Discharge was arranged with continued rehabilitation and contact with his usual care providers.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 18 of 20\n\nDISCHARGE PLAN:\nMr. Foster is discharged to continue recovery in his home setting with assistance as arranged by the patient and care team. He should use the walking aid recommended by therapy and follow the joint precautions provided by the orthopedic service. Continued rehabilitation is planned to build safe mobility and improve daily function. He should follow the written directions supplied at discharge regarding comfort, activity, wound care, and routine self-care. Chronic care for hypertension and type 2 diabetes mellitus should continue through his established clinicians. The patient was advised to keep the discharge information available and share it with any clinician involved in his ongoing care. He should seek prompt guidance if a new concern interferes with recovery or if he is uncertain how to follow a specific instruction.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 19 of 20\n\nINSTRUCTIONS FOR HOME:\nAt home, Mr. Foster should follow the orthopedic team's directions for activity and protect the new hip as taught during the admission. He should use his walking aid and accept help with transfers or personal tasks until he can complete them safely. He should avoid rushing, reduce fall hazards, and keep commonly used items within easy reach. Wound care should follow the written instructions provided by the surgical team. He should continue the comfort plan supplied at discharge without making unapproved changes. The patient should contact the orthopedic service for new drainage, increasing redness, worsening pain, feverishness, or a sudden loss of function. He should seek urgent help for severe or rapidly worsening symptoms. Routine care for his chronic conditions should continue with his usual clinicians.\n",
+        "James Foster | MRN-38058 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP:\nMr. Foster should arrange follow-up with the orthopedic service according to the instructions supplied at discharge. The visit will allow the team to review recovery, mobility, comfort, and progress with the new joint. He should also maintain routine follow-up with the clinicians who manage hypertension and type 2 diabetes mellitus. He should bring his discharge paperwork and a record of questions or concerns to those appointments. If therapy has been arranged, he should attend as directed and continue the home activity plan provided by the therapist. He should contact the orthopedic team sooner if a new problem develops or if he cannot follow the recovery instructions. The patient was advised that regular follow-up and gradual activity are important parts of recovery after elective hip replacement.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "echo",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Most recent echo showed an ejection fraction of 30%."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAcetaminophen 500 mg by mouth as needed"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report_1",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 157 mg/dL\nLDL Cholesterol: 77 mg/dL\nHDL Cholesterol: 33 mg/dL (L)\nTriglycerides: 237 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report_2",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 99 mmol/L\nCO2: 29 mmol/L\nBUN: 27 mg/dL (H)\nCreatinine: 0.8 mg/dL\nGlucose: 133 mg/dL (H)\nCalcium: 8.8 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "missing",
+    "ecg": "missing",
+    "echo": "contradictory",
+    "lipids": "stale",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "missing",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 4,
+  "input_tokens": 2275,
+  "output_tokens": 8856
+}

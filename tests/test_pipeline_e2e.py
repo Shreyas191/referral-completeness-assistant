@@ -336,3 +336,30 @@ def test_condition_check_adds_no_call_when_the_condition_is_never_mentioned(case
     run(case_dir, off, condition_check=False)
     assert trace.item("inr").condition_extra == [] and trace.item("inr").condition_status is None
     assert on.calls == off.calls
+
+
+def test_evidence_positions_count_pages_across_documents_in_loader_order(case_dir):
+    from referral.eval.gold import load_gold
+    from referral.eval.position import evidence_positions
+
+    n_pages, pos = evidence_positions(case_dir, load_gold(case_dir))
+    order = [d.doc_id for d in load_case(case_dir)]
+    pages = {d.doc_id: len(d.pages) for d in load_case(case_dir)}
+    before = sum(pages[d] for d in order[:order.index("progress_note")])
+    assert n_pages == sum(pages.values())
+    assert pos == {"echo": (before + 2, (before + 2) / n_pages)}   # TTE on page 2 of the progress note
+
+
+def test_reverse_doc_order_moves_evidence_but_not_results(case_dir, tmp_path):
+    from referral.eval.gold import load_gold
+    from referral.eval.position import evidence_positions
+
+    gold = load_gold(case_dir)
+    n, fwd = evidence_positions(case_dir, gold)
+    _, rev = evidence_positions(case_dir, gold, reverse=True)
+    assert [d.doc_id for d in load_case(case_dir, reverse=True)] == [d.doc_id for d in load_case(case_dir)][::-1]
+    assert fwd["echo"] != rev["echo"] and fwd["echo"][0] + rev["echo"][0] != 0
+    kw = {"cases_dir": case_dir.parent, "checklists_dir": CHECKLISTS}
+    a = run_split("pipeline", "dev", tmp_path / "a", PipelineConfig(), FakeLLM(), **kw)
+    b = run_split("pipeline", "dev", tmp_path / "b", PipelineConfig(), FakeLLM(), doc_order="reverse", **kw)
+    assert b["doc_order"] == "reverse" and a["status_accuracy"] == b["status_accuracy"]

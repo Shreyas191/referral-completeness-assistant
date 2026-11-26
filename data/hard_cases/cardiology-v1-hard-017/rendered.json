@@ -1,0 +1,268 @@
+{
+  "case_id": "cardiology-v1-hard-017",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-16",
+  "plan": {
+    "case_id": "cardiology-v1-hard-017",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": "bury"
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Daniel",
+    "last_name": "Thomas",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol succinate",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion with progressively reduced exercise tolerance.",
+    "history": "This 43-year-old man reports three months of breathlessness when walking uphill or climbing stairs. Symptoms have gradually worsened and improve with rest. He denies breathlessness at rest.",
+    "referring_physician": "Dr. James Turner",
+    "practice": "Blue Ridge Family Practice",
+    "sex": "male",
+    "age": 43,
+    "dob": "1983-04-28",
+    "mrn": "MRN-35558"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-16",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/16/2026\nPatient Name: Daniel Thomas\nDOB: 04/28/1983\nMRN: MRN-35558\n\nTo: Cardiology Clinic Intake\nFrom: Dr. James Turner, Blue Ridge Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion with progressively reduced exercise tolerance.\n\nI am referring Daniel Thomas, a 43-year-old man with atrial fibrillation, hypertension, and type 2 diabetes mellitus, for assessment of breathlessness with exertion.\n\nFor three months, he has had gradually worsening breathlessness when walking uphill or climbing stairs, with reduced exercise tolerance. Symptoms improve with rest, and he denies breathlessness at rest.\n\nThank you for seeing this patient.\n\nDr. James Turner\nBlue Ridge Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-22",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/22/2026\nPatient Name: Daniel Thomas\nDOB: 04/28/1983\nMRN: MRN-35558\nProvider: Dr. James Turner\n\nSUBJECTIVE:\nDaniel Thomas is a 43-year-old man with atrial fibrillation, hypertension, and type 2 diabetes mellitus. For three months, he has had gradually worsening breathlessness when walking uphill or climbing stairs, with reduced exercise tolerance. Symptoms improve with rest. He denies breathlessness at rest.\n\nVITALS:\nBP 122/72, HR 61, RR 16, SpO2 97% on room air, weight 207 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles.\n\nDATA REVIEWED:\n\nLipids: TC 181, LDL 108, HDL 43, TG 153.\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Progressive breathlessness on exertion with reduced exercise tolerance. Arrange cardiology evaluation.\n2. Atrial fibrillation. Include this history in the cardiology evaluation.\n3. Hypertension. Continue routine follow-up with his usual clinician.\n4. Type 2 diabetes mellitus. Continue routine follow-up with his usual clinician.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-22",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/22/2026\nPatient Name: Daniel Thomas\nDOB: 04/28/1983\nMRN: MRN-35558\n\nMetoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-07",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/07/2026\nPatient Name: Daniel Thomas\nDOB: 04/28/1983\nMRN: MRN-35558\nOrdering provider: Dr. James Turner\n\nFindings: Sinus bradycardia at 53 bpm. Normal axis. PR interval 149 ms, QRS 82 ms, QTc 403 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-26",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/26/2026\nPatient Name: Daniel Thomas\nDOB: 04/28/1983\nMRN: MRN-35558\nOrdering provider: Dr. James Turner\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-25",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/25/2026\nPatient Name: Daniel Thomas\nDOB: 04/28/1983\nMRN: MRN-35558\nOrdering provider: Dr. James Turner\n\nBASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 5.0 mmol/L\nChloride: 99 mmol/L\nCO2: 24 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.6 mg/dL\nGlucose: 125 mg/dL (H)\nCalcium: 10.0 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-06-29",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 06/29/2026\nPatient Name: Daniel Thomas\nDOB: 04/28/1983\nMRN: MRN-35558\nAttending: Dr. James Turner\n\nADMISSION DIAGNOSIS:\nDaniel Thomas is a 43-year-old male admitted for planned elective replacement of the hip joint because of chronic joint disease with persistent pain and reduced function. His associated conditions include atrial fibrillation, hypertension, and type 2 diabetes mellitus. The admission was scheduled rather than prompted by an acute injury or sudden change in health. The goals were to complete the planned operation, provide routine postoperative care, establish safe mobility, and arrange discharge home when appropriate. The patient participated in planning and understood that recovery would require pain control, gradual activity, and continued attention to his chronic conditions. No acute medical complaint was reported as the reason for admission. The operative plan was reviewed with him before proceeding, and he agreed to the proposed inpatient course. This summary describes the hospitalization and the discharge plan without listing specific drug names or numerical results.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 2 of 20\n\nREASON FOR ADMISSION:\nThe patient was admitted to the orthopedic service for elective hip replacement after ongoing symptoms had limited daily activities despite nonsurgical care. The planned inpatient stay allowed perioperative management of his established atrial fibrillation, hypertension, and type 2 diabetes mellitus, as well as rehabilitation after surgery. He was not admitted for evaluation of a new cardiac, respiratory, infectious, or metabolic problem. Preoperative discussions addressed the expected operation, postoperative pain management, mobility goals, and the need to follow precautions during recovery. The patient expressed understanding of the anticipated course and the possibility that progress with walking could determine the timing of discharge. The team also reviewed the importance of continuing long-term care for his chronic conditions after leaving the hospital. He remained engaged in decisions throughout the admission. No calendar dates, numerical findings, named drugs, or specific diagnostic results are included in this account.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 3 of 20\n\nHISTORY OF PRESENT ILLNESS:\nDaniel Thomas described chronic hip pain and progressive difficulty with ordinary activities, including walking and completing household tasks. Symptoms had persisted despite conservative measures, and he elected to proceed with joint replacement after discussion with the orthopedic team. There was no reported acute injury immediately before admission. His history was notable for atrial fibrillation, hypertension, and type 2 diabetes mellitus. These conditions were considered in planning for anesthesia, surgery, and postoperative observation. He reported no new concern requiring a change in the elective plan at the time of admission. Expectations for gradual improvement, use of a walking aid, and participation in therapy were reviewed. The patient understood that pain and activity tolerance could vary during early recovery and that discharge would depend on safe transfers and mobility. The available history supported proceeding with the planned operation and routine inpatient recovery.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 4 of 20\n\nRELEVANT MEDICAL HISTORY:\nThe patient has a history of atrial fibrillation, hypertension, and type 2 diabetes mellitus. These chronic diagnoses were communicated to the orthopedic and anesthesia teams before surgery and incorporated into perioperative planning. His atrial fibrillation history prompted attention to his established long-term care and to safe timing around the operation. Hypertension was followed during the admission, with attention to continuity of his usual management approach. Diabetes care included routine inpatient oversight and coordination around food intake and recovery. No additional acute condition was identified as a barrier to the planned procedure. The patient was encouraged to continue follow-up with his usual clinicians after discharge for ongoing management of these diagnoses. The record provided for this summary does not include specific drug names, numerical values, named diagnostic tests, or calendar dates. Chronic conditions remained stable enough for the elective surgical course described here.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 5 of 20\n\nPREOPERATIVE PLANNING:\nBefore surgery, the orthopedic and anesthesia teams reviewed the planned hip replacement, the patient's medical history, and the expected postoperative course. Particular attention was given to atrial fibrillation, hypertension, and type 2 diabetes mellitus. The patient received an explanation of the operative approach, anticipated pain, early mobility goals, and the need to follow hip precautions. Perioperative care was coordinated to limit interruption of his usual chronic disease management while accounting for the operation and recovery. The patient had an opportunity to ask questions and expressed agreement with proceeding. The team also discussed the role of therapy, use of an assistive device, and the criteria for a safe transition out of the hospital. No named diagnostic studies, numerical results, drug names, or calendar dates are stated in this summary. Planning was completed without a reported new medical issue that required postponement.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 6 of 20\n\nADMISSION STATUS:\nOn arrival, the patient was placed under the orthopedic service for planned operative care and postoperative observation. His admission history included atrial fibrillation, hypertension, and type 2 diabetes mellitus. The admitting team reviewed the purpose of hospitalization, the surgical plan, and the anticipated need for assistance during early recovery. The patient was oriented to the inpatient routine and informed that therapy would help establish safe transfers and walking. Care planning included communication among the orthopedic, anesthesia, nursing, and rehabilitation teams. His chronic conditions were considered throughout the perioperative period, with attention to usual care and changes in activity or eating after surgery. No acute event was recorded as the reason for admission. The admission proceeded as an elective joint replacement stay. This narrative omits physical findings, vital signs, named drugs, numerical data, and named diagnostic test results, in keeping with the requested format.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 7 of 20\n\nPROCEDURE:\nThe patient underwent elective replacement of the hip joint during this admission. The operation was completed as planned, with the orthopedic team providing routine perioperative care. The procedure was undertaken to address chronic pain and functional limitation. Anesthesia support was provided, and the patient was transferred to the recovery area after completion of surgery. The operative course was documented as uncomplicated, with no unexpected event requiring a change in the planned inpatient pathway. Postoperative orders addressed pain relief, wound care, prevention of immobility-related complications, and gradual return to activity. The patient was instructed to follow the surgeon's guidance regarding movement and hip precautions. No specific device brand, drug name, numerical operative detail, imaging result, or calendar date is included here. Recovery continued under the orthopedic service with attention to the patient's chronic atrial fibrillation, hypertension, and diabetes.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 8 of 20\n\nANESTHESIA AND IMMEDIATE RECOVERY:\nAnesthesia care was provided for the planned hip replacement, and the patient was transferred to postoperative recovery after the operation. The recovery team observed him and provided routine support while he became ready to participate in further inpatient care. No unexpected anesthesia-related event was recorded. Pain management was initiated according to the surgical plan, and nursing staff reviewed how to request assistance before getting out of bed. His known atrial fibrillation, hypertension, and type 2 diabetes mellitus remained part of the care plan during the transition from the operating area to the orthopedic unit. The patient was able to continue with the planned postoperative pathway. The summary does not include a physical examination, vital signs, named drugs, numerical findings, or diagnostic test results. Ongoing care focused on comfort, safety, wound protection, and preparation for therapy once the immediate recovery period had passed.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, OPERATIVE DAY:\nOn the operative day, the patient completed the planned hip replacement and returned to the orthopedic unit for observation. Nursing staff supported comfort, rest, and safety during the initial recovery period. He was reminded to request assistance before standing and to follow the movement precautions reviewed before surgery. The care team continued usual oversight of his atrial fibrillation, hypertension, and type 2 diabetes mellitus while adapting care to the postoperative setting. Food and activity were advanced as appropriate to his recovery. There was no recorded complication that changed the planned course. The patient and team discussed the next steps, including therapy participation and gradual progression to a walking aid. Discharge was not expected until he could manage essential mobility safely and had an appropriate plan for care at home. Specific test names, results, drug names, numerical values, and dates are not provided.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, FIRST POSTOPERATIVE DAY:\nDuring the first postoperative day, the patient continued recovery on the orthopedic unit. The focus was on comfort, wound protection, prevention of complications related to limited mobility, and beginning supervised activity. Therapy staff worked with him on transfers and short-distance walking using an assistive device. He was encouraged to follow the hip precautions and to ask for help when moving. Nursing and medical teams continued management of his chronic atrial fibrillation, hypertension, and diabetes in the context of reduced activity and recovery. No new acute concern was documented, and no event required interruption of the rehabilitation plan. The patient was able to participate in care discussions and understood that continued progress with mobility would guide discharge readiness. The record summarized here does not state vital signs, physical findings, named tests, results, drug names, or calendar dates. Further therapy and routine observation were planned.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 11 of 20\n\nHOSPITAL COURSE, SECOND POSTOPERATIVE DAY:\nOn the next postoperative day, the patient continued with the established recovery plan. He participated in therapy focused on safe movement, transfers, and walking with an assistive device. Staff reinforced the precautions necessary to protect the new joint and reduce the chance of a fall. His comfort was addressed with the agreed postoperative approach, and routine wound care continued. The team maintained attention to his history of atrial fibrillation, hypertension, and type 2 diabetes mellitus while preparing for discharge. No acute complication was recorded, and the patient continued to make progress toward the functional goals established by therapy. Discharge planning included confirmation that he could manage essential activities with available support and understood whom to contact if a concern arose. No test names, test results, numerical values, drug names, or dates are included. Home recovery was considered appropriate once the team completed its safety planning.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 12 of 20\n\nATRIAL FIBRILLATION MANAGEMENT:\nAtrial fibrillation was recognized as an established chronic condition and included in perioperative planning. The relevant teams reviewed the patient's usual care approach before surgery and considered it during postoperative observation. Care was coordinated around the procedure and the return to activity, with attention to resuming his established chronic management as appropriate to the surgical course. The patient had no reported new symptom or event that altered the orthopedic plan during this admission. No specific drug, numerical result, or named diagnostic test is listed in this summary. He was advised to continue follow-up with his usual clinician after discharge for ongoing management and to seek prompt care for concerning new symptoms. The inpatient team communicated the importance of keeping his long-term care plan coordinated with orthopedic recovery. Atrial fibrillation did not prevent completion of the planned operation or participation in rehabilitation.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 13 of 20\n\nHYPERTENSION MANAGEMENT:\nHypertension was managed as a chronic condition throughout the admission. The team reviewed the patient's usual approach to care and coordinated perioperative management with the orthopedic and anesthesia plans. Postoperatively, attention remained on continuity of his established care while he resumed eating, activity, and recovery routines. No acute issue related to hypertension was documented as changing the operative or discharge plan. The patient was reminded to continue long-term follow-up with his usual clinician after leaving the hospital. He was also advised to share the discharge information with that clinician so that chronic care could continue without interruption. This summary does not include physical findings, vital signs, numerical values, named diagnostic tests, or drug names. Hypertension remained a background condition considered in planning rather than a reason for additional inpatient treatment or delayed discharge.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 14 of 20\n\nDIABETES MANAGEMENT:\nType 2 diabetes mellitus was incorporated into the perioperative and postoperative care plan. The team coordinated routine inpatient diabetes care with the surgical schedule, food intake, and gradual increase in activity. The patient was encouraged to return to his established long-term plan as appropriate after leaving the hospital and to maintain follow-up with his usual clinician. No acute diabetes-related concern was recorded as interfering with surgery or rehabilitation. Specific drug names and numerical results are not included. The patient received general guidance to maintain regular meals during recovery, follow his established self-care routine, and seek clinical advice if he could not eat or manage his usual care as expected. The orthopedic team included diabetes in discharge planning because it is relevant to continued recovery and wound care. No named diagnostic test, physical finding, or calendar date is stated.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 15 of 20\n\nMOBILITY AND THERAPY:\nRehabilitation began after surgery, with therapy staff assisting the patient in transfers, standing, and walking with an appropriate aid. Activity was advanced gradually according to his tolerance and the surgeon's precautions. The patient was reminded to avoid unassisted movement until he felt secure and had been cleared to manage the task safely. Training included strategies for routine movement and planning for the home setting. The therapy team assessed his ability to complete essential activities and communicated progress to the orthopedic service. The patient participated in the sessions and understood that continued practice after discharge would be important. Home support and access to follow-up therapy were addressed as part of planning. The patient was considered suitable for discharge once safe mobility could be maintained with the available aid and support. No physical examination, vital signs, imaging result, named test, numerical value, or drug name is described.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 16 of 20\n\nPAIN AND BOWEL CARE:\nPostoperative comfort was addressed using the inpatient pain plan, with staff checking that the patient could rest and participate in therapy. He was encouraged to communicate changes in discomfort and request help before activity. The care team balanced comfort with the need for alertness and safe mobility. Routine attention was also given to bowel function because activity and changes in eating after surgery can affect regularity. The patient received general guidance on hydration, food intake, and movement as tolerated, and staff planned additional support if needed. No complication related to pain or bowel care was recorded as delaying recovery. At discharge, he was instructed to follow the written home plan and contact his care team if symptoms became difficult to manage. This summary does not name drugs, doses, tests, numerical findings, or calendar dates. Pain and bowel care remained part of routine postoperative recovery.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 17 of 20\n\nCONSULTING AND SUPPORT SERVICES:\nThe orthopedic service directed the admission and operative care. Anesthesia staff participated in perioperative planning and care. Rehabilitation staff worked with the patient on safe transfers, walking, and preparation for activity at home. Nursing staff provided routine postoperative support, reinforced precautions, and helped coordinate daily needs. Medical oversight included consideration of his atrial fibrillation, hypertension, and type 2 diabetes mellitus during surgery and recovery. Communication among the teams supported a consistent plan and helped determine when discharge would be safe. The patient took part in discussions about mobility goals and home arrangements. No separate acute issue required a change in the care team or the planned course. This account does not include named drugs, diagnostic tests, results, numerical values, vital signs, or physical findings. The combined services supported completion of the elective procedure and transition to continued recovery outside the hospital.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 18 of 20\n\nCOMPLICATIONS AND SAFETY:\nThe admission and operation were completed without a recorded complication that required a change in the planned treatment pathway. No new acute condition was documented as preventing the patient from beginning rehabilitation or preparing for discharge. Safety measures emphasized asking for assistance with movement, following hip precautions, and using the recommended walking aid. The team also considered his chronic atrial fibrillation, hypertension, and type 2 diabetes mellitus in the context of postoperative care. Wound protection and prevention of problems associated with immobility were included in routine planning. The patient received instructions on recognizing a change that should prompt a call to his care team or urgent assessment. No specific test result, numerical finding, drug name, physical examination, or vital sign is described. The discharge plan reflected his progress and available support rather than a need for further inpatient observation.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 19 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, the patient had completed the planned elective hip replacement and had progressed through the initial postoperative recovery period without a documented complication. He was able to participate in therapy and was considered ready to continue recovery outside the hospital with an assistive device and the support arranged for him. Pain and routine postoperative needs had a home plan. He understood the importance of following hip precautions, keeping the surgical area protected, and increasing activity gradually. His atrial fibrillation, hypertension, and type 2 diabetes mellitus remained part of his ongoing care plan, with follow-up advised through his usual clinicians. The discharge decision followed review of mobility, safety, and home arrangements. This summary does not provide physical findings, vital signs, numerical results, named diagnostic tests, drug names, or dates. He left the inpatient setting with instructions and follow-up plans in place.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 20 of 20\n\nDISCHARGE INSTRUCTIONS AND FOLLOW-UP:\nThe patient was instructed to follow the orthopedic team's written guidance for wound care, hip precautions, activity, and use of an assistive device. He should increase walking gradually and avoid tasks that have not been cleared by the therapy or surgical team. He was advised to seek help for a fall, new wound concern, worsening pain that is not controlled by the home plan, fever, or sudden change in general condition. He should continue follow-up with the orthopedic service as arranged and maintain ongoing care with his usual clinicians for atrial fibrillation, hypertension, and type 2 diabetes mellitus. He was encouraged to keep all scheduled rehabilitation appointments and bring discharge information to follow-up. The patient and support person had an opportunity to review the plan and ask questions. No calendar dates, drug names, doses, test names, or numerical values are stated.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-11-04",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 11/04/2026\nPatient Name: Daniel Thomas\nDOB: 04/28/1983\nMRN: MRN-35558\nAttending: Dr. James Turner\n\nADMISSION DIAGNOSIS:\nDaniel Thomas is a 43-year-old man admitted for an acute obstructing urinary stone with severe flank discomfort and difficulty passing urine. The admission diagnosis was ureteral stone causing obstruction. His history includes atrial fibrillation, hypertension, and type 2 diabetes mellitus. The obstruction required inpatient urology involvement and procedural treatment rather than observation alone. He was admitted for symptom control, relief of the blockage, and monitoring during recovery. The plan was reviewed with him in plain language, including the expected role of a temporary internal drain and the need for later urology follow-up. His chronic conditions were considered when planning care, but they did not change the need to promptly relieve the obstruction. He understood the reason for admission and agreed with the proposed approach.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 2 of 20\n\nPRESENTING CONCERN:\nBefore admission, Mr. Thomas developed abrupt flank pain that became difficult to manage at home. He also described nausea and a reduced ability to pass urine comfortably. The symptoms were consistent with an acute stone episode and prompted hospital assessment. He denied a recent similar episode requiring an operation. His account did not suggest a separate injury or a clear alternate source for the discomfort. The pain affected rest and ordinary activity, and he was concerned that the blockage would not resolve without treatment. His history of atrial fibrillation, hypertension, and type 2 diabetes was obtained as part of the admission discussion. He provided the history directly and was able to discuss his preferences and concerns. The immediate goal was relief of obstruction and control of symptoms.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Thomas has established atrial fibrillation, hypertension, and type 2 diabetes mellitus. These conditions were noted throughout the admission and incorporated into the perioperative plan. He did not report a recent hospitalization for these chronic problems. He described the stone episode as the principal new concern and did not identify another acute illness requiring separate inpatient care. His history was reviewed with attention to usual daily care and any recent change in his ability to manage at home. No family history relevant to this acute episode was provided. He was encouraged to share any prior stone history with the urology team at follow-up, including whether he has passed stones previously. Chronic disease management remains important after discharge, but the immediate hospital focus was relief of the obstructed urinary tract and safe recovery from the procedure.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 4 of 20\n\nADMISSION ASSESSMENT:\nThe admission assessment supported an acute obstructing stone requiring prompt urologic treatment. Mr. Thomas was admitted for symptom management and relief of the blockage. The team discussed that a temporary internal ureteral stent could be needed to maintain drainage after the stone procedure. The expected course, including temporary urinary discomfort and the importance of returning for stent removal, was reviewed before intervention. He was able to ask questions and expressed understanding. His atrial fibrillation, hypertension, and diabetes were included in planning for anesthesia and recovery. The team also reviewed the need to resume routine chronic care after the acute episode, without making changes unrelated to the admission. He was kept in the hospital for the procedure and observation afterward because of the obstruction and the need to confirm that he could manage symptoms and oral intake.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 5 of 20\n\nHOSPITAL COURSE, FIRST DAY:\nDuring the first hospital day, Mr. Thomas received supportive care for flank pain and nausea while urology assessed the obstructing stone. He was kept under observation because symptoms remained significant and the blockage required definitive attention. The care team reviewed his medical history and discussed the planned endoscopic approach. He remained involved in decisions and agreed to proceed. Oral intake was adjusted around the planned procedure, and nursing staff provided instructions about the expected sequence of care. His discomfort was addressed with hospital-directed symptom relief, with attention to his chronic conditions. No separate acute problem became the focus of care. The team explained that a temporary drain might be placed to support urine flow and that a later outpatient encounter could be required to remove it. He remained in the hospital for intervention and recovery planning.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, SECOND DAY:\nOn the second hospital day, the urology team proceeded with endoscopic treatment of the obstructing stone. The procedure was completed without a reported complication. A temporary ureteral stent was placed to support drainage and allow the treated area to recover. Afterward, Mr. Thomas was observed for pain, nausea, ability to take fluids, and ability to pass urine. He was advised that mild urinary urgency, frequency, or blood-tinged urine can occur while a stent is in place. His symptoms were manageable with the hospital care plan, and he was able to participate in discussion about recovery. The team emphasized that the stent is temporary and must be removed through urology follow-up. Continued observation was planned to ensure he could safely transition to home care.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, THIRD DAY:\nOn the third hospital day, Mr. Thomas continued recovery after the endoscopic procedure. He reported that the severe flank discomfort had eased and that he could take fluids by mouth. He was able to pass urine and understood that some temporary urinary irritation could persist while the stent remained in place. The team reviewed the home plan and the need to arrange stent removal with urology. He had no new concern requiring a longer inpatient stay. His chronic atrial fibrillation, hypertension, and diabetes were reviewed in the context of returning to his usual outpatient care. The team reinforced that worsening pain, inability to pass urine, feverish symptoms, or persistent vomiting would require prompt reassessment. Discharge was considered appropriate once he demonstrated adequate symptom control and understood the follow-up plan.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 8 of 20\n\nUROLOGY MANAGEMENT:\nUrology directed management of the obstructing stone during the admission. The team recommended endoscopic treatment because the blockage and symptoms were not appropriate for continued observation alone. The plan included treatment of the stone and placement of a temporary internal ureteral stent to support drainage. Mr. Thomas was informed that the stent may cause urinary urgency, frequency, discomfort with urination, or intermittent blood-tinged urine. He was also told that the stent cannot remain indefinitely and requires planned removal. The urology team reviewed the recovery expectations and the need to seek help if symptoms became severe or he could not pass urine. He was given an outpatient follow-up plan before discharge. No additional specialty service was required for the acute stone episode. His chronic conditions remain under the care of his usual outpatient clinicians.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 9 of 20\n\nPROCEDURE:\nMr. Thomas underwent an endoscopic ureteral procedure for relief of the obstruction and treatment of the stone. A temporary ureteral stent was placed to maintain drainage after the intervention. The procedure was completed without a reported complication, and he was transferred to recovery for observation. The operative team reviewed the purpose of the stent and explained that it is a temporary device rather than a permanent treatment. He was advised that urinary urgency, frequency, mild discomfort, or blood-tinged urine may occur during the recovery period. The procedure addressed the immediate obstruction, while later outpatient care is needed to remove the stent and complete stone follow-up. He was able to discuss the procedure and aftercare instructions. No further inpatient procedure was planned before discharge.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 10 of 20\n\nPOSTPROCEDURE RECOVERY:\nFollowing the procedure, Mr. Thomas was observed for return of comfort, oral intake, and ability to pass urine. He reported improvement in the intense flank pain that had brought him to the hospital. Some urinary irritation was discussed as an expected effect of the temporary stent, and he was instructed to report symptoms that were severe or worsening. He was able to drink fluids and did not report persistent vomiting. The team reviewed safe activity during the early recovery period and encouraged gradual return to routine tasks as tolerated. He understood that the internal stent needs planned removal even if he feels well. The postprocedure course was uncomplicated, and no additional inpatient intervention was needed. Discharge planning proceeded after he demonstrated that symptoms could be managed outside the hospital.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 11 of 20\n\nATRIAL FIBRILLATION:\nAtrial fibrillation is part of Mr. Thomas’s chronic medical history and was considered during perioperative planning. No new rhythm-related complaint became a separate focus during this admission. The hospital team reviewed the importance of continuing his established outpatient care after the acute stone episode. Any changes to his long-term treatment should be made with his usual clinician, particularly in light of the recent procedure and his individual history. He was advised to seek urgent care for new chest discomfort, fainting, severe shortness of breath, or sustained palpitations. The admission was not intended to replace ongoing management of atrial fibrillation. He should bring questions about his routine heart care to his established outpatient team. The stone procedure and recovery plan were explained separately from his chronic condition management.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 12 of 20\n\nHYPERTENSION:\nHypertension was recognized as a chronic condition during this hospitalization. No separate acute issue related to hypertension required an additional inpatient procedure or prolonged stay. The team considered this history when planning anesthesia, recovery, and transition home. Mr. Thomas was encouraged to continue routine follow-up with his established clinician and to discuss any concerns about his long-term care at that visit. He should not make independent changes to his usual treatment based solely on the stone admission. The hospital stay focused on relief of the urinary obstruction and recovery from the endoscopic procedure. If he develops a new severe headache, chest discomfort, shortness of breath, or another concerning symptom, he should seek prompt assessment. Otherwise, ongoing hypertension care can continue through his regular outpatient arrangements.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 13 of 20\n\nTYPE 2 DIABETES:\nType 2 diabetes mellitus was included in the admission history and considered during perioperative care. Mr. Thomas was advised to return to his established diabetes routine after discharge, following any instructions provided by his outpatient clinician. The hospital stay was focused on the obstructing stone, and no separate diabetes-related complication became the reason for continued admission. He should contact his usual clinician if he has difficulty maintaining his normal routine while recovering, or if illness interferes with eating and drinking. Adequate fluid intake is encouraged unless a clinician has given him a different restriction. He should keep planned chronic care appointments and discuss any questions about his diabetes management there. The discharge plan does not replace his usual ongoing diabetes care.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 14 of 20\n\nPAIN AND SYMPTOM MANAGEMENT:\nThe severe flank discomfort present before admission improved after the obstruction was treated. Mr. Thomas was able to manage symptoms with the discharge plan reviewed by the hospital team. He was told that some bladder irritation, urgency, frequency, or mild discomfort may continue while the temporary stent remains in place. He should use only the symptom relief approach provided in his discharge instructions and ask a clinician before adding anything new. Rest and gradual resumption of ordinary activity were encouraged. He should contact urology if discomfort becomes difficult to control, if urinary symptoms worsen, or if the expected recovery does not occur. Persistent vomiting or inability to keep fluids down requires prompt assessment. The team explained that symptom improvement does not mean the stent can be left in place without follow-up.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 15 of 20\n\nDIET, FLUIDS, AND ACTIVITY:\nAfter discharge, Mr. Thomas may resume food as tolerated and should maintain regular fluid intake unless another clinician has advised a restriction. Hydration supports urinary flow during recovery, though it does not replace removal of the temporary stent or follow-up of the stone. He may gradually return to usual activity as comfort allows. He should avoid pushing through significant pain and should follow any specific restrictions included in his procedure instructions. He was encouraged to keep a record of urinary symptoms and to note any change that concerns him. There is no need to remain on bed rest if he feels well enough to move about safely. He should ask the urology team about any activity that causes discomfort while the stent is present. The instructions were reviewed before he left the hospital.\n\nCoagulation on discharge: INR 2.8.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 16 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Thomas had recovered from the endoscopic procedure without a reported complication. His severe flank pain had improved, he could take fluids, and he was able to pass urine. He understood that temporary urinary irritation can occur with the stent and that follow-up is required for removal. There was no new problem requiring continued inpatient care. He was able to repeat the key return precautions and knew whom to contact for urology questions. His chronic atrial fibrillation, hypertension, and type 2 diabetes remain part of his ongoing outpatient care. The discharge decision was based on symptom control, ability to manage basic needs, and completion of the immediate treatment plan. He left with written instructions and a plan for follow-up.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 17 of 20\n\nDISCHARGE DESTINATION:\nMr. Thomas was discharged to his home after recovery from the procedure. He was considered able to continue care outside the hospital because his symptoms were manageable, he could take fluids, and he could pass urine. Before leaving, staff reviewed the temporary stent, expected urinary effects, and the need for follow-up removal. He was encouraged to have a responsible adult assist with transportation and early recovery if available. He should keep the discharge papers accessible and share them with his usual outpatient clinicians as appropriate. If he has difficulty arranging the planned urology appointment, he should contact the urology office promptly rather than waiting for symptoms to worsen. The home plan also includes continued routine care for atrial fibrillation, hypertension, and diabetes.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 18 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Thomas was instructed to maintain fluid intake as tolerated and return gradually to usual activity. He may notice temporary urgency, frequency, discomfort with urination, or blood-tinged urine while the stent is present. He should follow the written symptom relief instructions supplied at discharge and avoid adding new treatment without advice from a clinician. The stent must be removed through the planned urology follow-up, even if symptoms improve. He should keep all appointment information and contact urology if the appointment is not arranged or if he is unsure when removal will occur. He was asked to continue routine care for his chronic conditions with his established clinicians. The instructions were discussed in plain language, and he indicated that he understood the key steps.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP:\nUrology follow-up is needed for reassessment after the stone procedure and planned removal of the temporary ureteral stent. Mr. Thomas should attend the appointment arranged at discharge and contact the urology office if he has not received scheduling information. He should bring his discharge papers and describe any ongoing pain, urinary urgency, difficulty passing urine, or blood-tinged urine. Follow-up with his established outpatient clinician is also appropriate for continued care of atrial fibrillation, hypertension, and type 2 diabetes. These routine visits should not delay the urology appointment for stent removal. If travel, scheduling, or access issues arise, he should seek assistance promptly so that the temporary device is not forgotten. The hospital team reviewed these arrangements with him before discharge.\n",
+        "Daniel Thomas | MRN-35558 | Discharge summary | Page 20 of 20\n\nRETURN PRECAUTIONS:\nMr. Thomas was instructed to seek urgent medical care for feverish symptoms, shaking chills, worsening flank pain, inability to pass urine, persistent vomiting, or inability to keep fluids down. He should also seek prompt assessment if urinary bleeding becomes heavy, if he feels faint, or if he develops a new severe concern. New chest discomfort, marked shortness of breath, fainting, or sustained palpitations require urgent attention given his history of atrial fibrillation. He should not wait for a scheduled appointment when symptoms are severe or rapidly worsening. For milder questions about expected stent effects or appointment timing, he may contact the urology team. The return precautions were reviewed before discharge, and he was able to describe when he should seek immediate help.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion with progressively reduced exercise tolerance."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "Lipids: TC 181, LDL 108, HDL 43, TG 153."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 53 bpm. Normal axis. PR interval 149 ms, QRS 82 ms, QTc 403 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 5.0 mmol/L\nChloride: 99 mmol/L\nCO2: 24 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.6 mg/dL\nGlucose: 125 mg/dL (H)\nCalcium: 10.0 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "discharge_summary_2",
+      "page": 15,
+      "text": "Coagulation on discharge: INR 2.8."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 6,
+  "input_tokens": 3723,
+  "output_tokens": 11038
+}

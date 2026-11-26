@@ -1,0 +1,95 @@
+{
+  "case_id": "cardiology-v1-hard-005",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-11",
+  "split": "dev",
+  "slices": [
+    "contradiction",
+    "missing",
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of chest pressure with exertion."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 58 bpm. Normal axis. PR interval 162 ms, QRS 80 ms, QTc 412\nms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Most recent echo showed an ejectiion fraction of 35%."
+        },
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 135 mmol/L\nPotassium: 3.6 mmol/L\nChlorie: 105 mmol/L\nCO2: 25 mmol/L\nBUN: 26 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 103 mg/dL (H)\nCalcium: 9.0 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAtorvastatin 20 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supplle, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

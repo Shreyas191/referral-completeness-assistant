@@ -1,0 +1,262 @@
+{
+  "case_id": "cardiology-v1-hard-018",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-30",
+  "plan": {
+    "case_id": "cardiology-v1-hard-018",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Marcus",
+    "last_name": "Lewis",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Gastroesophageal reflux disease"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 40.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "amlodipine",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "omeprazole",
+        "dose": 20.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of persistently elevated blood pressure despite treatment.",
+    "history": "Marcus Lewis is a 59-year-old man with hypertension whose blood pressure remains high despite taking his prescribed medicines. He reports taking his doses regularly and is concerned that the readings have not improved. He denies recent changes in his routine.",
+    "referring_physician": "Dr. Thomas Turner",
+    "practice": "Horizon Medical Practice",
+    "sex": "male",
+    "age": 59,
+    "dob": "1967-01-19",
+    "mrn": "MRN-14257"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-30",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/30/2026\nPatient Name: Marcus Lewis\nDOB: 01/19/1967\nMRN: MRN-14257\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Thomas Turner, Horizon Medical Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of persistently elevated blood pressure despite treatment.\n\nMarcus Lewis is a 59-year-old man with hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease. His blood pressure remains elevated despite prescribed treatment. He reports taking treatment regularly and denies recent changes in his routine.\n\nI am requesting cardiology evaluation of his persistently elevated blood pressure despite treatment. He is concerned that his readings have not improved.\n\nThank you for seeing this patient.\n\nDr. Thomas Turner\nHorizon Medical Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-06",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/06/2026\nPatient Name: Marcus Lewis\nDOB: 01/19/1967\nMRN: MRN-14257\nProvider: Dr. Thomas Turner\n\nSUBJECTIVE:\nMarcus Lewis is a 59-year-old man with hypertension, type 2 diabetes, and gastroesophageal reflux disease. He reports taking prescribed treatment regularly but remains concerned that his blood pressure readings have not improved. He denies recent changes in his routine.\n\nVITALS:\nBP 124/85, HR 79, RR 14, SpO2 98% on room air, weight 131 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension with persistently elevated readings despite reported adherence. Refer to cardiology for further evaluation and recommendations. Continue prescribed treatment and blood pressure monitoring; follow up after the specialist assessment.\n2. Type 2 diabetes mellitus. Continue established management and routine follow-up.\n3. Gastroesophageal reflux disease. Continue established management.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-06",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/06/2026\nPatient Name: Marcus Lewis\nDOB: 01/19/1967\nMRN: MRN-14257\n\nLisinopril 40 mg by mouth once daily\nAmlodipine 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nOmeprazole 20 mg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-07-18",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 07/18/2026\nPatient Name: Marcus Lewis\nDOB: 01/19/1967\nMRN: MRN-14257\nOrdering provider: Dr. Thomas Turner\n\nFindings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 200 ms, QRS 102 ms, QTc 424 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-29",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/29/2026\nPatient Name: Marcus Lewis\nDOB: 01/19/1967\nMRN: MRN-14257\nOrdering provider: Dr. Thomas Turner\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 45%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-09-17",
+      "pages": [
+        "LABORATORY REPORT\nDate: 09/17/2026\nPatient Name: Marcus Lewis\nDOB: 01/19/1967\nMRN: MRN-14257\nOrdering provider: Dr. Thomas Turner\n\nLIPID PANEL\nTotal Cholesterol: 147 mg/dL\nLDL Cholesterol: 89 mg/dL\nHDL Cholesterol: 38 mg/dL (L)\nTriglycerides: 102 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 99 mmol/L\nCO2: 28 mmol/L\nBUN: 18 mg/dL\nCreatinine: 1.1 mg/dL\nGlucose: 83 mg/dL\nCalcium: 9.8 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2025-10-13",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/13/2025\nPatient Name: Marcus Lewis\nDOB: 01/19/1967\nMRN: MRN-14257\nAttending: Dr. Thomas Turner\n\nADMISSION DIAGNOSIS:\nMarcus Lewis is a 59-year-old man admitted for community-acquired pneumonia with associated cough, feverishness, fatigue, and reduced oral intake. The illness had progressed at home and was interfering with his usual activities. The admitting team considered the respiratory infection the primary reason for inpatient care. His history includes hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease. He was admitted for antimicrobial treatment, respiratory support as needed, observation of his clinical response, and assistance maintaining hydration and nutrition. The care plan also included attention to his chronic conditions during the acute illness. There was no reported need for an invasive intervention. The immediate goals were to improve breathing and energy, support safe eating and drinking, and establish a practical plan for continued recovery after discharge.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 2 of 20\n\nPRESENTING CONCERN:\nMr. Lewis came to the hospital after developing a persistent cough and a general decline in well-being. He described fatigue and decreased appetite, with difficulty keeping up with normal household and personal routines. His symptoms had not settled with rest at home, prompting evaluation and admission. The history was consistent with a new respiratory infection acquired outside a healthcare setting. He did not report a separate acute concern that changed the initial focus of care. His chronic diagnoses were reviewed because illness can complicate routine self-management, particularly when appetite and daily habits are disrupted. He was able to provide a history and participate in planning. The team reviewed what had changed, the expected inpatient approach, and the need to reassess his ability to manage safely at home.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 3 of 20\n\nHISTORY OF PRESENT ILLNESS:\nThe patient reported several days of increasing cough, malaise, and reduced intake before arrival. He felt less able to carry out usual activities and was concerned that the respiratory symptoms were worsening rather than resolving. No calendar dates are included in this summary. The illness began in the community, without a preceding hospital stay or known healthcare exposure described in the admission history. He had no reported episode requiring emergency airway support. His symptoms and overall course led the treating team to diagnose community-acquired pneumonia and recommend inpatient treatment. The history was reviewed during the stay as his condition evolved. He was encouraged to report changes in breathing, ability to drink, cough, or energy, and to take part in decisions about transition to outpatient recovery.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 4 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Lewis has hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease. These conditions were considered in planning care during the respiratory illness. The admission history did not identify another chronic condition that altered the main treatment approach. His usual routines may be harder to maintain when appetite is poor, sleep is interrupted, or activity is reduced, so the team addressed practical ways to resume them gradually. The patient was asked to share any important changes in his baseline health and any difficulty following his established care plan. His chronic conditions remained part of discharge planning rather than becoming the primary reason for hospitalization. Education emphasized that recovery from pneumonia can take time and that follow-up is useful for reviewing both the infection and ongoing management of his established health concerns.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 5 of 20\n\nADMISSION HISTORY AND GOALS:\nAt admission, the immediate concern was the combination of worsening respiratory symptoms and reduced ability to maintain normal intake and activity. The team discussed the working diagnosis, the need for inpatient observation, and the anticipated course of treatment. Mr. Lewis was able to express his concerns and ask questions. His priorities included breathing more comfortably, regaining energy, and returning to his home routine. The team explained that the timing of discharge would depend on sustained improvement and his ability to continue care outside the hospital. His history of diabetes, hypertension, and reflux was included in the plan, with attention to usual routines and dietary tolerance. The patient agreed to participate in treatment decisions and to notify staff if symptoms or intake changed.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 6 of 20\n\nINITIAL CLINICAL ASSESSMENT:\nThe admitting team assessed Mr. Lewis as having community-acquired pneumonia requiring hospital-level care. His cough, fatigue, and diminished intake were considered together with the reported progression of symptoms. The plan focused on antimicrobial therapy, supportive respiratory care, hydration, nutrition, and observation for complications or lack of improvement. No invasive airway support was required. The team also reviewed his chronic health conditions and considered how the acute illness could disrupt his usual self-care. The patient was oriented to the inpatient plan and encouraged to communicate changes promptly. Decisions were based on the overall clinical picture and his response during observation. The assessment did not identify a separate issue requiring an urgent procedure. Goals were reviewed with him so that treatment and recovery planning could proceed in a coordinated manner.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 7 of 20\n\nBASIS FOR DIAGNOSIS:\nThe treating team diagnosed community-acquired pneumonia based on the illness history and the overall clinical evaluation during admission. The reported cough, worsening fatigue, and reduced intake were consistent with an acute respiratory infection affecting his ability to function at home. The assessment favored a community-onset process rather than an infection associated with a recent healthcare stay. No specific organism is stated in this summary. The care team used the working diagnosis to guide inpatient antimicrobial treatment and supportive measures, while continuing to observe his clinical course. The team remained alert to changes that might require a different approach. Mr. Lewis was informed that his response over time was an important part of judging readiness for discharge and that ongoing recovery would need attention after leaving the hospital.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Lewis began inpatient treatment for community-acquired pneumonia. The team initiated antimicrobial therapy and supportive care, with attention to breathing comfort, oral intake, rest, and gradual movement as tolerated. Staff reviewed his history of hypertension, type 2 diabetes mellitus, and reflux so the acute plan could account for his usual needs. He was encouraged to report worsening cough, shortness of breath, nausea, or difficulty drinking. The admission goals were reviewed, including improvement sufficient for safe care at home. No invasive procedure was needed. His response was followed through repeated clinical reassessment and discussion with the patient. The team planned to continue treatment and reassess whether symptoms, activity, and intake were improving before making a discharge decision.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, the team continued treatment for pneumonia and supportive measures. Mr. Lewis remained engaged in care and was encouraged to increase oral fluids and food as tolerated. His cough and fatigue were reviewed in relation to the prior day, with attention to whether he could manage routine activity more comfortably. The care plan continued to include observation for progression or complications. His chronic conditions were kept in view, especially the possibility that appetite changes and reduced activity could disrupt his usual diabetes routine. Staff reinforced rest, pacing, and communication about new symptoms. No procedure was required. Discharge was not based on a single symptom; the team planned to consider the overall direction of recovery, his ability to maintain intake, and whether outpatient follow-up could safely support the next stage of care.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, the inpatient team continued to assess the trajectory of Mr. Lewis's respiratory illness and functional recovery. Antimicrobial treatment and supportive care remained focused on the diagnosed community-acquired pneumonia. His ability to drink, eat, rest, and participate in ordinary activity was discussed as part of discharge readiness. The patient was reminded that cough and reduced energy may persist after the acute infection begins to improve. The team reviewed home support and the importance of completing the planned course of treatment after discharge. His established chronic conditions were included in planning for a return to usual routines. No invasive intervention was needed. The team continued to reassess his needs and to provide clear communication about warning symptoms, follow-up, and the expected gradual pace of recovery.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 11 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, Mr. Lewis continued with the recovery plan for community-acquired pneumonia. The team reviewed his overall symptoms, activity, and ability to maintain food and fluid intake. He was considered for transition out of the hospital once the care team felt that ongoing treatment and recovery could be managed safely at home. The patient received further discussion about pacing activity and allowing time for fatigue and cough to settle. His chronic health concerns were incorporated into the transition plan, with advice to return gradually to usual self-care. There was no need for an invasive procedure during this admission. Discharge planning included a clear outpatient treatment plan and instructions about when to seek urgent help. The patient had an opportunity to ask questions and confirm his understanding.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 12 of 20\n\nANTIMICROBIAL TREATMENT:\nThe primary treatment for the diagnosed pneumonia was an antimicrobial course selected by the inpatient team. Treatment began in the hospital and was planned to continue after discharge as an outpatient. No drug name or dose is included in this summary. Mr. Lewis was instructed to follow the separately provided treatment directions and to complete the course unless a treating clinician advises otherwise. The team discussed contacting a clinician if he develops a new reaction, cannot keep the treatment down, or has difficulty following the plan. The purpose and expected duration were reviewed in plain language, without implying that symptoms must disappear immediately. He was also reminded that antimicrobial treatment does not replace rest, fluid intake, gradual activity, or follow-up. The outpatient plan was designed to support continued improvement while avoiding an unnecessary extension of inpatient care.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 13 of 20\n\nRESPIRATORY AND SUPPORTIVE CARE:\nSupportive care addressed breathing comfort, cough, rest, oral fluids, and nutrition while the pneumonia was treated. Mr. Lewis was encouraged to take fluids and food as tolerated and to pace activity according to fatigue. The team discussed allowing time for recovery rather than attempting to resume all usual tasks at once. No invasive airway procedure was needed during the stay. Staff reviewed symptoms that should prompt urgent assessment, including worsening breathing, inability to maintain fluids, new confusion, or a marked decline in function. The patient was advised that cough and low energy can linger during recovery, even when the acute illness is improving. Supportive measures were intended to complement the antimicrobial course and to help him transition safely to home. He was encouraged to seek guidance if recovery stalled or symptoms worsened.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 14 of 20\n\nHYPERTENSION DURING ADMISSION:\nHypertension was considered during the admission and included in planning for discharge. The acute respiratory illness and changes in activity or appetite can affect usual routines, so Mr. Lewis was encouraged to resume his established care plan as directed by his regular clinician. No drug names or doses are included here. The team discussed the importance of keeping follow-up and bringing any questions about his ongoing treatment to the clinician who manages this condition. He was advised not to make independent changes based solely on the pneumonia admission. The hospital stay did not become focused on a separate hypertension-related problem. At home, he should seek care if he develops concerning new symptoms or has difficulty following his established plan. Follow-up will allow review of his recovery and continuing blood pressure care.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 15 of 20\n\nDIABETES DURING ADMISSION:\nType 2 diabetes mellitus was considered throughout the admission because acute infection and reduced intake can disrupt usual routines. The team encouraged Mr. Lewis to follow the diabetes plan provided by his treating clinicians and to seek advice if illness interferes with eating or routine self-care. No medication names, doses, or laboratory values are included in this summary. He was reminded to resume his usual meal pattern gradually as appetite returns and to avoid making unsupervised changes to his established diabetes care. The discharge plan emphasizes follow-up with the clinician who manages his diabetes. He should contact that clinician if he has difficulty maintaining his routine during recovery or if new concerns develop. The pneumonia remained the primary reason for hospitalization, while diabetes care was incorporated into safe outpatient planning.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 16 of 20\n\nGASTROESOPHAGEAL REFLUX DISEASE:\nGastroesophageal reflux disease was reviewed as part of Mr. Lewis's medical history. Reduced intake, altered meal timing, and disrupted sleep during an acute illness can make familiar symptoms harder to manage. He was encouraged to return gradually to his regular eating routine as tolerated and to follow the established plan from his usual clinician. No drug names or doses are included in this summary. The inpatient team did not identify reflux as the primary cause of the respiratory illness or as a reason for a separate procedure. He should seek follow-up if reflux symptoms become persistent, interfere with eating or drinking, or change substantially from his usual pattern. The focus of the admission remained treatment and recovery from community-acquired pneumonia, with chronic reflux care continued through outpatient follow-up.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 17 of 20\n\nCONSULTATIONS:\nNo outside specialty consultation was required during this admission. The inpatient team coordinated care for community-acquired pneumonia and incorporated Mr. Lewis's history of hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease into the treatment and discharge plans. The patient participated in discussions and was invited to raise concerns about breathing, intake, daily routines, and the transition home. Communication focused on the expected course of recovery, completion of outpatient treatment, and symptoms that warrant prompt assessment. The team also considered whether additional support would be needed after discharge. No separate specialty service assumed responsibility for his care. The discharge plan was reviewed with Mr. Lewis in practical terms, and he was encouraged to contact his regular clinicians for ongoing management of chronic conditions or for questions that arise during recovery.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 18 of 20\n\nPROCEDURES:\nNo invasive procedure was performed during this hospitalization. Care consisted of inpatient observation, antimicrobial treatment, supportive respiratory measures, and planning for continued recovery outside the hospital. There was no need for airway intervention or another procedural treatment. The absence of a procedure did not change the need to complete the outpatient plan or to monitor for worsening symptoms. Mr. Lewis was advised to continue gradual activity and maintain fluids and food as tolerated. The team explained that uncomplicated recovery may still involve a period of cough or reduced energy. Any new or worsening breathing difficulty should prompt urgent assessment rather than waiting for a routine appointment. The patient understood that follow-up and adherence to the discharge plan remain important despite not having undergone a procedure during the admission.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 19 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Lewis was considered improved enough to continue recovery at home with an outpatient treatment plan. His care team reviewed his overall clinical course, ability to manage food and fluids, and capacity to follow the plan outside the hospital. He did not require an invasive intervention or ongoing inpatient support. The patient was able to participate in discharge discussions and expressed understanding of the next steps. Some cough or fatigue may continue, and he was advised to increase activity gradually rather than return immediately to full exertion. His chronic conditions remain part of ongoing care and should be followed by his regular clinicians. He was instructed to seek urgent help for worsening breathing, inability to maintain intake, confusion, or another sudden decline. Follow-up was recommended to confirm continued recovery.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 20 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Lewis should continue the outpatient antimicrobial course according to the separate written directions and should not stop early without advice from a clinician. He should rest, drink fluids, and return to usual activities gradually as energy improves. Food intake may also be advanced as tolerated. He should follow his established care plans for hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease, and contact his regular clinicians if the acute illness makes those routines difficult. He should seek urgent care for worsening shortness of breath, inability to drink, new confusion, fainting, or a sudden significant decline. If cough, fatigue, or other symptoms fail to improve or become worse, he should contact a clinician promptly. The patient was encouraged to keep a copy of the discharge instructions available and ask for clarification if any part of the plan is unclear.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-07-16",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 07/16/2026\nPatient Name: Marcus Lewis\nDOB: 01/19/1967\nMRN: MRN-14257\nAttending: Dr. Thomas Turner\n\nADMISSION DIAGNOSIS:\nMarcus Lewis is a 59-year-old man admitted for urinary tract infection with dehydration. The working diagnosis was based on his urinary complaints, reduced oral intake, and overall clinical course. He reported feeling unwell before arrival and described difficulty maintaining usual fluid intake. His history includes hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease. Dehydration was considered related to illness and reduced intake. The admission plan was to provide fluid replacement, begin antimicrobial treatment for the urinary infection, and observe his response. His chronic conditions were reviewed as part of the inpatient plan. No procedure was required. The record supplied for this summary does not include specific test names, numerical findings, or named treatments. The patient was admitted for continued care, symptom management, and reassessment before discharge.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 2 of 20\n\nCHIEF CONCERN:\nThe patient came to the hospital because of urinary symptoms accompanied by weakness and difficulty taking enough fluids. He felt that his usual intake had fallen during the period of illness. The combination of urinary complaints and poor hydration prompted evaluation and inpatient treatment. He denied any need for emergency intervention beyond supportive care at the time of admission. His account was consistent with an acute illness rather than a planned admission. The main goals were to address the suspected infection, restore adequate hydration, and ensure that he could resume drinking and eating before leaving the hospital. His established history of hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease was considered in planning care. No specific medication names, measured values, or test findings are included in this summary.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 3 of 20\n\nHISTORY OF PRESENT ILLNESS:\nMarcus Lewis described a recent period of urinary discomfort and general malaise. During the same period, he was taking less fluid by mouth than usual and felt increasingly weak. These symptoms led him to seek hospital care. The inpatient team treated the presentation as a urinary tract infection complicated by dehydration. He received supportive hydration and antimicrobial therapy, with observation for improvement in symptoms and ability to tolerate oral intake. The available account does not specify the exact onset, duration, or character of each urinary symptom. It also does not provide specific organism information or named test findings. There was no reported need for an invasive urinary intervention. By the later part of the stay, he was able to participate in discharge planning and discuss continued recovery at home.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 4 of 20\n\nRELEVANT MEDICAL HISTORY:\nHis known chronic conditions are hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease. These diagnoses were considered during the admission and included in planning for his return home. The acute illness caused reduced intake, making attention to hydration and regular meals important during recovery. Diabetes care was reviewed in the context of an infection and a change in usual eating patterns. Hypertension and reflux were also noted for routine outpatient management. No history of a related procedure or prior admission is documented in the supplied information. The summary does not identify named home treatments or provide individual chronic disease measurements. The patient was encouraged to reconnect with his usual clinician after discharge so the chronic conditions could be reviewed alongside recovery from the urinary illness.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 5 of 20\n\nPAST MEDICAL AND SURGICAL HISTORY:\nThe documented medical history includes hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease. No additional chronic diagnosis is supplied for this admission. The available record does not describe prior surgery, a prior urinary procedure, or a history of recurrent infection. These items were not necessary to the immediate inpatient plan, which focused on treatment of the urinary illness and correction of dehydration. The patient’s established conditions were considered when planning oral intake and follow-up. There is no detailed record here of prior treatment changes or prior specialist care. The discharge plan therefore asks him to review his ongoing health needs with his regular outpatient clinician. No specific medication names, test names, or numerical findings are included in this summary.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 6 of 20\n\nALLERGIES AND SENSITIVITIES:\nThe available discharge information does not identify a specific allergy or sensitivity. Allergy status should be confirmed with Marcus Lewis and with his usual outpatient records before any future treatment is prescribed. During this admission, antimicrobial treatment was provided for the urinary illness, but the name of the agent and any related details are intentionally not included here. No reaction is described in the supplied account. The patient should make sure that any known allergy or prior adverse response is communicated to each clinician involved in his care. If he recalls a new or previously unrecorded sensitivity, he should report it promptly and request that it be added to his personal health record. This section does not imply that no allergy exists; it reflects limited documentation in the information available for this summary.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 7 of 20\n\nSOCIAL AND FUNCTIONAL HISTORY:\nSocial circumstances and baseline functional status are not described in the supplied admission information. During this stay, the care plan focused on helping Marcus Lewis regain adequate oral intake and feel sufficiently well to continue recovery outside the hospital. Before discharge, he was able to take part in discussions about home care and follow-up. He should seek help from family or another trusted person if weakness or poor intake makes usual daily tasks difficult. He was advised to keep fluids available and to resume meals as tolerated. The record does not specify tobacco, alcohol, living arrangement, employment, or mobility history. Those details can be reviewed with his regular clinician when he returns for ongoing care. No specific social service intervention is documented.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 8 of 20\n\nADMISSION FINDINGS:\nAt admission, the clinical picture was considered consistent with a urinary tract infection and dehydration. The patient reported urinary complaints, reduced fluid intake, and weakness. The admitting team determined that hospital care was appropriate to provide hydration, initiate antimicrobial treatment, and observe his response. The information available for this summary does not include named tests, numerical findings, imaging details, or an organism identification. No physical examination details or vital sign information are included. There was no documented need for urgent surgery or other invasive care. The working assessment remained focused on the urinary illness and associated volume depletion. His chronic diagnoses were recognized as relevant background conditions, especially during an acute illness that had affected normal intake and daily routine.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 9 of 20\n\nINITIAL TREATMENT PLAN:\nThe initial plan was to provide fluid replacement and antimicrobial therapy for the suspected urinary infection. The team also encouraged oral fluids and food as tolerated, with observation for improvement in urinary symptoms, energy, and ability to maintain intake. His chronic conditions were kept in view during routine inpatient care. No named agent, dose, test, or numerical value is stated in this summary. The care team planned reassessment during the stay and intended to discharge him once his symptoms were improving and home care appeared reasonable. Staff reviewed the need to seek additional help if symptoms worsened or if he could not drink adequately. The plan did not include a procedure. Follow-up with his regular clinician was included to ensure continued attention to both the acute illness and established health conditions.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, FIRST DAY:\nDuring the first hospital day, Marcus Lewis remained under observation for urinary symptoms and dehydration. The team began fluid replacement and antimicrobial treatment, and encouraged him to drink as he was able. His reduced intake was addressed with repeated attention to hydration and food tolerance. He was given time to rest and was asked to report any worsening urinary discomfort or new concerns. His known hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease were considered in routine care. The available account does not include specific measurements, named tests, or treatment names. There was no reported need for an invasive procedure or a specialty intervention. The initial response was considered adequate to continue the plan and reassess his progress the following day.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 11 of 20\n\nHOSPITAL COURSE, SECOND DAY:\nOn the second hospital day, the team continued supportive hydration and antimicrobial treatment. Marcus Lewis reported improvement in his general sense of weakness and was better able to take fluids by mouth. Urinary symptoms were monitored through his reports and overall course. Staff reinforced the importance of drinking regularly while recovering from the infection. He remained engaged in care discussions and began considering the transition home. His chronic conditions did not require a change in the overall focus of care during this period. No named test findings or numerical values are included in the supplied summary. No procedure was needed. The team planned to continue observation until his intake and symptoms supported safe outpatient recovery, with clear instructions for contacting a clinician if problems returned or worsened.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 12 of 20\n\nHOSPITAL COURSE, THIRD DAY:\nBy the third hospital day, Marcus Lewis continued to show clinical improvement and was tolerating oral fluids more consistently. His urinary complaints had eased enough for the team to proceed with discharge planning. Supportive hydration and the planned antimicrobial course were continued as appropriate to the inpatient plan. Staff reviewed the importance of completing the prescribed course after leaving the hospital, though no treatment name or dose is included here. He was able to discuss warning symptoms and the need for follow-up. The admission information does not provide a named test result, numerical finding, or organism identification. No invasive care was required. The team considered his progress sufficient for home recovery with outpatient follow-up and instructions to return for worsening symptoms or inability to maintain fluids.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 13 of 20\n\nHOSPITAL COURSE, FINAL DAY:\nOn the final hospital day, Marcus Lewis was considered ready to continue recovery at home. He was drinking by mouth and reported improvement in urinary symptoms and weakness. The team reviewed the discharge plan, including completion of the planned antimicrobial course and continued attention to hydration. His chronic conditions were acknowledged for follow-up with his regular clinician. No procedure had been performed, and no new inpatient concern was described in the supplied information. Specific measurements, test names, treatment names, and calendar dates are not included in this summary. The patient was given instructions on symptoms that should prompt urgent medical attention and was encouraged to arrange timely outpatient review. Discharge was appropriate because his course had improved and home care was considered feasible.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 14 of 20\n\nCONSULTATIONS:\nNo specialty consultation is documented in the information available for this discharge summary. The primary inpatient team managed the urinary infection and dehydration with supportive hydration, antimicrobial treatment, observation, and discharge planning. No additional specialty service was required to complete the described course. The patient’s established hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease were considered in routine care, with ongoing outpatient review recommended after discharge. This summary does not include any separate consultant assessment, recommendation, or named test result. If Marcus Lewis has an established clinician who manages one of his chronic conditions, he should reconnect with that clinician as part of follow-up. Any future questions about recurrent urinary symptoms or difficulty maintaining hydration should be discussed promptly with his regular care team.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 15 of 20\n\nPROCEDURES AND INTERVENTIONS:\nNo surgical procedure, catheter placement, or other invasive intervention is documented for this admission. Care consisted of fluid replacement, antimicrobial treatment, observation, encouragement of oral intake, and discharge education. These measures were directed at the urinary illness and associated dehydration. The patient’s response was followed through his reported symptoms and ability to drink and eat. No named test, imaging study, numerical result, or treatment name is provided in this summary. There was no documented need for a procedure before discharge. At home, Marcus Lewis should continue to drink regularly and follow the written treatment instructions supplied by the hospital. He should contact a clinician if he has difficulty following the plan or if urinary symptoms return. Follow-up is advised to review recovery and chronic health needs.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 16 of 20\n\nDISCHARGE DIAGNOSIS:\nThe discharge diagnoses are urinary tract infection and dehydration, with improvement during the inpatient stay. His chronic conditions remain hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease. The acute urinary illness was treated with antimicrobial therapy, while reduced intake and dehydration were addressed with fluid replacement and encouragement of oral fluids. The information available does not state a specific organism, named test finding, or numerical value. No procedure was needed. The patient was considered suitable for home recovery after his symptoms improved and he could take fluids by mouth. He was instructed to finish the planned treatment course and seek care if symptoms worsened. Follow-up with his usual clinician is recommended to review the acute illness and ongoing management of chronic conditions.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Marcus Lewis reported improvement in urinary symptoms and weakness. He was able to take fluids by mouth and was considered able to continue recovery at home. He understood that hydration and completion of the planned antimicrobial course were important parts of the plan. No new concern requiring continued inpatient care is described in the available information. This summary does not include physical examination details, vital signs, named tests, numerical findings, or treatment names. His chronic diagnoses remain relevant and should be reviewed with his usual clinician after the acute illness has resolved. The patient was advised to seek prompt care if he develops worsening urinary discomfort, feverishness, vomiting, confusion, marked weakness, or inability to drink. He left with instructions for routine follow-up and return precautions.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 18 of 20\n\nDISCHARGE INSTRUCTIONS:\nDrink fluids regularly throughout the day and resume meals as tolerated. Follow the hospital’s written directions for completing the planned antimicrobial treatment; no treatment name or dose is included in this summary. Do not stop the course early unless a clinician specifically advises you to do so. Rest as needed while returning gradually to usual activities. Contact a clinician if urinary symptoms fail to improve, return, or become more uncomfortable. Seek urgent care for inability to keep fluids down, worsening weakness, new confusion, feverishness, or other rapid decline. Continue routine care for hypertension, type 2 diabetes mellitus, and gastroesophageal reflux disease as directed by your outpatient clinician. Keep a copy of the discharge paperwork available for follow-up. If any instruction is unclear, contact the hospital team or your regular clinician before making a change.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 19 of 20\n\nDIET AND HYDRATION:\nThe main dietary goal after discharge is to maintain steady fluid intake and return to regular meals as tolerated. Marcus Lewis should keep water or other appropriate fluids accessible during the day, particularly while recovering from the urinary illness. If nausea or reduced appetite returns, he can try small, frequent amounts and contact a clinician if intake remains poor. His diabetes history makes regular meals and routine outpatient care important during recovery. No special diet or fluid restriction is documented in the available information. He should follow any separate instructions previously provided by his usual clinician. Ongoing dehydration can worsen weakness and interfere with recovery, so inability to drink should not be ignored. If he has questions about fluid or food choices in relation to chronic conditions, he should discuss them with his outpatient care team.\n",
+        "Marcus Lewis | MRN-14257 | Discharge summary | Page 20 of 20\n\nACTIVITY AND HOME CARE:\nMarcus Lewis may return gradually to usual daily activities as his energy improves. He should allow time for rest and avoid pushing through marked weakness. Regular drinking and meals should remain priorities while he recovers. If he feels too weak to manage usual activities safely, he should ask a trusted person for help and contact a clinician for advice. No restriction related to a procedure is needed because none is documented. The available information does not specify his usual work, home setting, or baseline activity level. He should use his own tolerance as a guide and increase activity gradually. Any return of urinary discomfort, worsening weakness, or difficulty maintaining fluids should prompt medical advice. Routine care for his chronic conditions should continue through his established outpatient team.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of persistently elevated blood pressure despite treatment."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 40 mg by mouth once daily\nAmlodipine 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nOmeprazole 20 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 52 bpm. Normal axis. PR interval 200 ms, QRS 102 ms, QTc 424 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 45%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Mildly reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 147 mg/dL\nLDL Cholesterol: 89 mg/dL\nHDL Cholesterol: 38 mg/dL (L)\nTriglycerides: 102 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 99 mmol/L\nCO2: 28 mmol/L\nBUN: 18 mg/dL\nCreatinine: 1.1 mg/dL\nGlucose: 83 mg/dL\nCalcium: 9.8 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 5,
+  "input_tokens": 2855,
+  "output_tokens": 9935
+}

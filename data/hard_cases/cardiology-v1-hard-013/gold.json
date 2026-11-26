@@ -1,0 +1,96 @@
+{
+  "case_id": "cardiology-v1-hard-013",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-04",
+  "split": "dev",
+  "slices": [
+    "buried",
+    "contradiction",
+    "missing",
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of persistent fatigue in the setting of a strong family\nhistory of early heart disease."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 91 bpm. Normal axis.\nPR interval 189 ms, QRS 86 ms, QTc 444 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Most recent echo showed an ejection fraction of 55%."
+        },
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n30%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report_2",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 219 mg/dL (H)\nLDL Cholesterol: 119 mg/dL\nHDL Cholesterol: 57 mg/dL\nTriglycerides: 215 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "lab_report_1",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 4.2 mmol/L\nChloride: 99 mmol/L\nCO2: 28 mmol/L\nBUN: 19 mg/dL\nCreatinine: 1.0 mg/dL\nGlucose: 127 mg/dL (H)\nCalcium: 9.0 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 10,
+          "text": "Discharge medications:\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

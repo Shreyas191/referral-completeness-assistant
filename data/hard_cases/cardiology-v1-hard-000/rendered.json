@@ -1,0 +1,262 @@
+{
+  "case_id": "cardiology-v1-hard-000",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-05",
+  "plan": {
+    "case_id": "cardiology-v1-hard-000",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": "stale"
+      },
+      {
+        "item_id": "meds",
+        "defect": "bury"
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Elena",
+    "last_name": "Ellison",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of a newly heard heart murmur.",
+    "history": "A new heart murmur was noted during a routine visit. She denies chest discomfort, shortness of breath, fainting, or leg swelling.",
+    "referring_physician": "Dr. Evan Jones",
+    "practice": "Summit Family Practice",
+    "sex": "female",
+    "age": 52,
+    "dob": "1974-08-25",
+    "mrn": "MRN-55656"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-05",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/05/2026\nPatient Name: Elena Ellison\nDOB: 08/25/1974\nMRN: MRN-55656\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Evan Jones, Summit Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of a newly heard heart murmur.\n\nI am requesting cardiology evaluation for Elena Ellison, a 52-year-old woman with hypertension, type 2 diabetes mellitus, and hypothyroidism. A new heart murmur was noted during a routine visit.\n\nShe denies chest discomfort, shortness of breath, fainting, or leg swelling. Please assess the murmur and advise on further care.\n\nThank you for seeing this patient.\n\nDr. Evan Jones\nSummit Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-12",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/12/2026\nPatient Name: Elena Ellison\nDOB: 08/25/1974\nMRN: MRN-55656\nProvider: Dr. Evan Jones\n\nSUBJECTIVE:\nElena Ellison is a 52-year-old woman with hypertension, type 2 diabetes, and hypothyroidism. A new heart murmur was noted during a routine visit. She denies chest discomfort, shortness of breath, fainting, or leg swelling.\n\nVITALS:\nBP 116/78, HR 82, RR 14, SpO2 96% on room air, weight 143 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nMost recent echo showed an ejection fraction of 60%.\n\nASSESSMENT AND PLAN:\n1. Newly noted heart murmur. Arrange cardiology evaluation.\n2. Hypertension. Continue ongoing management with her usual care team.\n3. Type 2 diabetes mellitus. Continue ongoing management with her usual care team.\n4. Hypothyroidism. Continue ongoing management with her usual care team.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-12",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/12/2026\nPatient Name: Elena Ellison\nDOB: 08/25/1974\nMRN: MRN-55656\nOrdering provider: Dr. Evan Jones\n\nFindings: Sinus bradycardia at 51 bpm. Normal axis. PR interval 197 ms, QRS 105 ms, QTc 415 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-10-05",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 10/05/2026\nPatient Name: Elena Ellison\nDOB: 08/25/1974\nMRN: MRN-55656\nOrdering provider: Dr. Evan Jones\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 35%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_1",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-16",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/16/2026\nPatient Name: Elena Ellison\nDOB: 08/25/1974\nMRN: MRN-55656\nOrdering provider: Dr. Evan Jones\n\nLIPID PANEL\nTotal Cholesterol: 165 mg/dL\nLDL Cholesterol: 63 mg/dL\nHDL Cholesterol: 57 mg/dL\nTriglycerides: 227 mg/dL (H)\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report_2",
+      "doc_type": "lab_report",
+      "doc_date": "2026-05-16",
+      "pages": [
+        "LABORATORY REPORT\nDate: 05/16/2026\nPatient Name: Elena Ellison\nDOB: 08/25/1974\nMRN: MRN-55656\nOrdering provider: Dr. Evan Jones\n\nBASIC METABOLIC PANEL\nSodium: 142 mmol/L\nPotassium: 3.7 mmol/L\nChloride: 101 mmol/L\nCO2: 27 mmol/L\nBUN: 13 mg/dL\nCreatinine: 0.8 mg/dL\nGlucose: 170 mg/dL (H)\nCalcium: 10.2 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-04-17",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 04/17/2026\nPatient Name: Elena Ellison\nDOB: 08/25/1974\nMRN: MRN-55656\nAttending: Dr. Evan Jones\n\nADMISSION DIAGNOSIS:\nElena Ellison, a 52-year-old woman, was admitted with acute gallstone pancreatitis. The episode began with persistent upper abdominal discomfort, nausea, and inability to tolerate her usual meals. The treating team attributed the pancreatitis to gallstone disease after reviewing her history and the information available during the admission. There was no reported alcohol use or other clear precipitating event. Her known conditions include hypertension, type 2 diabetes mellitus, and hypothyroidism. These chronic conditions were included in the inpatient care plan. The initial goals were relief of pain and nausea, support of oral hydration and nutrition as tolerated, and close observation for complications. General surgery and gastroenterology participated in planning care. Elena remained in the hospital until her symptoms improved, oral intake resumed, and a definitive plan for gallstone management was completed.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 2 of 20\n\nHISTORY OF PRESENT ILLNESS:\nBefore arrival, Elena developed abdominal pain that became persistent and was accompanied by nausea and reduced intake. She described the discomfort as interfering with rest and normal activity. She did not report a similar prolonged episode requiring hospital care. The history was consistent with acute pancreatitis related to gallstones. The team reviewed possible contributing factors and did not identify another likely cause from the history obtained. She came to the hospital because symptoms continued despite attempts to rest and take fluids at home. On admission, care focused on symptom relief, bowel rest followed by gradual intake as tolerated, and observation for a worsening course. She and her family received updates about the suspected cause, expected recovery, and the possibility of surgical treatment during this stay. Her symptoms began to ease with supportive inpatient care.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nElena has hypertension, type 2 diabetes mellitus, and hypothyroidism. These conditions were considered throughout the admission, particularly as her oral intake changed and she prepared for a procedure. She reported no prior episode of gallstone pancreatitis requiring admission. Her history was reviewed with her to identify prior abdominal procedures, allergies, and relevant family or social factors. No additional chronic condition altered the overall treatment plan. Her usual outpatient care had been directed toward ongoing management of her chronic illnesses. During this stay, the team aimed to avoid interruption of necessary chronic care while adapting it to a temporary period of reduced intake and procedural preparation. Elena understood that the admission was primarily for the acute pancreatic illness and that long-term care of her chronic conditions would continue after discharge through her usual outpatient clinicians.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 4 of 20\n\nINITIAL INPATIENT ASSESSMENT:\nThe admitting team assessed Elena’s symptoms as acute pancreatitis associated with gallstones. The immediate approach was supportive care, including relief of discomfort and nausea, fluid support, and temporary limitation of food while symptoms were active. The team planned to advance her diet when she could tolerate it. She was observed for persistent pain, inability to resume intake, or other signs of a complicated course. The cause and treatment options were discussed in plain language, including the role of gallbladder removal in preventing another episode. Her hypertension, diabetes, and hypothyroidism were accounted for in the care plan. Gastroenterology and general surgery were asked to contribute recommendations. Elena was able to participate in decisions and expressed agreement with the proposed approach. The early plan emphasized recovery from inflammation before proceeding with definitive gallstone treatment.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 5 of 20\n\nFIRST HOSPITAL DAY:\nDuring the first hospital day, Elena received supportive care for acute pancreatitis. Her abdominal discomfort and nausea remained the main concerns, and oral intake was limited while symptoms were prominent. The inpatient team adjusted the care plan according to her reported comfort and ability to drink. Staff encouraged rest and explained that food would be reintroduced gradually as she improved. Her care team reviewed the suspected gallstone cause and discussed that removal of the gallbladder could reduce the risk of recurrence. General surgery and gastroenterology reviewed the case and coordinated their recommendations with the admitting service. No separate urgent intervention was required at that point. Elena remained engaged in discussions and asked appropriate questions about recovery and the anticipated length of stay. Her chronic conditions continued to be considered while the acute illness was managed.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 6 of 20\n\nSECOND HOSPITAL DAY:\nOn the second hospital day, Elena reported that the abdominal discomfort was easing, although she was not yet ready for a full diet. Nausea also became less troublesome with supportive care. The team continued to encourage oral fluids and planned a gradual diet advance based on her tolerance. General surgery reviewed the timing and expected benefits of gallbladder removal during this admission. Gastroenterology agreed that a procedure to clear the bile duct was not indicated based on the clinical course available to the team. The plan remained to allow the acute inflammation to settle and then proceed with definitive gallstone treatment if improvement continued. Elena was updated about the sequence of care and the usual recovery period. Her diabetes and other chronic conditions remained part of routine inpatient planning.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 7 of 20\n\nTHIRD HOSPITAL DAY:\nBy the third hospital day, Elena described continued improvement and was able to take small amounts by mouth without a return of severe nausea. Her pain was manageable, and she was more comfortable discussing the next step in treatment. The team advanced her diet as tolerated and monitored for recurrence of symptoms. General surgery evaluated her readiness for laparoscopic gallbladder removal. The procedure was planned during the admission to address the source of the pancreatitis and reduce the chance of another attack. The team reviewed expected benefits, common risks, and postoperative expectations with Elena. She agreed to proceed. Her family was kept informed at her request. No new concern changed the overall plan, and she continued to make steady progress with supportive care.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 8 of 20\n\nFOURTH HOSPITAL DAY:\nOn the fourth hospital day, Elena continued to improve and proceeded with laparoscopic removal of the gallbladder. She had been informed about the purpose of the procedure and the expected short-term recovery. The operation was completed without a reported complication. Afterward, she rested and resumed oral intake gradually as tolerated. The care team reviewed postoperative comfort measures and encouraged movement when she felt ready. Her abdominal symptoms remained improved compared with admission. She and her family were told that mild soreness around the incision area could occur during recovery and should lessen over time. The team continued to assess whether she could manage meals, walking, and routine self-care before discharge. Her recovery remained on the expected course, and no additional inpatient procedure was planned.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 9 of 20\n\nFIFTH HOSPITAL DAY:\nDuring the fifth hospital day, Elena continued recovery after gallbladder removal. She tolerated progressively more food and fluids and did not report a return of the severe pain or nausea that brought her to the hospital. She was able to get out of bed and walk with minimal assistance. The surgical team reviewed wound care and activity guidance, while the admitting team confirmed that her pancreatic symptoms had settled sufficiently for discharge planning. Her chronic conditions were reviewed with attention to resuming her usual outpatient routine through her established care. The team discussed warning symptoms that would require prompt medical attention. Elena felt ready to continue recovery at home, and her family confirmed that support would be available. Discharge was planned once the remaining routine arrangements were completed.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 10 of 20\n\nGASTROENTEROLOGY INPUT:\nGastroenterology reviewed Elena’s presentation and agreed with the diagnosis of gallstone pancreatitis. The service recommended supportive care and observation for improvement, with attention to pain, nausea, hydration, and return of oral intake. The team did not recommend a bile duct procedure during this admission because the clinical course did not suggest a need for one. Gastroenterology supported definitive gallbladder treatment once Elena had improved enough to proceed safely. Their recommendations were discussed with general surgery and the admitting team so that care remained coordinated. Elena received an explanation that treatment of the gallbladder source was intended to lower the chance of another pancreatitis episode. No separate outpatient gastroenterology appointment was considered necessary unless symptoms returned or her usual clinicians identified a new concern. She was encouraged to seek care promptly for recurrent severe abdominal pain, persistent vomiting, or inability to drink.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 11 of 20\n\nGENERAL SURGERY INPUT:\nGeneral surgery reviewed Elena’s gallstone pancreatitis and recommended removal of the gallbladder during this admission after her acute symptoms improved. The surgeon discussed the reason for the procedure, the expected benefits, alternatives, and potential complications with Elena. She was given an opportunity to ask questions and agreed with the plan. The surgical team coordinated timing with the admitting service and gastroenterology. Laparoscopic removal was completed without a reported complication. After the procedure, the surgical team reviewed incision care, gradual return to usual activity, and the need to avoid strenuous exertion until recovery progressed. They also reviewed symptoms that should prompt urgent evaluation, including worsening abdominal pain, fever, persistent vomiting, or problems at an incision. Routine surgical follow-up was arranged to assess healing and review any concerns. No additional operative treatment was planned before discharge.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 12 of 20\n\nPROCEDURES:\nElena underwent laparoscopic cholecystectomy during the admission for gallstone pancreatitis. The procedure addressed the suspected source of the acute illness and was selected after her symptoms improved enough for surgery. The operative course was reported as uncomplicated. No other procedure was required during this stay. Following surgery, Elena was observed as she recovered from the effects of the procedure and gradually resumed oral intake. The surgical team provided instructions about keeping the incision areas clean and dry and avoiding strenuous activity during early healing. She was advised to contact the surgical service if she noticed increasing redness, drainage, opening of an incision, or worsening pain. The operation was explained to her as a preventive step intended to reduce the risk of recurrent gallstone-related illness. She understood the reason for treatment and agreed with the recovery plan.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 13 of 20\n\nTREATMENT DURING ADMISSION:\nTreatment focused on supportive care for acute pancreatitis and recovery after gallbladder removal. Elena received fluid support, relief of pain and nausea, and temporary limitation of food while symptoms were active. Intake was advanced gradually as she improved. The team observed her response and adjusted the plan according to comfort and ability to eat and drink. After the procedure, care included routine recovery support, encouragement to walk, and instruction on incision care. Chronic hypertension, type 2 diabetes mellitus, and hypothyroidism were considered in planning her inpatient and discharge care. No medication names or doses are included in this summary; her discharge instructions and separate medication record contain the specific regimen. Elena was involved in discussions throughout the stay and was able to describe the main steps of her care. She left after demonstrating sufficient progress for continued recovery at home.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 14 of 20\n\nDIABETES CARE:\nElena’s type 2 diabetes mellitus was considered while she had reduced oral intake and underwent surgery. The inpatient team monitored her ability to eat and drink and coordinated her diabetes plan with the admitting and surgical services. The approach was adjusted for the temporary change in her usual routine. As her appetite returned, she was instructed to resume the outpatient plan provided separately at discharge and to continue the self-care practices established with her usual clinician. She was advised to seek guidance if she could not maintain food or fluid intake, if symptoms of unusually high or low blood sugar occurred, or if illness interfered with her routine. This summary does not specify drug names, doses, or individual readings. Elena understood that ongoing diabetes care remains important during recovery and that her usual outpatient clinician should be contacted for further adjustments.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 15 of 20\n\nHYPERTENSION AND HYPOTHYROIDISM:\nElena’s hypertension and hypothyroidism were included in the inpatient care plan and reviewed during discharge preparation. The acute admission did not require a separate change in the long-term approach to either condition. Her usual outpatient regimen was reviewed with her, with specific details provided separately in the discharge materials. She was advised to continue follow-up with her established clinicians and to ask them about any questions that arose during recovery. The team discussed the importance of maintaining her usual chronic care while allowing time to recover from surgery. No specific drug names or doses are included in this narrative. Elena expressed understanding of the need to continue routine care and to report new concerns to her outpatient team. These chronic diagnoses were not a barrier to recovery from the pancreatitis or the gallbladder procedure.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 16 of 20\n\nNUTRITION AND ACTIVITY:\nElena’s diet was limited while nausea and abdominal discomfort were active. As symptoms improved, the team advanced her intake in stages, and she was able to tolerate food and fluids before discharge. At home, she was advised to begin with meals that felt comfortable and to increase variety as tolerated. She should maintain adequate fluid intake and avoid forcing food if nausea returns. After laparoscopic surgery, gentle walking was encouraged as part of recovery. She was instructed to avoid strenuous activity and heavy lifting until cleared by the surgical team. She may gradually return to ordinary tasks as comfort allows. Elena was told to contact her care team if she cannot keep fluids down, develops recurrent severe abdominal pain, or has a concerning change in her recovery. These instructions were reviewed with her and her family.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Elena’s abdominal symptoms had improved, nausea had eased, and she was tolerating oral intake. She had recovered from laparoscopic gallbladder removal without a reported complication and was able to walk and manage routine self-care. Her overall condition was suitable for continued recovery at home with family support. The acute episode was considered resolved sufficiently for discharge, with no further inpatient treatment planned. Her hypertension, type 2 diabetes mellitus, and hypothyroidism remained part of her ongoing outpatient care. She received written instructions covering recovery, incision care, activity, diet, and warning symptoms. Specific outpatient drug details were supplied separately rather than in this summary. Elena and her family indicated that they understood the plan and knew how to contact the surgical team and her usual clinicians if questions or new concerns arose.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 18 of 20\n\nDISCHARGE INSTRUCTIONS:\nAt home, Elena should follow the written instructions provided by the surgical service and use the separate discharge record for specific outpatient drug details. She should keep incision areas clean and follow the directions for bathing and dressing care. Gentle walking is encouraged, while strenuous activity and heavy lifting should be avoided until the surgical team advises otherwise. Food may be advanced as tolerated, with attention to maintaining fluid intake. She should seek urgent care for severe or worsening abdominal pain, persistent vomiting, fever, inability to drink, yellowing of the skin or eyes, or new drainage or opening at an incision. She should contact her outpatient clinician if recovery interferes with management of diabetes, hypertension, or hypothyroidism. These instructions were discussed before departure, and Elena had the opportunity to ask questions.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP PLAN:\nElena should attend the surgical follow-up arranged for review of incision healing and recovery after gallbladder removal. She should also continue routine care with her established outpatient clinician for hypertension, type 2 diabetes mellitus, and hypothyroidism. The separate discharge paperwork provides the appointment details and contact information. If the scheduled follow-up cannot be kept, she should contact the surgical service to arrange another time. Earlier contact is appropriate for worsening pain, persistent nausea or vomiting, fever, poor intake, or a concern about an incision. Gastroenterology follow-up is not required routinely if recovery continues as expected, but her clinician may arrange it if symptoms recur or a new issue develops. Elena and her family were reminded to bring discharge paperwork to follow-up and to share any changes in her recovery or chronic care needs.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 20 of 20\n\nDISCHARGE SUMMARY:\nElena Ellison was admitted with acute gallstone pancreatitis after persistent abdominal discomfort and nausea limited her oral intake. Supportive inpatient care led to improvement, and gastroenterology and general surgery agreed on a plan for definitive treatment of the gallstone source. She underwent laparoscopic cholecystectomy without a reported complication. Afterward, she resumed oral intake, walked, and continued to recover without return of severe symptoms. She was discharged home with family support, written postoperative guidance, and follow-up arranged with the surgical service. Ongoing care for hypertension, type 2 diabetes mellitus, and hypothyroidism will continue with her established outpatient clinicians. The discharge paperwork contains specific outpatient treatment details not repeated here. Elena and her family understood the instructions and were aware of symptoms that should prompt urgent evaluation. No additional inpatient procedure or treatment was planned.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-14",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/14/2026\nPatient Name: Elena Ellison\nDOB: 08/25/1974\nMRN: MRN-55656\nAttending: Dr. Evan Jones\n\nADMISSION DIAGNOSIS:\nElena Ellison, a 52-year-old woman, was admitted for cellulitis involving the lower leg. She described a gradually expanding area of redness, tenderness, and swelling, with discomfort that made walking less comfortable. The symptoms had continued despite rest at home and prompted hospital evaluation. The working diagnosis was an acute skin and soft tissue infection requiring inpatient treatment and observation. Her known conditions include hypertension, type 2 diabetes mellitus, and hypothyroidism. Diabetes was considered relevant because it can complicate recovery from skin infections, so the care plan included attention to glucose management and daily review of symptoms. No injury or open wound was identified in the history available at admission. The location and reported progression supported treatment for cellulitis. There was no separate diagnosis requiring an invasive intervention. The admission goal was to control the infection, limit further spread, maintain safe mobility, and establish a practical plan for ongoing care after discharge.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 2 of 20\n\nDISCHARGE DIAGNOSES:\nThe principal discharge diagnosis was cellulitis of the lower leg, improved after inpatient treatment. Associated diagnoses were hypertension, type 2 diabetes mellitus, and hypothyroidism. The cellulitis was managed with antimicrobial treatment, supportive care, and repeated review of the patient’s reported symptoms and general progress. The infection showed a favorable response during the stay, and no procedure was required. Her chronic conditions remained part of the discharge plan, with instructions to resume established outpatient care and follow the guidance already provided by her usual clinicians. There was no new chronic diagnosis established during this admission. The patient was considered appropriate for discharge because her symptoms were improving, she could continue care outside the hospital, and she understood when to seek prompt reassessment. The discharge plan emphasized completing the prescribed course of treatment, protecting the affected leg, monitoring for renewed or worsening symptoms, and arranging timely follow-up. No specific test or imaging finding is included in this summary.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 3 of 20\n\nREASON FOR ADMISSION:\nThe patient came to the hospital after noticing worsening discomfort, redness, and swelling in the lower leg over several days. She reported that the affected area had become more bothersome and that walking was less comfortable than usual. She was concerned that the condition was continuing to spread and requested further care. The decision was made to admit her because the infection required prompt treatment and observation in the setting of type 2 diabetes. The team planned to begin antimicrobial therapy, support comfort and mobility, and assess the response over time. Her hypertension and hypothyroidism were also reviewed as relevant chronic conditions, without being the reason for hospitalization. She did not report a recent injury or a known puncture to the leg. The purpose of admission was to stabilize the infection, ensure a safe transition to outpatient treatment, and provide clear instructions about warning signs and follow-up. No dates, named drugs, or test findings are included here.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 4 of 20\n\nHISTORY OF PRESENT ILLNESS:\nElena Ellison reported gradual development of redness and tenderness over the lower leg, followed by swelling and increasing discomfort. Symptoms had progressed over several days and were affecting her usual walking. She did not identify a clear injury or break in the skin before symptoms began. At home, she tried resting but felt the area was not improving. She denied having a similar recent episode that required hospital care. Her history of type 2 diabetes was considered when selecting the level of monitoring and arranging follow-up. She also has hypertension and hypothyroidism, which were stable by her account before admission. The history focused on the timing and progression of the leg symptoms, possible triggers, impact on activity, and ability to manage care at home. During the admission, she described steady improvement with treatment. She received explanations about the expected course of recovery and the importance of seeking reassessment if the area worsened or new concerns developed.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 5 of 20\n\nRELEVANT MEDICAL BACKGROUND:\nThe patient’s established medical conditions are hypertension, type 2 diabetes mellitus, and hypothyroidism. These conditions were reviewed during admission to guide a coordinated plan and to support continuity after discharge. She reported ongoing outpatient care for her chronic health concerns. Diabetes was particularly relevant to the skin infection because it may affect healing and the risk of complications. The team discussed maintaining her usual diabetes care during recovery and contacting her regular clinician if her routine becomes difficult to follow. Hypertension and hypothyroidism were not associated with new complaints during this stay. No prior lower-leg procedure or recent injury was reported. Her usual home regimen was reviewed with her for discharge planning, but no drug names are included in this summary. The patient was able to explain the major points of the plan and agreed to arrange follow-up. This admission did not establish a new chronic condition, and the focus remained treatment of the acute infection with attention to her existing diagnoses.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 6 of 20\n\nADMISSION ASSESSMENT AND PLAN:\nThe admitting team assessed the reported progression of lower-leg redness, tenderness, swelling, and discomfort as consistent with cellulitis. Inpatient care was selected to begin antimicrobial treatment and observe the response, with additional attention to recovery in the setting of diabetes. The plan included supportive measures for comfort, limiting unnecessary strain on the affected leg, and helping the patient remain mobile as tolerated. Her chronic conditions were reviewed for continuity, and the patient was encouraged to follow her established outpatient care plan. The team also discussed the expected course of improvement and the importance of reporting any new or worsening symptoms promptly. The plan was reassessed during the stay based on her account of symptoms and overall ability to participate in daily activities. Discharge would be considered once the infection was responding and a safe outpatient plan was available. No invasive treatment was planned, and no named test or imaging result is part of this account.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, the patient began inpatient antimicrobial treatment for lower-leg cellulitis. The team reviewed the reported onset and progression of symptoms, her chronic diagnoses, and the effect of discomfort on walking. Supportive care focused on comfort, rest when needed, and safe movement. The patient was asked to communicate any change in pain, redness, swelling, or general well-being. Her type 2 diabetes was included in care planning because of its relevance to skin healing. Her hypertension and hypothyroidism were acknowledged, with continuity of established outpatient care kept in view. The team explained that improvement may take time and that treatment should be completed as directed after discharge. She was cooperative with the plan and able to discuss her concerns. No procedure was needed. The immediate goal was to begin treatment, observe for a favorable response, and make sure the patient understood the expected course and the conditions that would require urgent reassessment.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, the patient reported that the lower-leg discomfort was beginning to ease and that walking felt more manageable. The treatment plan continued, with ongoing attention to the reported extent of redness and swelling and to her ability to carry out routine activities. She remained engaged in discussions about recovery and asked appropriate questions about care at home. Supportive measures were continued, and the team reinforced the need to avoid unnecessary irritation of the affected area. Her diabetes remained an important consideration in planning a safe transition to outpatient care. No new concern involving her chronic hypertension or hypothyroidism was raised during the day. The team reviewed warning signs that would call for prompt medical attention, including renewed spread of redness, increasing pain, feverishness, or inability to walk safely. The patient demonstrated understanding. The improving course supported continued observation and planning for discharge once outpatient treatment and follow-up could be arranged.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, the patient continued to describe improvement in the lower-leg symptoms. Discomfort was less limiting, and she felt more confident moving about. The inpatient antimicrobial plan was continued while the team considered transition to care at home. The patient received further instruction on taking the prescribed treatment exactly as directed and completing the full course, even if symptoms continue to improve. She was reminded to protect the affected area from rubbing or injury and to keep it clean and dry. Her chronic conditions were reviewed in the context of follow-up, with emphasis on maintaining her usual diabetes care during recovery. She did not report a new problem requiring a change in the overall plan. The team discussed access to help at home and the importance of contacting her usual clinician if the infection did not continue to improve. Discharge planning proceeded with attention to clear instructions and timely outpatient review.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nBy the fourth hospital day, the patient described continued progress and felt able to manage the remaining recovery outside the hospital. The lower-leg discomfort was less disruptive to walking, and she understood that complete resolution could take longer than the inpatient stay. The team reviewed the transition from inpatient antimicrobial treatment to the prescribed outpatient course. She was advised not to stop treatment early or alter the plan without speaking with a clinician. Supportive care and protection of the affected leg were discussed again. Her type 2 diabetes, hypertension, and hypothyroidism were included in the discharge planning conversation, with no new issue reported for these conditions. The patient participated in planning and could state when she would seek urgent help. No procedure was performed during admission. The improving course and ability to follow the outpatient plan supported discharge home with follow-up arranged through her usual care team.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 11 of 20\n\nTREATMENT PROVIDED:\nThe patient received antimicrobial treatment for cellulitis during the hospital stay, with a planned transition to a prescribed course after discharge. Supportive care addressed comfort, safe activity, and protection of the affected lower leg. Treatment was continued while the team followed the patient’s report of symptom progression and her ability to walk and manage routine needs. Her type 2 diabetes was considered when planning treatment and follow-up because recovery from skin infection can require close attention. The patient was given instructions to complete the treatment as prescribed and to contact a clinician if she could not tolerate it or had questions about the plan. She was also encouraged to maintain her established care for hypertension and hypothyroidism. No drug names or doses are included in this summary. The patient did not require an operation or other invasive intervention. Her response was favorable, and care was transitioned to an outpatient plan once she was comfortable doing so.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 12 of 20\n\nCONSULTATION AND CARE COORDINATION:\nThe inpatient team coordinated care around treatment of the lower-leg cellulitis and the patient’s existing chronic conditions. No specialty consultation was required during this admission. The team reviewed the patient’s reported symptoms, response to treatment, and ability to continue care at home. Discharge planning included discussion of outpatient follow-up, completion of the prescribed treatment course, protection of the affected leg, and recognition of warning signs. Her usual care team was identified as the appropriate resource for ongoing management of hypertension, type 2 diabetes mellitus, and hypothyroidism. The patient was encouraged to share the discharge instructions with that team and to arrange a timely follow-up encounter. She demonstrated understanding of the plan and was able to describe how she would seek help if symptoms worsened. No outside referral was made or discussed in this summary. Coordination focused on making the transition clear and ensuring that the patient knew whom to contact after leaving the hospital.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 13 of 20\n\nPROCEDURES:\nNo procedure was performed during this admission. The cellulitis was managed with antimicrobial treatment and supportive care, and the patient improved without the need for surgical treatment or another invasive measure. Care focused on symptom improvement, safe mobility, protection of the affected lower leg, and planning for continued treatment at home. The patient was encouraged to avoid scratching, rubbing, or otherwise irritating the area while it healed. She was also advised to keep the area clean and to contact a clinician if she noticed renewed spread, worsening discomfort, drainage, or another concerning change. The absence of a procedure did not limit the treatment plan, and the patient was able to transition to outpatient care with clear instructions. Her chronic conditions were included in discharge planning, especially diabetes because of its relationship to skin recovery. No procedure-related restrictions were required. This section records that no intervention beyond routine inpatient medical care was needed.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 14 of 20\n\nRESPONSE TO TREATMENT:\nThe patient had a favorable response to inpatient treatment for lower-leg cellulitis. Over the course of the stay, she reported a gradual decrease in discomfort and improved ability to walk. She also described the affected area as less troublesome in daily activities. The team continued treatment while reviewing her reported symptoms and readiness for outpatient care. No new complaint required a change in the overall plan. Her progress was considered sufficient to complete treatment outside the hospital, provided that she followed the prescribed course and sought reassessment for any worsening. The team discussed that some residual tenderness or discoloration may take time to settle and that improvement should continue rather than reverse. The patient understood the need to remain alert for renewed redness, swelling, pain, feverishness, or difficulty walking. Her diabetes was included in counseling about recovery and follow-up. The response supported discharge home with timely contact with her usual clinician.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 15 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, the patient reported continued improvement in the lower-leg symptoms and felt able to manage care at home. She was comfortable with the transition plan and understood that treatment needed to continue after leaving the hospital. She was able to participate in routine activity at a level appropriate for her recovery and did not identify a new concern requiring continued inpatient care. Her chronic diagnoses of hypertension, type 2 diabetes mellitus, and hypothyroidism remained part of the outpatient plan. The patient received instructions about completing treatment, protecting the affected leg, and seeking help if symptoms worsened or new concerns developed. She was advised to avoid delay if redness spreads, pain increases, feverishness occurs, or walking becomes difficult. The discharge decision was based on the improving course and the availability of a safe outpatient plan. No physical findings or vital signs are included in this summary.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 16 of 20\n\nDISCHARGE INSTRUCTIONS:\nComplete the prescribed treatment course exactly as directed, and do not stop early because the leg feels better. Keep the affected area clean and dry, protect it from rubbing or injury, and avoid scratching. Rest as needed, but resume walking gradually as comfort allows. Contact a clinician promptly if redness spreads, swelling or pain increases, drainage appears, feverishness develops, or you have trouble walking. Seek urgent care if symptoms worsen rapidly or you feel seriously unwell. Continue the established outpatient plan for hypertension, type 2 diabetes mellitus, and hypothyroidism. If illness disrupts your usual diabetes care, contact your regular clinician for guidance. Arrange follow-up with your usual care team soon after discharge to review recovery and ongoing health needs. Bring these instructions to that encounter and ask questions if any part of the treatment plan is unclear. Do not make changes to your established care without guidance from a clinician.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 17 of 20\n\nSKIN CARE AND ACTIVITY:\nDuring recovery, handle the affected lower leg gently and avoid pressure, friction, or scratching. Keep the area clean and dry, and use comfortable clothing that does not rub against it. Resume regular activity gradually, using discomfort as a guide and allowing rest when needed. Avoid strenuous activity that makes the area more painful until improvement is well established. Check the area regularly for renewed spread of redness, increasing swelling, new drainage, or worsening tenderness. If any of these changes occur, contact a clinician promptly rather than waiting for the next scheduled follow-up. The patient was advised to seek urgent care for rapid worsening, feverishness, or inability to walk safely. Diabetes makes attention to healing especially important, so any new skin break or delayed improvement should be discussed with her usual care team. These precautions support recovery while the outpatient treatment course is completed.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 18 of 20\n\nCHRONIC CONDITION FOLLOW-UP:\nThe patient should continue established outpatient care for hypertension, type 2 diabetes mellitus, and hypothyroidism. No new long-term plan for these conditions was created during this admission. She was encouraged to contact her usual clinician to arrange follow-up and to discuss any questions about her ongoing care. Maintaining her usual diabetes routine during recovery is important, and she should seek guidance if illness or reduced activity makes that difficult. The lower-leg infection should also be reviewed at follow-up to confirm that symptoms continue to improve and that the treatment course has been completed as directed. The patient should bring the discharge instructions and share any changes noticed at home. She was reminded not to make independent changes to her established care. If the leg becomes more painful, redness spreads, feverishness develops, or walking becomes difficult, she should seek prompt assessment rather than waiting for a routine appointment.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 19 of 20\n\nWARNING SIGNS:\nThe patient was instructed to watch for signs that the infection may be worsening or returning. These include redness extending beyond the area previously affected, increasing swelling, worsening pain, new drainage, feverishness, chills, or difficulty walking. She should contact a clinician promptly if any of these occur. Rapid progression, marked worsening, or feeling seriously unwell warrants urgent care. Because she has type 2 diabetes, she should not ignore a new skin injury or a change that does not improve as expected. If the prescribed treatment causes a concerning reaction or cannot be continued, she should contact a clinician for advice rather than stopping or changing the plan on her own. The patient was able to repeat the main warning signs and understood that timely reassessment can prevent further complications. She should keep the follow-up plan even if the leg continues to improve, so recovery and ongoing care can be reviewed.\n",
+        "Elena Ellison | MRN-55656 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP PLAN:\nThe patient should arrange a follow-up encounter with her usual clinician soon after discharge. That clinician can review the progress of the lower-leg cellulitis, confirm that the prescribed treatment course is being completed, and address any remaining discomfort or skin changes. Follow-up should also support continuity of care for hypertension, type 2 diabetes mellitus, and hypothyroidism. The patient should bring her discharge instructions and be prepared to describe how the leg has changed since leaving the hospital. If symptoms worsen before the planned encounter, she should seek prompt medical attention rather than waiting. If the infection has not clearly continued to improve, she should contact her care team for earlier review. The patient was encouraged to confirm the follow-up plan before leaving and to ask for help arranging it if needed. No specific calendar date is included in this summary.\n\nDischarge medications:\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of a newly heard heart murmur."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "Most recent echo showed an ejection fraction of 60%."
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 51 bpm. Normal axis. PR interval 197 ms, QRS 105 ms, QTc 415 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 35%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report_1",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 165 mg/dL\nLDL Cholesterol: 63 mg/dL\nHDL Cholesterol: 57 mg/dL\nTriglycerides: 227 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report_2",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 142 mmol/L\nPotassium: 3.7 mmol/L\nChloride: 101 mmol/L\nCO2: 27 mmol/L\nBUN: 13 mg/dL\nCreatinine: 0.8 mg/dL\nGlucose: 170 mg/dL (H)\nCalcium: 10.2 mg/dL"
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "discharge_summary_2",
+      "page": 20,
+      "text": "Discharge medications:\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "contradictory",
+    "lipids": "present",
+    "bmp": "stale",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 5,
+  "input_tokens": 2795,
+  "output_tokens": 9915
+}

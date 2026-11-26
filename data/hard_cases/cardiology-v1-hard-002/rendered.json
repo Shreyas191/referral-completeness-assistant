@@ -1,0 +1,268 @@
+{
+  "case_id": "cardiology-v1-hard-002",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-15",
+  "plan": {
+    "case_id": "cardiology-v1-hard-002",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": "abbreviate"
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Arthur",
+    "last_name": "Anderson",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol succinate",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 75.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of fatigue in the setting of a strong family history of early heart disease.",
+    "history": "This 81-year-old man reports persistent fatigue. His father had a heart attack before age 50, and he is concerned about his own risk of early heart disease.",
+    "referring_physician": "Dr. William Adams",
+    "practice": "Northside Medical",
+    "sex": "male",
+    "age": 81,
+    "dob": "1945-11-04",
+    "mrn": "MRN-89019"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-15",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/15/2026\nPatient Name: Arthur Anderson\nDOB: 11/04/1945\nMRN: MRN-89019\n\nTo: Cardiology Clinic Intake\nFrom: Dr. William Adams, Northside Medical\n\nDear Colleague,\n\nReason for referral: Evaluation of fatigue in the setting of a strong family history of early heart disease.\n\nArthur Anderson is an 81-year-old man with atrial fibrillation, hypertension, and hypothyroidism who reports persistent fatigue.\n\nHis father had a heart attack before age 50, and he is concerned about his own risk of early heart disease. I would appreciate your evaluation of his fatigue and cardiovascular risk.\n\nThank you for seeing this patient.\n\nDr. William Adams\nNorthside Medical\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-26",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/26/2026\nPatient Name: Arthur Anderson\nDOB: 11/04/1945\nMRN: MRN-89019\nProvider: Dr. William Adams\n\nSUBJECTIVE:\nArthur Anderson is an 81-year-old man with atrial fibrillation, hypertension, and hypothyroidism who reports persistent fatigue. His father had a heart attack before age 50, and he is concerned about his own risk of early heart disease.\n\nVITALS:\nBP 152/67, HR 80, RR 13, SpO2 99% on room air, weight 138 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nDATA REVIEWED:\n\nMost recent echo showed an ejection fraction of 55%.\n\nPT/INR: 24.3/2.1.\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Persistent fatigue. Cardiology referral placed for evaluation in the setting of a strong family history of early heart disease.\n2. Family history of premature heart disease. His father had a heart attack before age 50. Discussed his concern and arranged cardiology evaluation.\n3. Atrial fibrillation. Continue established care.\n4. Hypertension. Continue established management.\n5. Hypothyroidism. Continue established management.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-26",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/26/2026\nPatient Name: Arthur Anderson\nDOB: 11/04/1945\nMRN: MRN-89019\n\nMetoprolol succinate 50 mg by mouth once daily\nLevothyroxine 75 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-12",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/12/2026\nPatient Name: Arthur Anderson\nDOB: 11/04/1945\nMRN: MRN-89019\nOrdering provider: Dr. William Adams\n\nFindings: Sinus rhythm with occasional premature atrial complexes at 88 bpm. Normal axis. PR interval 155 ms, QRS 83 ms, QTc 459 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-18",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/18/2026\nPatient Name: Arthur Anderson\nDOB: 11/04/1945\nMRN: MRN-89019\nOrdering provider: Dr. William Adams\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-29",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/29/2026\nPatient Name: Arthur Anderson\nDOB: 11/04/1945\nMRN: MRN-89019\nOrdering provider: Dr. William Adams\n\nLIPID PANEL\nTotal Cholesterol: 169 mg/dL\nLDL Cholesterol: 109 mg/dL\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 102 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 100 mmol/L\nCO2: 28 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 1.5 mg/dL (H)\nGlucose: 123 mg/dL (H)\nCalcium: 9.2 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2025-11-22",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 11/22/2025\nPatient Name: Arthur Anderson\nDOB: 11/04/1945\nMRN: MRN-89019\nAttending: Dr. William Adams\n\nADMISSION DIAGNOSIS:\nArthur Anderson, an 81-year-old man, was admitted for cellulitis involving the lower leg. He described increasing discomfort, redness, and swelling in the affected area before coming to the hospital. The symptoms had begun to interfere with walking and usual daily activities. The admitting team determined that inpatient care was appropriate because the infection required prompt treatment and close observation. His history of atrial fibrillation, hypertension, and hypothyroidism was reviewed during admission planning. The initial goals were to control the infection, support comfort and mobility, and watch for any change that would require a different level of care. The affected leg and side are documented in the inpatient chart. No additional cause for the episode was established in the discharge record. He remained involved in decisions throughout the stay, with explanations provided in plain language.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 2 of 20\n\nDISCHARGE DIAGNOSES:\nThe principal diagnosis at discharge was cellulitis of the lower leg, improved after inpatient care. The condition had been associated with localized redness, swelling, and discomfort reported before admission. There was no documented need for an operative procedure during this stay. His established conditions of atrial fibrillation, hypertension, and hypothyroidism were also addressed as part of the discharge plan. No new chronic diagnosis was added. The team reviewed the importance of continuing his established care for these conditions after leaving the hospital, without making changes beyond the instructions supplied separately. He was considered suitable to continue recovery outside the hospital with assistance from family and follow-up with his usual care team. The infection still required attention at home, and return precautions were reviewed before discharge.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 3 of 20\n\nPATIENT INFORMATION:\nArthur Anderson is an 81-year-old male with a known history of atrial fibrillation, hypertension, and hypothyroidism. He was able to provide a history and participate in decisions about his care. Before this admission, he managed his usual routine with support as needed from family. The lower-leg symptoms represented a change from his recent baseline and led him to seek hospital care. He expressed a preference to return home once the inpatient team felt that ongoing hospital treatment was no longer necessary. Family involvement was encouraged for the transition and for help with daily needs during recovery. The discharge plan was discussed directly with him and made available to the people assisting him. The record contains no additional personal or social details that would alter the plan described here.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 4 of 20\n\nHISTORY OF PRESENT ILLNESS:\nBefore admission, Mr. Anderson noticed worsening redness and swelling in one lower leg, along with increasing soreness. He reported that the discomfort made walking and standing less comfortable than usual. The symptoms progressed despite his efforts to rest at home, so he sought hospital care. The admission history did not identify a clear preceding injury or other definite trigger. He did not report a separate problem that became the main focus of the hospitalization. His account of the course was reviewed with the inpatient team, and the leg infection was treated as the primary issue. The specific timing and side are documented in the hospital record. He was able to describe his concerns and understood that the care plan would depend on improvement and his ability to manage safely after discharge.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 5 of 20\n\nRELEVANT MEDICAL HISTORY:\nHis medical history includes atrial fibrillation, hypertension, and hypothyroidism. These conditions were considered during the admission and discharge planning, although the lower-leg infection remained the main reason for hospitalization. The team reviewed his established outpatient care and encouraged him to continue it as directed by his usual clinicians. No new long-term condition was identified during this stay. The record does not provide a reason to alter his ongoing care for these chronic problems in this summary. He was advised to bring any questions about his established treatment to his usual care team after discharge. His history was also considered when planning a safe transition home, including the importance of keeping follow-up arrangements and seeking help if he felt unable to manage his routine.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 6 of 20\n\nBASELINE FUNCTION AND SUPPORT:\nBefore the episode, Mr. Anderson lived in the community and followed a familiar daily routine. He described the leg discomfort as a barrier to normal walking and household activities, rather than a longstanding limitation. Family support was available to assist with the transition home and provide help while he recovered. The inpatient team considered his mobility needs when discussing discharge readiness and the practical requirements for care outside the hospital. He was encouraged to ask for assistance with tasks that increased discomfort or created a risk of losing balance. The plan emphasized a gradual return to usual activity rather than immediate resumption of every task. If his ability to walk or manage daily needs declined after discharge, he and his family were instructed to contact his care team promptly.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 7 of 20\n\nREASON FOR INPATIENT CARE:\nHospital admission was chosen because the lower-leg infection was worsening and required treatment with close observation. The affected area was painful enough to limit Mr. Anderson’s usual mobility, and outpatient management was not felt to be the safest initial plan. The team focused on starting appropriate infection treatment, following his response over time, and supporting safe movement. His age and established health conditions were included in the overall planning, without becoming the primary problem during this stay. The expected transition home depended on steady improvement, manageable discomfort, and a workable plan for continued care. Mr. Anderson and his family were kept informed about those goals. They were also told that renewed worsening, fever, or difficulty managing at home would require timely contact with a clinician or urgent reassessment.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, the team reviewed the history of progressive lower-leg redness, swelling, and discomfort and confirmed cellulitis as the main problem requiring care. Treatment for the infection was initiated in the hospital, and the plan included observation for improvement or any new concerns. Mr. Anderson was encouraged to rest the affected leg when practical and to request help when walking felt uncomfortable. His chronic conditions were included in routine care planning. The team discussed the purpose of admission, the expected course, and the signs that would prompt a change in the plan. He was able to take part in those discussions and ask questions. Discharge was not planned until the infection showed a suitable response and he could continue recovery safely outside the hospital.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, inpatient care continued for the lower-leg cellulitis. Mr. Anderson reported that the area remained uncomfortable, though the team continued to follow his symptoms and overall ability to move about. Treatment was continued, with attention to comfort and the need for support during activity. He was reminded to avoid putting himself at risk by walking without help if the leg felt unsteady or painful. The team reviewed whether he was beginning to meet the goals for continued recovery outside the hospital. His atrial fibrillation, hypertension, and hypothyroidism remained part of his background care plan, with no new issue becoming the focus of the stay. The plan remained to continue observation and reassess discharge readiness as the infection response became clearer.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, the team continued care for cellulitis and reviewed the course of symptoms with Mr. Anderson. He described gradual improvement in comfort and felt better able to consider returning to his usual routine. The affected leg still needed attention, so the team reinforced the importance of continuing the prescribed infection treatment after leaving the hospital. Mobility and home support were discussed, including help with activities that might be difficult during early recovery. He was reminded that improvement in the hospital did not mean the infection could be ignored once home. The chronic conditions remained stable in the plan documented for this admission. The team continued to evaluate whether his progress and available support were sufficient for a safe discharge, while explaining when he should seek prompt reassessment.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 11 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, Mr. Anderson continued to report improvement in the lower-leg symptoms. The inpatient team reviewed his ability to manage basic activities and confirmed that family support would be available after discharge. Continued hospital-level care was no longer considered necessary, provided that he followed the home plan and remained alert to worsening symptoms. The infection treatment plan was reviewed in terms of completion and follow-through, without changes to his established care for atrial fibrillation, hypertension, or hypothyroidism. He and his family discussed transportation, help at home, and how to contact the care team if concerns arose. Discharge planning included clear instructions to return for urgent assessment if the area worsened or if he became generally unwell. He agreed with the transition plan.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 12 of 20\n\nCLINICAL RESPONSE:\nDuring the admission, Mr. Anderson’s lower-leg symptoms improved with inpatient treatment and supportive care. He reported less discomfort and greater confidence about returning home than he had expressed at admission. The team considered the overall trend, his ability to take part in daily activities, and the support available after discharge when deciding that hospital care could end. The affected area still required continued attention and completion of the treatment plan. He was advised not to assume that early improvement meant the infection had fully resolved. Any return or spread of redness, increasing swelling or pain, drainage, fever, or worsening ability to walk should prompt contact with a clinician. He and his family were able to restate the main warning signs and the plan for continued recovery.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 13 of 20\n\nSPECIALIST INVOLVEMENT:\nThe inpatient team coordinated care for the cellulitis and considered whether input from another service was needed. No additional specialist service was required for the course documented in this summary. The team also reviewed how the infection plan fit with Mr. Anderson’s history of atrial fibrillation, hypertension, and hypothyroidism. His usual care team remains the appropriate point of contact for ongoing management of those chronic conditions. The discharge discussion included the value of keeping established follow-up arrangements and sharing the hospital summary with clinicians involved in his routine care. Mr. Anderson and his family were encouraged to raise any new concerns with the appropriate clinician rather than making independent changes to his established care. The hospital team provided a clear plan for follow-up focused on the leg infection and recovery.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 14 of 20\n\nPROCEDURES AND DEVICES:\nNo operative procedure was needed during this admission. The cellulitis was managed with inpatient treatment and supportive measures, followed by a plan for continued care at home. There was no procedure-related recovery restriction added to the discharge instructions. Mr. Anderson was encouraged to protect the affected leg from avoidable irritation and to follow the care guidance given by the inpatient team. He and his family were advised to seek help if the area developed new drainage, worsening pain, or other signs of deterioration. The record does not identify a device or wound procedure that requires special care after discharge. This summary does not add instructions beyond those reviewed with him before leaving the hospital. Any question about local care should be directed to his usual care team.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 15 of 20\n\nINFECTION TREATMENT PLAN:\nTreatment for the lower-leg cellulitis was started in the hospital and continued according to the inpatient plan. At discharge, Mr. Anderson was instructed to complete the remaining course exactly as directed in the separate written instructions. He should not stop early because the symptoms seem better, share treatment with another person, or make changes without speaking with a clinician. If he misses a scheduled part of the plan or develops a concern about tolerating it, he should contact his care team for advice. The affected leg should be observed for renewed redness, increasing swelling, drainage, or worsening discomfort. He should seek prompt care if these changes occur or if he develops fever or feels significantly unwell. The family was asked to help him keep track of the instructions during early recovery.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 16 of 20\n\nCHRONIC CONDITION PLANNING:\nAtrial fibrillation, hypertension, and hypothyroidism remain part of Mr. Anderson’s ongoing health history. No new chronic care plan was established for these conditions during the cellulitis admission. He was instructed to continue his established outpatient care as previously directed and to avoid making independent changes during recovery. Questions about those conditions should be addressed with his usual clinicians. The team discussed the importance of keeping routine follow-up and bringing the hospital discharge information to those appointments. If he develops a new concern related to his chronic conditions, he should contact the appropriate care team rather than waiting for the leg infection follow-up. The main discharge priority remains completion of the infection plan, gradual return to activity, and prompt attention to any worsening symptoms.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Anderson reported improvement in the discomfort and swelling associated with the lower-leg infection. He was able to participate in planning for his return home and understood the need to continue the care plan after leaving the hospital. His symptoms did not require continued inpatient management at that point, and family support was available for the transition. The cellulitis had improved but still required follow-through and observation. He was not advised to ignore new symptoms or delay seeking help if the condition worsened. The team reviewed the instructions with him and his family, including who to contact with routine questions and when to seek urgent care. He left with a plan for follow-up and continued recovery outside the hospital.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 18 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Anderson should follow the written home plan and complete the infection treatment as directed. He should rest when needed, increase activity gradually, and request help if walking or daily tasks feel unsafe. Keep the affected leg protected from avoidable irritation and follow the local care instructions provided at discharge. Contact his care team promptly for increasing redness, swelling, pain, drainage, or difficulty managing the plan. Seek urgent care for rapid worsening, fever, feeling markedly unwell, or a sudden decline in ability to walk. He should not alter his established care for atrial fibrillation, hypertension, or hypothyroidism without speaking with his usual clinician. Family members should help review the instructions and support him during the first part of recovery at home.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP PLAN:\nMr. Anderson should arrange follow-up with his usual care team after discharge to review recovery from the lower-leg cellulitis and confirm that the infection continues to improve. He should bring the discharge instructions and share any changes in symptoms since leaving the hospital. Earlier contact is appropriate if the redness spreads, pain increases, swelling returns, drainage appears, or he develops fever or feels unwell. He should also keep his established follow-up for atrial fibrillation, hypertension, and hypothyroidism. If he cannot arrange the planned follow-up or has difficulty completing the home treatment plan, he or his family should call for assistance rather than allowing the concern to go unaddressed. The exact appointment arrangements are provided separately from this summary.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 20 of 20\n\nDIET AND ACTIVITY:\nNo special dietary restriction was introduced for the cellulitis admission in this summary. Mr. Anderson may return to his usual eating routine unless his established clinicians have given different guidance for another condition. Activity should increase gradually according to comfort and safety. He should avoid rushing into prolonged walking or tasks that increase discomfort in the affected leg. Rest periods and help from family may be useful during the first days at home. He should use any usual mobility support as directed and ask for assistance if he feels unsteady. A return to worsening pain, swelling, or redness during activity should lead him to pause and contact his care team. These instructions are intended to support recovery and do not replace guidance already given for his chronic conditions.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-03-19",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 03/19/2026\nPatient Name: Arthur Anderson\nDOB: 11/04/1945\nMRN: MRN-89019\nAttending: Dr. William Adams\n\nADMISSION DIAGNOSIS:\nArthur Anderson, an 81-year-old man, was admitted with acute gallstone pancreatitis. He reported upper abdominal discomfort with nausea and reduced oral intake. The admitting team considered the episode consistent with inflammation of the pancreas related to gallstone disease. He was kept in the hospital for supportive care, observation, and assessment for complications or persistent blockage. His history includes atrial fibrillation, hypertension, and hypothyroidism. His established outpatient therapies were reviewed and managed during the stay without naming individual agents in this summary. The initial plan included temporary restriction of food and drink, fluid support, relief of discomfort, and repeated clinical reassessment. The team also considered the timing of definitive gallbladder treatment in light of his age and chronic conditions. No calendar dates or numerical clinical findings are included here.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 2 of 20\n\nREASON FOR HOSPITALIZATION:\nAdmission was recommended because Mr. Anderson's abdominal symptoms and overall presentation required inpatient treatment for suspected gallstone-related pancreatic inflammation. He was unable to maintain normal intake and needed close observation while the acute episode settled. The team assessed him for ongoing pain, nausea, intolerance of food, and signs that would require a change in management. His known atrial fibrillation and hypertension were taken into account when planning supportive treatment and a procedure. His hypothyroidism was also noted during review of his background history. The patient and family were informed that gallstone pancreatitis can recur if the gallbladder remains untreated, while an intervention during an acute illness must be balanced against procedural risk. He agreed with admission and the proposed stepwise approach.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Anderson has a history of atrial fibrillation, hypertension, and hypothyroidism. These conditions were considered in care planning, particularly when balancing his usual outpatient regimen with temporary changes during an acute abdominal illness. He did not report a prior episode of pancreatitis during the recorded history for this admission. His history of gallstone disease was considered the likely source of the present illness. The team reviewed prior treatment information available to the hospital and sought clarification from the patient and family where needed. No individual drug names or doses are included in this summary. His advanced age prompted attention to mobility, nutrition, fall prevention, and recovery after any intervention. The available record did not identify a separate acute condition that displaced the primary diagnosis.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 4 of 20\n\nPRESENTATION AND INITIAL ASSESSMENT:\nAt presentation, Mr. Anderson described abdominal discomfort accompanied by nausea and difficulty eating. The admitting service assessed the history and clinical course as acute pancreatitis associated with gallstones. Initial care focused on symptom control, fluid support, and observation rather than immediate advancement of food. The team reviewed his chronic conditions and considered them when selecting an appropriate level of monitoring. The possibility of a persistent biliary obstruction or another complication was considered as part of the assessment. Surgical and digestive disease specialists were asked to contribute to planning. Mr. Anderson was able to participate in discussions, with family involvement as appropriate. This summary does not include examination findings, vital signs, numerical values, named diagnostic studies, or specific diagnostic results.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 5 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Anderson was admitted to the inpatient service for supportive treatment of gallstone pancreatitis. Oral intake was held initially because nausea and discomfort limited his ability to eat. He received fluid support and treatment directed at relieving symptoms. The team monitored his response through repeated clinical review and reassessed whether his discomfort, nausea, and intake were improving. His chronic atrial fibrillation, hypertension, and hypothyroidism were considered in the plan, with outpatient therapies handled according to the inpatient circumstances. Surgical and digestive disease input was requested to help determine whether a duct procedure or gallbladder surgery would be appropriate. He remained engaged in discussion and understood that the plan could change if symptoms persisted or complications emerged.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, the team continued supportive care and reviewed Mr. Anderson's course with the surgical and digestive disease services. His abdominal symptoms were followed closely, and the team considered whether there was evidence of a continuing blockage that would need a separate intervention. No named diagnostic study or result is reported in this document. Intake remained limited until nausea and discomfort allowed a cautious trial of oral fluids. The team discussed the benefits of removing the gallbladder during the same admission to reduce the chance of another episode. His age and chronic conditions were included in the risk discussion. Mr. Anderson and his family were given an opportunity to ask questions and expressed understanding of the proposed management.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Mr. Anderson's symptoms had begun to improve with conservative treatment. The care team continued to assess his ability to tolerate oral intake and whether discomfort returned as intake advanced. The surgical service reviewed the timing of gallbladder removal, while the digestive disease service considered whether additional duct-directed treatment was necessary. The decision was based on the overall clinical course and the absence of a need for urgent escalation. His usual outpatient regimen for chronic conditions was addressed in the context of the planned intervention and recovery. The patient was kept informed of the options and expected course. Supportive care continued, with attention to hydration, safe mobility, and preparation for definitive treatment.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, Mr. Anderson continued to improve and was able to take small amounts by mouth without a significant return of nausea. The team advanced his intake gradually and observed his response. With input from the surgical service, the plan proceeded toward removal of the gallbladder during this admission. His atrial fibrillation, hypertension, and hypothyroidism were considered in perioperative planning, and the inpatient team coordinated care around his chronic needs. The team again discussed the rationale for surgery, potential risks, and expected recovery. Mr. Anderson remained agreeable to the plan. There was no reported need for urgent duct intervention, and care remained focused on resolving the acute episode and preventing recurrence.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY FIVE:\nOn the fifth hospital day, Mr. Anderson underwent laparoscopic removal of the gallbladder after clinical improvement from the acute pancreatic inflammation. The operative course was documented as uncomplicated. He was observed afterward for return of nausea, worsening discomfort, difficulty taking fluids, or other concerns that might delay recovery. The surgical and inpatient teams coordinated his ongoing care. His chronic conditions were taken into account during the transition from the procedure to routine recovery. Oral intake was advanced as tolerated, and he was encouraged to mobilize safely with assistance when needed. The patient and family received an update on the procedure and the expected recovery plan. No operative findings or named diagnostic results are included in this summary.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, DAY SIX:\nOn the sixth hospital day, Mr. Anderson continued postoperative recovery. The team reviewed his tolerance of food and fluids, comfort, mobility, and ability to manage routine activities safely. Supportive care was adjusted to his progress, and discharge planning began in earnest. His chronic outpatient therapies were reviewed for resumption or continuation after discharge, with specific names and doses omitted from this document. The patient was advised to avoid rushing activity while recovering and to seek assistance if weakness or discomfort interfered with safe movement. Family members discussed the home plan with the inpatient staff. The team considered him suitable for continued recovery outside the hospital once oral intake and symptom control remained stable.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 11 of 20\n\nHOSPITAL COURSE, DAY SEVEN:\nOn the seventh hospital day, Mr. Anderson remained clinically improved after gallbladder removal. He was able to take food and fluids, and he did not report a return of the severe symptoms that brought him to the hospital. The team reviewed his recovery and confirmed that no additional inpatient procedure was planned. His chronic conditions were considered in the discharge plan, including continuation of established outpatient care as appropriate. Nursing staff and the treating team discussed safe activity, incision care, and signs that would require prompt medical attention. Mr. Anderson and his family confirmed that they understood the plan and had support available after discharge. The patient was discharged home with follow-up arrangements and written instructions.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 12 of 20\n\nCONSULTING SERVICES:\nThe surgical service assessed Mr. Anderson for definitive management of gallstone disease and advised that gallbladder removal during the admission was appropriate after improvement of the acute episode. The digestive disease service reviewed the possibility of persistent biliary obstruction and helped determine whether a separate duct procedure was needed. No such procedure was required during this stay. The inpatient team coordinated care for atrial fibrillation, hypertension, and hypothyroidism in the setting of pancreatitis and surgery. Nursing staff contributed to monitoring intake, mobility, comfort, and discharge readiness. The patient and family were included in discussions with the involved services. Recommendations were shared with the primary team, and the care plan was updated as his symptoms improved and operative recovery proceeded.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 13 of 20\n\nPROCEDURES:\nMr. Anderson underwent laparoscopic cholecystectomy during this admission for gallstone pancreatitis. The procedure was completed without a reported complication, and he proceeded to postoperative observation. No separate endoscopic duct procedure was performed. The purpose of gallbladder removal was to address the likely source of the episode and reduce the risk of recurrent gallstone-related pancreatitis. Perioperative planning took account of his age and history of atrial fibrillation, hypertension, and hypothyroidism. After the procedure, the team followed his tolerance of oral intake, comfort, and ability to mobilize. He and his family received routine counseling about incision care and activity during recovery. This summary does not provide operative findings, named diagnostic studies, numerical values, or calendar dates.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 14 of 20\n\nTREATMENT PROVIDED:\nTreatment centered on supportive care for acute pancreatitis, including temporary restriction of oral intake, fluid support, and relief of discomfort and nausea. Intake was resumed gradually as symptoms improved. The team repeatedly reassessed his clinical progress and adjusted the plan to avoid unnecessary intervention while ensuring that definitive treatment of gallstone disease was completed. Laparoscopic gallbladder removal was performed after discussion among the patient, family, and involved services. Care also included review of his established outpatient therapies in relation to his chronic conditions and the operative period. Staff encouraged safe mobility and provided guidance on recovery at home. No named drug, dose, laboratory value, diagnostic test, or imaging result is stated in this summary.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 15 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Anderson had recovered sufficiently from the acute episode and gallbladder procedure to continue care at home. He was tolerating oral intake and did not report a return of severe abdominal symptoms. His postoperative recovery was considered appropriate for outpatient follow-up, and no further inpatient intervention was planned. His chronic atrial fibrillation, hypertension, and hypothyroidism remained part of his ongoing care plan. He and his family understood the need to follow the written instructions and attend follow-up appointments. He was advised to seek prompt help if symptoms worsened, if he could not keep fluids down, or if a new concern developed. No examination findings, vital signs, or numerical measurements are included here.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 16 of 20\n\nDISCHARGE DIAGNOSES:\nThe principal discharge diagnosis is acute gallstone pancreatitis, improved after supportive treatment and gallbladder removal. Additional diagnoses include gallstone disease treated with laparoscopic cholecystectomy, atrial fibrillation, hypertension, and hypothyroidism. The latter conditions were recognized during the admission and incorporated into perioperative planning and discharge arrangements. There was no need for a separate duct procedure during this hospitalization. The acute abdominal illness improved sufficiently for discharge with outpatient follow-up. The diagnoses reflect the treating team's assessment of the admission and hospital course. This summary intentionally omits numerical findings, named diagnostic studies, individual drug names, and calendar dates. The patient was advised to share this discharge information with his usual outpatient clinicians.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 17 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Anderson was instructed to follow the written postoperative directions provided by the surgical team. He should keep the incision areas clean and follow the specific guidance given for bathing and dressing care. Activity should increase gradually, with avoidance of strenuous lifting until cleared by the surgical service. He should eat and drink as tolerated, using smaller portions if this is more comfortable during early recovery. He should continue his established outpatient care plan as reviewed at discharge and should not make changes without guidance from his treating clinicians. He should seek prompt medical attention for worsening abdominal pain, repeated vomiting, inability to take fluids, fever, new jaundice, increasing redness or drainage at an incision, or any other concerning change.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 18 of 20\n\nDIET AND ACTIVITY:\nAfter discharge, Mr. Anderson may advance his food intake gradually as tolerated, following the instructions supplied by the inpatient and surgical teams. Smaller meals may be easier during the first part of recovery. He should maintain adequate fluid intake unless an outpatient clinician has given different guidance. Walking short distances and increasing activity gradually are encouraged, with attention to balance and fall prevention. He should avoid strenuous exercise and heavy lifting until the surgical service confirms that these activities are safe. Family assistance is recommended if he feels weak or unsteady. If eating causes recurrent severe discomfort, persistent nausea, or vomiting, he should contact a clinician promptly. These measures are intended to support recovery after both pancreatitis and gallbladder surgery.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 19 of 20\n\nINCISION AND SYMPTOM CARE:\nThe surgical team provided instructions for routine care of the small incision sites. Mr. Anderson should follow the specific directions on keeping them clean and dry and on changing any coverings. He should watch for spreading redness, increasing tenderness, drainage, separation of an incision, or other unexpected changes and contact the surgical service if these occur. Mild soreness may occur during recovery, but worsening or persistent abdominal pain should not be ignored. He should seek urgent care for repeated vomiting, inability to keep fluids down, fever, yellowing of the skin or eyes, confusion, fainting, or a sudden decline in function. If symptoms feel severe or rapidly progressive, emergency services should be used rather than waiting for a scheduled appointment.\n",
+        "Arthur Anderson | MRN-89019 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP:\nMr. Anderson should arrange follow-up with the surgical service as directed in the discharge paperwork to review recovery and incision healing. He should also contact his usual outpatient clinician to review his chronic atrial fibrillation, hypertension, and hypothyroidism after the hospitalization. The outpatient team should receive a copy of this summary and the hospital discharge instructions. He should bring questions about restarting or changing any established outpatient therapy to those clinicians rather than making changes independently. If he has difficulty arranging appointments, his family may contact the hospital care team for assistance. He should seek earlier review if symptoms return or recovery does not proceed as expected. No calendar date is provided in this summary.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of fatigue in the setting of a strong family history of early heart disease."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "Most recent echo showed an ejection fraction of 55%."
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "PT/INR: 24.3/2.1."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol succinate 50 mg by mouth once daily\nLevothyroxine 75 mcg by mouth once daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 88 bpm. Normal axis. PR interval 155 ms, QRS 83 ms, QTc 459 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 30%. Mild left atrial enlargement. No pericardial effusion.\nImpression: Severely reduced left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 169 mg/dL\nLDL Cholesterol: 109 mg/dL\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 102 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 100 mmol/L\nCO2: 28 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 1.5 mg/dL (H)\nGlucose: 123 mg/dL (H)\nCalcium: 9.2 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "contradictory",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 6,
+  "input_tokens": 3716,
+  "output_tokens": 10248
+}

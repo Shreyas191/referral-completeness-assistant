@@ -1,0 +1,256 @@
+{
+  "case_id": "cardiology-v1-hard-005",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-11",
+  "plan": {
+    "case_id": "cardiology-v1-hard-005",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "lipids",
+        "defect": "omit"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "stale"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "David",
+    "last_name": "Adams",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hyperlipidemia"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "atorvastatin",
+        "dose": 20.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of chest pressure with exertion.",
+    "history": "He reports intermittent pressure in the center of his chest when walking uphill or climbing stairs. It resolves after several minutes of rest and has been occurring for about six weeks. He denies symptoms at rest.",
+    "referring_physician": "Dr. Thomas Allen",
+    "practice": "Downtown Family Practice",
+    "sex": "male",
+    "age": 59,
+    "dob": "1967-05-19",
+    "mrn": "MRN-41481"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-11",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/11/2026\nPatient Name: David Adams\nDOB: 05/19/1967\nMRN: MRN-41481\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Thomas Allen, Downtown Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of chest pressure with exertion.\n\nDavid Adams is a 59-year-old man with hypertension, type 2 diabetes mellitus, and hyperlipidemia. He reports intermittent pressure in the center of his chest when walking uphill or climbing stairs, occurring for about six weeks.\n\nThe pressure resolves after several minutes of rest. He denies symptoms at rest. Please evaluate his exertional chest pressure.\n\nMost recent echo showed an ejection fraction of 35%.\n\nThank you for seeing this patient.\n\nDr. Thomas Allen\nDowntown Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-02-02",
+      "pages": [
+        "PROGRESS NOTE\nDate: 02/02/2026\nPatient Name: David Adams\nDOB: 05/19/1967\nMRN: MRN-41481\nProvider: Dr. Thomas Allen\n\nSUBJECTIVE:\nDavid Adams is a 59-year-old man with hypertension, type 2 diabetes, and hyperlipidemia. For about six weeks, he has had intermittent pressure in the center of his chest when walking uphill or climbing stairs. It resolves after several minutes of rest. He denies symptoms at rest.\n\nVITALS:\nBP 141/72, HR 86, RR 18, SpO2 97% on room air, weight 135 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Exertional chest pressure: Arrange cardiology evaluation. Advise urgent evaluation if symptoms occur at rest, persist, or worsen.\n2. Hypertension: Continue ongoing management with primary care.\n3. Type 2 diabetes mellitus: Continue ongoing management with primary care.\n4. Hyperlipidemia: Continue ongoing management with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-09",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/09/2026\nPatient Name: David Adams\nDOB: 05/19/1967\nMRN: MRN-41481\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAtorvastatin 20 mg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-07-11",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 07/11/2026\nPatient Name: David Adams\nDOB: 05/19/1967\nMRN: MRN-41481\nOrdering provider: Dr. Thomas Allen\n\nFindings: Sinus bradycardia at 58 bpm. Normal axis. PR interval 162 ms, QRS 80 ms, QTc 412 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-08-06",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/06/2026\nPatient Name: David Adams\nDOB: 05/19/1967\nMRN: MRN-41481\nOrdering provider: Dr. Thomas Allen\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-22",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/22/2026\nPatient Name: David Adams\nDOB: 05/19/1967\nMRN: MRN-41481\nOrdering provider: Dr. Thomas Allen\n\nBASIC METABOLIC PANEL\nSodium: 135 mmol/L\nPotassium: 3.6 mmol/L\nChloride: 105 mmol/L\nCO2: 25 mmol/L\nBUN: 26 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 103 mg/dL (H)\nCalcium: 9.0 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-04-18",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 04/18/2026\nPatient Name: David Adams\nDOB: 05/19/1967\nMRN: MRN-41481\nAttending: Dr. Thomas Allen\n\nADMISSION DIAGNOSIS:\nDavid Adams is a 59-year-old male admitted for a urinary tract infection accompanied by dehydration. His established medical conditions include hypertension, type 2 diabetes mellitus, and hyperlipidemia. He came to the hospital after developing urinary discomfort and reduced ability to maintain usual fluid intake. The combination of urinary symptoms and poor intake prompted inpatient care for treatment and observation. The admitting team considered the infection and volume depletion together, with attention to his chronic conditions during the stay. He was able to provide a history and participate in care planning. No additional acute diagnosis was established during this admission. The immediate goals were to address the infection, restore adequate hydration, support oral intake, and arrange a safe transition home. Discharge planning began during the hospital stay and included education about symptoms that should prompt further care.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 2 of 20\n\nHISTORY OF PRESENT ILLNESS:\nBefore admission, Mr. Adams developed discomfort with urination and a sense of urinary urgency. He also reported taking less fluid than usual, with increasing concern that he was becoming dehydrated. He sought hospital care when the symptoms persisted and interfered with his normal routine. He denied a recent injury or other event that would account for his symptoms. The history was reviewed with him on arrival and was consistent with an acute urinary infection and inadequate hydration. His type 2 diabetes was considered relevant because illness and reduced intake can complicate day-to-day management. He remained able to communicate his symptoms and preferences throughout the evaluation. The hospital team discussed the planned supportive care and infection treatment with him. He agreed with admission for observation, hydration, and clinical improvement before returning home.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Adams has a history of hypertension, type 2 diabetes mellitus, and hyperlipidemia. These chronic conditions were reviewed as part of the admission planning and were considered when discussing his acute illness and recovery. He reports managing his longstanding conditions with care arranged outside the hospital. No new chronic diagnosis was made during this stay. His diabetes warranted attention while his appetite and fluid intake were changing, and he received guidance to continue his usual management plan as directed by his established care team. His hypertension and hyperlipidemia remained chronic issues without a separate acute complication identified during this admission. He did not describe a prior event that changed the current treatment approach. The team focused on the immediate infection and dehydration while maintaining continuity with his established care. He was encouraged to keep routine follow-up for all longstanding conditions.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 4 of 20\n\nADMISSION HISTORY AND REVIEW:\nThe admission history focused on the urinary symptoms, reduced fluid intake, and the timing of his decline. Mr. Adams described a period of discomfort and urgency followed by difficulty keeping up with his normal hydration. His account helped the team plan care directed at both the infection and volume depletion. He did not report a recent change in his established chronic diagnoses. The history also addressed his ability to eat, drink, and manage routine tasks at home. He remained engaged in discussion and could explain his concerns about returning home before feeling better. The care team reviewed the anticipated inpatient approach, including supportive hydration, treatment of the infection, and reassessment of symptoms. He understood that discharge would depend on adequate improvement and a workable home plan. His questions were addressed during the admission process.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 5 of 20\n\nINITIAL TREATMENT PLAN:\nThe initial plan was to provide inpatient care for the urinary infection and dehydration, with observation of his response. Supportive fluid replacement and antimicrobial treatment were started according to the treating team's assessment. Oral intake was encouraged as tolerated, with attention to his reported difficulty drinking before admission. The team also considered the effect of acute illness on his diabetes and encouraged him to follow guidance from the hospital staff while his routine was disrupted. His chronic hypertension and hyperlipidemia were recognized in the plan, without a separate acute intervention being needed for either condition. Staff reviewed the goals of care with Mr. Adams and explained that treatment would be adjusted according to his clinical progress. The plan included reassessment each day, education about warning symptoms, and preparation for discharge once he could continue recovery safely at home.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Adams was admitted for treatment of a urinary tract infection with associated dehydration. The team began supportive hydration and antimicrobial care, while encouraging oral fluids as he was able. He was observed for change in urinary discomfort, urgency, general energy, and ability to take fluids. The history of type 2 diabetes was kept in mind as his intake changed during the acute illness. Staff discussed the importance of reporting worsening symptoms or difficulty drinking. He remained involved in decisions and understood the reason for continued inpatient observation. Care planning also included reviewing his usual approach to chronic conditions without introducing unnecessary changes. The first day was directed toward stabilization, symptom relief, and determining whether the treatment plan was helping. No procedure was required, and discharge was deferred pending further improvement.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY TWO:\nDuring the second hospital day, care continued to focus on infection treatment and correction of dehydration. Mr. Adams was encouraged to drink regularly and was able to participate in discussions about his intake and urinary symptoms. The team reassessed his overall progress and continued supportive care in the hospital. He reported improvement compared with his admission concerns, although continued observation remained appropriate before discharge. His chronic diabetes was considered in relation to his appetite and changing routine, and he received reminders to follow the instructions provided by the treating team. There was no need for a procedure or a separate acute intervention for hypertension or hyperlipidemia. The staff reviewed the home setting and discussed how he could maintain hydration after leaving the hospital. Education emphasized completion of the planned treatment and prompt contact with a clinician if symptoms returned or worsened.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, Mr. Adams continued to show a favorable response to treatment for the urinary infection and dehydration. His urinary discomfort had lessened, and he was better able to maintain oral fluid intake. The team continued supportive care and reviewed whether he could manage recovery outside the hospital. He was able to describe the instructions discussed with staff and participated in planning for discharge. Chronic hypertension, type 2 diabetes mellitus, and hyperlipidemia remained part of his ongoing health history, but none required a new acute intervention during this stay. The team reinforced the need to resume his established routine as directed by his regular clinicians. No procedure was indicated. Discharge planning included arranging follow-up, reviewing signs of recurrence or worsening illness, and confirming that he had a reasonable plan for fluids and daily care at home.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nBy the fourth hospital day, Mr. Adams had continued improvement in the symptoms that brought him to the hospital. He was drinking more reliably and no longer described the same degree of urinary discomfort. The inpatient team reviewed his progress and determined that ongoing hospital care was no longer necessary. Supportive hydration and antimicrobial treatment had addressed the immediate concerns, and he was prepared to complete recovery at home under the discharge plan. Staff again discussed warning symptoms, including renewed urinary pain, feverishness, worsening weakness, inability to drink, or a return of dehydration concerns. His chronic diagnoses were reviewed for continuity, with no new issue identified during the final planning. He understood the follow-up recommendations and the importance of seeking help if his condition changed. No procedure was performed during the admission.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 10 of 20\n\nINFECTION MANAGEMENT:\nThe urinary tract infection was managed with antimicrobial treatment selected by the treating team and continued supportive care. Mr. Adams was monitored for change in urinary discomfort, urgency, and his ability to carry out usual activities. His symptoms improved during the admission, supporting the plan for continued recovery at home. Staff explained that he should follow the complete treatment instructions provided at discharge, even if he felt better before the planned course was finished. He was advised to contact a clinician if urinary symptoms returned, failed to continue improving, or were joined by feverishness, chills, or worsening illness. The discussion also covered avoiding delay in seeking care if he could not maintain fluids. No specific drug name or test result is included in this summary. He expressed understanding of the treatment goals and the need to keep follow-up.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 11 of 20\n\nDEHYDRATION MANAGEMENT:\nDehydration was addressed with supportive fluid replacement and encouragement of oral fluids as tolerated. Mr. Adams had reported reduced intake before admission, so the team monitored his ability to drink and discussed practical steps for maintaining fluids after discharge. His intake improved over the course of the stay, and he was able to continue drinking without hospital support at the time of discharge. Education included taking frequent fluids through the day and increasing attention to intake when ill or when urinary symptoms interfere with usual routines. He was told to seek medical advice if he became unable to drink, developed repeated vomiting, or noticed worsening weakness or reduced urination. Staff emphasized that diabetes and acute illness can make regular self-care more challenging. He was encouraged to ask for assistance early if symptoms made it difficult to follow the home plan.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 12 of 20\n\nCHRONIC CONDITIONS:\nHypertension, type 2 diabetes mellitus, and hyperlipidemia were included in the discharge planning as established chronic conditions. No new acute complication related to these diagnoses was identified during the hospitalization. Mr. Adams was advised to continue the care plan already established for each condition, following instructions from his usual clinicians and the discharge team. Because the acute illness affected his intake and daily routine, he was encouraged to be attentive to diabetes self-care while recovering. He was also advised to arrange routine follow-up for ongoing management rather than making independent changes based on the short hospital stay. The inpatient team did not provide a new chronic disease diagnosis. Mr. Adams expressed understanding that improvement in the urinary infection does not replace regular care for his longstanding conditions. These issues should remain part of future outpatient discussions.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 13 of 20\n\nCONSULTATIONS:\nNo specialty consultation was required during this admission. The hospital team managed the urinary tract infection and dehydration through inpatient medical care, supportive hydration, antimicrobial treatment, and repeated discussion with Mr. Adams. His chronic conditions were considered in the overall plan, but they did not require a separate specialist assessment during this stay. The patient remained able to communicate his concerns and participate in decisions, so the team discussed treatment and discharge planning directly with him. He was encouraged to seek guidance from his usual outpatient clinicians for ongoing management of hypertension, type 2 diabetes mellitus, and hyperlipidemia. If urinary symptoms recur or fail to resolve, he should contact an appropriate clinician promptly for reassessment. No outside specialty service was involved, and no additional consultation was pending at discharge. The plan was to continue care through established outpatient channels.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 14 of 20\n\nPROCEDURES AND SERVICES:\nNo procedure was performed during this hospitalization. Care consisted of inpatient observation, supportive hydration, antimicrobial treatment, symptom review, and discharge education. Nursing and medical staff supported Mr. Adams with fluid intake and discussed practical steps for continuing recovery after leaving the hospital. The team also reviewed how his acute illness could affect his usual routines for managing chronic conditions. No imaging or other procedural service was needed to complete the inpatient plan. Mr. Adams did not require a transfer to another facility or a higher level of care. The absence of a procedure did not alter the need to finish the treatment plan and arrange follow-up. He was given instructions to contact a clinician if symptoms returned, became more severe, or interfered with his ability to drink and manage daily activities.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 15 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Adams had improved from the urinary discomfort and reduced fluid intake that prompted admission. He was able to drink by mouth and understood the home plan for continued recovery. The team considered him suitable to leave the hospital without ongoing inpatient support. He remained aware of his chronic diagnoses and the need for routine care after this acute illness. No procedure or specialty intervention remained pending. He was instructed to complete the treatment plan as directed and to maintain regular fluid intake. The discharge discussion included symptoms that would require prompt attention, such as recurrent urinary pain, feverishness, inability to drink, or worsening weakness. Mr. Adams participated in the discussion and expressed understanding. He was discharged to continue recovery at home, with outpatient follow-up recommended for the infection and his established health conditions.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 16 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Adams was instructed to follow the treatment directions provided by the hospital team and to complete the planned course for the urinary infection. He should drink fluids regularly and pay attention to intake during recovery, particularly if appetite or usual routines remain reduced. He was asked to contact a clinician if urinary discomfort or urgency returned, symptoms failed to improve, or feverishness, chills, vomiting, or increasing weakness developed. He should seek urgent care if he becomes unable to keep fluids down or feels markedly worse. He should continue established care for hypertension, type 2 diabetes mellitus, and hyperlipidemia as previously directed. He was advised not to make independent changes to his chronic care plan based solely on this admission. Written discharge information was reviewed with him, and he had an opportunity to ask questions before leaving.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 17 of 20\n\nDIET AND HYDRATION:\nDuring recovery, Mr. Adams should maintain a regular pattern of fluid intake and avoid allowing urinary symptoms or a busy routine to prevent drinking. He was encouraged to choose fluids he can tolerate and to spread intake throughout the day. If he has ongoing difficulty drinking, repeated vomiting, or a clear decline in urination, he should contact a clinician rather than waiting for a routine appointment. He may return to his usual food pattern as tolerated, while keeping his established diabetes care in mind. The hospital stay did not require a special long-term diet for the urinary infection. He was advised to follow any prior nutrition guidance from his outpatient care team and to ask that team about changes if his appetite remains poor. These steps are intended to support hydration while he completes recovery at home.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 18 of 20\n\nACTIVITY AND HOME CARE:\nMr. Adams may return gradually to his usual daily activities as his strength and symptoms allow. He should avoid pushing himself if he feels weak or is not drinking adequately. He was encouraged to rest as needed and to keep fluids accessible while recovering at home. If urinary discomfort, feverishness, dizziness, or weakness interferes with ordinary tasks, he should contact a clinician for advice. He was asked to involve a family member or other support person if he has trouble keeping track of the treatment directions or maintaining fluid intake. No special equipment or home procedure was required at discharge. He should continue routine self-care for his chronic conditions and follow the guidance already provided by his regular clinicians. He expressed confidence that he could follow the plan and seek help if recovery did not continue.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP:\nMr. Adams should arrange follow-up with his usual outpatient clinician after discharge to review recovery from the urinary infection and dehydration. The timing should be guided by the discharge instructions and any change in symptoms. He should also continue routine appointments for hypertension, type 2 diabetes mellitus, and hyperlipidemia. At follow-up, he should discuss whether urinary discomfort has fully resolved and whether his fluid intake has returned to a comfortable routine. He should bring the hospital discharge information and describe any difficulty completing the treatment plan. He was advised not to wait for a scheduled appointment if urinary symptoms recur, feverishness develops, or he cannot maintain fluids. No appointment date is listed in this summary. The patient understood that outpatient continuity is important after inpatient treatment and agreed to contact his established care team.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 20 of 20\n\nPENDING ISSUES:\nNo inpatient procedure or specialty assessment remained pending at discharge. The main ongoing issue is completion of the treatment plan for the urinary tract infection and continued recovery from dehydration. Mr. Adams should monitor his symptoms and maintain adequate fluid intake. Any return of urinary discomfort, new feverishness, inability to drink, worsening weakness, or other significant decline should prompt timely contact with a clinician. His chronic hypertension, type 2 diabetes mellitus, and hyperlipidemia remain appropriate for ongoing outpatient management. This summary does not include specific test findings, drug names, or a calendar date. The patient was informed that the discharge plan depends on continued improvement and that reassessment may be needed if symptoms do not resolve. No other unresolved acute concern was identified in the final discharge discussion.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-05-08",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 05/08/2026\nPatient Name: David Adams\nDOB: 05/19/1967\nMRN: MRN-41481\nAttending: Dr. Thomas Allen\n\nADMISSION DIAGNOSIS:\nDavid Adams was admitted for community-acquired pneumonia after developing a persistent cough, feverishness, fatigue, and increasing shortness of breath at home. The working diagnosis was based on the overall history and the need for inpatient care. His established medical conditions include hypertension, type 2 diabetes mellitus, and hyperlipidemia. The admission plan focused on treating the lung infection, supporting breathing, maintaining hydration and nutrition, and observing his response to care. No other acute diagnosis was established during this stay. The patient was able to provide a history and participate in decisions. He was informed that the expected course involved treatment in the hospital followed by continued recovery at home. His family support and ability to seek outpatient care were considered when planning a safe discharge. The diagnosis and plan were reviewed with him during the admission.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 2 of 20\n\nHISTORY OF PRESENT ILLNESS:\nMr. Adams reported several days of cough, reduced energy, feverishness, and worsening breathlessness before coming to the hospital. He described a decline in his usual ability to manage daily activities and felt that his symptoms were not improving at home. He did not report a recent change in his chronic medical conditions. The symptoms were concerning for a lower respiratory infection, and inpatient treatment was chosen to provide support and observe his progress. His account was consistent with community-acquired pneumonia. He was able to communicate his needs and ask questions throughout the admission. The history available at discharge did not identify another cause for the respiratory symptoms. His cough and breathing difficulty gradually improved with hospital care, and he was comfortable continuing recovery outside the hospital with close outpatient follow-up.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nThe patient is a 59-year-old man with hypertension, type 2 diabetes mellitus, and hyperlipidemia. These chronic conditions were considered while planning care for pneumonia. He reported that he generally manages his health in the community and understands the importance of ongoing primary care. The admission did not reveal a new chronic diagnosis. His prior health history was reviewed to identify issues that could affect recovery, including the need to maintain usual routines for chronic disease care. No prior lung condition was reported as a major factor in this illness. He remained engaged in discussions about treatment and discharge planning. The team encouraged him to resume his usual outpatient approach to chronic disease management after leaving the hospital and to contact his regular clinician if questions or concerns arose during recovery.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 4 of 20\n\nADMISSION HISTORY AND GOALS:\nAt admission, Mr. Adams described his main concerns as cough, fatigue, feverishness, and breathlessness that interfered with normal activities. His immediate goal was to improve enough to return home safely. The care team discussed the suspected lung infection, the expected need for inpatient treatment, and the signs of improvement that would guide discharge planning. He expressed understanding and agreed with the proposed plan. His chronic hypertension, type 2 diabetes mellitus, and hyperlipidemia were acknowledged as relevant background conditions. The team also discussed the importance of maintaining adequate food and fluid intake while recovering. His preferences were taken into account when arranging care and planning for the transition home. He was encouraged to raise any new symptoms or barriers to recovery promptly with the hospital team.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 5 of 20\n\nINITIAL ASSESSMENT AND PLAN:\nThe initial plan was to treat community-acquired pneumonia with empiric antimicrobial care and supportive measures. The team planned to follow his reported breathing, cough, energy, oral intake, and ability to move about safely. Care was directed toward preventing avoidable complications and supporting a gradual return to his usual activities. His chronic conditions were reviewed, with attention to maintaining their routine management during an acute illness. The patient was encouraged to drink fluids as tolerated, rest, and communicate any worsening symptoms. Discharge readiness would depend on sustained improvement and his ability to continue recovery outside the hospital. The team explained that treatment might be adjusted according to his clinical response. Mr. Adams understood the plan and was included in daily decisions about care.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Adams began inpatient care for community-acquired pneumonia. He continued to describe cough, fatigue, and reduced exercise tolerance, though he was able to communicate his needs and participate in care planning. Empiric antimicrobial treatment was started, along with supportive care directed at comfort, hydration, and breathing. The team discussed the usual course of a lung infection and explained that improvement could take time. His chronic conditions remained part of the daily plan, and staff encouraged him to maintain food and fluid intake as tolerated. He was asked to report changes in breathing, new discomfort, or difficulty taking part in routine activities. No new diagnosis or complication was identified during this portion of the stay. The team continued to assess his response and readiness for ongoing recovery.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY TWO:\nBy the second hospital day, Mr. Adams reported that his breathing was beginning to feel easier and that his energy was slowly returning. His cough remained present, but it was less disruptive to rest and ordinary conversation. He continued the planned antimicrobial and supportive care without a reported treatment concern. The team encouraged gradual movement and continued attention to food and fluid intake. His chronic conditions were reviewed in the context of the acute illness, and the plan remained focused on maintaining his usual outpatient care where appropriate. Discharge planning began, including discussion of support at home and follow-up with his regular clinician. He was reminded that a lingering cough or fatigue may persist during recovery, while worsening breathlessness or a renewed feverish feeling should prompt medical advice.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, Mr. Adams described continued improvement in breathing and overall comfort. He was able to take part in routine activities with less difficulty and felt ready to continue recovery outside the hospital. His cough had not completely resolved, but it was no longer the main barrier to rest or activity. The team continued the pneumonia treatment plan and reviewed how to complete the remaining care after discharge. He received counseling on pacing activity, maintaining fluids, and allowing time for energy to return. His hypertension, type 2 diabetes mellitus, and hyperlipidemia remained stable concerns for outpatient management rather than new inpatient problems. No new complication was documented. He participated in planning for home care and expressed understanding of when to seek help if symptoms worsened.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DISCHARGE DAY:\nOn the day of discharge, Mr. Adams reported meaningful improvement in breathlessness, cough-related discomfort, and fatigue. He felt able to return home and continue recovery with outpatient support. The team reviewed the course of community-acquired pneumonia and the importance of completing the prescribed treatment plan as directed. He was advised to avoid rushing back to strenuous activity and to increase activity gradually according to how he felt. His chronic conditions were included in the discharge discussion, with a recommendation to continue regular care through his usual clinician. He was given clear instructions about symptoms that should prompt urgent evaluation and those that should prompt routine contact. He understood the plan, had an opportunity to ask questions, and agreed with discharge home.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 10 of 20\n\nPNEUMONIA TREATMENT:\nCommunity-acquired pneumonia was managed with empiric antimicrobial treatment during the inpatient stay and a plan to finish the course after discharge as directed. Supportive care emphasized rest, oral fluids, nutrition, and gradual activity. The team discussed that the cough and reduced stamina may take longer to resolve than the feverishness and breathing difficulty. Mr. Adams reported improvement over the course of treatment and did not identify a barrier to continuing the plan at home. He was asked not to stop the prescribed course early unless instructed by a clinician. He was also advised to contact his usual clinician if he experienced a new concern about the treatment or a return of worsening symptoms. No specific drug names or treatment quantities are included in this summary.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 11 of 20\n\nRESPIRATORY RECOVERY:\nThe respiratory symptoms prompting admission improved during the hospital stay. Mr. Adams reported less breathlessness and increasing ability to complete routine activities. His cough persisted to a lesser degree, and he was advised that gradual improvement may continue after discharge. Care focused on comfort, rest, hydration, and measured increases in activity rather than an abrupt return to usual exertion. He was encouraged to avoid exposure to smoke and other irritants that might worsen coughing. He was also advised to seek urgent help for severe breathing difficulty, bluish discoloration, confusion, or inability to keep fluids down. A prompt call to his clinician was recommended for a return of feverishness, worsening cough, or lack of continued improvement. He understood these precautions and the expected recovery process.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 12 of 20\n\nCHRONIC CONDITION MANAGEMENT:\nHypertension, type 2 diabetes mellitus, and hyperlipidemia were acknowledged throughout the admission. No new issue involving these chronic conditions required a separate inpatient diagnosis. Mr. Adams was advised to continue the established outpatient care plan as directed by his regular clinician and to arrange routine follow-up after the pneumonia begins to resolve. The team discussed that an acute infection can disrupt normal habits, including meals, fluid intake, activity, and self-care. He was encouraged to return to his usual routines gradually and to ask his clinician for guidance if illness symptoms interfere with ongoing care. This discharge summary does not list individual treatments or make changes to his long-term regimen. He expressed understanding that his chronic conditions remain important even as he focuses on recovering from the lung infection.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 13 of 20\n\nNUTRITION AND ACTIVITY:\nDuring recovery, Mr. Adams was encouraged to eat regular meals as tolerated and maintain fluid intake unless his outpatient clinician has given him different instructions. He was advised to rest when tired and increase walking and other light activity gradually. Strenuous tasks should wait until breathing, energy, and daily function have improved. He may need additional rest during the first part of recovery, and the team explained that fatigue can linger after a lung infection. He was asked to avoid smoking and secondhand smoke, and to limit contact with people who are ill when practical. These measures support recovery and reduce avoidable strain. He understood the recommendations and planned to resume household and work-related activities at a pace guided by his symptoms and clinician advice.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 14 of 20\n\nCONSULTATIONS:\nNo specialty service was required during this admission. The hospital team managed the pneumonia and coordinated care for the patient's established chronic conditions. Mr. Adams remained involved in discussions about his progress, treatment plan, and transition home. The team reviewed his goals and addressed questions about recovery, activity, and when to seek help. Discharge planning included consideration of his ability to continue care at home and his access to routine outpatient support. He was encouraged to contact his regular clinician after discharge for ongoing management of hypertension, type 2 diabetes mellitus, and hyperlipidemia. No outside clinician or service was needed to make the discharge plan. The patient expressed understanding of the plan and did not request additional specialty input before leaving the hospital.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 15 of 20\n\nPROCEDURES AND HOSPITAL SERVICES:\nNo invasive procedure was performed during this admission. Hospital care consisted of inpatient observation, antimicrobial treatment, supportive care, and discharge planning for community-acquired pneumonia. The team monitored his reported symptoms and ability to resume ordinary activities, while providing guidance on rest, hydration, and gradual recovery. No procedure-related complication occurred. The patient received explanations about the purpose of the care provided and was able to participate in decisions. His chronic health conditions were considered in planning but did not require a separate procedure or acute intervention during this stay. This summary does not include named diagnostic procedures, specific test results, or imaging findings. Mr. Adams left with instructions to continue the plan at home and to follow up with his usual clinician.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 16 of 20\n\nCOMPLICATIONS AND SAFETY:\nNo major complication was documented during the hospitalization. Mr. Adams showed gradual improvement in the symptoms that led to admission and was able to participate in discharge planning. Safety discussions focused on recognizing worsening breathing, a return of feverishness, increasing weakness, inability to drink, or confusion. He was advised to seek urgent care if severe symptoms developed rather than waiting for a routine appointment. The team also reviewed the value of taking the discharge plan seriously and contacting a clinician if recovery did not continue as expected. His chronic conditions were noted as reasons to maintain regular outpatient care during and after recovery. He understood the warning signs and had an opportunity to clarify how to seek help after leaving the hospital.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Adams reported that his breathing and general comfort had improved enough for recovery at home. His cough and fatigue had lessened but had not completely disappeared. He was able to describe the home plan and the symptoms that would require medical attention. No new complication or additional acute diagnosis was recorded. He was considered appropriate for discharge with continued outpatient treatment and follow-up. The team advised that recovery may be gradual and that a temporary reduction in stamina is common after pneumonia. He was encouraged to continue resting as needed, drink fluids, and increase activity in small steps. His chronic conditions remained part of his ongoing care plan and were to be reviewed with his usual clinician after discharge.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 18 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Adams was instructed to complete the pneumonia treatment plan as prescribed and to follow any directions provided with the discharge paperwork. He should rest, maintain fluids and nutrition as tolerated, and return to activity gradually. He should avoid smoke exposure and take care to reduce contact with people who are ill while recovering. He was advised to seek urgent help for severe or rapidly worsening breathing difficulty, confusion, inability to keep fluids down, or a marked decline in function. He should contact a clinician promptly for renewed feverishness, worsening cough, or failure to continue improving. He was encouraged to keep his routine care in place for hypertension, type 2 diabetes mellitus, and hyperlipidemia. He confirmed understanding of these instructions before leaving.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP PLAN:\nMr. Adams should arrange follow-up with his regular clinician after discharge to review recovery from pneumonia and continue management of hypertension, type 2 diabetes mellitus, and hyperlipidemia. He should make contact sooner if symptoms worsen, new concerns arise, or he is unable to continue the home plan. If improvement stalls or cough and breathlessness become more troublesome, he should not wait for routine follow-up. At the outpatient appointment, he can discuss when to resume his full level of activity and whether any additional care is needed. He was encouraged to bring his discharge paperwork and to share any changes in symptoms. No calendar date or appointment time is specified in this summary. The patient understood that follow-up is an important part of recovery.\n",
+        "David Adams | MRN-41481 | Discharge summary | Page 20 of 20\n\nPATIENT UNDERSTANDING AND PARTICIPATION:\nMr. Adams took part in discussions throughout the admission and was able to explain his main concerns and preferences. The team reviewed the pneumonia diagnosis, the treatment approach, the expected course of recovery, and the reasons for follow-up. He had an opportunity to ask questions about the home plan and warning signs. He expressed understanding that cough and fatigue may last beyond the hospital stay, while worsening breathing or a return of feverishness should prompt contact with a clinician. His established chronic conditions were also discussed, with encouragement to continue routine care. He agreed with discharge home and the plan for gradual activity and outpatient follow-up. The patient was given instructions in a form intended to support safe continuation of care outside the hospital.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of chest pressure with exertion."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Most recent echo showed an ejection fraction of 35%."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAtorvastatin 20 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 58 bpm. Normal axis. PR interval 162 ms, QRS 80 ms, QTc 412 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 135 mmol/L\nPotassium: 3.6 mmol/L\nChloride: 105 mmol/L\nCO2: 25 mmol/L\nBUN: 26 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 103 mg/dL (H)\nCalcium: 9.0 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "contradictory",
+    "lipids": "missing",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "stale",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 5,
+  "input_tokens": 2809,
+  "output_tokens": 9829
+}

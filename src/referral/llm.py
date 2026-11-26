@@ -75,9 +75,9 @@ class LLM:
         self.input_tokens += input_tokens
         self.output_tokens += output_tokens
 
-    def structured(self, system: str, user: str, schema: type[T], retries: int = 1) -> T:
+    def structured(self, system: str, user: str, schema: type[T], retries: int = 1, max_tokens: int = 4000) -> T:
         prompt = f"{user}\n\nReturn only JSON matching this schema:\n{json.dumps(schema.model_json_schema())}"
-        raw = self.complete(system, prompt, json_mode=True)
+        raw = self.complete(system, prompt, max_tokens=max_tokens, json_mode=True)
         for attempt in range(retries + 1):
             try:
                 return schema.model_validate_json(_extract_json(raw))
@@ -85,7 +85,7 @@ class LLM:
                 if attempt == retries:
                     raise
                 raw = self.complete(system, f"{prompt}\n\nYour last answer was invalid ({err}). Fix it.",
-                                    json_mode=True)
+                                    max_tokens=max_tokens, json_mode=True)
         raise RuntimeError("unreachable")
 
 

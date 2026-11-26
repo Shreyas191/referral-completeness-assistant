@@ -1,0 +1,83 @@
+{
+  "case_id": "cardiology-v1-hard-015",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-09",
+  "split": "dev",
+  "slices": [
+    "buried",
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of recurrent palpitations."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 15,
+          "text": "12-lead ECG on admission: sinus rhythm with occasional premature atrial complexes at 88\nbpm, PR interval 147 ms, QRS 86 ms, QTc 418 ms. Sinus rhythm with occasional premature\natrial complexes and no acute changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n65%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 194 mg/dL\nLDL Cholesterol: 79 mg/dL\nHDL Cholesterol: 73 mg/dL\nTriglycerides: 212 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "meds",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "COAGULATION\nProthrombin Time: 35.7 sec\nINR: 3.1"
+        }
+      ]
+    }
+  ]
+}

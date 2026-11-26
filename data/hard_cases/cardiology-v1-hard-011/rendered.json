@@ -1,0 +1,268 @@
+{
+  "case_id": "cardiology-v1-hard-011",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-06",
+  "plan": {
+    "case_id": "cardiology-v1-hard-011",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": "abbreviate"
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Alan",
+    "last_name": "Walker",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Chronic obstructive pulmonary disease"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "tiotropium",
+        "dose": 18.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty.",
+    "history": "Alan Walker is a 60-year-old man scheduled for elective total knee arthroplasty and is sent for preoperative risk assessment. He reports no chest discomfort, exertional breathlessness, palpitations, or fainting. His chronic conditions include hypertension, type 2 diabetes, and chronic obstructive pulmonary disease.",
+    "referring_physician": "Dr. Frank Nelson",
+    "practice": "Atlantic Family Practice",
+    "sex": "male",
+    "age": 60,
+    "dob": "1966-02-07",
+    "mrn": "MRN-57123"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-06",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/06/2026\nPatient Name: Alan Walker\nDOB: 02/07/1966\nMRN: MRN-57123\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Frank Nelson, Atlantic Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty.\n\nAlan Walker is a 60-year-old man with hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. He is scheduled for elective total knee arthroplasty and reports no chest discomfort, exertional breathlessness, palpitations, or fainting.\n\nPlease assess his perioperative cardiovascular risk before the planned surgery and provide your recommendations.\n\nThank you for seeing this patient.\n\nDr. Frank Nelson\nAtlantic Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-01-31",
+      "pages": [
+        "PROGRESS NOTE\nDate: 01/31/2026\nPatient Name: Alan Walker\nDOB: 02/07/1966\nMRN: MRN-57123\nProvider: Dr. Frank Nelson\n\nSUBJECTIVE:\nAlan Walker is a 60-year-old male seen for routine follow-up of hypertension, type 2 diabetes, and chronic obstructive pulmonary disease. He reports consistent adherence to his prescribed treatment and usual activity tolerance. No interval changes reported.\n\nVITALS:\nBP 149/89, HR 73, RR 13, SpO2 97% on room air, weight 138 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue established treatment and lifestyle measures.\n2. Type 2 diabetes is stable by history. Continue established treatment and dietary and activity recommendations.\n3. Chronic obstructive pulmonary disease is stable by history. Continue prescribed respiratory treatment and avoid respiratory irritants.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-07-24",
+      "pages": [
+        "PROGRESS NOTE\nDate: 07/24/2026\nPatient Name: Alan Walker\nDOB: 02/07/1966\nMRN: MRN-57123\nProvider: Dr. Frank Nelson\n\nSUBJECTIVE:\nAlan Walker is a 60-year-old man scheduled for elective total knee arthroplasty. He denies chest discomfort, exertional breathlessness, palpitations, or fainting. His history includes hypertension, type 2 diabetes, and chronic obstructive pulmonary disease.\n\nVITALS:\nBP 128/86, HR 86, RR 17, SpO2 99% on room air, weight 160 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nEKG: NSR, LVH by voltage, rate 83, PR 153, QRS 109.\n\nMost recent LDL is 91 mg/dL.\n\nASSESSMENT AND PLAN:\n1. Perioperative cardiovascular risk: Cardiology referral placed for risk assessment before planned elective total knee arthroplasty.\n2. Hypertension: Continue routine management with his usual clinician and include this history in perioperative planning.\n3. Type 2 diabetes: Continue routine care with his usual clinician and account for diabetes in perioperative planning.\n4. Chronic obstructive pulmonary disease: Continue routine care with his usual clinician and account for this condition in perioperative planning.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-07-24",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 07/24/2026\nPatient Name: Alan Walker\nDOB: 02/07/1966\nMRN: MRN-57123\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-12",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/12/2026\nPatient Name: Alan Walker\nDOB: 02/07/1966\nMRN: MRN-57123\nOrdering provider: Dr. Frank Nelson\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-23",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/23/2026\nPatient Name: Alan Walker\nDOB: 02/07/1966\nMRN: MRN-57123\nOrdering provider: Dr. Frank Nelson\n\nLIPID PANEL\nTotal Cholesterol: 269 mg/dL (H)\nLDL Cholesterol: 151 mg/dL (H)\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 246 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 5.2 mmol/L (H)\nChloride: 106 mmol/L\nCO2: 28 mmol/L\nBUN: 30 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 174 mg/dL (H)\nCalcium: 10.1 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-05-15",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 05/15/2026\nPatient Name: Alan Walker\nDOB: 02/07/1966\nMRN: MRN-57123\nAttending: Dr. Frank Nelson\n\nADMISSION DIAGNOSIS:\nAlan Walker is a 60-year-old male admitted with community-acquired pneumonia. His relevant chronic conditions include hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. The admitting team assessed the acute respiratory illness as an infection acquired outside a hospital setting, with worsening cough, increased sputum, and breathlessness reported before arrival. He required inpatient treatment and observation because his respiratory symptoms were affecting ordinary activity and he had limited reserve from chronic lung disease. The initial plan focused on antimicrobial therapy, respiratory support, and continuation of appropriate care for his longstanding conditions. He was admitted to the medical service for management of the pneumonia and monitoring of his response. No other acute diagnosis was established during this admission. The plan was reviewed with Mr. Walker, who agreed with inpatient care and ongoing reassessment.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 2 of 20\n\nPRESENTING HISTORY:\nMr. Walker described several days of worsening cough and increased sputum production before coming to the hospital. He also reported shortness of breath that was more limiting than his usual baseline. He did not describe a recent hospital stay or a known exposure that changed the initial assessment. The symptoms had interfered with routine activity and prompted him to seek hospital care. His history of chronic obstructive pulmonary disease increased concern for a more difficult recovery from a lower respiratory infection. The team considered community-acquired pneumonia the main explanation for the acute change. He was able to provide a coherent account of the illness and participate in decisions. His history did not suggest a separate acute complaint requiring a distinct inpatient plan. The course and symptom burden supported admission for treatment and observation.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nHis established medical history includes hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. These conditions were considered throughout the admission because infection and reduced activity can complicate chronic disease management. He reported that the lung condition had been present before this illness and that the recent breathlessness represented a change from his usual function. Diabetes care was addressed in the context of acute infection and variable appetite. Blood pressure management was reviewed without a separate acute concern becoming the focus of care. The record available to the admitting team was used to guide continuation of his longstanding care plan. No additional chronic diagnosis materially changed the treatment approach during this stay. Mr. Walker remained involved in discussions about the relationship between his chronic conditions and recovery from pneumonia.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 4 of 20\n\nBASELINE FUNCTION AND SUPPORTS:\nBefore this illness, Mr. Walker managed his usual daily activities with the limitations associated with chronic obstructive pulmonary disease. The increase in cough and breathlessness reduced his tolerance for routine tasks, leading him to seek care. During the admission, the team considered both his reported baseline and the new functional limitation when planning a safe transition home. He was able to communicate his needs, understand instructions, and take part in decisions about recovery. No new need for residential placement was identified. He was encouraged to increase activity gradually as symptoms allowed and to seek help from available household or community supports if fatigue persisted. The discharge plan emphasized a return toward his prior level rather than immediate resumption of all activity. Ongoing primary care remains important for tracking recovery and chronic disease needs.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 5 of 20\n\nADMISSION ASSESSMENT AND PLAN:\nThe admitting assessment identified community-acquired pneumonia as the principal acute problem in a patient with chronic obstructive pulmonary disease. His increased cough, sputum, and breathlessness justified inpatient treatment rather than immediate routine care at home. The team initiated empiric antimicrobial therapy and supportive respiratory care, with continued review of symptoms and function. Care for diabetes and hypertension was incorporated into the inpatient plan while avoiding unnecessary changes to his established outpatient approach. The team also reviewed warning signs that would require prompt escalation of care. Mr. Walker was informed that recovery could take time because of his chronic lung disease, even if the acute infection improved. The initial goals were to reduce respiratory symptoms, support safe mobility and oral intake, and establish a practical discharge plan once improvement was sustained.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY 1:\nOn the first hospital day, Mr. Walker remained under inpatient care for pneumonia with increased respiratory symptoms in the setting of chronic obstructive pulmonary disease. Antimicrobial treatment and supportive respiratory measures were continued. The team reviewed his symptom pattern, ability to rest, and tolerance of routine activity, using those changes to guide ongoing care. He was encouraged to drink fluids as tolerated and to report any new concern promptly. His chronic conditions were considered in the daily plan, and the team sought to avoid disruption of established routines when feasible. No invasive procedure was required. Discharge planning began early, with attention to the support he would need at home and the importance of completing the treatment plan after leaving the hospital. He remained engaged in discussions and understood the reason for continued observation.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY 2:\nOn the second hospital day, the team continued treatment for community-acquired pneumonia and assessed whether Mr. Walker was making a durable recovery. He reported that the acute respiratory burden was beginning to ease, although he continued to need time and rest between activities. Supportive respiratory care remained available, and staff reinforced pacing and safe movement. The antimicrobial plan was reviewed in light of his clinical course, without introducing a separate treatment concern. His oral intake and ability to participate in routine self-care were followed as practical markers of readiness for discharge. Chronic obstructive pulmonary disease remained relevant to the pace of improvement. The team discussed the possibility of continued cough after discharge and explained that this alone would not necessarily indicate treatment failure if the overall trend remained favorable.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY 3:\nBy the third hospital day, Mr. Walker described continued improvement in cough and breathlessness compared with admission. He was able to participate more consistently in routine activity, while still recognizing the need to avoid overexertion. The team continued the pneumonia treatment plan and supportive care, with attention to his chronic lung disease and overall stamina. No new acute problem emerged that required a change in the principal diagnosis. Discharge readiness was reviewed in conversation with Mr. Walker, including whether he could manage basic activities and follow the home plan. The team explained the importance of completing the prescribed course after discharge and monitoring symptoms for a setback. Planning also included communication with his usual outpatient care team so that chronic conditions and recovery could be reviewed after he returned home.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY 4:\nOn the fourth hospital day, Mr. Walker continued to show a favorable overall course and was considered appropriate for discharge home. His respiratory symptoms had improved from the level that prompted admission, and he was able to manage activity with pacing. The inpatient team reviewed the remaining treatment plan, expectations for gradual recovery, and circumstances that should prompt urgent reassessment. Chronic obstructive pulmonary disease was considered when setting activity expectations, and the team reinforced use of his established home respiratory care approach. His diabetes and hypertension remained part of the transition plan, with no new inpatient issue requiring separate follow-up during the stay. Mr. Walker expressed understanding of the instructions and was comfortable leaving the hospital with outpatient follow-up arranged through his usual care channels.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 10 of 20\n\nRESPIRATORY CARE:\nRespiratory care during admission centered on supporting Mr. Walker through pneumonia while accounting for chronic obstructive pulmonary disease. The team used supportive measures and ongoing symptom review to help him rest, move safely, and tolerate routine activity. He was encouraged to pace tasks, take breaks when breathlessness increased, and communicate any worsening symptoms. His established home approach to chronic lung care was considered during transition planning. Staff discussed that cough, reduced stamina, and gradual return of activity may continue for a period after discharge. He was advised to avoid smoke and other exposures that could aggravate his lungs. The team did not identify a need for an invasive respiratory procedure. Instructions emphasized maintaining the recovery plan and obtaining prompt help if breathing became substantially worse or routine activity became newly difficult.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 11 of 20\n\nPNEUMONIA TREATMENT:\nCommunity-acquired pneumonia was treated with an empiric antimicrobial course and supportive care. The team reviewed Mr. Walker's response over the admission and continued treatment while his cough, sputum, and breathlessness improved. The plan at discharge was to complete the prescribed course exactly as directed in the separate discharge materials. He was advised not to stop early because he felt better and not to share treatment with another person. The team also reviewed common reasons to seek reassessment, including a return of worsening respiratory symptoms or inability to maintain oral intake. No separate infectious complication required an additional inpatient plan. Mr. Walker was reminded that improvement can be gradual, particularly with chronic lung disease, and that persistent mild symptoms should be discussed with his outpatient clinician if they fail to keep improving.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 12 of 20\n\nCHRONIC OBSTRUCTIVE PULMONARY DISEASE:\nChronic obstructive pulmonary disease affected the team's assessment of Mr. Walker's respiratory reserve and the expected pace of recovery. The acute infection caused more cough and breathlessness than he typically experienced, so supportive respiratory care and careful activity planning were included throughout the admission. His usual approach to chronic lung care was reviewed, and the transition plan was designed to continue that approach at home. He was encouraged to avoid tobacco smoke and other known respiratory irritants. The team discussed pacing, rest periods, and gradual return to usual activity rather than pushing through significant breathlessness. He was instructed to seek prompt care if respiratory symptoms became markedly worse or if he could not manage ordinary tasks. Follow-up with his regular clinician will allow reassessment of the chronic lung condition after the acute infection.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 13 of 20\n\nDIABETES MANAGEMENT:\nType 2 diabetes mellitus was considered during the admission because acute infection and changes in appetite can affect usual routines. The inpatient approach was directed toward maintaining a safe and practical plan while Mr. Walker recovered from pneumonia. He was encouraged to resume his established diabetes care routine at home and to follow the instructions supplied at discharge. Regular meals and adequate fluid intake were discussed as tolerated. He was asked to contact his usual clinician if illness, poor intake, or difficulty following his routine continued after discharge. No new diabetes-related complication became the focus of inpatient care. The team emphasized that recovery from infection can temporarily disrupt established habits, and that persistent difficulty with diabetes self-care should be addressed rather than ignored. His outpatient clinician can review ongoing management during follow-up.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 14 of 20\n\nHYPERTENSION MANAGEMENT:\nHypertension remained part of Mr. Walker's chronic care during the pneumonia admission. The team reviewed his established outpatient approach and incorporated it into the transition plan without making a new acute hypertension diagnosis. Infection and reduced activity can disrupt usual routines, so he was encouraged to return to his regular care plan as directed in his discharge materials. He was advised to discuss persistent concerns about blood pressure management with his usual clinician rather than making unsupervised changes. No separate complication related to hypertension altered the pneumonia treatment course. The discharge plan also encouraged regular follow-up for his chronic conditions once the acute respiratory illness was improving. Mr. Walker understood that successful recovery includes attention to longstanding health needs as well as completion of the short-term plan for pneumonia.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 15 of 20\n\nNUTRITION, ACTIVITY, AND SELF-CARE:\nDuring the admission, Mr. Walker was encouraged to maintain oral intake as tolerated and to increase activity gradually. The team discussed the value of rest periods while his cough and breathlessness continued to improve. He was able to participate in planning for routine self-care and understood that stamina may return more slowly than the most acute symptoms. At home, he should avoid strenuous exertion until he feels ready, while continuing gentle movement as tolerated. Adequate fluids and regular meals were encouraged unless his outpatient clinician has given different guidance. He should ask for assistance with tasks if fatigue or shortness of breath makes them unsafe. The team reviewed pacing strategies and advised him to stop and rest if symptoms intensify. These measures are intended to support recovery without creating unnecessary inactivity.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 16 of 20\n\nCONSULTATIONS:\nNo specialty consultation was requested during this admission. The hospital medicine team coordinated care for pneumonia and considered the effects of chronic obstructive pulmonary disease, diabetes, and hypertension in the daily plan. Nursing staff supported symptom management, safe activity, and discharge teaching. Mr. Walker participated in discussions about his recovery and was able to explain the main elements of the home plan. The team did not identify a separate issue requiring input from another specialty service. If respiratory symptoms fail to improve or chronic disease concerns become more difficult to manage, his usual outpatient clinician can determine whether additional specialty care is appropriate. The inpatient team provided information for continuity after discharge and emphasized that he should seek help if his condition changes in a way that is not covered by the written instructions.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 17 of 20\n\nPROCEDURES AND COMPLICATIONS:\nNo invasive procedure was performed during this hospitalization. Mr. Walker received medical treatment and supportive care for community-acquired pneumonia, with attention to his chronic obstructive pulmonary disease and other longstanding conditions. The admission was not complicated by a new acute condition requiring procedural intervention. He remained involved in care planning and was able to discuss the transition home. The team reviewed the possibility that symptoms may persist during recovery and explained which changes should prompt prompt clinical attention. No new limitation was identified that would prevent him from following the discharge plan. The absence of a procedure does not remove the need to complete the prescribed treatment course or arrange follow-up. He left with written instructions intended to support safe recovery and continued management of his chronic health needs.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 18 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Walker had improved from the respiratory illness that prompted hospitalization and was considered suitable for continued recovery at home. His cough and breathlessness were less limiting than at admission, and he could plan for basic daily activity with pacing. He understood that his chronic obstructive pulmonary disease may prolong recovery and that full stamina may not return immediately. No new acute problem required continued inpatient care. He was able to discuss the treatment plan, follow-up expectations, and reasons to seek urgent help. The discharge decision was made after review of his overall course and ability to manage the home plan. He left with instructions for completion of pneumonia treatment and continuation of appropriate care for hypertension, type 2 diabetes, and chronic obstructive pulmonary disease.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 19 of 20\n\nDISCHARGE INSTRUCTIONS:\nAt home, Mr. Walker should complete the prescribed pneumonia treatment exactly as directed in the written discharge materials. He should continue his established care routines for chronic obstructive pulmonary disease, hypertension, and type 2 diabetes according to his usual clinician's instructions. Rest as needed, drink fluids, eat regular meals as tolerated, and return to activity gradually. Avoid smoke and other exposures that worsen breathing. Seek urgent care for substantially worsening breathlessness, new confusion, inability to keep fluids down, or a marked return of fever or weakness. Contact his usual clinician if cough or fatigue is not steadily improving, or if he has difficulty following the home plan. He should bring the discharge instructions to follow-up and ask questions about any part that is unclear. Do not make unsupervised changes to established chronic care.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP:\nMr. Walker should arrange follow-up with his usual outpatient clinician after discharge to review recovery from pneumonia and ongoing care for chronic obstructive pulmonary disease, hypertension, and type 2 diabetes. The clinician should be informed if cough, sputum, breathlessness, fatigue, or reduced activity persists or worsens. He should also discuss any difficulty completing the prescribed pneumonia treatment or maintaining his normal chronic care routines. No specific calendar date is stated here; follow-up should occur according to the discharge arrangement and the clinician's guidance. If symptoms become severe before that appointment, he should seek urgent care rather than waiting. A family member or other support person may help with transportation or remembering instructions if needed. Continuity with his usual care team is important for confirming that recovery is progressing and addressing any remaining concerns.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-06-29",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 06/29/2026\nPatient Name: Alan Walker\nDOB: 02/07/1966\nMRN: MRN-57123\nAttending: Dr. Frank Nelson\n\nADMISSION DIAGNOSIS:\nAlan Walker, a 60-year-old man with hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease, was admitted for symptomatic urinary tract infection with associated dehydration. He described urinary discomfort, increased urgency, reduced fluid intake, and generalized weakness before arrival. The combination of urinary symptoms and difficulty maintaining oral intake prompted inpatient care for antimicrobial treatment, hydration, and observation. The admission plan also included support for his established chronic conditions while his acute illness improved. No complication requiring an invasive procedure was identified during the stay. The primary goals were relief of urinary symptoms, restoration of adequate oral intake, and safe transition to home. He participated in care planning and understood the need to continue recovery measures after leaving the hospital.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 2 of 20\n\nDISCHARGE DIAGNOSES:\nThe principal discharge diagnoses are urinary tract infection and dehydration, both improved with inpatient supportive care and antimicrobial treatment. Hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease remain established chronic conditions. No acute complication involving these conditions was documented during this admission. The infection-related urinary discomfort and urgency decreased, and his ability to drink fluids improved. Weakness associated with reduced intake also lessened as hydration was restored. He was considered appropriate for discharge after discussion of ongoing care needs and warning symptoms. These diagnoses reflect the problems addressed during the hospitalization and do not replace follow-up with his usual outpatient clinicians. The patient was advised to continue his established care plans and seek reassessment if symptoms return or worsen.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 3 of 20\n\nCHIEF CONCERN:\nMr. Walker came to the hospital because of urinary discomfort, frequent urgency, weakness, and difficulty keeping up with fluid intake. He reported that the urinary symptoms had become bothersome enough to interfere with normal daily activity. Reduced drinking followed, and he felt increasingly depleted. He did not describe a separate new concern that required a different admission pathway. His history of diabetes was considered relevant to the infection and the need for close observation during treatment. His chronic lung condition and hypertension were also reviewed as part of planning. He sought care because the symptoms were not resolving at home and he was concerned about becoming more dehydrated. The hospital team focused on treating the suspected urinary infection and supporting recovery.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 4 of 20\n\nHISTORY OF PRESENT ILLNESS:\nBefore admission, Mr. Walker developed urinary urgency and discomfort over a short period, followed by reduced oral fluid intake and progressive weakness. He was unable to maintain his usual hydration while feeling unwell. He reported no recent change in his chronic diagnoses and did not identify a new respiratory complaint as the reason for seeking care. His diabetes increased the importance of monitoring his general response to the acute illness, while his other chronic conditions were incorporated into the care plan. There was no reported recent procedure or injury associated with the onset of symptoms. Because urinary symptoms continued alongside poor intake, inpatient evaluation and treatment were arranged. The history supported care for a urinary infection with dehydration and a need for continued observation.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 5 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Walker has a history of hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. These conditions were reviewed during admission and considered when selecting a practical plan for his acute illness. He reports ongoing care for his chronic problems outside the hospital. No additional chronic diagnosis was identified as a major contributor to the current episode. The diabetes history was relevant because infection and limited intake can disrupt usual routines, so the team encouraged a gradual return to his established self-care practices. His lung condition remained part of discharge planning, although the admission centered on urinary symptoms and dehydration. Hypertension was also considered during the stay without becoming a separate acute problem. Follow-up with his usual clinicians was recommended to maintain continuity.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 6 of 20\n\nSOCIAL AND FUNCTIONAL HISTORY:\nMr. Walker lives in the community and was managing his usual daily activities before this illness. During the days leading to admission, urinary urgency and reduced fluid intake made his routine more difficult and contributed to weakness. He was able to take part in conversations about treatment and discharge planning. He plans to return to his home setting after discharge and was encouraged to ask a trusted support person for help if fatigue temporarily limits his usual activities. He should keep fluids accessible and avoid delaying care if urinary symptoms recur. No new home equipment need was identified as part of this admission. The team reviewed practical steps for a safe transition, including arranging follow-up and contacting his outpatient care team with questions.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 7 of 20\n\nADMISSION ASSESSMENT:\nAt admission, the working assessment was urinary tract infection accompanied by dehydration after several days of urinary discomfort, urgency, reduced intake, and weakness. His chronic diagnoses were reviewed for possible effects on recovery and discharge planning. The immediate priorities were to begin antimicrobial treatment, provide fluid support, encourage oral intake as tolerated, and observe the course of symptoms. Care was directed toward the reported illness and did not require an invasive intervention. The team planned to reassess his ability to drink, the degree of urinary discomfort, and his overall readiness to return home. He was included in discussions about the expected course and the importance of completing the treatment plan provided at discharge. The assessment remained focused on uncomplicated recovery from the presenting problems.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 8 of 20\n\nINITIAL TREATMENT PLAN:\nInitial inpatient care consisted of antimicrobial treatment for the urinary infection and fluid support for dehydration. Oral fluids were encouraged as he was able to tolerate them, with additional hydration provided during the early phase of care. The team asked him to report persistent urinary discomfort, worsening weakness, or difficulty drinking. His usual care routines for hypertension, diabetes, and chronic obstructive pulmonary disease were considered without introducing a new chronic-care plan. Staff reviewed the importance of adequate intake during recovery and a gradual return to normal activities. The plan emphasized symptom improvement and safe oral intake before discharge. Mr. Walker understood the purpose of treatment and remained engaged in decisions about his care. No procedure was required to initiate the plan.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, care focused on treating the urinary infection and addressing reduced fluid intake. Antimicrobial therapy was started, and hydration support was provided. Mr. Walker was encouraged to drink regularly as tolerated and to report any worsening urinary discomfort or weakness. The team reviewed his history of hypertension, diabetes, and chronic obstructive pulmonary disease in order to keep his established care needs in view. He remained involved in the daily plan and asked appropriate questions about recovery at home. His symptoms were followed over the course of the day, with attention to whether he could maintain intake and manage routine activity. The initial response supported continued inpatient observation and supportive care rather than a change in treatment direction.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, Mr. Walker reported that urinary discomfort was beginning to lessen. He continued to receive antimicrobial treatment and hydration support, while staff encouraged regular oral fluids. His appetite and ability to drink were reviewed as part of the recovery plan. Weakness remained a consideration, but he was able to participate in care discussions and gradually resume simple activities. The team continued to account for his chronic diagnoses without identifying a new acute concern that changed the plan. He received reminders to avoid becoming dehydrated again and to follow the written care instructions after discharge. Continued observation was appropriate while his urinary symptoms improved and his intake became more dependable. No procedure was performed during this period.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 11 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, urinary urgency and discomfort had continued to improve. Mr. Walker was drinking more consistently and described less weakness than at admission. The team continued the planned antimicrobial course and reviewed the transition from inpatient support to home recovery. He was able to discuss the next steps and the symptoms that should prompt a call to his outpatient clinician. His chronic obstructive pulmonary disease, hypertension, and diabetes remained part of routine care planning, with no separate acute issue requiring a change in disposition. The emphasis shifted toward confirming that he could maintain fluids and follow the plan outside the hospital. He expressed understanding of these goals and agreed with preparation for discharge once the treatment plan was finalized.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 12 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, Mr. Walker continued to report improvement in urinary symptoms and was maintaining oral fluid intake. His weakness had eased sufficiently for him to feel ready to return home with continued recovery measures. The team reviewed the course of antimicrobial treatment and the importance of following the written instructions supplied at discharge. He was reminded to contact his usual clinician if urinary discomfort, urgency, or difficulty drinking returned. His chronic conditions were considered in final planning, and he had no new concern that required continued inpatient care. Discharge planning included a safe return to his home setting and follow-up with his outpatient care team. He agreed with the plan and understood that worsening symptoms should receive prompt attention.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 13 of 20\n\nURINARY INFECTION MANAGEMENT:\nThe urinary infection was treated with antimicrobial therapy during the admission. The team followed Mr. Walker's reported symptoms and ability to return to usual activity as indicators of clinical progress. Urinary discomfort and urgency decreased during the stay, and no invasive treatment was needed. He was instructed to follow the complete treatment plan provided at departure, even if symptoms continue to improve. He should contact his usual clinician promptly for recurrent discomfort, increased urgency, difficulty passing urine, or other concerning changes. He should seek urgent care if symptoms become severe or are accompanied by a marked decline in his general condition. The discharge discussion emphasized that improvement in the hospital does not remove the need to complete follow-up care and report a return of symptoms.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 14 of 20\n\nDEHYDRATION MANAGEMENT:\nDehydration was addressed with fluid support and encouragement of oral intake as tolerated. Mr. Walker's reduced drinking before admission had contributed to weakness and made home management more difficult. During the stay, he became more able to drink regularly and reported less fatigue. He was advised to keep fluids available throughout the day and to take frequent drinks, particularly if appetite or energy is below his usual level. If nausea, urinary symptoms, or another illness limits his ability to drink, he should contact his clinician rather than wait for weakness to worsen. He should seek urgent evaluation if he cannot keep fluids down or develops a substantial decline in his condition. These measures are intended to support continued recovery after discharge.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 15 of 20\n\nCHRONIC CONDITION MANAGEMENT:\nHypertension and type 2 diabetes mellitus were included in the inpatient care plan as established chronic conditions. No new chronic diagnosis was made during this admission, and the acute treatment remained focused on urinary infection and dehydration. Mr. Walker was encouraged to resume his usual self-care routine as he recovers and to follow the written instructions provided by his outpatient clinicians. He should not make changes to his established treatment plan without discussing them with the clinician responsible for that care. Adequate fluid intake and regular meals, as tolerated, may help him return to his normal routine. He was advised to arrange follow-up after discharge, particularly if illness disrupts his usual diabetes care or if he has difficulty managing his chronic conditions at home.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 16 of 20\n\nCHRONIC LUNG CONDITION:\nChronic obstructive pulmonary disease was reviewed during the admission because it is part of Mr. Walker's established history. The primary reason for hospitalization remained urinary infection with dehydration, and no separate acute lung concern changed the treatment plan. He was encouraged to continue the respiratory care routine already established with his outpatient clinician and to seek advice if breathing symptoms worsen. He should contact his usual care team for persistent increased breathlessness, a new or worsening cough, or a noticeable change in his usual respiratory pattern. Urgent evaluation is appropriate for severe breathing difficulty. He was advised to avoid exertion beyond his current tolerance while recovering, then gradually resume ordinary activity. Follow-up should include his usual chronic lung care.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 17 of 20\n\nCONSULTATIONS:\nNo specialty service was required during this admission. The hospital team managed the urinary infection, dehydration, and related discharge planning. Mr. Walker's established conditions were reviewed as part of routine inpatient care, and his treatment needs did not require a separate specialist assessment during this stay. The patient participated in discussions about symptom improvement, fluid intake, completion of the treatment plan, and follow-up. If a new concern arises after discharge, he should first contact the outpatient clinician who normally manages that issue, unless the symptoms are severe enough to require urgent care. The absence of a specialty evaluation does not change the importance of routine follow-up for his chronic conditions. He left with a plan for continued care through his usual outpatient providers.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 18 of 20\n\nPROCEDURES AND INPATIENT INTERVENTIONS:\nNo surgical or invasive procedure was performed during this hospitalization. Care consisted of antimicrobial treatment, fluid support, encouragement of oral intake, observation of symptoms, and discharge planning. These interventions addressed the urinary infection and dehydration while allowing Mr. Walker to recover in the hospital setting. He did not require a procedural treatment to relieve urinary symptoms. The team discussed the purpose of the care provided and reviewed practical steps for continuing recovery at home. He was advised to follow the treatment instructions supplied at discharge and to contact his outpatient clinician with questions. If urinary discomfort or difficulty maintaining fluids returns, he should seek guidance promptly. There were no procedure-related restrictions to add to the home plan.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 19 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Walker reported improvement in urinary discomfort and urgency and was able to maintain oral fluid intake. He felt less weak than when he arrived and agreed that he could continue recovery at home. The urinary infection had received inpatient antimicrobial treatment, and hydration had improved with supportive care. No new acute problem was identified that required continued hospitalization. His chronic diagnoses remained part of his ongoing outpatient care plan. He was able to describe the next steps, including completion of the written treatment plan and follow-up with his usual clinicians. He was also able to identify reasons to seek further care, such as returning urinary symptoms or inability to drink. Discharge was arranged to his home setting.\n",
+        "Alan Walker | MRN-57123 | Discharge summary | Page 20 of 20\n\nDISCHARGE INSTRUCTIONS:\nAt home, Mr. Walker should drink fluids regularly as tolerated and gradually return to his usual daily routine. He should follow the written treatment instructions provided at discharge and avoid stopping the planned course early without guidance from his clinician. He should contact his usual care team if urinary discomfort, urgency, weakness, or difficulty maintaining intake returns. He should seek urgent care for severe worsening, inability to keep fluids down, or a marked decline in his general condition. He should continue the chronic care routines already established for hypertension, diabetes, and chronic obstructive pulmonary disease unless his outpatient clinician advises otherwise. He should ask for help with daily tasks if weakness persists. Questions about the treatment plan should be directed to his care team.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of perioperative cardiovascular risk before planned elective total knee arthroplasty."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EKG: NSR, LVH by voltage, rate 83, PR 153, QRS 109."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "Most recent LDL is 91 mg/dL."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 269 mg/dL (H)\nLDL Cholesterol: 151 mg/dL (H)\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 246 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 5.2 mmol/L (H)\nChloride: 106 mmol/L\nCO2: 28 mmol/L\nBUN: 30 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 174 mg/dL (H)\nCalcium: 10.1 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "contradictory",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 6,
+  "input_tokens": 3340,
+  "output_tokens": 10819
+}

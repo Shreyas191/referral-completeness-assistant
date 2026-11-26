@@ -51,12 +51,16 @@ def run_split(
     llm: LLM | None = None,
     cases_dir: Path = CASES,
     checklists_dir: Path = CHECKLISTS,
+    doc_order: str = "name",
 ) -> dict:
-    """Run one system over every case in a split. Returns the metrics dict (also written to disk)."""
+    """Run one system over every case in a split. Returns the metrics dict (also written to disk).
+
+    doc_order "reverse" (E4) feeds each packet's documents in reverse file-name order: same content, evidence
+    at different positions."""
     cfg = cfg or PipelineConfig()
     out_dir.mkdir(parents=True, exist_ok=True)
     cases = case_dirs(cases_dir, split)
-    docs_by_case = {gold.case_id: load_case(case_dir) for case_dir, gold in cases}
+    docs_by_case = {gold.case_id: load_case(case_dir, reverse=doc_order == "reverse") for case_dir, gold in cases}
 
     # Every chunk in the split, for recall@k lookups and for the global-scope ablation (E2).
     all_chunks = [c for docs in docs_by_case.values() for c in chunk_case(docs, cfg.chunk_size, cfg.sentence_cuts)]
@@ -92,7 +96,8 @@ def run_split(
 
     metrics: dict = {"run": out_dir.name, "system": system, "split": split, "cases": len(golds),
                      "model": getattr(llm, "name", type(llm).__name__) if llm is not None else None,
-                     **run_info(), "cases_dir": str(cases_dir), "case_ids": [g.case_id for g in golds]}
+                     **run_info(), "cases_dir": str(cases_dir), "doc_order": doc_order,
+                     "case_ids": [g.case_id for g in golds]}
     if system == "pipeline":
         metrics["config"] = traces[golds[0].case_id].config if golds else {}
     metrics.update(summarize(golds, preds))
@@ -123,6 +128,8 @@ def main() -> None:
     ap.add_argument("--split", default="dev")
     ap.add_argument("--name", required=True)
     ap.add_argument("--cases-dir", type=Path, default=CASES)
+    ap.add_argument("--doc-order", default="name", choices=["name", "reverse"],
+                    help="E4: documents in file-name order (default) or reversed")
     ap.add_argument("--retrieval", default="bm25", choices=["bm25", "dense", "hybrid"])
     ap.add_argument("--scope", default="case", choices=["case", "global"], help="E2 ablation")
     ap.add_argument("--top-k", type=int, default=PipelineConfig.top_k)
@@ -161,7 +168,8 @@ def main() -> None:
         chunk_size=args.chunk_size, sentence_cuts=args.sentence_cuts,
     )
     llm = LLM() if args.system != "b0" else None
-    metrics = run_split(args.system, args.split, Path("runs") / args.name, cfg, llm, cases_dir=args.cases_dir)
+    metrics = run_split(args.system, args.split, Path("runs") / args.name, cfg, llm, cases_dir=args.cases_dir,
+                        doc_order=args.doc_order)
     print(json.dumps(metrics, indent=2))
 
 

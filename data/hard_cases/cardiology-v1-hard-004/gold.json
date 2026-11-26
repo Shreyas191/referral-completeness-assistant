@@ -1,0 +1,87 @@
+{
+  "case_id": "cardiology-v1-hard-004",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-16",
+  "split": "dev",
+  "slices": [
+    "buried",
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of perioperative cardiac risk before planned non-cardiac\nsurgery."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 14,
+          "text": "12-lead ECG on admission: sinus rhythm with occasional premature atrial complexes at 69\nbpm, PR interval 169 ms, QRS 90 ms, QTc 418 ms. Sinus rhythm with occasional premature\natrial complexes and no acute changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "lipids",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 3.8 mmol/L\nChloride: 104 mmol/L\nCO2: 24 mmol/L\nBUN: 15 mg/dL\nCreatinine: 1.5 mg/dL (H)\nGlucose: 117 mg/dL (H)\nCalcium: 8.6 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral:well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+        },
+        {
+          "doc_id": "progress_note_3",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

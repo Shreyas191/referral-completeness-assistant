@@ -1,0 +1,256 @@
+{
+  "case_id": "cardiology-v1-hard-006",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-08",
+  "plan": {
+    "case_id": "cardiology-v1-hard-006",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Thomas",
+    "last_name": "Bennett",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "amlodipine",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of intermittent palpitations.",
+    "history": "Thomas Bennett is a 62-year-old male with intermittent episodes of a rapid, fluttering heartbeat over the past two months. Episodes occur several times weekly, last a few minutes, and are sometimes accompanied by mild lightheadedness. He denies fainting, chest discomfort, or shortness of breath.",
+    "referring_physician": "Dr. Timothy Moore",
+    "practice": "Pinecrest Primary Care",
+    "sex": "male",
+    "age": 62,
+    "dob": "1964-08-07",
+    "mrn": "MRN-72894"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-09-08",
+      "pages": [
+        "REFERRAL LETTER\nDate: 09/08/2026\nPatient Name: Thomas Bennett\nDOB: 08/07/1964\nMRN: MRN-72894\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Timothy Moore, Pinecrest Primary Care\n\nDear Colleague,\n\nReason for referral: Evaluation of intermittent palpitations.\n\nThomas Bennett is a 62-year-old man with hypertension, type 2 diabetes mellitus, and hypothyroidism. For the past two months, he has had episodes of a rapid, fluttering heartbeat several times weekly, lasting a few minutes. Episodes are sometimes accompanied by mild lightheadedness. He denies fainting, chest discomfort, or shortness of breath.\n\nPlease evaluate Mr. Bennett for these intermittent palpitations and provide recommendations for further care.\n\nThank you for seeing this patient.\n\nDr. Timothy Moore\nPinecrest Primary Care\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-08-19",
+      "pages": [
+        "PROGRESS NOTE\nDate: 08/19/2026\nPatient Name: Thomas Bennett\nDOB: 08/07/1964\nMRN: MRN-72894\nProvider: Dr. Timothy Moore\n\nSUBJECTIVE:\nThomas Bennett is a 62-year-old male with intermittent episodes of a rapid, fluttering heartbeat over the past two months. Episodes occur several times weekly and last a few minutes. He sometimes has mild lightheadedness. He denies fainting, chest discomfort, or shortness of breath.\n\nVITALS:\nBP 125/87, HR 59, RR 12, SpO2 98% on room air, weight 236 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Intermittent palpitations with occasional mild lightheadedness. Refer to cardiology for evaluation.\n2. Hypertension. Continue routine management with his established clinician.\n3. Type 2 diabetes mellitus. Continue routine management with his established clinician.\n4. Hypothyroidism. Continue routine management with his established clinician.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-08-19",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 08/19/2026\nPatient Name: Thomas Bennett\nDOB: 08/07/1964\nMRN: MRN-72894\n\nAmlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-06-24",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 06/24/2026\nPatient Name: Thomas Bennett\nDOB: 08/07/1964\nMRN: MRN-72894\nOrdering provider: Dr. Timothy Moore\n\nFindings: Sinus rhythm with occasional premature atrial complexes at 82 bpm. Normal axis. PR interval 184 ms, QRS 90 ms, QTc 424 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-08-04",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/04/2026\nPatient Name: Thomas Bennett\nDOB: 08/07/1964\nMRN: MRN-72894\nOrdering provider: Dr. Timothy Moore\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-08-23",
+      "pages": [
+        "LABORATORY REPORT\nDate: 08/23/2026\nPatient Name: Thomas Bennett\nDOB: 08/07/1964\nMRN: MRN-72894\nOrdering provider: Dr. Timothy Moore\n\nLIPID PANEL\nTotal Cholesterol: 138 mg/dL\nLDL Cholesterol: 63 mg/dL\nHDL Cholesterol: 42 mg/dL\nTriglycerides: 165 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 105 mmol/L\nCO2: 24 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 1.0 mg/dL\nGlucose: 177 mg/dL (H)\nCalcium: 9.0 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2025-09-16",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 09/16/2025\nPatient Name: Thomas Bennett\nDOB: 08/07/1964\nMRN: MRN-72894\nAttending: Dr. Timothy Moore\n\nADMISSION DIAGNOSIS:\nThomas Bennett is a 62-year-old man admitted for acute diverticulitis with abdominal discomfort and reduced tolerance of food. His history includes hypertension, type 2 diabetes mellitus, and hypothyroidism. The illness was managed without an operation. The working diagnosis was reviewed during the stay, and the care plan focused on bowel rest as tolerated, supportive care, and antimicrobial treatment. There was no documented progression requiring an urgent surgical approach. His established chronic conditions were considered while planning inpatient care and discharge. He remained engaged in decisions and was able to describe his symptoms and concerns. The admission was appropriate for observation, symptom control, and treatment until he could continue recovery outside the hospital. The discharge plan includes continued attention to the abdominal illness, gradual return to usual eating, and follow-up with his regular clinician.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 2 of 20\n\nCHIEF CONCERN:\nMr. Bennett came to the hospital because of abdominal pain and a change in his ability to eat comfortably. He described a recent worsening that prompted evaluation and inpatient treatment. The discomfort was considered in the context of diverticulitis and his other health conditions. He did not report a need for an operation during the stay. His symptoms were followed over time, with attention to whether pain, appetite, and general tolerance of food were improving. The team discussed the expected course of recovery and the importance of returning promptly if symptoms worsened after discharge. He was able to participate in these discussions and expressed understanding of the plan. His concern at discharge centered on continuing recovery at home and knowing which changes should lead him to seek further care.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 3 of 20\n\nHISTORY OF PRESENT ILLNESS:\nThe patient is a 62-year-old man with an acute episode of diverticulitis accompanied by abdominal discomfort and reduced oral intake. The onset and progression of symptoms led him to seek hospital care. His illness was treated nonoperatively, with supportive measures and antimicrobial therapy. During admission, the clinical course was monitored for worsening pain, inability to tolerate intake, or other signs that would change the treatment approach. His symptoms improved sufficiently for transition to outpatient recovery. He did not undergo an operation during this admission. The details of any prior similar episodes were not established in the discharge record. He received counseling on gradual dietary advancement, completion of the planned course of treatment, and recognition of recurrent or worsening symptoms. Follow-up with his usual clinician was advised to review recovery and ongoing care.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 4 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Bennett has a history of hypertension, type 2 diabetes mellitus, and hypothyroidism. These chronic conditions were considered during his admission for diverticulitis and in planning his transition home. No additional chronic diagnosis is included in this summary. The acute abdominal illness was the primary reason for hospitalization, and the chronic conditions did not require a change to the nonoperative approach. He was encouraged to continue the established care plan for his long-term conditions and to discuss any questions about that plan with his regular clinician. The importance of maintaining routine follow-up was reviewed, especially while recovering from an acute illness that may temporarily affect appetite and daily activity. The discharge plan also emphasizes seeking guidance if he has difficulty maintaining his usual care routines during recovery.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 5 of 20\n\nADMISSION ASSESSMENT:\nAt admission, the care team considered the presentation consistent with diverticulitis requiring hospital-based observation and treatment. The immediate goals were to control discomfort, support hydration and nutrition as tolerated, and watch for a change that might require a different approach. His history of hypertension, type 2 diabetes mellitus, and hypothyroidism was included in the overall plan. The team discussed nonoperative care and monitored his response during the stay. No operation was required. The record does not include specific laboratory, imaging, or vital sign details in this summary. The admission assessment was revisited as his symptoms evolved, and the plan remained focused on conservative treatment. His eventual improvement allowed discharge with instructions for continued recovery at home and timely follow-up with his usual clinician.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 6 of 20\n\nINITIAL TREATMENT PLAN:\nThe initial plan was to manage the diverticulitis without surgery. Supportive care included allowing rest from food as needed, then encouraging intake as symptoms permitted, along with attention to hydration and comfort. Antimicrobial treatment was provided as part of the inpatient approach, without a specific agent listed in this summary. The team monitored his response and considered whether any change in symptoms would warrant surgical management. His chronic conditions were taken into account, and he was encouraged to resume his established care routines as appropriate. The plan also included discussion of warning signs and the need for prompt reassessment if his course worsened. As his ability to tolerate intake and manage discomfort improved, the team prepared him for outpatient continuation of the recovery plan.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Bennett was admitted for treatment of diverticulitis and observation of his abdominal symptoms. The team initiated a nonoperative plan with supportive care and antimicrobial treatment. Food intake was adjusted according to his comfort, and hydration was supported. His history of hypertension, type 2 diabetes mellitus, and hypothyroidism was reviewed as part of planning. The team followed his pain, appetite, and general ability to participate in routine activities. Surgical intervention was not required at this point. The plan was to continue observation and reassess if symptoms changed or if oral intake remained difficult. The patient received an explanation of the approach and the reasons for monitoring his progress in the hospital. He was encouraged to report changes promptly so the plan could be adjusted if needed.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY TWO:\nDuring the second hospital day, care continued with a conservative approach. Mr. Bennett remained under observation while receiving supportive measures and the planned antimicrobial treatment. His abdominal discomfort and ability to take food and fluids were reviewed over the course of the day. The care team continued to watch for deterioration or a new concern that would require operative management. No operation was undertaken. His chronic conditions remained part of the discharge planning discussion, particularly in relation to maintaining usual routines while recovering. The patient was kept informed about the goals of treatment and the signs of improvement needed before leaving the hospital. The team planned to advance his intake gradually as tolerated and continue monitoring his response. He remained involved in decisions and was able to discuss his preferences and questions.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Mr. Bennett was progressing with nonoperative care for diverticulitis. The team continued supportive treatment and reviewed his ability to tolerate food and fluids, as well as his overall comfort. There was no need to proceed with surgery. Planning shifted toward completion of inpatient treatment and a safe transition home if improvement continued. Counseling addressed gradual return to a usual diet rather than forcing intake before he felt ready. His history of hypertension, type 2 diabetes mellitus, and hypothyroidism was reviewed in relation to continuing care after discharge. The patient was reminded to seek help if pain increased, intake became difficult, or new symptoms developed. The team also emphasized keeping follow-up with his regular clinician. His progress supported continued planning for outpatient recovery.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, SUBSEQUENT DAYS:\nOver the subsequent hospital days, Mr. Bennett continued to improve with supportive care and antimicrobial treatment. His abdominal symptoms were followed, and his ability to resume food and fluids was considered in deciding when hospital care could end. The treatment remained nonoperative throughout the admission. No new issue requiring an operation was documented in the discharge plan. The team reviewed expectations for the remainder of recovery and reinforced that improvement may continue after leaving the hospital. His chronic conditions were included in discussions about returning to established routines and arranging follow-up. The patient was advised to avoid advancing his diet faster than his comfort allowed. By the time of discharge planning, he was considered able to continue recovery outside the hospital with clear instructions and access to follow-up.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 11 of 20\n\nSURGICAL SERVICE INVOLVEMENT:\nThe surgical service reviewed the case as part of determining whether an operation was needed for the diverticulitis. After consideration of the clinical course, treatment remained conservative. There was no operative intervention during this admission. The plan was to continue observation, supportive care, and antimicrobial treatment while monitoring for worsening abdominal symptoms or inability to resume intake. The patient was informed that surgery was not necessary during this hospitalization and that he should seek prompt care if symptoms returned or worsened after discharge. The surgical input supported the decision to continue nonoperative management. No additional specialty involvement is recorded in this summary. The patient was able to discuss the plan and understood that reassessment would be appropriate if his recovery did not proceed as expected.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 12 of 20\n\nPROCEDURES:\nNo surgical procedure was performed during this admission. The diverticulitis was managed with supportive care and antimicrobial treatment, with observation of the patient’s symptoms and ability to tolerate intake. No invasive intervention was required as his course improved. This summary does not include details of diagnostic testing or imaging. The absence of an operation was reviewed with Mr. Bennett as part of discharge planning, along with the need to continue recovery instructions at home. He was advised to contact a clinician promptly if abdominal pain increased, food or fluid intake became difficult, or another concerning change occurred. The plan is for outpatient follow-up rather than a scheduled procedural intervention. His understanding of the nonoperative plan was confirmed through discussion before discharge.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 13 of 20\n\nTREATMENT DURING ADMISSION:\nInpatient treatment consisted of conservative management of diverticulitis, including supportive care and antimicrobial therapy. Intake was adjusted to his tolerance, and attention was given to hydration and comfort. The team observed his response and maintained readiness to reconsider the approach if his symptoms worsened. No operation was needed. The specific agents and treatment quantities are not included in this summary. His chronic conditions were considered while planning care, and he was advised to continue established long-term care through his usual clinician. As he improved, the team discussed transition from hospital-based treatment to continued recovery at home. He received guidance on completing the outpatient plan as directed by the treating team and on seeking assistance if he had difficulty following it. His clinical improvement supported discharge without further inpatient intervention.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 14 of 20\n\nCHRONIC CONDITION MANAGEMENT:\nHypertension, type 2 diabetes mellitus, and hypothyroidism were recognized during the admission. The hospitalization was focused on diverticulitis, and no new chronic diagnosis was made in this summary. Mr. Bennett was encouraged to continue the care routines already established for these conditions, subject to the instructions provided at discharge. He was advised to contact his regular clinician if acute illness interfered with his usual routine or if he had questions about resuming long-term treatment. Reduced intake during recovery may make planning daily care more difficult, so he was encouraged to seek individualized guidance rather than make unapproved changes on his own. The team included chronic condition follow-up in the overall transition plan. These conditions did not require an operation or alter the conservative approach to the acute abdominal illness.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 15 of 20\n\nDIET AND ACTIVITY:\nAfter discharge, Mr. Bennett should advance his diet gradually according to comfort and tolerance. He should maintain fluid intake as able and avoid forcing food when abdominal symptoms make intake uncomfortable. If he has difficulty keeping food or fluids down, he should contact a clinician promptly. He may resume ordinary daily activity gradually as his strength and comfort permit, with rest when needed during the recovery period. He should avoid activities that clearly worsen his discomfort and discuss any persistent limitation with his regular clinician. No special activity restriction beyond recovery as tolerated is included in this summary. The patient was encouraged to follow the specific instructions given by the treating team and to keep track of any change in symptoms. These measures are intended to support continued recovery outside the hospital.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 16 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Bennett had improved sufficiently to continue treatment and recovery at home. His diverticulitis had been managed without surgery, and the inpatient team did not identify a need for continued hospital observation. His ability to continue oral intake and manage symptoms was considered adequate for the transition. He was able to participate in discharge discussions and express understanding of the plan. His chronic conditions remained part of ongoing care but did not prevent discharge. The patient was instructed to follow the outpatient treatment plan as provided and to seek prompt reassessment for worsening abdominal pain, inability to maintain intake, or another concerning change. He left with follow-up recommended through his regular clinician. The overall plan is continued recovery at home with clear precautions and access to further care if needed.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 17 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Bennett was instructed to follow the treatment plan supplied by the hospital team and to complete the planned course of antimicrobial treatment as directed. He should advance food gradually, drink fluids as tolerated, and rest as needed while recovering. He should continue established care for hypertension, type 2 diabetes mellitus, and hypothyroidism according to his usual clinician’s guidance. He should not make changes to long-term treatment without discussing them with a clinician. He was advised to seek prompt medical attention for worsening or persistent abdominal pain, repeated inability to take food or fluids, new feverishness, faintness, or any other marked decline. He should contact his regular clinician if recovery is not proceeding as expected. Written instructions were reviewed before discharge, and he was encouraged to ask questions if any part of the plan was unclear.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 18 of 20\n\nWARNING SIGNS:\nThe patient was advised to seek prompt care if abdominal pain becomes more severe, returns after initial improvement, or interferes with ordinary movement or intake. He should also seek help if he cannot keep fluids down, develops repeated vomiting, feels unusually weak, or notices a new and concerning change in his general condition. These symptoms may require reassessment and a change in the plan. He was told not to wait for a scheduled follow-up if a serious concern develops. For less urgent questions about ongoing discomfort, diet, or the outpatient treatment plan, he may contact his regular clinician. The team reviewed these precautions with him before he left the hospital. He expressed understanding that improvement is expected but that worsening symptoms should not be ignored. A support person may assist with arranging care if he feels unwell.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP:\nMr. Bennett should arrange follow-up with his regular clinician after leaving the hospital to review recovery from diverticulitis and ongoing care of his chronic conditions. The specific appointment timing should be coordinated according to the discharge instructions and availability. He should bring any questions about his outpatient treatment plan to that visit and report whether abdominal discomfort, appetite, and activity are continuing to improve. If symptoms worsen before the planned follow-up, he should seek care sooner rather than wait. He should also discuss any difficulty returning to his usual routines for hypertension, type 2 diabetes mellitus, or hypothyroidism. No calendar appointment is listed in this summary. The patient was encouraged to confirm the follow-up arrangement and to contact the appropriate clinic if he has not received instructions or is uncertain where to go.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 20 of 20\n\nDISCHARGE DESTINATION AND SUPPORT:\nThe discharge plan is for Mr. Bennett to continue recovery outside the hospital. He was considered able to follow the instructions and seek help if his condition changed. He should use available support from family or others if he needs assistance with meals, transportation, or arranging follow-up. The patient was encouraged to keep discharge instructions accessible and share them with a person who may help coordinate care. He should contact his regular clinician if he has practical concerns that interfere with the plan, including difficulty maintaining food or fluid intake or continuing established routines for chronic conditions. If a serious symptom occurs, he should seek prompt medical care rather than rely on routine follow-up. The transition plan was discussed before discharge, and the patient indicated understanding of the expected next steps.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2025-11-13",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 11/13/2025\nPatient Name: Thomas Bennett\nDOB: 08/07/1964\nMRN: MRN-72894\nAttending: Dr. Timothy Moore\n\nADMISSION DIAGNOSIS:\nThomas Bennett, a 62-year-old man, was admitted for cellulitis of the lower leg. He described a progressively enlarging area of redness, warmth, discomfort, and swelling that had interfered with walking and usual activities. The symptoms had continued despite rest at home. He denied a known injury or bite preceding the change. His history of type 2 diabetes was considered relevant because it can complicate recovery from a skin infection. The admission goal was to begin prompt treatment, follow the course of the affected leg, and assess whether he could safely continue care outside the hospital. He was also known to have hypertension and hypothyroidism. The infection was treated as a localized acute illness, with attention to his chronic conditions and ability to manage the plan after discharge.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 2 of 20\n\nDISCHARGE DIAGNOSES:\nThe principal diagnosis at discharge was cellulitis of the lower leg, improved after inpatient care. The affected area had caused redness, warmth, swelling, and discomfort by patient report, with limitation in his usual walking. The discharge plan accounts for the need to complete antimicrobial treatment and continue local care after leaving the hospital. Type 2 diabetes mellitus remained an active chronic condition during the stay and was considered in planning his recovery. Hypertension and hypothyroidism were also part of his established history and were stable during this admission. No additional acute diagnosis changed the discharge plan. The patient was able to participate in decisions about ongoing care and expressed understanding of the need to complete treatment, monitor symptoms, and obtain timely follow-up if the leg did not continue to improve.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 3 of 20\n\nPATIENT BACKGROUND:\nThomas Bennett is a 62-year-old male with a known history of hypertension, type 2 diabetes mellitus, and hypothyroidism. He lives in the community and manages routine activities independently at baseline. Before this illness, he was able to walk without assistance and did not report a chronic wound or persistent leg symptoms. He presented with a new lower-leg problem that became increasingly uncomfortable and limited normal activity. His chronic conditions were reviewed as part of discharge planning, with emphasis on maintaining his established care routines while recovering from infection. The patient provided the history and participated in discussions throughout the admission. He reported no known preceding injury or bite. His social supports were considered adequate for continued care at home, and he was agreeable to following instructions and arranging follow-up with his usual care team.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 4 of 20\n\nPRESENTING HISTORY:\nThe patient reported a gradual onset of redness and warmth over the lower leg, followed by increasing swelling and tenderness. The area had enlarged over several days and made walking less comfortable. He did not recall a cut, puncture, bite, or other clear trigger. He denied a similar recent episode and did not describe ongoing drainage. He sought hospital care because the change continued to spread and home measures had not helped. He reported no new respiratory or gastrointestinal symptoms accompanying the leg complaint. His type 2 diabetes was noted as a factor that could affect the pace of recovery. His history of hypertension and hypothyroidism was also reviewed. The admission history supported treatment for an acute skin and soft tissue infection, with observation for improvement and planning for continued care after discharge.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 5 of 20\n\nADMISSION RATIONALE:\nHospital admission was selected because the lower-leg symptoms were progressing and had begun to interfere with mobility. The patient also had type 2 diabetes, which warranted close attention during treatment of an active infection. Inpatient care allowed antimicrobial therapy to begin promptly, provided a structured setting for monitoring symptoms, and enabled the care team to adjust the plan if improvement was not adequate. The patient was able to explain his concerns and take part in decisions. The goals were to limit further spread, relieve discomfort, preserve his ability to walk, and establish a practical home plan. His chronic hypertension and hypothyroidism were included in the overall review but did not require a separate acute admission plan. Discharge would be considered once he could continue the treatment plan at home and understood when to seek additional care.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 6 of 20\n\nINITIAL MANAGEMENT:\nOn arrival, the team reviewed the history of the leg symptoms, their progression, and the patient’s chronic conditions. The initial plan focused on treatment of cellulitis, comfort, mobility, and observation for change in the affected area. Intravenous antimicrobial therapy was started, with the intention to move to an oral course when the clinical course allowed. The patient was encouraged to rest the leg when practical and to resume gentle activity as discomfort permitted. His diabetes care was reviewed during the acute illness, including the importance of regular meals and adherence to his established routine. His usual care for hypertension and hypothyroidism was continued as appropriate. The team explained the expected course and the need to report increasing pain, spreading redness, feverishness, or new drainage. He agreed with the initial approach.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY ONE:\nDuring the first hospital day, Thomas remained engaged with the care plan and reported ongoing tenderness in the affected leg. The redness and swelling were not described as rapidly spreading, and there was no new complaint suggesting a separate acute problem. Intravenous antimicrobial therapy was continued. The team reviewed the importance of elevating the leg when resting and avoiding unnecessary pressure on the affected area. Walking was encouraged within comfort, with assistance available if needed. His oral intake was adequate, and diabetes care was addressed alongside treatment of the infection. The patient received an explanation of the expected response and was asked to alert staff to any worsening symptoms. Discharge was not yet planned for that day because the team wanted to confirm that the infection was settling and that an outpatient plan would be practical.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, the patient reported that discomfort was less intrusive and that walking was becoming easier. The affected area was described as less tense, without a new complaint of spreading symptoms. Intravenous antimicrobial treatment was continued while the team observed the overall response. Supportive care included rest periods, leg elevation when seated, and gradual return to ordinary movement. His diabetes plan was reviewed, and he was reminded that illness can disrupt usual routines. He continued to eat and drink without reported difficulty. The team discussed the possibility of changing to oral treatment if improvement continued. Thomas asked questions about how long recovery might take and what changes would require prompt attention. He was reassured that healing can continue after discharge, provided the treatment course is completed and follow-up is obtained.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, the patient reported continued improvement in tenderness and greater comfort with routine movement. There was no new complaint of chills, worsening pain, or drainage from the affected area. The team judged that the course was moving in the expected direction and began planning transition from intravenous treatment to an oral antimicrobial course. Education focused on taking the full course as directed and not stopping early because symptoms had improved. The patient demonstrated understanding of the plan and was able to describe the main warning signs. Diabetes care remained part of the daily plan, with attention to maintaining his usual routine during recovery. The team also reviewed his home situation and confirmed that he had a way to obtain follow-up care. He was willing to continue recovery at home once the transition plan was finalized.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, DAY FOUR AND STABILIZATION:\nOn the fourth hospital day, Thomas continued to report improvement and had no new concern related to the leg. He was comfortable with the plan to continue treatment at home and could walk for basic needs without the earlier degree of discomfort. Intravenous therapy was stopped in favor of an oral antimicrobial course. The team reviewed local care, activity as tolerated, and the importance of completing the planned treatment. No procedure was needed during the admission. Discharge planning confirmed that he could return home and contact his usual care team if symptoms failed to improve. The patient and team reviewed the warning signs that should prompt urgent reassessment. His chronic conditions remained stable within the scope of this admission, and no separate inpatient intervention was required for them.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 11 of 20\n\nDIABETES MANAGEMENT:\nType 2 diabetes mellitus was considered throughout the admission because acute infection can make routine self-care more difficult. The patient’s usual approach to diabetes care was reviewed, and he was encouraged to continue that routine during recovery, including regular meals and attention to changes in how he felt. No new diabetes diagnosis was made, and no change to his long-term plan was required as part of this discharge summary. He was advised to contact his usual clinician if illness interfered with his established care or if he had concerns about managing at home. The team explained that good ongoing diabetes care supports recovery from a skin infection. Thomas was able to restate the plan and agreed to resume his usual follow-up. This admission did not identify a separate acute diabetes complication requiring ongoing hospital care.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 12 of 20\n\nCHRONIC CONDITIONS:\nHypertension and hypothyroidism were reviewed during the hospital stay as established chronic conditions. Neither was reported to be causing a new problem related to the leg infection, and neither changed the inpatient treatment approach. The patient was advised to continue the chronic care plan already established with his usual clinician. No specific chronic-condition drug names or dosing changes are included in this summary. Attention remained focused on the acute cellulitis, while the team sought to avoid unnecessary disruption of his normal routines. He was encouraged to bring questions about long-term care to his usual clinician after discharge. Thomas understood that the acute infection plan and chronic condition follow-up are related parts of his overall care, but that the outpatient team should continue to guide routine management of hypertension and hypothyroidism.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 13 of 20\n\nCONSULTANT INPUT:\nThe hospital team reviewed the case with an infectious disease specialist during the admission. The discussion supported continued antimicrobial treatment and a transition to an oral course after the patient showed a favorable clinical response. The specialist’s input did not require a procedure or a separate outpatient specialty appointment. The patient was informed of the treatment approach in plain language and had an opportunity to ask questions. The team also considered diabetes and the patient’s ability to complete care at home when shaping the discharge plan. No additional specialty service was needed for the cellulitis. Thomas agreed with the plan and demonstrated understanding that improvement should continue after discharge. If the infection worsens or does not follow the expected course, he should contact his usual clinician promptly for reassessment and further direction.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 14 of 20\n\nPROCEDURES:\nNo procedure was performed during this admission. The cellulitis was managed with antimicrobial treatment, symptom support, and observation of the patient’s reported course. There was no reported collection or drainage concern that required an intervention. The patient did not require a wound operation, bedside drainage, or other invasive treatment. Avoiding an unnecessary procedure was consistent with the improving course and the plan for continued care at home. The team discussed simple local care and the need to avoid irritating or injuring the affected leg. Thomas was advised to seek timely reassessment if a new area of drainage develops, if discomfort increases, or if the redness expands. He understood that a change in symptoms could alter the plan and require additional evaluation, even though no procedure was indicated during this stay.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 15 of 20\n\nFUNCTIONAL AND SOCIAL PLANNING:\nBefore this illness, Thomas managed routine activities independently. The leg discomfort had made walking more difficult, but by discharge he reported that basic movement was more comfortable. He planned to return home and continue gradual activity as tolerated. He was encouraged to rest when tired and avoid prolonged pressure on the affected leg. No special equipment or home service was required for the discharge plan. The patient confirmed that he could obtain the prescribed oral treatment and had a way to contact his usual care team. His social supports were considered adequate for recovery at home. The team reviewed the importance of asking for help if mobility worsens or if he cannot manage local care. Thomas agreed to follow the instructions and understood that continued improvement, rather than immediate complete resolution, was the expected course.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 16 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, the cellulitis was improving and the patient reported less discomfort and easier walking than at admission. He had no new symptom that required continued inpatient care. He was able to participate in the discharge discussion, explain the home plan, and identify circumstances that should prompt reassessment. The transition to oral antimicrobial treatment was considered appropriate based on the overall course. His chronic hypertension, type 2 diabetes mellitus, and hypothyroidism remained part of his ongoing care needs but did not prevent discharge. Thomas was returning to his home setting with instructions for completing treatment, caring for the leg, and arranging follow-up. He was advised that residual redness or tenderness may take time to settle, but worsening symptoms are not expected and should be reported without delay.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 17 of 20\n\nDISCHARGE TREATMENT PLAN:\nThe patient is to complete the oral antimicrobial course exactly as directed in the separate treatment instructions. He should not stop early simply because the leg feels better, and he should contact his usual clinician if he cannot continue the course or develops a concern about it. He may use simple comfort measures as tolerated and should rest with the leg raised when practical. His established care routines for hypertension, diabetes, and hypothyroidism should continue unless his usual clinician advises otherwise. No new long-term treatment for those chronic conditions was initiated during this admission. Thomas was asked to keep a record of any change in the leg symptoms and bring questions to follow-up. The discharge plan was reviewed with him, and he expressed understanding of the need to finish treatment and monitor for deterioration.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 18 of 20\n\nWOUND AND LEG CARE:\nThe patient should keep the affected lower leg clean and avoid scratching, rubbing, or applying unapproved products to the area. He may cover the area lightly if clothing causes irritation, but should keep it dry and comfortable. Leg elevation while resting may help with swelling and discomfort. He should return gradually to normal walking and avoid activity that causes a marked increase in pain. Any new break in the skin should be kept clean and brought to the attention of his usual clinician if it does not settle. Thomas was advised to observe whether redness, warmth, swelling, or tenderness is improving over time. He should not attempt to drain or otherwise manipulate the area himself. These instructions are intended to support recovery while the oral treatment course is completed.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 19 of 20\n\nRETURN PRECAUTIONS:\nThomas was instructed to seek urgent care if redness spreads, pain becomes substantially worse, swelling increases, drainage appears, or he develops feverishness, shaking chills, confusion, or marked weakness. He should also seek prompt advice if he cannot keep the oral treatment down or develops a concerning reaction while taking it. New difficulty walking or a rapid decline in his ability to manage basic activities should be reported. If symptoms are not continuing to improve after discharge, he should contact his usual clinician rather than waiting until the treatment course is finished. He was reminded that diabetes can increase the importance of addressing a worsening skin infection early. The patient was able to repeat the key warning signs and understood that emergency symptoms require immediate assessment, not a routine follow-up.\n",
+        "Thomas Bennett | MRN-72894 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP:\nThomas should arrange follow-up with his usual primary care clinician soon after discharge to review the leg’s response and confirm that recovery is progressing. He should bring the discharge instructions and share any concerns about completing treatment or caring for the affected area. Follow-up should also provide an opportunity to review his established care for hypertension, type 2 diabetes mellitus, and hypothyroidism. No calendar date is specified in this summary; the patient should contact the clinic promptly to arrange an appropriate appointment. If symptoms worsen before that visit, he should follow the return precautions rather than waiting. The patient stated that he understood the need for follow-up and was able to make arrangements after discharge. Continued improvement, completion of treatment, and return to ordinary activity as tolerated are the goals of outpatient recovery.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of intermittent palpitations."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Amlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 82 bpm. Normal axis. PR interval 184 ms, QRS 90 ms, QTc 424 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 138 mg/dL\nLDL Cholesterol: 63 mg/dL\nHDL Cholesterol: 42 mg/dL\nTriglycerides: 165 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 105 mmol/L\nCO2: 24 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 1.0 mg/dL\nGlucose: 177 mg/dL (H)\nCalcium: 9.0 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 5,
+  "input_tokens": 2849,
+  "output_tokens": 10112
+}

@@ -1,0 +1,101 @@
+{
+  "case_id": "cardiology-v1-hard-017",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-16",
+  "split": "dev",
+  "slices": [
+    "abbreviation",
+    "buried"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of breathlessness on exertion with progressively reduced\nexercise tolerance."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 53 bpm. Normal axis. PR interval 149 ms, QRS 82 ms, QTc 403\nms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "Lipids: TC 181, LDL 108, HDL 43, TG 153."
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium: 5.0 mmol/L\nChloride: 99 mmol/L\nCO2: 24 mmol/L\nBUN: 8 mg/dL\nCreatinine: 0.6 mg/dL\nGlucose: 125 mg/dL (H)\nCalcium: 10.0 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Metoprolol succinate 50 mg by mouth once daily\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck:no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 15,
+          "text": "Coagulation on discharge: INR 2.8."
+        }
+      ]
+    }
+  ]
+}

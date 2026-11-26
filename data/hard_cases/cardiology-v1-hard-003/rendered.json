@@ -1,0 +1,268 @@
+{
+  "case_id": "cardiology-v1-hard-003",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-10",
+  "plan": {
+    "case_id": "cardiology-v1-hard-003",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "bury"
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Samuel",
+    "last_name": "Carter",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Chronic obstructive pulmonary disease"
+    ],
+    "medications": [
+      {
+        "name": "losartan",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "tiotropium",
+        "dose": 18.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion.",
+    "history": "He reports gradually worsening breathlessness when walking uphill or climbing stairs over the past three months. Symptoms improve with rest, and he denies breathlessness at rest or chest discomfort.",
+    "referring_physician": "Dr. Peter Green",
+    "practice": "Lakeside Primary Care",
+    "sex": "male",
+    "age": 78,
+    "dob": "1948-03-26",
+    "mrn": "MRN-77986"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-10",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/10/2026\nPatient Name: Samuel Carter\nDOB: 03/26/1948\nMRN: MRN-77986\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Peter Green, Lakeside Primary Care\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion.\n\nSamuel Carter is a 78-year-old man with hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease.\n\nHe reports gradually worsening breathlessness when walking uphill or climbing stairs over the past three months. It improves with rest. He denies breathlessness at rest or chest discomfort.\n\nPlease assess him for exertional breathlessness.\n\nThank you for seeing this patient.\n\nDr. Peter Green\nLakeside Primary Care\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-07-06",
+      "pages": [
+        "PROGRESS NOTE\nDate: 07/06/2026\nPatient Name: Samuel Carter\nDOB: 03/26/1948\nMRN: MRN-77986\nProvider: Dr. Peter Green\n\nSUBJECTIVE:\nHe returns for routine follow-up. Reports doing well overall, with stable home blood pressure and glucose readings. Breathing has remained stable without recent exacerbations. He reports following his usual care routine and making consistent dietary efforts.\n\nVITALS:\nBP 125/70, HR 61, RR 18, SpO2 98% on room air, weight 180 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue the established regimen, limit dietary salt, and track home blood pressure.\n2. Type 2 diabetes mellitus is stable by history. Continue the established regimen, maintain meal planning and regular activity, and track home glucose readings.\n3. Chronic obstructive pulmonary disease is stable without recent exacerbations. Continue the established inhaled regimen, avoid smoke exposure, and report worsening breathlessness or increased sputum.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-02",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/02/2026\nPatient Name: Samuel Carter\nDOB: 03/26/1948\nMRN: MRN-77986\nProvider: Dr. Peter Green\n\nSUBJECTIVE:\nSamuel Carter is a 78-year-old man with hypertension, type 2 diabetes, and chronic obstructive pulmonary disease. He reports gradually worsening breathlessness when walking uphill or climbing stairs over the past three months. Symptoms improve with rest. He denies breathlessness at rest or chest discomfort.\n\nVITALS:\nBP 125/77, HR 92, RR 12, SpO2 96% on room air, weight 155 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema.\n\nDATA REVIEWED:\n\nMost recent potassium is 5.9 mmol/L.\n\nASSESSMENT AND PLAN:\n1. Exertional breathlessness: Gradually worsening with activity and relieved by rest. Arrange cardiology evaluation.\n2. Hypertension: Continue routine follow-up with his usual clinician.\n3. Type 2 diabetes: Continue routine follow-up with his usual clinician.\n4. Chronic obstructive pulmonary disease: Continue routine follow-up with his usual clinician.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-02",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/02/2026\nPatient Name: Samuel Carter\nDOB: 03/26/1948\nMRN: MRN-77986\n\nLosartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily\n\nAllergies: No known drug allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-27",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/27/2026\nPatient Name: Samuel Carter\nDOB: 03/26/1948\nMRN: MRN-77986\nOrdering provider: Dr. Peter Green\n\nFindings: Sinus bradycardia at 55 bpm. Normal axis. PR interval 186 ms, QRS 82 ms, QTc 427 ms.\nImpression: Sinus bradycardia, otherwise normal tracing.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-06",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/06/2026\nPatient Name: Samuel Carter\nDOB: 03/26/1948\nMRN: MRN-77986\nOrdering provider: Dr. Peter Green\n\nLIPID PANEL\nTotal Cholesterol: 218 mg/dL (H)\nLDL Cholesterol: 135 mg/dL (H)\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 70 mg/dL\n\nBASIC METABOLIC PANEL\nSodium: 141 mmol/L\nPotassium: 4.1 mmol/L\nChloride: 102 mmol/L\nCO2: 29 mmol/L\nBUN: 9 mg/dL\nCreatinine: 1.2 mg/dL\nGlucose: 153 mg/dL (H)\nCalcium: 9.5 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-02-06",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 02/06/2026\nPatient Name: Samuel Carter\nDOB: 03/26/1948\nMRN: MRN-77986\nAttending: Dr. Peter Green\n\nADMISSION DIAGNOSIS:\nSamuel Carter is a 78-year-old man admitted for acute diverticulitis with abdominal discomfort and reduced oral intake. The clinical presentation was considered consistent with diverticulitis, and the admitting team selected nonoperative treatment. There was no indication for an urgent procedure during this admission. His known history includes hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. These chronic conditions were considered in planning his inpatient care and transition home. He was admitted for symptom control, supportive care, and observation for clinical improvement or development of complications. The plan was to advance oral intake as tolerated and reassess his symptoms during the stay. The patient and his family were informed that surgery was not planned, while escalation of care would remain available if his condition worsened.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 2 of 20\n\nPRESENTING HISTORY:\nMr. Carter came to the hospital after developing abdominal discomfort associated with a change in bowel habits and difficulty maintaining his usual oral intake. The discomfort was concerning for an acute inflammatory process involving the colon. He did not describe a recent operation or prior intervention related to this episode. His symptoms and overall course led the admitting team to manage him in the hospital rather than continue care at home. The patient’s account was used to establish the timing and progression of his concerns. His chronic medical history was reviewed because diabetes, hypertension, and chronic obstructive pulmonary disease can affect recovery and discharge planning. No calendar dates or numeric findings are included in this summary. The initial plan emphasized close observation, symptom relief, hydration, and treatment without surgery.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 3 of 20\n\nRELEVANT BACKGROUND:\nThe patient is a 78-year-old man with hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. These conditions were recognized throughout the admission and incorporated into decisions about supportive care and transition planning. His usual outpatient routine was reviewed with him, but individual drug names and doses are not included here. The patient was able to communicate his needs and participate in discussions about treatment. His care team considered his age and chronic illnesses when choosing a conservative approach and monitoring his response. He had no operative treatment during this stay. The available history supported managing the acute episode in the hospital with observation and gradual return to oral intake. The discharge plan included clear instructions about symptoms that should prompt urgent reassessment and arrangements for continued outpatient care.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 4 of 20\n\nADMISSION ASSESSMENT:\nThe admitting assessment identified acute diverticulitis as the principal problem requiring inpatient care. The team considered the patient’s abdominal symptoms, ability to eat and drink, and overall clinical trajectory when deciding on a nonoperative plan. There was no immediate reason to proceed with surgery at admission. The care team also reviewed his chronic conditions and considered whether they would complicate the acute illness. The treatment goals were to relieve discomfort, maintain hydration, provide appropriate antimicrobial treatment, and watch for worsening symptoms. The patient was kept under observation so that the team could adjust the plan if his condition did not improve. He was included in discussions regarding the expected course, the possibility of a prolonged recovery, and circumstances in which a higher level of intervention might be considered.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 5 of 20\n\nINITIAL MANAGEMENT:\nInitial care focused on conservative treatment of the diverticulitis. The patient received supportive care, with oral intake adjusted to his tolerance and hydration supported during the period when eating was limited. Antimicrobial therapy was started as part of the inpatient plan. The team followed his symptoms and ability to resume food and fluids, while maintaining a low threshold to reassess the treatment strategy if his course changed. Pain relief and comfort measures were provided as needed, without listing individual agents or doses in this summary. Surgery was not performed, and no invasive procedure was required. His chronic conditions were considered alongside the acute illness, with attention to avoiding unnecessary disruption of his usual routine. The patient was updated about the plan and the importance of reporting any worsening symptoms.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Carter remained under inpatient observation for acute diverticulitis. The team continued the conservative plan and assessed whether his abdominal discomfort and oral intake were moving in a favorable direction. He received supportive care and antimicrobial treatment. Intake was advanced cautiously according to his tolerance, with attention to fluids and comfort. No surgery was undertaken. The care team discussed the expected gradual nature of recovery and encouraged him to report any new or worsening concerns promptly. His chronic hypertension, diabetes, and chronic obstructive pulmonary disease remained part of the daily planning, although no new chronic condition became the focus of the admission. Discharge was not pursued until the team felt that symptoms and oral intake were sufficiently improved for safe care outside the hospital.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, the team continued to observe Mr. Carter’s response to nonoperative treatment. His symptoms were followed over time, and the plan remained centered on supportive care, antimicrobial treatment, and gradual return to oral intake. He was encouraged to take fluids and food as tolerated, with adjustments made according to comfort. No operative intervention was required. The team reviewed the need to complete the planned course of treatment after discharge and to seek help if symptoms worsened. His chronic illnesses were considered in decisions about readiness to leave the hospital. The patient participated in discussions about his progress and the anticipated next steps. Continued observation was considered appropriate until he could manage oral intake and routine activities with adequate support at home.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Mr. Carter’s course continued to support conservative management. The team reviewed his reported discomfort, intake, and general ability to resume routine activity. The inpatient plan was maintained without surgery or another invasive intervention. Supportive care and antimicrobial treatment continued as planned, and he was reminded to avoid advancing his diet faster than he could tolerate. Discharge planning became a greater focus as the patient’s ability to manage outside the hospital was discussed. His chronic conditions were included in planning for follow-up and continuity of care. The team explained that improvement did not remove the need to monitor for recurrence or a complication. The patient understood that worsening pain, inability to drink, or other concerning change should prompt timely medical attention.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 9 of 20\n\nSYMPTOM MANAGEMENT:\nAbdominal discomfort associated with diverticulitis was managed conservatively during the admission. Comfort measures and appropriate symptom relief were provided as needed, while the team followed the patient’s report of how he felt. The approach avoided operative treatment and supported a gradual return to routine eating and activity. Mr. Carter was encouraged to communicate any change in discomfort, new symptoms, or difficulty taking fluids. The care team discussed that some residual sensitivity may continue during recovery, but a worsening course should not be ignored. No specific drug names or doses are recorded in this summary. Before discharge, the patient received guidance on using the written treatment instructions and contacting his usual clinician if symptoms did not continue to improve. Urgent assessment was advised for severe or rapidly worsening concerns.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 10 of 20\n\nNUTRITION AND HYDRATION:\nOral intake was limited at the start of the admission because of the acute abdominal illness. The team used a cautious approach, supporting hydration and advancing food as Mr. Carter could tolerate it. His progress with eating and drinking was included in decisions about discharge readiness. He was advised to resume a more usual diet gradually rather than force intake while discomfort remained. The plan also emphasized maintaining fluid intake during recovery, unless his outpatient clinician provides different individualized guidance. His diabetes was considered when discussing meals and ongoing self-care, without including any numeric targets or test findings. The patient was encouraged to contact his care team if he could not keep fluids down or if reduced intake continued. Written instructions reviewed these points before he left the hospital.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 11 of 20\n\nACTIVITY AND SAFETY:\nMr. Carter was encouraged to resume activity gradually as his symptoms allowed. The inpatient team considered his functional ability and the support available at home when discussing a safe transition. He was advised to avoid overexertion during early recovery and to increase routine activity in a steady manner. No procedure-related restrictions were needed because he did not undergo surgery or another invasive intervention. He was asked to seek help if pain or weakness prevented routine movement, or if he developed a sudden decline in his ability to manage at home. The patient and family were invited to raise concerns about transportation, meals, or assistance after discharge. The plan was for him to continue recovery outside the hospital with follow-up through his usual outpatient care team.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 12 of 20\n\nHYPERTENSION MANAGEMENT:\nHypertension was recognized as a chronic condition during the hospitalization. The team considered this history while planning the acute diverticulitis treatment and transition home. Mr. Carter’s established outpatient routine was reviewed with him, and he was advised to continue his usual care plan unless his clinician provides updated direction. This summary does not list individual drug names, doses, or numeric findings. No new hypertension-related concern became the reason for continued hospitalization. The patient was encouraged to maintain follow-up with the clinician who manages this condition and to bring any discharge paperwork to that appointment. He should contact that clinician if he has questions about resuming his routine after the acute illness. The hospital plan remained focused on diverticulitis, with ongoing attention to his chronic health needs.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 13 of 20\n\nDIABETES MANAGEMENT:\nType 2 diabetes mellitus was included in the inpatient care plan because acute illness and a change in eating can affect usual self-care. The team discussed maintaining the patient’s established diabetes routine during recovery and following the individualized instructions provided at discharge. No drug names, doses, numeric readings, or named tests are included in this summary. Mr. Carter was advised to contact his usual clinician if he had difficulty following his routine, was unable to eat normally, or had concerns related to his diabetes. The discharge plan also emphasized gradual dietary advancement and adequate fluids as tolerated. Ongoing outpatient follow-up was recommended to review his chronic care after recovery from diverticulitis. The diabetes history did not require surgery or a separate inpatient procedure during this admission.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 14 of 20\n\nCHRONIC OBSTRUCTIVE PULMONARY DISEASE:\nChronic obstructive pulmonary disease was considered throughout the admission and during discharge planning. The acute abdominal illness was treated without surgery, and no separate pulmonary intervention was required during this stay. Mr. Carter was advised to continue his established respiratory care routine as directed by his outpatient clinician. No individual drug names or doses are listed in this summary. He was asked to seek prompt care for a new or worsening breathing concern, especially if it interfered with drinking, eating, or routine activity. The patient’s chronic pulmonary condition was considered when discussing a gradual return to activity at home. Follow-up with his usual care team was recommended so that this condition could continue to be managed alongside recovery from diverticulitis.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 15 of 20\n\nCONSULTATIONS:\nThe inpatient team coordinated care for acute diverticulitis and reviewed the need for input from additional services. No specialty consultation was required to carry out the nonoperative plan during this admission. The treating team managed symptom support, antimicrobial treatment, observation, and discharge planning. Surgical intervention was not indicated during the documented course, and the patient did not undergo an operation. The team discussed the treatment approach with Mr. Carter and made sure he understood that reassessment would be appropriate if symptoms worsened or failed to improve. His chronic conditions were considered in the overall plan, with continued outpatient management recommended after discharge. This section records the coordination of care without listing individual clinicians or external contacts. The patient left with instructions for follow-up through his established care team.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 16 of 20\n\nPROCEDURES AND SURGERY:\nNo surgery was performed during this admission. No invasive procedure was required to manage the episode of diverticulitis. The patient was treated with a conservative approach that included supportive care, antimicrobial treatment, observation, and gradual advancement of oral intake. The decision to avoid surgery was based on the clinical course and the absence of a need for operative management during the stay. Mr. Carter was informed that the plan could have been reconsidered if he developed worsening symptoms or did not respond to treatment. He was also advised that further assessment may be needed if concerns recur after discharge. There were no procedure-related restrictions at the time of discharge. The patient and family received guidance about when to seek urgent evaluation and how to continue routine follow-up.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 17 of 20\n\nDISCHARGE DIAGNOSES:\nThe principal discharge diagnosis is acute diverticulitis, managed without surgery. Associated chronic diagnoses include hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. The inpatient team treated the acute episode with conservative care and monitored the patient’s ability to resume oral intake and routine activity. No operative diagnosis or procedure was added during the stay. The patient was considered appropriate for continued recovery outside the hospital with follow-up through his usual care team. This summary does not include named drugs, numeric findings, named tests, imaging findings, or calendar dates. The diagnoses were reviewed with Mr. Carter as part of discharge planning. He was instructed to follow the written care plan and to seek prompt help for worsening abdominal symptoms, inability to maintain intake, or a new concerning change.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 18 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Carter had improved sufficiently for continued recovery at home under the agreed nonoperative plan. His symptoms and tolerance of oral intake were reviewed as part of the decision to end inpatient observation. He did not require surgery or another invasive intervention during the admission. He was able to participate in discussion of the care plan and expressed understanding of the instructions. His chronic hypertension, type 2 diabetes, and chronic obstructive pulmonary disease remained important outpatient concerns but did not prevent discharge. No physical findings or numeric values are included in this summary. The patient was advised that recovery may continue after leaving the hospital and that new or worsening symptoms require prompt reassessment. Follow-up with his established outpatient clinicians was recommended.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 19 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Carter was instructed to follow the written treatment plan provided at discharge and to continue the prescribed course of care as directed. He should increase oral intake gradually, maintain fluids as tolerated, and return to ordinary activity in a steady manner. He should contact a clinician promptly for worsening abdominal discomfort, persistent difficulty eating or drinking, or another new concern. Urgent evaluation is advised for severe symptoms or a sudden decline. He should continue his established outpatient routines for hypertension, diabetes, and chronic obstructive pulmonary disease unless his clinician provides different instructions. Individual drug names and doses are intentionally not included in this summary. The patient and family were encouraged to keep discharge paperwork available and ask his care team to clarify any instruction that is unclear.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP PLAN:\nMr. Carter should arrange follow-up with his usual outpatient clinician after discharge to review recovery from diverticulitis and his ongoing chronic conditions. The appointment should address whether abdominal symptoms have continued to improve, whether he is maintaining adequate oral intake, and whether additional care is needed. He should also continue routine follow-up for hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. No calendar date is specified in this summary. If symptoms worsen before planned follow-up, he should contact a clinician promptly or seek urgent care according to the severity of the change. The patient was advised to bring his discharge instructions to follow-up and discuss questions about his outpatient routine. The inpatient team remains available through the hospital’s usual contact pathway for concerns related to this admission.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-17",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/17/2026\nPatient Name: Samuel Carter\nDOB: 03/26/1948\nMRN: MRN-77986\nAttending: Dr. Peter Green\n\nADMISSION DIAGNOSIS:\nSamuel Carter was admitted for cellulitis involving the lower leg. The infection was accompanied by increasing redness, warmth, tenderness, and swelling reported before arrival. The affected area had become more uncomfortable during the preceding days and limited his usual walking. His age and chronic illnesses increased the need for inpatient treatment and observation. The admitting team planned antimicrobial treatment, support for comfort and mobility, and close tracking of the area over time. There was no reported injury requiring operative care. The immediate goals were to control the infection, prevent extension, maintain safe movement, and establish a clear plan for ongoing care after discharge. His chronic hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease were included in care planning throughout the admission. He agreed with the proposed approach and participated in discussions about recovery and discharge needs.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 2 of 20\n\nPRESENTING CONCERN:\nMr. Carter came to the hospital because symptoms in his lower leg had worsened despite efforts to manage them at home. He described progressive redness and soreness, with swelling that made standing and walking less comfortable. He denied a specific recent injury as the cause. The worsening local symptoms prompted evaluation and admission for treatment rather than continued home observation. His account of the symptom course helped the team follow changes during the stay. He was concerned about how the infection might affect his independence and ability to return to his usual routine. Staff reviewed the anticipated course of care, the importance of reporting changes, and the need to protect the affected area. His questions were addressed in plain language, and he remained engaged in decisions about treatment and discharge planning.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nHis medical history includes hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. These longstanding conditions were considered when planning inpatient care and determining what support would be needed after discharge. Diabetes was relevant to recovery from a skin and soft tissue infection, so the team emphasized consistent follow-through with his established care routine. His chronic lung condition was considered when planning activity and monitoring comfort with exertion. Hypertension remained part of his ongoing care needs during the admission. He described living with these conditions over time and was able to discuss his usual routines. The team encouraged him to share any changes in symptoms and to seek help if recovery did not proceed as expected. His chronic conditions remained stable by report during the hospitalization and did not prevent treatment of the leg infection.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 4 of 20\n\nBACKGROUND BEFORE ADMISSION:\nBefore this hospitalization, Mr. Carter lived with his chronic conditions and managed his usual daily activities with some limitations related to age and breathing. The leg symptoms interrupted that routine, particularly walking and standing for extended periods. He sought hospital care when the local discomfort and visible changes continued to worsen. His account did not identify a clear wound or injury preceding the illness. The team discussed his ability to manage care at home and what assistance might be useful during early recovery. He expressed a preference to return home when the infection was improving and a safe plan was in place. Family support and access to routine medical care were considered during planning. His baseline needs were used to guide recommendations for activity, skin care, and follow-up after leaving the hospital.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 5 of 20\n\nADMISSION ASSESSMENT AND GOALS:\nThe admitting team considered the lower leg findings and reported symptom progression consistent with cellulitis requiring hospital-based treatment. The care plan focused on antimicrobial therapy, comfort, preservation of mobility, and observation for any worsening or spread. No operative intervention was planned. The team also aimed to support his established care for hypertension, diabetes, and chronic obstructive pulmonary disease during the admission. Mr. Carter was included in discussions about the expected course and the importance of completing the recommended treatment plan. Staff reviewed which changes should be reported promptly, including increasing pain, spreading redness, new drainage, or feeling generally worse. Discharge planning began early because he wished to return home. The team planned to reassess his symptoms and functional ability each day and adjust the plan according to his progress.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, the team began treatment for cellulitis of the lower leg and reviewed the history of worsening redness and discomfort. Mr. Carter was encouraged to keep the affected area protected and to limit activities that increased discomfort. Staff discussed the treatment plan, expected recovery, and symptoms that would require prompt attention. His chronic conditions were incorporated into daily care planning, with attention to his usual routines and his ability to move safely. He remained involved in decisions and asked appropriate questions about the length of treatment and the possibility of returning home. No procedure was required. The team tracked his reported pain, mobility, and changes in the affected area through ongoing care. Discharge was not yet appropriate because the response to treatment needed further observation and reassessment.\n\nTransthoracic echo this admission: LVEF 40%. Trace mitral regurgitation. Moderately reduced left ventricular systolic function.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, Mr. Carter continued antimicrobial treatment for the lower leg infection. He reported that discomfort remained present, but he was able to participate in care discussions and short periods of activity. The care team continued to follow the reported extent of redness and swelling and encouraged him to avoid rubbing or injuring the area. Supportive care focused on comfort, rest, and safe movement. His diabetes, hypertension, and chronic obstructive pulmonary disease remained part of the daily plan, without a reported interruption in his usual long-term care needs. Staff reviewed the importance of completing the full course of treatment after leaving the hospital. He remained concerned about maintaining independence, and the team discussed gradual return to routine activities. Continued inpatient care was planned to allow further observation of the infection's response.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Mr. Carter described a gradual improvement in lower leg discomfort and said movement was becoming easier. The team continued the established antimicrobial plan and reviewed ongoing changes with him. He was reminded to protect the area and to report any renewed worsening or new symptoms. Activity was advanced carefully according to comfort, with attention to avoiding falls and excess strain. His chronic conditions continued to be considered in planning, and he reported no new concerns related to them. Staff reviewed the proposed transition from hospital care to home care and discussed how to maintain the treatment routine outside the hospital. He demonstrated understanding by restating the main points in his own words. The team considered his improving symptoms encouraging but continued observation before making a final discharge decision.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, Mr. Carter continued to report improvement in the leg symptoms. He was more comfortable with routine movement and participated in planning for discharge. Antimicrobial treatment continued, with the transition plan reviewed so that care would remain uninterrupted after leaving the hospital. Staff discussed keeping the area clean and protected, avoiding unnecessary pressure, and seeking help if symptoms worsened. His chronic illnesses remained stable by report, and no new concern altered the discharge plan. He and the team reviewed available support at home and his ability to follow the recommended routine. He expressed confidence about returning home with clear instructions. The team planned discharge once he remained clinically stable, could manage basic activity safely, and understood the need for follow-up and continued care.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 10 of 20\n\nINFECTION MANAGEMENT:\nTreatment of the cellulitis centered on antimicrobial therapy and careful observation of the affected lower leg. The team followed Mr. Carter's reports of tenderness, swelling, redness, and ability to move, using these changes to guide ongoing decisions. Supportive measures included protecting the area, avoiding irritation, and allowing rest between periods of activity. Staff explained that improvement may continue gradually after discharge and that the full prescribed course should be completed as directed. They also reviewed the importance of contacting a clinician if the area began to worsen or if new symptoms developed. No procedure was needed during this admission. The infection showed a favorable clinical course with inpatient care, and the plan was transitioned to continued treatment at home. Mr. Carter verbalized understanding of the approach and the reasons to seek prompt reassessment.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 11 of 20\n\nDIABETES CARE:\nType 2 diabetes mellitus was considered throughout the admission because it can affect recovery from a skin infection. The team encouraged Mr. Carter to continue his established diabetes care routine and to follow the instructions provided for the period after discharge. He was reminded to maintain regular meals and adequate fluid intake as appropriate to his broader care plan. Staff discussed watching for changes in the leg and reporting symptoms that did not continue to improve. He did not report a new diabetes-related concern during the stay. The team included diabetes follow-up in the discharge plan and emphasized keeping routine appointments with his usual clinician. He understood that good ongoing control supports general health and recovery. No change to his chronic condition was identified as a barrier to discharge, and the infection plan was coordinated with his usual diabetes care.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 12 of 20\n\nCHRONIC LUNG CONDITION:\nMr. Carter's chronic obstructive pulmonary disease was considered when planning activity and the transition home. He did not report a new breathing concern that changed the course of treatment for cellulitis. Staff encouraged pacing, rest between activities, and use of his established care routine as directed by his usual clinicians. His ability to move around safely was discussed in relation to both the leg discomfort and his chronic lung condition. The team advised him to seek prompt care for a significant change in breathing or other concerning new symptoms. His respiratory history did not require a separate inpatient intervention during this stay. Discharge planning included continuity with his usual outpatient care and a gradual return to customary activity. He expressed understanding of these recommendations and felt prepared to manage his routine at home.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 13 of 20\n\nHYPERTENSION CARE:\nHypertension remained part of Mr. Carter's ongoing care plan during the hospitalization. No new concern related to this chronic condition was reported, and it did not interfere with treatment of the leg infection. The team encouraged him to continue his established routine as instructed by his usual clinician and to maintain regular follow-up after discharge. Staff reviewed the value of communicating any new symptoms or changes in his general health. The inpatient team did not make a separate intervention for hypertension during this stay. His discharge planning included continuity of care for this condition along with his diabetes and chronic lung disease. Mr. Carter was able to discuss his usual approach to chronic care and agreed to resume routine follow-up. The plan was to focus on recovery from cellulitis while maintaining attention to his established long-term health needs.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 14 of 20\n\nCARE TEAM INPUT:\nThe hospital team coordinated care among nursing staff, the admitting service, and discharge planning personnel. No separate specialty service was needed during this admission. Staff shared information about Mr. Carter's reported symptoms, treatment response, comfort, and ability to move safely. The team also considered his chronic conditions and his preference to return home as soon as appropriate. Education was repeated in clear terms to support understanding of the treatment plan and warning symptoms. Mr. Carter participated in discussions and was able to describe the next steps he would take after discharge. His home situation and available support were reviewed to help determine whether additional services were needed. No additional inpatient support was identified as necessary at the time of discharge. Coordination focused on a safe transition and continuity with his established outpatient care.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 15 of 20\n\nPROCEDURES AND OPERATIONS:\nNo procedure or operation was performed during this hospitalization. The lower leg infection was managed with antimicrobial treatment, supportive care, and continued observation of symptoms. There was no reported need for drainage or other operative management during the stay. The team reviewed this plan with Mr. Carter and explained that any new worsening after discharge should prompt timely medical attention. He was advised not to attempt to open or manipulate the affected area himself. The absence of a procedure allowed the care plan to focus on completing treatment, protecting the skin, and gradually returning to activity. He understood that the plan could be reconsidered by a clinician if his symptoms changed or failed to improve. At discharge, no procedural follow-up was required, and routine care was directed toward continued recovery and monitoring at home.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 16 of 20\n\nCOMPLICATIONS AND SAFETY:\nNo major complication was reported during the admission. The cellulitis improved with treatment, and there was no reported need for operative care or a change to a higher level of support. Mr. Carter did not describe a new problem related to hypertension, diabetes, or chronic obstructive pulmonary disease that altered the discharge plan. Staff discussed safety at home, including protecting the lower leg, moving carefully, and asking for assistance if discomfort limited walking. He was advised to seek prompt care for spreading redness, increasing pain or swelling, new drainage, feverishness, or a general decline. The team emphasized that early communication is preferable to waiting for symptoms to become severe. Mr. Carter confirmed understanding of these precautions. His course remained appropriate for discharge with continued treatment and routine follow-up.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Carter reported that the lower leg discomfort and swelling had improved enough for him to return home. He was able to discuss the ongoing treatment plan and the precautions needed during recovery. The infection had shown a favorable response to inpatient care, although further improvement was expected to continue after discharge. He was advised to complete the prescribed antimicrobial course and protect the affected area from irritation or injury. His chronic hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease remained part of his routine outpatient care. He expressed confidence in following the plan and had an opportunity to ask questions. No procedure or additional inpatient service was required. Discharge was considered appropriate with follow-up arranged through his usual care pathway and clear instructions for seeking help if symptoms worsened.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 18 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Carter was instructed to complete the antimicrobial course exactly as directed and not to stop early because symptoms were improving. He should keep the affected lower leg clean and protected, avoid scratching or rubbing it, and increase activity gradually as comfort allows. He should seek prompt medical attention for spreading redness, worsening pain or swelling, new drainage, feverishness, or feeling significantly unwell. He should also seek care for a substantial change in breathing or any other urgent new symptom. He was encouraged to maintain his usual routines for diabetes, hypertension, and chronic obstructive pulmonary disease unless his clinician advises otherwise. He should keep a record of questions or concerns for follow-up. Written instructions were reviewed with him, and he stated that he understood the plan and when to seek help.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 19 of 20\n\nACTIVITY AND HOME CARE:\nAfter returning home, Mr. Carter may resume routine activities gradually, using comfort as a guide. He should avoid prolonged pressure on the affected lower leg and take rest periods as needed. He should use care while walking, especially if pain or swelling affects balance, and ask for assistance when needed. The area should be kept clean and protected from avoidable injury. He should not apply unapproved products or attempt to manipulate the skin. Family or other support may assist with routine tasks during the early recovery period if walking remains uncomfortable. He was advised to contact his usual clinician if he has difficulty completing the care plan or if symptoms fail to continue improving. These instructions were intended to support a safe recovery while allowing him to return to his customary routine at a tolerable pace.\n",
+        "Samuel Carter | MRN-77986 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP PLAN:\nMr. Carter should arrange follow-up with his usual clinician soon after leaving the hospital to review recovery from cellulitis and ongoing care of his chronic conditions. At that contact, he should describe any remaining redness, swelling, tenderness, or limits on walking. He should also raise any difficulty completing the prescribed treatment course or following home instructions. Earlier reassessment is recommended if symptoms worsen rather than improve, if new drainage appears, or if he develops feverishness or a general decline. Routine follow-up for hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease should continue through his established care pathway. He should bring discharge instructions and any questions to the appointment. Mr. Carter stated that he understood the follow-up plan and intended to contact his usual clinician after returning home.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "Most recent potassium is 5.9 mmol/L."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Losartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Sinus bradycardia at 55 bpm. Normal axis. PR interval 186 ms, QRS 82 ms, QTc 427 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 218 mg/dL (H)\nLDL Cholesterol: 135 mg/dL (H)\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 70 mg/dL"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 141 mmol/L\nPotassium: 4.1 mmol/L\nChloride: 102 mmol/L\nCO2: 29 mmol/L\nBUN: 9 mg/dL\nCreatinine: 1.2 mg/dL\nGlucose: 153 mg/dL (H)\nCalcium: 9.5 mg/dL"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "discharge_summary_2",
+      "page": 6,
+      "text": "Transthoracic echo this admission: LVEF 40%. Trace mitral regurgitation. Moderately reduced left ventricular systolic function."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "contradictory",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 6,
+  "input_tokens": 3255,
+  "output_tokens": 10038
+}

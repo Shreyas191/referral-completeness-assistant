@@ -1,0 +1,249 @@
+{
+  "case_id": "cardiology-v1-hard-019",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-03",
+  "plan": {
+    "case_id": "cardiology-v1-hard-019",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": "stale"
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Mara",
+    "last_name": "Hayes",
+    "conditions": [
+      "Hypertension",
+      "Hypothyroidism"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "levothyroxine",
+        "dose": 50.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of a recent fainting episode with brief loss of consciousness.",
+    "history": "A 52-year-old woman fainted while standing in her kitchen and was briefly unresponsive. She recovered spontaneously and reports no prior episodes.",
+    "referring_physician": "Dr. Frank Nolan",
+    "practice": "Cedar Family Practice",
+    "sex": "female",
+    "age": 52,
+    "dob": "1973-12-27",
+    "mrn": "MRN-51814"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-03",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/03/2026\nPatient Name: Mara Hayes\nDOB: 12/27/1973\nMRN: MRN-51814\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Frank Nolan, Cedar Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of a recent fainting episode with brief loss of consciousness.\n\nMara Hayes is a 52-year-old woman with hypertension and hypothyroidism. I am asking your cardiology clinic to evaluate a recent fainting episode with brief loss of consciousness.\n\nShe fainted while standing in her kitchen and was briefly unresponsive. She recovered spontaneously and reports no prior episodes.\n\nThank you for seeing this patient.\n\nDr. Frank Nolan\nCedar Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-10-30",
+      "pages": [
+        "PROGRESS NOTE\nDate: 10/30/2026\nPatient Name: Mara Hayes\nDOB: 12/27/1973\nMRN: MRN-51814\nProvider: Dr. Frank Nolan\n\nSUBJECTIVE:\nMara Hayes is a 52-year-old woman with hypertension and hypothyroidism who fainted while standing in her kitchen and was briefly unresponsive. She recovered spontaneously and reports no prior episodes.\n\nVITALS:\nBP 139/84, HR 58, RR 14, SpO2 99% on room air, weight 178 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Syncope with brief loss of consciousness. Referral to cardiology placed for evaluation of this episode.\n2. Hypertension. Continue routine management and follow up as planned.\n3. Hypothyroidism. Continue routine management and follow up as planned.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-10-30",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 10/30/2026\nPatient Name: Mara Hayes\nDOB: 12/27/1973\nMRN: MRN-51814\n\nLisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-03",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 08/03/2026\nPatient Name: Mara Hayes\nDOB: 12/27/1973\nMRN: MRN-51814\nOrdering provider: Dr. Frank Nolan\n\nFindings: Normal sinus rhythm at 86 bpm. Normal axis. PR interval 188 ms, QRS 104 ms, QTc 414 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2025-08-11",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 08/11/2025\nPatient Name: Mara Hayes\nDOB: 12/27/1973\nMRN: MRN-51814\nOrdering provider: Dr. Frank Nolan\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-22",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/22/2026\nPatient Name: Mara Hayes\nDOB: 12/27/1973\nMRN: MRN-51814\nOrdering provider: Dr. Frank Nolan\n\nLIPID PANEL\nTotal Cholesterol: 258 mg/dL (H)\nLDL Cholesterol: 180 mg/dL (H)\nHDL Cholesterol: 33 mg/dL (L)\nTriglycerides: 226 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 106 mmol/L\nCO2: 23 mmol/L\nBUN: 19 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 178 mg/dL (H)\nCalcium: 9.1 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-03-02",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 03/02/2026\nPatient Name: Mara Hayes\nDOB: 12/27/1973\nMRN: MRN-51814\nAttending: Dr. Frank Nolan\n\nADMISSION DIAGNOSIS:\nMara Hayes was admitted for planned total hip replacement because of longstanding, disabling hip pain and loss of comfortable movement. The operation was elective and had been arranged after discussion of her symptoms, daily limitations, and treatment choices. Her medical history includes hypertension and hypothyroidism. She reported that these conditions were established before admission and were managed through routine outpatient care. No acute illness was reported as the reason for hospitalization. The purpose of admission was to complete the planned operation, support early recovery, and establish a safe transition to home. The patient understood the general goals of surgery and participated in planning. Her admission remained focused on the hip condition and postoperative recovery. There was no separate acute medical complaint requiring a change in the operative plan.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 2 of 20\n\nHISTORY OF PRESENT ILLNESS:\nThe patient described progressive hip discomfort that interfered with walking, household activity, and other routine tasks. Symptoms had continued despite nonsurgical measures, and she elected to proceed with joint replacement after reviewing expected benefits and potential risks with the orthopedic team. Her functional limitation had become substantial enough that ordinary activity required pacing and additional support. She denied any new concern that changed her preference for surgery during this admission. The operation was scheduled in advance rather than performed as an urgent response to injury. Her account of symptoms and goals was reviewed as part of the inpatient planning. She hoped to reduce pain and regain greater independence with mobility. The team discussed that recovery would require a period of assisted walking, gradual activity progression, and continued participation in rehabilitation.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nMara Hayes is a 52-year-old woman with hypertension and hypothyroidism. These chronic conditions were included in perioperative planning and were not reported as newly diagnosed problems during this hospitalization. She described routine outpatient management before admission and did not report an acute change in her general health. The history available to the inpatient team did not identify another active condition that altered the planned hip procedure. Her ongoing care needs were considered when preparing for anesthesia, surgery, and postoperative recovery. She was able to discuss her health history and participate in decisions throughout the stay. The team reviewed the importance of continuing her established outpatient care after leaving the hospital. No new long-term diagnosis was added during this admission, and the hospitalization remained centered on elective joint replacement and functional recovery.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 4 of 20\n\nPRIOR FUNCTION AND LIVING SITUATION:\nBefore surgery, the patient remained responsible for her usual daily activities but had increasing difficulty completing tasks that involved walking, standing, or moving around her home. Hip symptoms limited her pace and reduced her confidence with longer distances. She described a desire to return to practical activities with less discomfort and less reliance on help. Discharge planning considered her home setting, available support, and the equipment needed for safe mobility. The team reviewed the value of having assistance during the first phase of recovery, especially with household tasks and transportation. She participated in these discussions and expressed understanding of the temporary limits expected after joint replacement. Planning emphasized a gradual return to independence rather than immediate resumption of all prior activities. Her recovery goals were incorporated into the mobility plan established during admission.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 5 of 20\n\nPREOPERATIVE PLANNING:\nThe operative plan was reviewed with the patient before surgery, including the purpose of replacing the affected hip and the expected inpatient recovery. The team discussed general risks, benefits, alternatives, and the need for rehabilitation after the procedure. Ms. Hayes had an opportunity to ask questions and stated that she wished to proceed. Her history of hypertension and hypothyroidism was acknowledged in planning for the perioperative period. Instructions for the day of surgery were reviewed, and she followed the prepared admission plan. The patient understood that the length of stay would depend on recovery, comfort, and safe mobility rather than a fixed timetable. Discharge planning began before the operation and included discussion of home support, walking assistance, and follow-up with the orthopedic service. No change to the elective plan was reported.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 6 of 20\n\nADMISSION COURSE:\nOn arrival, Ms. Hayes was admitted to the orthopedic service for the planned procedure. The team confirmed the purpose of hospitalization, reviewed her reported health history, and coordinated preparation for surgery. She remained engaged in the process and voiced no new concern that prevented proceeding. Her chronic hypertension and hypothyroidism were noted for routine perioperative management. The patient received an explanation of the expected sequence of care, including surgery, recovery, assisted mobility, and discharge planning. Personal belongings and home support arrangements were addressed as part of the admission process. There was no acute event requiring a change in service or an alternate treatment plan. The admission remained elective throughout. After preparation was complete, she proceeded to the operating area for the planned hip replacement and later returned to inpatient recovery for continued care.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 7 of 20\n\nPROCEDURE:\nMs. Hayes underwent elective total hip arthroplasty during this admission. The procedure addressed the hip condition responsible for persistent pain and impaired function. The operation was completed as planned, without a reported intraoperative complication. She was transferred to the recovery area after the procedure and then continued under the orthopedic service. The operative plan had been discussed with her before surgery, and the performed procedure was consistent with that plan. Details of the operation were recorded by the surgical team in the operative documentation. Postoperative care focused on comfort, safe movement, prevention of avoidable complications, and gradual return to activity. No additional procedure was required during this hospitalization. The patient remained in the hospital for routine observation and rehabilitation after the joint replacement, with discharge dependent on her ability to manage the next stage of recovery safely.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 8 of 20\n\nANESTHESIA AND IMMEDIATE RECOVERY:\nAnesthesia care was provided for the planned joint replacement, and Ms. Hayes was transferred to recovery after surgery. She continued to the orthopedic inpatient unit when the immediate recovery period was complete. No unexpected anesthesia-related event was reported. The team monitored her comfort and ability to begin the planned postoperative routine. She was given an explanation of the next steps, including gradual movement, support with transfers, and participation in rehabilitation. The patient was able to communicate her needs and take part in decisions about recovery. Her established hypertension and hypothyroidism remained part of the background care plan, without a newly reported acute problem. The immediate postoperative period was considered routine. Care then shifted toward pain management, assisted mobility, and preparation for a safe return to her home setting.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, OPERATIVE DAY:\nOn the day of surgery, Ms. Hayes completed the planned hip replacement and returned to inpatient care for observation and recovery. The team encouraged rest while also explaining the importance of beginning movement as soon as appropriate. Her comfort was addressed through the postoperative plan, and she was supported with routine needs. She remained willing to participate in care and communicated questions to the nursing and orthopedic teams. No unplanned event changed the course of the day. Staff reviewed how to ask for assistance before getting out of bed and how activity would be increased gradually. Her home support and anticipated discharge needs continued to be considered. The operative day ended with the patient stable in the recovery process and with plans to begin more active rehabilitation on the following day.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, FIRST POSTOPERATIVE DAY:\nDuring the first day after surgery, Ms. Hayes continued recovery on the orthopedic unit. She began assisted transfers and short periods of walking with the rehabilitation team, as tolerated. The team reinforced safe movement and the need to use support rather than attempt unsupported activity. Her reported discomfort was addressed within the established postoperative plan. She was encouraged to participate at a manageable pace and to communicate any change in symptoms. She continued to take part in routine care and discharge discussions. No new medical concern was reported that required a change in the overall plan. The team reviewed expected activity limits and the gradual nature of recovery after joint replacement. Planning remained directed toward home discharge once she could manage essential mobility with appropriate assistance and understood the instructions for continued recovery.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 11 of 20\n\nHOSPITAL COURSE, SECOND POSTOPERATIVE DAY:\nOn the next day of recovery, Ms. Hayes continued working with the rehabilitation team on transfers and walking. Sessions emphasized safe technique, appropriate use of a walking aid, and gradual increase in activity. She reported ongoing postoperative soreness but was able to participate in the planned program. Staff continued to support routine self-care and reviewed strategies for reducing strain during movement. The patient asked questions about what to expect after leaving the hospital and received guidance from the care team. No new complication was reported, and no additional procedure was needed. Her progress was considered adequate for continued planning toward discharge home. The team also confirmed that she understood the need to follow the orthopedic recovery plan and to seek assistance when needed. Home support and safe transportation were addressed before the transition was finalized.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 12 of 20\n\nCONSULTATIONS AND TEAM COORDINATION:\nThe orthopedic service directed the inpatient plan, with nursing, rehabilitation, and discharge planning staff contributing to daily care. The rehabilitation team worked with Ms. Hayes on transfers, walking, and practical movement strategies for the home setting. Nursing staff reinforced safety instructions, supported routine care, and communicated her needs to the treating team. Discharge planning addressed available assistance, transportation, and arrangements for continued recovery after hospitalization. No additional specialty service was required during this stay. The team shared updates with the patient and invited her participation in decisions about readiness for discharge. Coordination focused on consistent instructions and a realistic plan that matched her functional progress. The patient was receptive to guidance and was able to describe the main safety steps. The team agreed that home recovery was appropriate once the planned transition arrangements were in place.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 13 of 20\n\nPAIN MANAGEMENT:\nPostoperative discomfort was managed as part of the routine recovery plan. Ms. Hayes was encouraged to describe her symptoms so the team could adjust supportive care within the established approach. She was reminded that some soreness is expected after joint replacement and that activity should increase gradually. Comfort measures were coordinated with rehabilitation so that she could participate in walking and transfers without unnecessary strain. The patient was instructed to follow the written treatment directions provided at discharge and to contact her care team if symptoms became difficult to manage. No specific drug names or doses are included in this summary. By the time of discharge planning, she was able to take part in essential mobility and self-care activities with support. Ongoing comfort management was assigned to the outpatient recovery plan.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 14 of 20\n\nMOBILITY AND REHABILITATION:\nRehabilitation began after surgery and focused on safe transfers, standing, and walking with an appropriate aid. Ms. Hayes practiced moving between the bed and chair and walking short distances with staff support. The team reviewed how to position herself, pace activity, and avoid rushing during changes in direction. She was encouraged to perform only the activities taught by the rehabilitation staff until her next stage of recovery. Her participation improved enough to support the planned transition home. Continued practice was recommended after discharge, following the instructions provided by the orthopedic and rehabilitation teams. She was advised to use her walking aid as directed and to have another person nearby when assistance was needed. The goals were safer mobility, gradual progress, and reduced risk of a fall during early recovery.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 15 of 20\n\nDIET AND ROUTINE CARE:\nAfter the procedure, Ms. Hayes resumed routine oral intake as tolerated and continued ordinary inpatient care. Staff assisted with personal needs and encouraged regular movement within the limits of the recovery plan. The team discussed maintaining adequate food and fluid intake at home and following any written directions provided by her treating clinicians. No new dietary restriction was introduced as a result of this admission. Routine care also included planning for rest periods between activity and keeping needed supplies within reach. The patient was encouraged to ask for assistance rather than attempt tasks that felt unsafe. Her ability to manage basic needs was reviewed as part of discharge planning. These instructions were intended to support comfort and gradual recovery while she returned to her home routine.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 16 of 20\n\nCHRONIC CONDITION MANAGEMENT:\nHypertension and hypothyroidism were recognized as chronic conditions during the admission. They did not become the focus of a separate acute treatment course, and no new long-term diagnosis was added. The patient was advised to continue her established outpatient care after discharge and to use the instructions already provided by her usual clinicians. The inpatient stay did not include a change in her long-term management plan as documented in this summary. She was encouraged to arrange routine follow-up for these conditions and to bring any questions about ongoing care to her regular care team. The orthopedic recovery plan was coordinated with awareness of her medical history. No new concern related to either chronic condition was reported as a barrier to the planned home transition.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Ms. Hayes had completed the planned hip replacement and had made appropriate progress with early recovery. She was able to participate in essential transfers and walking with a support aid and understood the need for continued assistance as needed. Her postoperative discomfort was being managed under the written plan, and she was able to take part in discharge teaching. No new complication was reported that required continued inpatient care. She was considered suitable for discharge to her home setting with the support and follow-up arrangements discussed by the team. She understood that recovery would continue after leaving the hospital and would require gradual activity progression. Her chronic conditions remained part of her ongoing outpatient care plan, without a new issue affecting discharge readiness.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 18 of 20\n\nDISCHARGE DISPOSITION:\nMs. Hayes was discharged to her home after the inpatient team reviewed her recovery progress and confirmed the transition plan. Home discharge was selected because she could manage essential mobility with an aid and had a plan for help during the early recovery period. The patient and her support person were encouraged to arrange assistance with tasks that required bending, carrying, or extended walking. Transportation home was to be completed with support, and she was instructed not to travel alone if she felt unsteady or uncomfortable. Continued rehabilitation and orthopedic follow-up were planned outside the hospital. The discharge destination and support arrangements were reviewed with her before departure. She expressed understanding of the plan and agreed to contact the care team if a new concern arose.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 19 of 20\n\nDISCHARGE INSTRUCTIONS:\nThe patient was instructed to follow the written orthopedic directions for wound care, activity, and recovery. She should use her walking aid as taught and request help for movement or household tasks when needed. Activity should increase gradually, with rest between periods of walking or exercise. She should avoid movements or tasks that the surgical team has restricted and should not resume driving until specifically cleared. She was asked to keep the operative area clean and follow the supplied care directions without adding unapproved products. She should contact the orthopedic team for increasing pain, new drainage, fever, a fall, sudden difficulty moving, or any other concerning change. Emergency help should be sought for severe or rapidly worsening symptoms. The patient confirmed that she understood these instructions before leaving.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP PLAN:\nMs. Hayes was asked to arrange follow-up with the orthopedic service according to the appointment instructions provided at discharge. That review will address her recovery, activity progression, and need for continued rehabilitation. She should bring questions about walking, self-care, or the operative area to that visit and should follow the team’s guidance before increasing activity beyond the current plan. She was also advised to continue routine outpatient care for hypertension and hypothyroidism. Any change in her general health should be discussed with the clinician responsible for that care. If she cannot attend the planned orthopedic follow-up, she should contact the service to arrange another time. The patient was given the appropriate contact information and stated that she understood the follow-up plan and the importance of continued care after discharge.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-08-31",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 08/31/2026\nPatient Name: Mara Hayes\nDOB: 12/27/1973\nMRN: MRN-51814\nAttending: Dr. Frank Nolan\n\nADMISSION DIAGNOSIS:\nMara Hayes, a 52-year-old female, was admitted for community-acquired pneumonia after developing cough, feverishness, fatigue, and shortness of breath that interfered with usual activities. The admitting team considered the illness significant enough to require hospital care and treatment with respiratory support and antimicrobial therapy. Hypertension and hypothyroidism were recorded as established conditions relevant to her ongoing care. The admission plan focused on treating the lung infection, easing breathing, maintaining hydration and nutrition, and watching for changes that could require a different level of support. She was able to participate in discussions about the plan and understood the reason for admission. This summary describes the hospital course and the arrangements made for continued recovery after discharge. No medication names, doses, laboratory values, or imaging findings are included here.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 2 of 20\n\nCHIEF CONCERN:\nThe patient came to the hospital because of a worsening cough and difficulty breathing during ordinary movement. She also described low energy and feeling unwell over several days. The symptoms had persisted despite rest at home, and she felt unable to manage the illness safely without additional care. She reported no separate concern that displaced the respiratory illness as the main reason for admission. The history gathered at arrival supported an acute infection acquired in the community rather than a problem arising during a prior hospital stay. She was concerned about how long recovery might take and whether her chronic conditions would complicate treatment. The care team reviewed the immediate goals, including support for breathing, treatment of the infection, and gradual return to activity as symptoms improved.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 3 of 20\n\nHISTORY OF PRESENT ILLNESS:\nBefore admission, Mara Hayes developed cough and progressive breathlessness, accompanied by fatigue and a general sense of illness. Symptoms persisted over several days and began limiting routine tasks. She did not describe a recent hospital stay or a known exposure requiring a separate infection-control plan. The clinical team assessed the overall history and concluded that community-acquired pneumonia best accounted for the presentation. Her symptoms warranted inpatient care for treatment and observation rather than continued home management alone. During the initial discussion, she provided a coherent account of the course of illness and her usual level of function. The team explained that recovery would be judged by improvement in breathing, reduced cough burden, ability to eat and drink, and safe mobility. She agreed with the proposed approach and remained engaged throughout care.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 4 of 20\n\nRELEVANT MEDICAL BACKGROUND:\nHer recorded medical history includes hypertension and hypothyroidism. These conditions were considered during admission planning, with attention to maintaining her established routine where appropriate while prioritizing treatment of the acute respiratory infection. She did not report another active condition that changed the central plan. Her usual level of independence and ability to manage daily needs were reviewed as part of discharge planning. The team also discussed the importance of communicating any change in symptoms and of arranging follow-up after leaving the hospital. No family history or prior procedure was identified as a major factor in this admission. Details of outpatient treatment are not repeated in this summary. The patient was encouraged to keep her personal care information available for the clinician who will continue her routine management after recovery.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 5 of 20\n\nADMISSION ASSESSMENT AND INITIAL PLAN:\nThe admission assessment identified community-acquired pneumonia with cough, reduced exercise tolerance, and shortness of breath. The initial plan was inpatient antimicrobial treatment, supportive care, and observation for progression or complications. Respiratory support was available as needed, with the aim of helping her remain comfortable while the infection began to improve. The team encouraged fluids and food as tolerated and planned to increase activity gradually. Her chronic hypertension and hypothyroidism were acknowledged in the care plan, without allowing them to distract from the acute illness. The expected course, warning signs, and possible need to revise the plan were reviewed with her. She understood that discharge would depend on stable breathing, ability to manage basic activities, and a clear plan for continued care outside the hospital.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mara Hayes began inpatient care for community-acquired pneumonia. The team reviewed her symptom history and established the immediate goals of infection treatment, breathing support, comfort, hydration, and rest. Antimicrobial therapy was started, and supportive measures were provided while she adjusted to the hospital routine. Her cough and breathlessness remained the main concerns, so staff encouraged her to report changes promptly and to pace activity. She was able to communicate needs and take part in discussions about her plan. The team explained that improvement might be gradual and that ongoing observation was appropriate. Her hypertension and hypothyroidism remained part of the background plan. No procedure was required during this portion of the stay, and no separate issue altered the working diagnosis.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY TWO:\nDuring the second hospital day, care continued with antimicrobial treatment and supportive measures. Mara reported that breathing remained uncomfortable with exertion, though she was able to rest and communicate with staff. The team reinforced pacing, upright positioning when resting, and gradual movement as tolerated. Cough continued to affect comfort, and supportive care focused on making it easier for her to rest and drink fluids. The care plan was reviewed with her, including the reasons for continued inpatient observation and the goals required before discharge could be considered. She remained involved in decisions and expressed understanding of the expected recovery process. No new diagnosis emerged to replace community-acquired pneumonia as the principal problem. Her chronic conditions were monitored within the overall plan, and no procedure or specialty involvement became necessary.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Mara described gradual improvement in her breathing and energy, although cough and reduced stamina continued. She was encouraged to increase movement in short, manageable intervals and to rest between activities. Antimicrobial treatment continued, with supportive care adjusted to her reported needs. The team discussed how symptoms can take time to resolve even after the infection begins responding. She was able to take fluids and food as tolerated and participated in planning for recovery beyond the hospital. Observation remained appropriate while the team confirmed that she could manage basic activity without an unacceptable increase in breathlessness. Her chronic hypertension and hypothyroidism did not require a change in the primary treatment direction. No new complication was identified, and no procedure was indicated.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, Mara continued to make a gradual recovery from pneumonia. She reported improved tolerance of light activity and less difficulty catching her breath than earlier in the stay. Cough persisted but was no longer the sole focus of her attention. The team continued the established antimicrobial and supportive plan and reviewed her ability to manage meals, hydration, rest, and movement. Discharge planning became more detailed, with discussion of home support, symptom monitoring, and follow-up with her usual clinician. She asked appropriate questions about the expected pace of recovery and was advised to increase activity gradually rather than resume all usual tasks immediately. No new concern changed the discharge goals, and continued improvement supported transition planning.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 10 of 20\n\nHOSPITAL COURSE, FINAL DAY:\nOn the final hospital day, Mara was considered ready to continue recovery outside the hospital. Her breathing and activity tolerance had improved enough for a home plan, and she was able to describe the next steps in her care. The team reviewed completion of the planned antimicrobial course and the importance of following the instructions provided at discharge. She was advised that fatigue and cough may continue for a period and should improve over time. The care team also reviewed symptoms that should prompt urgent assessment, including worsening breathlessness, return of persistent fever, confusion, inability to keep fluids down, or a marked decline in function. She expressed understanding and had an opportunity to ask questions. No further inpatient intervention was planned.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 11 of 20\n\nINFECTION TREATMENT:\nCommunity-acquired pneumonia was treated with an inpatient course of antimicrobial therapy, together with supportive care. The treatment plan was selected by the hospital team and continued as her symptoms gradually improved. She was advised that the course should be completed exactly as directed in the separate discharge instructions, even if she feels better before it is finished. No drug names or doses are included in this summary. The team discussed the importance of promptly reporting a new reaction or a meaningful worsening of symptoms. Continued improvement was the basis for shifting care from the hospital to home. She was not given a guarantee that cough or fatigue would disappear immediately, and she was advised to allow time for recovery while following the plan provided at discharge.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 12 of 20\n\nRESPIRATORY AND SUPPORTIVE CARE:\nSupportive care during the admission focused on comfort, breathing, rest, hydration, nutrition, and gradual movement. Respiratory support was provided as needed while her symptoms improved. Staff encouraged her to speak up if breathing became more difficult or if she felt unable to complete routine activities. She was supported in pacing activity and balancing movement with rest, rather than remaining inactive throughout the day. Fluids and food were offered as tolerated. These measures complemented antimicrobial treatment and helped prepare her for continued recovery at home. The team explained that lingering cough and reduced stamina can continue after leaving the hospital. She was asked to seek reassessment if symptoms worsen instead of steadily improving. No specific equipment was required for her discharge plan.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 13 of 20\n\nCHRONIC CONDITIONS:\nHypertension and hypothyroidism were recognized throughout the admission as chronic conditions requiring continuity after the acute illness. They did not change the diagnosis of community-acquired pneumonia or prevent the patient from progressing toward discharge. Her usual outpatient care should continue according to the instructions already established with her regular clinician. This summary does not list medication names or doses. She was advised not to make independent changes to her long-term treatment based solely on this hospitalization. If she has questions about how to coordinate her usual care with the pneumonia plan, she should contact the clinician who manages those conditions. The team emphasized that follow-up for the acute infection and routine management of chronic health concerns are both important parts of her recovery.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 14 of 20\n\nCONSULTS:\nNo specialty consultation was required during this admission. The hospital team managed the pneumonia and supportive care, and the patient remained able to participate in the treatment plan. Her course did not present a separate issue that required additional specialty involvement. The team reviewed her established hypertension and hypothyroidism as part of routine care planning, with ongoing management left to her usual clinician after discharge. Mara understood who to contact if a question arose after returning home. Coordination focused on a clear transition, completion of the planned infection treatment, and arranging follow-up rather than adding another inpatient service. No outside clinician was asked to evaluate her during the stay, and no separate specialty recommendation changed the course of care.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 15 of 20\n\nPROCEDURES:\nNo procedure was performed during this admission. Treatment consisted of inpatient antimicrobial therapy and supportive care for community-acquired pneumonia. The patient did not require an invasive intervention, and there was no need to arrange procedure-related follow-up. The team explained the care provided in plain language and addressed her questions about the transition home. Her discharge planning was based on clinical improvement, ability to manage basic activity, and a workable plan for continued treatment and observation outside the hospital. No device or procedure-specific instruction was needed at discharge. If a new concern develops after leaving the hospital, she should use the follow-up and urgent-care guidance provided rather than wait for a routine appointment.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 16 of 20\n\nCOMPLICATIONS AND SAFETY:\nNo major complication was identified during the hospital stay. The principal concern remained community-acquired pneumonia with cough and breathlessness, which improved gradually with treatment and supportive care. The team watched for worsening respiratory symptoms and changes that could delay discharge. Mara was reminded to seek urgent help if breathing becomes substantially more difficult, if fever returns or persists, if she becomes confused, or if she cannot maintain fluids. She was also advised to contact a clinician for a clear setback after an initial period of improvement. No fall, injury, or new functional problem was reported as a barrier to going home. She understood the safety guidance and could explain when to seek help after discharge.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 17 of 20\n\nDISCHARGE PLANNING:\nDischarge planning began once Mara showed steady improvement and could take part in decisions about care at home. The team reviewed her ability to manage basic daily activities, maintain food and fluid intake, and follow the pneumonia treatment plan. She was encouraged to arrange practical support if fatigue limits household tasks during early recovery. A follow-up plan with her usual clinician was discussed, including review of symptoms and ongoing management of hypertension and hypothyroidism. She was given instructions about completing the planned antimicrobial course and about when to seek urgent assessment. The team invited questions and confirmed that she understood the plan. No home procedure or specialized equipment was required. She left with a clear understanding of the next steps and who to contact if concerns arose.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 18 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mara Hayes had improved from her admission condition and was considered suitable to continue recovery at home. Breathing and tolerance of light activity were better than earlier in the stay, though she was advised that cough and fatigue could persist. She was able to understand and discuss the plan for completing treatment, monitoring symptoms, and arranging follow-up. She was not expected to return immediately to her full usual activity level and was advised to build activity gradually, with rest as needed. Her chronic hypertension and hypothyroidism remained relevant to routine ongoing care but did not prevent discharge. She was provided with guidance on symptoms that should prompt urgent assessment. The final plan was reviewed with her before leaving the hospital.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 19 of 20\n\nDISCHARGE INSTRUCTIONS:\nComplete the pneumonia treatment course according to the separate instructions provided at discharge. Rest as needed, drink fluids, eat as tolerated, and increase activity gradually as breathing and energy improve. Do not resume strenuous tasks until you can manage lighter activity without a significant increase in symptoms. Cough and tiredness may continue for a while, but should trend toward improvement. Contact a clinician if recovery stalls or symptoms return after improving. Seek urgent care for worsening shortness of breath, persistent or returning fever, confusion, inability to keep fluids down, or a sudden decline in your ability to manage daily needs. Continue the established plan for hypertension and hypothyroidism unless your regular clinician advises otherwise. Keep all discharge papers available for follow-up.\n",
+        "Mara Hayes | MRN-51814 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP:\nMara should arrange follow-up with her usual clinician after discharge to review recovery from pneumonia and confirm that symptoms are continuing to improve. The visit should also provide an opportunity to address routine care for hypertension and hypothyroidism and to clarify any questions about the separate treatment instructions. She should bring the discharge papers and describe any ongoing cough, breathlessness, fatigue, or difficulty returning to normal activities. If she cannot arrange timely follow-up, she should contact the hospital team for guidance. She should not wait for a routine appointment if breathing worsens, fever persists or returns, confusion develops, or she cannot maintain fluids. No calendar date is specified in this summary; the patient should follow the scheduling instructions provided at discharge.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of a recent fainting episode with brief loss of consciousness."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection murmur, no radiation.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 86 bpm. Normal axis. PR interval 188 ms, QRS 104 ms, QTc 414 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 258 mg/dL (H)\nLDL Cholesterol: 180 mg/dL (H)\nHDL Cholesterol: 33 mg/dL (L)\nTriglycerides: 226 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 106 mmol/L\nCO2: 23 mmol/L\nBUN: 19 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 178 mg/dL (H)\nCalcium: 9.1 mg/dL"
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "stale",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 5,
+  "input_tokens": 2757,
+  "output_tokens": 9159
+}

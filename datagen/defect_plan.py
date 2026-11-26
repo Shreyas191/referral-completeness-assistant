@@ -22,6 +22,10 @@ DEFECTS = ["omit", "contradict", "stale", "bury", "abbreviate"]
 MIX = {"complete": 0.30, "omit": 0.40, "abbreviate": 0.25, "contradict": 0.20,
        "bury": 0.20, "stale": 0.15, "wrong_patient": 0.05}
 
+# Hard profile (E3 / E4): fewer complete cases, and most cases carry a contradiction, a stale item or buried evidence.
+MIX_HARD = {"complete": 0.10, "omit": 0.40, "abbreviate": 0.25, "contradict": 0.50,
+            "bury": 0.60, "stale": 0.40, "wrong_patient": 0.10}
+
 CONDITION_RATE = 0.30  # share of cases in which a conditional item's condition holds
 
 ABBREVIATION_RE = re.compile(r"^[A-Z][A-Z0-9/\-]{1,5}$")  # e.g. ECG, TTE, LDL, PT/INR
@@ -55,21 +59,21 @@ def eligible(defect: str, item: dict) -> bool:
     raise ValueError(f"unknown defect {defect!r}")
 
 
-def make_plan(case_id: str, checklist: dict, rng: random.Random) -> DefectPlan:
+def make_plan(case_id: str, checklist: dict, rng: random.Random, mix: dict = MIX) -> DefectPlan:
     items = {i["item_id"]: i for i in checklist["items"]}
     holds = {i: rng.random() < CONDITION_RATE for i, item in items.items() if item.get("condition")}
     applicable = [i for i in items if holds.get(i, True)]
     plans = {i: ItemPlan(item_id=i) for i in items}
-    if rng.random() >= MIX["complete"]:
-        if rng.random() < MIX["omit"] / (1 - MIX["complete"]):
+    if rng.random() >= mix["complete"]:
+        if rng.random() < mix["omit"] / (1 - mix["complete"]):
             for i in rng.sample(applicable, k=min(len(applicable), rng.randint(1, 3))):
                 plans[i].defect = "omit"
         for defect in ["contradict", "stale", "bury", "abbreviate"]:
             free = [i for i in applicable if plans[i].defect is None and eligible(defect, items[i])]
-            if free and rng.random() < MIX[defect] / (1 - MIX["complete"]):
+            if free and rng.random() < mix[defect] / (1 - mix["complete"]):
                 plans[rng.choice(free)].defect = defect
     return DefectPlan(case_id=case_id, checklist_id=checklist["checklist_id"], items=list(plans.values()),
-                      wrong_patient_doc=rng.random() < MIX["wrong_patient"], condition_holds=holds)
+                      wrong_patient_doc=rng.random() < mix["wrong_patient"], condition_holds=holds)
 
 
 if __name__ == "__main__":
@@ -92,12 +96,12 @@ def plan_features(plan: DefectPlan) -> set[str]:
     return defects | ({"complete"} if not defects else set()) | ({"wrong_patient"} if plan.wrong_patient_doc else set())
 
 
-def quota_targets(n: int) -> dict[str, int]:
-    return {k: round(share * n) for k, share in MIX.items()}
+def quota_targets(n: int, mix: dict = MIX) -> dict[str, int]:
+    return {k: round(share * n) for k, share in mix.items()}
 
 
 def select_plans(checklist: dict, n: int, seed: int, prefix: str, pool_size: int = 5000,
-                 steps: int = 50_000) -> tuple[list[DefectPlan], dict[str, int], dict[str, int]]:
+                 steps: int = 50_000, mix: dict = MIX) -> tuple[list[DefectPlan], dict[str, int], dict[str, int]]:
     """Pick n plans whose mix matches MIX as closely as possible.
 
     With few cases, independent random draws miss the targets badly (5% wrong-patient of 40 is often 0), so
@@ -105,9 +109,9 @@ def select_plans(checklist: dict, n: int, seed: int, prefix: str, pool_size: int
     targets does not grow. Deterministic for a seed. Returns (plans renamed <prefix>-000..., targets, achieved).
     """
     rng = random.Random(seed)
-    pool = [make_plan(f"pool-{k}", checklist, rng) for k in range(pool_size)]
+    pool = [make_plan(f"pool-{k}", checklist, rng, mix) for k in range(pool_size)]
     feats = [plan_features(p) for p in pool]
-    targets = quota_targets(n)
+    targets = quota_targets(n, mix)
 
     def loss(c: Counter) -> int:
         return sum(abs(c[k] - t) for k, t in targets.items())

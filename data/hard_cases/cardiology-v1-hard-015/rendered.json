@@ -1,0 +1,223 @@
+{
+  "case_id": "cardiology-v1-hard-015",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-09",
+  "plan": {
+    "case_id": "cardiology-v1-hard-015",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": "bury"
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": "omit"
+      },
+      {
+        "item_id": "meds",
+        "defect": "omit"
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "omit"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Diane",
+    "last_name": "Parker",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol tartrate",
+        "dose": 25.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "losartan",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known drug allergies.",
+    "referral_reason": "Evaluation of recurrent palpitations.",
+    "history": "Diane Parker is a 62-year-old woman with intermittent episodes of a racing, irregular heartbeat over the past two months. Episodes last several minutes and occur both at rest and with activity. She reports occasional lightheadedness but no fainting or chest discomfort.",
+    "referring_physician": "Dr. Elena Shaw",
+    "practice": "Family Health Partners",
+    "sex": "female",
+    "age": 62,
+    "dob": "1964-07-30",
+    "mrn": "MRN-39890"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-09",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/09/2026\nPatient Name: Diane Parker\nDOB: 07/30/1964\nMRN: MRN-39890\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Elena Shaw, Family Health Partners\n\nDear Colleague,\n\nReason for referral: Evaluation of recurrent palpitations.\n\nDiane Parker is a 62-year-old woman with atrial fibrillation, hypertension, and type 2 diabetes mellitus. For the past two months, she has had intermittent episodes of a racing, irregular heartbeat lasting several minutes, both at rest and with activity. She reports occasional lightheadedness but no fainting or chest discomfort.\n\nI would appreciate your evaluation of her recurrent palpitations and recommendations for further care.\n\nPatient is on warfarin.\n\nThank you for seeing this patient.\n\nDr. Elena Shaw\nFamily Health Partners\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-28",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/28/2026\nPatient Name: Diane Parker\nDOB: 07/30/1964\nMRN: MRN-39890\nOrdering provider: Dr. Elena Shaw\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-01",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/01/2026\nPatient Name: Diane Parker\nDOB: 07/30/1964\nMRN: MRN-39890\nOrdering provider: Dr. Elena Shaw\n\nLIPID PANEL\nTotal Cholesterol: 194 mg/dL\nLDL Cholesterol: 79 mg/dL\nHDL Cholesterol: 73 mg/dL\nTriglycerides: 212 mg/dL (H)\n\nCOAGULATION\nProthrombin Time: 35.7 sec\nINR: 3.1\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-02-11",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 02/11/2026\nPatient Name: Diane Parker\nDOB: 07/30/1964\nMRN: MRN-39890\nAttending: Dr. Elena Shaw\n\nADMISSION DIAGNOSIS:\nDiane Parker is a 62-year-old woman admitted with gallstone pancreatitis. The working diagnosis was acute pancreatic inflammation related to gallstone passage or temporary blockage of bile flow. Her associated history includes atrial fibrillation, hypertension, and type 2 diabetes mellitus. The admitting team initiated inpatient supportive care and observed her response before deciding on definitive treatment. She was able to provide her history and participate in discussions about the plan. The initial goals were relief of abdominal discomfort, gradual return to oral intake, management of her chronic conditions during the illness, and prevention of recurrent biliary symptoms. The team discussed that removal of the gallbladder would be considered once the acute episode had improved. No calendar dates, medication names, numerical results, or imaging findings are included in this summary.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 2 of 20\n\nRELEVANT HISTORY:\nMs. Parker has a history of atrial fibrillation, hypertension, and type 2 diabetes mellitus. These conditions were considered in planning inpatient care and the timing of surgery. Her history was reviewed with her during the admission, including prior treatment and her understanding of her chronic illnesses. She reported an acute episode of abdominal symptoms that led to hospital evaluation and the diagnosis of gallstone pancreatitis. The available history did not identify a separate chronic pancreatic disorder as the reason for this admission. Her care team explained that the biliary source could lead to another episode if the gallbladder remained in place. She understood the purpose of definitive treatment and the need for follow-up after discharge. Specific medication names, doses, laboratory values, imaging findings, and calendar dates are omitted.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 3 of 20\n\nPRESENTING SYMPTOMS:\nMs. Parker came to the hospital because of acute abdominal discomfort accompanied by nausea and difficulty tolerating food. The symptoms were consistent with the admitting diagnosis of gallstone pancreatitis. She described the onset and progression of her illness to the admitting team, and the history was used to guide supportive treatment and surgical planning. Her discomfort was addressed during the hospital stay, with reassessment based on her reported symptoms and ability to resume eating. The care team discussed warning symptoms that would require prompt attention after discharge, including recurrent severe abdominal pain, persistent vomiting, fever, or inability to keep fluids down. Her symptoms improved sufficiently to allow a gradual transition to oral intake and planning for discharge. No examination description, vital signs, named tests, or specific results are provided here.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 4 of 20\n\nADMISSION ASSESSMENT:\nThe admitting assessment was acute gallstone pancreatitis in a patient with atrial fibrillation, hypertension, and type 2 diabetes mellitus. The team considered the biliary episode the principal problem requiring hospitalization. Supportive inpatient care was provided while the acute symptoms settled and the team assessed readiness for definitive gallbladder treatment. Her chronic conditions were incorporated into perioperative planning and discharge coordination. The team discussed the expected course, the reason for observation, and the possibility of surgery during this admission. Ms. Parker was included in those discussions and agreed with the proposed approach. The immediate priorities were comfort, hydration, return to food and fluids as tolerated, and coordination of safe treatment for her chronic illnesses. This summary does not state laboratory values, named diagnostic tests, imaging findings, or medication details.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 5 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Ms. Parker remained admitted for supportive care of gallstone pancreatitis. The team followed her reported pain, nausea, and ability to tolerate oral intake while allowing the acute episode to improve. Fluids and symptom-directed care were provided without including specific product names or doses in this summary. Her chronic atrial fibrillation, hypertension, and diabetes were reviewed as part of the inpatient plan. The surgical team discussed removal of the gallbladder as a way to reduce the chance of another biliary episode. She was given time to ask questions about the expected procedure and recovery. Her initial care focused on stabilization and reassessment rather than immediate discharge. The record supplied for this summary contains no calendar date, numerical result, named test, or imaging result.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, the team continued supportive management and reviewed Ms. Parker’s progress through her reported symptoms and tolerance of intake. Her abdominal discomfort and nausea were monitored, and care was adjusted to support a gradual return to eating and drinking. The surgical plan remained focused on definitive gallbladder removal after improvement of the acute episode. Planning included consideration of her atrial fibrillation, hypertension, and type 2 diabetes mellitus. The team reviewed the anticipated benefits and routine recovery expectations with her. She remained involved in decisions and expressed understanding of the purpose of treatment. No additional procedure is described for this day. No test names, imaging findings, numerical data, medication names, or calendar dates are included in this account.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, Ms. Parker continued to receive inpatient care while the team evaluated her readiness for surgery and discharge planning. Her symptoms had improved enough for the care team to proceed with the planned definitive approach. She was able to discuss the expected postoperative course and the importance of following the surgical instructions. Her chronic conditions were considered in preparation for the procedure, with coordination among the inpatient teams as needed. Oral intake was advanced according to her tolerance, and symptom control remained part of routine care. The team also reviewed the need for outpatient follow-up after recovery. The narrative does not include numerical results, named tests, imaging findings, medication details, or calendar dates.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, Ms. Parker underwent the planned gallbladder operation after improvement of the acute episode. The procedure was completed during this admission, and the immediate recovery was without a reported complication. The team continued to observe her response, including comfort, ability to take food and fluids, and readiness for home care. Her chronic atrial fibrillation, hypertension, and type 2 diabetes mellitus remained part of discharge planning. She received instructions about activity, incision care, diet progression, and symptoms that should prompt urgent evaluation. The care team confirmed that follow-up arrangements would be needed after discharge. No specific procedure findings, named tests, imaging results, numerical results, medication names, or calendar dates are stated in this summary.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 9 of 20\n\nSUPPORTIVE TREATMENT:\nSupportive treatment during the admission was directed at the acute symptoms of gallstone pancreatitis and preparation for definitive care. The team provided hydration and relief of discomfort and nausea, while assessing Ms. Parker’s ability to resume oral intake. Her food and fluid intake was advanced as tolerated rather than on a fixed schedule. The care plan was revised in response to her reported symptoms and recovery after surgery. The team also accounted for her chronic atrial fibrillation, hypertension, and type 2 diabetes mellitus when coordinating inpatient care. The purpose and expected course of supportive treatment were explained to her. This summary intentionally omits names and doses of any therapies, laboratory values, diagnostic test names, imaging findings, and calendar dates.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 10 of 20\n\nSPECIALTY TEAM INPUT:\nSurgical team input was obtained regarding the timing and appropriateness of gallbladder removal during this admission. The team reviewed the working diagnosis, the improvement of Ms. Parker’s symptoms, and her ability to proceed with definitive treatment. Perioperative planning took account of her history of atrial fibrillation, hypertension, and type 2 diabetes mellitus. The surgical team discussed the expected procedure and recovery with Ms. Parker, including the possibility of temporary changes in activity and diet. The inpatient team coordinated the plan and continued supportive care while she prepared for surgery. She was given an opportunity to ask questions and agreed to proceed. No outside referral is described. No test names, imaging findings, numerical results, medication names, or calendar dates are included.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 11 of 20\n\nPROCEDURE:\nMs. Parker underwent gallbladder removal during the admission for gallstone pancreatitis. The procedure was completed without a reported immediate complication. The purpose was to address the suspected biliary source and reduce the likelihood of a further episode. The operation and expected recovery were discussed with her beforehand, and she agreed with the plan. Afterward, the team followed her reported comfort, oral intake, and ability to manage routine activity. Discharge planning included care of the operative area, gradual activity, and instructions about when to seek urgent help. Details of operative findings are not included in this summary. No additional named procedure, imaging result, test result, medication name, numerical value, or calendar date is reported.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 12 of 20\n\nPOSTOPERATIVE COURSE:\nAfter surgery, Ms. Parker continued inpatient recovery and was observed for changes in symptoms and ability to resume oral intake. Her postoperative course was described as uncomplicated. Pain and nausea were addressed with symptom-directed care, and she received guidance on gradually returning to usual food and activity. The team reviewed routine incision care and advised her to avoid strenuous activity until cleared during follow-up. She participated in discussions about the transition home and was able to restate the major warning symptoms. The plan was to continue recovery outside the hospital once she was comfortable with oral intake and home instructions. Specific therapy names, doses, examination details, vital signs, numerical data, and calendar dates are omitted.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 13 of 20\n\nATRIAL FIBRILLATION:\nAtrial fibrillation was considered throughout the admission and incorporated into the perioperative and discharge plans. The team reviewed her history and coordinated care around the acute illness and gallbladder procedure. No new rhythm-related complication was reported during the stay. Ms. Parker was reminded to continue the chronic care plan established with her usual clinician and to clarify any temporary perioperative changes with the treating team. The discharge discussion included seeking prompt care for new or worsening symptoms such as fainting, chest discomfort, or shortness of breath. No specific treatment names, doses, monitoring results, or numerical values are included. Follow-up with her established clinician was advised so that her ongoing atrial fibrillation care could be reviewed after recovery from the abdominal illness.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 14 of 20\n\nHYPERTENSION:\nHypertension was included in the inpatient care plan and considered during surgical preparation and recovery. The admission did not result in a reported complication related to this condition. Ms. Parker was advised to continue the long-term plan made with her usual clinician, while following any temporary instructions given at discharge. She was encouraged to arrange routine follow-up after returning home and to discuss any concerns about control or treatment changes with that clinician. The team reviewed that acute illness and recovery can affect usual routines, so she should seek guidance if she is uncertain about her plan. This section does not provide vital signs, numerical results, medication names, or doses. No examination description or calendar date is included.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 15 of 20\n\nTYPE 2 DIABETES MELLITUS:\nType 2 diabetes mellitus was considered during the admission, particularly while Ms. Parker was eating less than usual and preparing for surgery. The inpatient team coordinated care around her changing food intake and recovery. Discharge planning emphasized returning to her established chronic care routine as directed by her treating clinician and contacting that clinician if she had questions about changes made during the hospital stay. She was advised to seek guidance if she could not eat or drink adequately or if she felt unwell after returning home. Follow-up was recommended to review ongoing diabetes care after the acute illness. No medication names, doses, laboratory values, named tests, or numerical results are included in this account.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 16 of 20\n\nCOMPLICATIONS AND OTHER ISSUES:\nNo major complication was reported during the hospitalization or immediate recovery. Ms. Parker proceeded from supportive care to gallbladder removal and then continued recovery with a plan for home discharge. Her known atrial fibrillation, hypertension, and type 2 diabetes mellitus were taken into account, and no new issue involving those conditions was documented in the summary provided. The care team reviewed symptoms that could indicate a postoperative problem or recurrence of abdominal illness. She was instructed to seek prompt evaluation for worsening pain, persistent vomiting, fever, breathing difficulty, fainting, or a concerning change in her condition. No additional diagnoses, specific test results, imaging findings, numerical values, or calendar dates are stated here.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Ms. Parker had completed inpatient treatment for gallstone pancreatitis and gallbladder removal. Her recovery was considered adequate for continued care at home, with oral intake resumed as tolerated and no reported immediate operative complication. She understood the main discharge instructions and the need for surgical and primary care follow-up. Her chronic atrial fibrillation, hypertension, and type 2 diabetes mellitus remained part of her ongoing care plan. She was advised to seek urgent evaluation for severe or worsening abdominal pain, repeated vomiting, fever, inability to maintain fluids, chest discomfort, fainting, or shortness of breath. This summary does not include an examination description, vital signs, medication names, test names, results, or calendar dates.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 18 of 20\n\nDISCHARGE PLAN:\nMs. Parker was discharged home after completing inpatient supportive care and gallbladder removal. She was instructed to follow the written postoperative plan and to resume food and fluids gradually according to tolerance. Activity should increase in stages, with avoidance of strenuous effort until the surgical team provides further guidance. She was asked to keep the operative area clean and follow the care directions provided by the surgical team. Her chronic care should continue according to the instructions reviewed at discharge, with questions directed to her usual clinician. The discharge plan included outpatient surgical follow-up and routine follow-up for atrial fibrillation, hypertension, and diabetes. No named therapies, doses, calendar dates, test names, or numerical results are provided in this summary.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 19 of 20\n\nHOME INSTRUCTIONS:\nAt home, Ms. Parker should follow the postoperative instructions given by the surgical team, including incision care and gradual return to activity. She should advance her diet as tolerated and maintain fluid intake. She should contact the care team for increasing redness or drainage at the incision, worsening abdominal pain, persistent nausea or vomiting, fever, or inability to keep fluids down. Urgent evaluation is advised for chest discomfort, fainting, new shortness of breath, or sudden deterioration. She should not make changes to her chronic treatment plan without guidance from the clinician responsible for that care. She was encouraged to keep a record of questions and bring them to follow-up. No medication names, doses, or dates are listed.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP:\nMs. Parker should arrange follow-up with the surgical team to review recovery and the operative area. She should also contact her usual clinician after discharge to review ongoing care for atrial fibrillation, hypertension, and type 2 diabetes mellitus, including any temporary changes made during hospitalization. She should bring her discharge paperwork and share any new symptoms or concerns. If she is unable to arrange an appointment or her recovery worsens, she should contact the hospital team or seek urgent care as appropriate. Follow-up timing should follow the written instructions provided at discharge. No calendar date, named medication, dose, test name, imaging result, or numerical value is included in this document.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-28",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 09/28/2026\nPatient Name: Diane Parker\nDOB: 07/30/1964\nMRN: MRN-39890\nAttending: Dr. Elena Shaw\n\nADMISSION DIAGNOSIS:\nDiane Parker was admitted for an acute urinary tract infection with dehydration. She is a 62-year-old woman with a history of atrial fibrillation, hypertension, and type 2 diabetes mellitus. Her presenting symptoms and reduced oral intake were consistent with an infection affecting the urinary tract and a volume deficit. She required inpatient care for treatment, fluid support, and observation of her response. The admitting team also considered how her chronic conditions could affect recovery and discharge planning. No additional acute diagnosis was established during this stay. Her care focused on resolving the urinary symptoms, restoring adequate intake, and making sure she could continue recovery safely outside the hospital. The discharge plan includes clear instructions for symptom monitoring and timely follow-up with her usual care team.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 2 of 20\n\nREASON FOR ADMISSION:\nMs. Parker came to the hospital after developing urinary discomfort and a general decline in her ability to maintain usual food and fluid intake. She described feeling unwell and increasingly weak in the setting of these symptoms. The combination raised concern for a urinary infection accompanied by dehydration, particularly because her oral intake had been limited. Inpatient treatment was chosen to provide supportive care and observe her clinical course while the acute illness was addressed. Her history of atrial fibrillation, hypertension, and diabetes was reviewed as part of the admission assessment. She did not report a separate complaint that required a distinct inpatient treatment plan. The immediate goals were to improve hydration, relieve urinary symptoms, and establish a safe plan for continued care after discharge.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nThe patient has established atrial fibrillation, hypertension, and type 2 diabetes mellitus. These chronic conditions were considered throughout her hospitalization, including when planning supportive care and discharge follow-up. She was able to provide a history of her usual health and described the current illness as a change from her normal routine. There was no reported recent hospital stay that altered the plan for this admission. Her history did not include a new chronic diagnosis during the current episode. The team reviewed her home care routine with her and encouraged her to share any changes or concerns with her regular clinicians after discharge. The acute urinary infection and dehydration remained the principal reasons for hospitalization, and the chronic conditions were managed as ongoing issues rather than new problems.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 4 of 20\n\nADMISSION HISTORY:\nOn arrival, Ms. Parker reported urinary symptoms along with poor intake and a sense of weakness. The symptoms had interfered with her usual daily routine and her ability to drink adequately. The history was consistent with an acute urinary tract infection and associated dehydration. She denied a separate issue that became the focus of inpatient care. Her atrial fibrillation, hypertension, and type 2 diabetes were noted in the admission history. The team discussed the importance of maintaining fluids during recovery and of seeking help if symptoms worsened. Information about her usual care routine was obtained to support a coordinated discharge plan. Her presentation warranted hospital treatment and observation, with attention directed toward the infection, hydration, and her ability to resume safe oral intake.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 5 of 20\n\nINITIAL ASSESSMENT AND PLAN:\nThe initial plan was to treat the presumed urinary infection, support hydration, and follow her clinical response during the hospital stay. The team reviewed her symptoms, recent intake, relevant medical history, and ability to manage care at home. The approach was adjusted to her overall status and her history of atrial fibrillation, hypertension, and diabetes. Supportive fluids and antimicrobial treatment were provided without identifying a named product in this summary. Staff encouraged oral intake as tolerated and assessed whether she could meet basic hydration needs. The team also discussed warning signs that would require prompt attention after discharge. The plan emphasized clinical improvement, safe activity, and coordination with her established outpatient care team before leaving the hospital.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY ONE:\nDuring the first hospital day, care focused on treating the urinary infection and addressing dehydration after reduced intake. Ms. Parker received supportive fluid replacement and antimicrobial therapy. Staff encouraged her to take fluids by mouth as she was able and helped her understand the need for regular intake during recovery. Her symptoms and general clinical course were followed, with no new problem requiring a separate inpatient plan. Her chronic atrial fibrillation, hypertension, and diabetes remained part of routine care planning. The patient was included in discussions about the goals of treatment and the expected next steps. Discharge was deferred until her symptoms and intake had improved enough to support a safe transition home. No procedure was needed during this initial phase of treatment.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, Ms. Parker continued treatment for the urinary infection and dehydration. She reported improvement in her ability to drink and described less disruption from the urinary symptoms. The care team continued supportive treatment and observed her progress without a new complication. Attention remained on steady oral intake, comfort, and readiness to manage at home. Her chronic conditions were considered in the daily plan, but none became an acute reason to extend treatment independently of the infection and dehydration. Staff reviewed the importance of completing the planned course of care and contacting her usual clinicians if symptoms failed to resolve. The team began discussing the practical details of discharge, including access to fluids, assistance at home, and follow-up arrangements.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Ms. Parker had made continued clinical progress. Her urinary discomfort had eased, and she was able to take fluids more consistently. The team found no new concern that required a procedure or an expanded inpatient plan. Treatment for the infection was continued as planned, with supportive care for hydration and recovery. Her condition and ability to manage basic needs were reviewed in preparation for discharge. She participated in discussion of home care and understood the need to stay hydrated and watch for return of symptoms. Her atrial fibrillation, hypertension, and diabetes remained relevant to follow-up, though no new acute issue related to them arose during this stay. Discharge planning proceeded once the team considered home recovery appropriate.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, REMAINING STAY:\nFor the remainder of the admission, Ms. Parker continued to improve with treatment and supportive care. She was able to maintain oral intake more reliably and described ongoing relief of the urinary symptoms. The team continued observation and confirmed that no additional inpatient intervention was needed. Her care remained directed toward recovery from the urinary infection and dehydration, with routine consideration of her chronic medical conditions. Discussions focused on maintaining hydration, following the discharge plan, and recognizing when additional care might be needed. There was no reported event that changed the overall course or required a higher level of care. The patient and team agreed that continued recovery could take place at home with outpatient follow-up and clear instructions for seeking help if her condition worsened.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 10 of 20\n\nCONSULTATIONS:\nNo specialty consultation was required during this admission. The hospital team managed the urinary infection and dehydration, while also considering Ms. Parker’s history of atrial fibrillation, hypertension, and type 2 diabetes. Her needs were addressed through the inpatient care team and routine coordination for discharge. The patient was encouraged to contact her established clinicians after leaving the hospital, particularly if she had questions about ongoing care for her chronic conditions. No outside service introduced a separate diagnosis or changed the overall treatment plan. The decision to discharge was based on her improvement, better oral intake, and ability to continue recovery at home. Follow-up arrangements were included in the discharge plan so that her ongoing health needs could be reviewed after the acute illness had resolved.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 11 of 20\n\nPROCEDURES AND OPERATIONS:\nNo procedure or operation was performed during this hospitalization. Ms. Parker’s condition was managed with supportive care, fluid replacement, antimicrobial treatment, and observation of her clinical response. There was no need for an invasive intervention to address the urinary infection or dehydration. The team continued to assess her progress through discussion of her symptoms, intake, and ability to manage daily needs. Her recovery proceeded without a procedural complication because no procedure was undertaken. This summary does not include named diagnostic tests or results. The absence of a procedural need supported a straightforward transition plan once she was improving. She was advised to follow the instructions provided at discharge and to seek care if symptoms returned or if she could not maintain adequate intake at home.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 12 of 20\n\nATRIAL FIBRILLATION:\nMs. Parker has a history of atrial fibrillation. This condition was considered during the admission, but it did not become a new acute problem or require a separate inpatient intervention. The urinary infection and dehydration remained the principal focus of care. The team reviewed the importance of continuing her established plan for this chronic condition and discussing any questions with her usual clinician after discharge. No specific product or dose is listed in this summary. She was instructed to seek prompt care for new or worsening symptoms that concern her, including symptoms that feel different from her usual pattern. Ongoing outpatient follow-up is appropriate to review her long-term care needs once she has recovered from the acute illness.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 13 of 20\n\nHYPERTENSION:\nMs. Parker has a history of hypertension. No separate acute complication related to this condition was identified during the hospitalization, and it did not alter the primary treatment plan for urinary infection and dehydration. The team kept her chronic condition in mind while supporting recovery and preparing for discharge. She should continue her established care plan as directed by her regular clinician and discuss any concerns or changes after leaving the hospital. This document does not list specific products, doses, or measurements. The patient was reminded that follow-up is important even when the immediate reason for admission has improved. Her outpatient care team can review her longer-term management and make any needed adjustments after the acute illness has resolved.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 14 of 20\n\nTYPE 2 DIABETES MELLITUS:\nMs. Parker has type 2 diabetes mellitus. The condition was considered during the admission because acute illness and reduced intake can affect her usual daily routine. No separate acute complication of diabetes was identified as a reason for additional inpatient treatment. The team discussed resuming her established outpatient care plan and contacting her usual clinician with questions after discharge. She was encouraged to maintain regular intake as tolerated and to follow the guidance previously provided for managing diabetes during illness. No product, dose, or numerical result is included in this summary. Continued outpatient follow-up is recommended to review her ongoing diabetes care after recovery from the urinary infection and dehydration. The patient expressed understanding that worsening symptoms or difficulty maintaining intake should prompt timely medical attention.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 15 of 20\n\nNUTRITION AND ACTIVITY:\nDuring the admission, Ms. Parker was encouraged to drink fluids and resume food as tolerated. Her reduced intake had contributed to concern for dehydration, so maintaining adequate hydration was an important part of the recovery plan. She was able to take fluids more consistently as her symptoms improved. Activity was advanced according to her comfort and ability to manage basic needs, without a need for a formal procedure or separate rehabilitation plan. At home, she should pace her return to usual activities and ask for assistance if weakness or urinary symptoms interfere with safe self-care. She should follow any established dietary guidance related to diabetes and her other chronic conditions. If she cannot maintain intake, she should contact a clinician promptly.\n\n12-lead ECG on admission: sinus rhythm with occasional premature atrial complexes at 88 bpm, PR interval 147 ms, QRS 86 ms, QTc 418 ms. Sinus rhythm with occasional premature atrial complexes and no acute changes.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 16 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Ms. Parker had improved from the urinary infection and dehydration that prompted admission. She was taking fluids more consistently, and her urinary symptoms had eased. The inpatient team considered her appropriate to continue recovery at home with follow-up. No new acute problem required ongoing hospital care, and no procedure had been necessary. Her history of atrial fibrillation, hypertension, and type 2 diabetes remains important for her continued outpatient care. She understood the main instructions for hydration, symptom monitoring, and contacting a clinician if she worsened. Discharge planning was completed with attention to a safe transition and continuation of her usual care. She left the hospital with a plan for follow-up and instructions to seek help if concerning symptoms developed.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 17 of 20\n\nDISCHARGE DIAGNOSES:\nThe principal discharge diagnoses are urinary tract infection and dehydration, both improved during the admission. Her chronic medical history includes atrial fibrillation, hypertension, and type 2 diabetes mellitus. No additional acute diagnosis was established during this hospitalization. The infection and associated volume deficit were treated with supportive care and antimicrobial therapy, followed by clinical improvement and better oral intake. Her chronic conditions did not require a separate inpatient treatment course, but should continue to be addressed by her usual clinicians. The patient was advised to follow the discharge plan and maintain communication with her outpatient care team. This summary does not include named products, doses, test names, numerical results, or imaging details. The immediate focus after discharge is continued recovery and return to her usual routine as tolerated.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 18 of 20\n\nDISCHARGE INSTRUCTIONS:\nMs. Parker should continue to drink fluids regularly and resume food as tolerated. She should follow the treatment plan provided at discharge and complete the planned care for the urinary infection as instructed. She should contact a clinician promptly if urinary discomfort returns, if she develops new concerning symptoms, or if she is unable to maintain adequate intake. She should seek urgent care for a marked worsening in her condition or an inability to manage safely at home. She should continue her established care plan for atrial fibrillation, hypertension, and diabetes, and should not make changes without guidance from her usual clinician. She should keep a record of questions or concerns to discuss at follow-up. Rest and a gradual return to normal activity are encouraged.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP PLAN:\nMs. Parker should arrange follow-up with her usual outpatient clinician after discharge to review recovery from the urinary infection and dehydration. The visit should also provide an opportunity to discuss her ongoing care for atrial fibrillation, hypertension, and type 2 diabetes. She should seek earlier advice if urinary symptoms return, oral intake declines, or she develops a new concern. If she is unsure whether a symptom requires urgent care, she should contact a healthcare professional for guidance rather than waiting for a routine appointment. The hospital team reviewed the need for continued follow-up and encouraged her to bring questions about her recovery and chronic conditions. No calendar appointment date is specified in this summary. Continued communication with her established care team will support a safe return to usual activities.\n",
+        "Diane Parker | MRN-39890 | Discharge summary | Page 20 of 20\n\nDISPOSITION:\nMs. Parker was discharged home after improvement in her urinary symptoms and hydration. She was considered able to continue recovery outside the hospital with the instructions and follow-up plan provided. No procedure, operation, or specialty service was needed to complete the admission. The patient was included in discharge discussions and understood the importance of drinking regularly, following the treatment plan, and seeking help if she worsened. Her atrial fibrillation, hypertension, and diabetes remain ongoing conditions for outpatient management. The transition plan emphasized follow-up with her usual clinician and prompt attention to return of urinary symptoms or difficulty maintaining intake. No specific product, dose, test result, or calendar date is included here. The hospital stay ended with a plan for continued recovery at home and outpatient oversight.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of recurrent palpitations."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 65%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 194 mg/dL\nLDL Cholesterol: 79 mg/dL\nHDL Cholesterol: 73 mg/dL\nTriglycerides: 212 mg/dL (H)"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 35.7 sec\nINR: 3.1"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "discharge_summary_2",
+      "page": 15,
+      "text": "12-lead ECG on admission: sinus rhythm with occasional premature atrial complexes at 88 bpm, PR interval 147 ms, QRS 86 ms, QTc 418 ms. Sinus rhythm with occasional premature atrial complexes and no acute changes."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "missing",
+    "meds": "missing",
+    "progress_note": "missing",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 4,
+  "input_tokens": 2336,
+  "output_tokens": 9370
+}
