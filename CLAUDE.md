@@ -144,7 +144,7 @@ Tested end to end offline (FakeLLM + text-file case): full pipeline, both absenc
 validator, conflict checker, harness with per-item traces, recall@k, foreign-citation rate (E2), bootstrap
 CIs, slice table, run comparison, error attribution, and the LLM wrapper's JSON repair. Not yet run against the real API or real generated cases.
 
-Untested: B1 against a real model, dense/hybrid retrieval (chromadb), API.
+Untested: the API. Dense and hybrid retrieval ran on dev (E3, Nov 26); BM25 stays the default.
 
 Not written yet, roughly in priority order:
 1. Data generator after the defect plan: render documents, add noise, write PDFs and `gold.json`, leak check
