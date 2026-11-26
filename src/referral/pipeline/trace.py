@@ -14,6 +14,8 @@ class ItemTrace(BaseModel):
     first_status: str = ""          # verifier's first proposal
     absence_extra: list[str] = []   # extra chunk ids shown by the absence re-check
     absence_status: str | None = None
+    condition_extra: list[str] = []  # chunk ids mentioning the condition, shown after a Not applicable
+    condition_status: str | None = None
     long_context_status: str | None = None
     final_status: str = ""
     # Quotes the validator rejected: {"chunk_id", "quote", "score"}, score = match against the cited chunk

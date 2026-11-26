@@ -6,7 +6,7 @@ from referral.config import settings
 from referral.ingest.chunker import MAX_CHARS, chunk_case
 from referral.ingest.identity import quarantine
 from referral.llm import LLM
-from referral.pipeline.absence import candidates_for_recheck, final_read, names_item
+from referral.pipeline.absence import candidates_for_recheck, condition_candidates, final_read, names_item
 from referral.pipeline.conflicts import dose_conflicts, laterality_conflict
 from referral.pipeline.trace import TRACE_DEPTH, CaseTrace, ItemTrace
 from referral.pipeline.validator import decide, quote_score, quote_supported
@@ -31,6 +31,7 @@ class PipelineConfig:
     value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
     strict_long_context: bool = True   # final read may overturn Missing only with a quote naming the item
     piecewise_quotes: bool = True    # validator accepts quotes whose lines / "..." pieces each match (pw-dev runs)
+    condition_check: bool = False   # re-verify a Not applicable with chunks that mention the condition
     quote_length_check: bool = True  # a quote longer than its chunk must match the whole chunk, not contain it
 
 
@@ -86,6 +87,15 @@ def run_case(
                 if second.status != "missing":
                     proposal = second
                     flags[item.item_id].append("absence_check_overturned")
+        if proposal.status == "not_applicable" and cfg.condition_check and item.condition:
+            extra = condition_candidates(item, first, chunks)
+            t.condition_extra = [c.chunk_id for c in extra]
+            if extra:
+                second = verify_item(llm, item, first + extra)
+                t.condition_status = second.status
+                if second.status != "not_applicable":
+                    proposal = second  # a Missing here still goes to the long-context read below
+                    flags[item.item_id].append("condition_check_overturned")
         proposals[item.item_id] = proposal
         trace.items.append(t)
 

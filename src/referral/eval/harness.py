@@ -138,6 +138,8 @@ def main() -> None:
     ap.add_argument("--chunk-size", type=int, default=PipelineConfig.chunk_size, help="E3: chunk size in characters")
     ap.add_argument("--sentence-cuts", action="store_true",
                     help="cut long paragraphs at section or sentence boundaries instead of a fixed length")
+    ap.add_argument("--condition-check", action="store_true",
+                    help="re-verify a Not applicable with chunks that mention the item's condition")
     ap.add_argument("--no-quote-length-check", action="store_true",
                     help="let a quote longer than its chunk pass if it contains the chunk (old behaviour)")
     ap.add_argument("--no-value-expansion", action="store_true",
@@ -155,7 +157,7 @@ def main() -> None:
         validator=not args.no_validator, conflict_checker=not args.no_conflict_checker,
         value_expansion=not args.no_value_expansion, strict_long_context=not args.no_strict_long_context,
         piecewise_quotes=not args.no_piecewise_quotes,
-        quote_length_check=not args.no_quote_length_check,
+        quote_length_check=not args.no_quote_length_check, condition_check=args.condition_check,
         chunk_size=args.chunk_size, sentence_cuts=args.sentence_cuts,
     )
     llm = LLM() if args.system != "b0" else None
