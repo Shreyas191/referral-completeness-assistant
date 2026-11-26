@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referral Review</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1d2330; --muted: #5d6677; --line: #e2e5eb; --accent: #2f5bd3;
+    --present: #1f7a4d; --present-bg: #e3f4ea; --missing: #b42318; --missing-bg: #fde7e5;
+    --contradictory: #b54708; --contradictory-bg: #fdecd8; --stale: #8a6100; --stale-bg: #fbf1d0;
+    --review: #6b3fb0; --review-bg: #efe7fb; --na: #5d6677; --na-bg: #eceef2; --warn-bg: #fff6e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151b; --panel: #1b1f27; --text: #e6e9ef; --muted: #9aa3b2; --line: #2c323d; --accent: #7aa2ff;
+      --present: #6fd3a0; --present-bg: #17332a; --missing: #ff8a80; --missing-bg: #3a1d1b;
+      --contradictory: #ffb36b; --contradictory-bg: #3a2614; --stale: #f0cd6a; --stale-bg: #362d12;
+      --review: #c7a6ff; --review-bg: #2b2140; --na: #aab2c0; --na-bg: #262b34; --warn-bg: #352c14;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  header { padding: 18px 24px; border-bottom: 1px solid var(--line); background: var(--panel);
+           display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  header h1 { font-size: 19px; margin: 0; }
+  header .note { color: var(--muted); font-size: 13px; }
+  main { max-width: 1180px; margin: 0 auto; padding: 20px 16px 48px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px;
+           margin-bottom: 16px; }
+  .tabs { display: flex; gap: 6px; margin-bottom: 14px; }
+  .tabs button { background: none; border: 1px solid var(--line); color: var(--text); border-radius: 8px;
+                 padding: 6px 12px; cursor: pointer; font: inherit; }
+  .tabs button[aria-selected="true"] { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  .row { display: flex; gap: 12px; align-items: end; flex-wrap: wrap; }
+  label { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+  select, input, textarea { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line);
+                            border-radius: 7px; padding: 7px 9px; }
+  select { min-width: 320px; max-width: 100%; }
+  button.primary { background: var(--accent); color: #fff; border: 0; border-radius: 8px; padding: 8px 16px;
+                   font: inherit; font-weight: 600; cursor: pointer; }
+  button.primary:disabled { opacity: .55; cursor: progress; }
+  button.small { font: inherit; font-size: 13px; padding: 4px 10px; border-radius: 7px; cursor: pointer;
+                 border: 1px solid var(--line); background: var(--panel); color: var(--text); }
+  #status { color: var(--muted); margin-top: 10px; min-height: 1.4em; }
+  #status.error { color: var(--missing); }
+  .summary { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+  .summary .verdict { font-size: 17px; font-weight: 650; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .meta { color: var(--muted); font-size: 13px; }
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12.5px; font-weight: 650;
+           white-space: nowrap; }
+  .s-present { color: var(--present); background: var(--present-bg); }
+  .s-missing { color: var(--missing); background: var(--missing-bg); }
+  .s-contradictory { color: var(--contradictory); background: var(--contradictory-bg); }
+  .s-stale { color: var(--stale); background: var(--stale-bg); }
+  .s-needs_review { color: var(--review); background: var(--review-bg); }
+  .s-not_applicable { color: var(--na); background: var(--na-bg); }
+  .warn { background: var(--warn-bg); border-radius: 8px; padding: 8px 12px; margin-top: 12px; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-top: 1px solid var(--line); }
+  th { font-size: 12.5px; color: var(--muted); font-weight: 600; border-top: 0; }
+  td.item b { display: block; }
+  td.item span { color: var(--muted); font-size: 13px; }
+  .cite { margin: 0 0 8px; }
+  .cite .where { font-size: 12.5px; color: var(--muted); }
+  blockquote { margin: 3px 0 0; padding: 4px 10px; border-left: 3px solid var(--line); white-space: pre-wrap;
+               font-size: 13.5px; }
+  .why { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .flags { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .match { font-size: 13px; margin-left: 4px; }
+  .mlabel { display: none; font-size: 12px; color: var(--muted); margin-right: 6px; }
+  .match.ok { color: var(--present); } .match.bad { color: var(--missing); }
+  .followup { display: grid; gap: 6px; margin-bottom: 12px; }
+  .followup textarea { width: 100%; min-height: 56px; resize: vertical; }
+  .docs { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--muted); margin-top: 8px; }
+  h2 { font-size: 16px; margin: 0 0 10px; }
+  [hidden] { display: none !important; }
+  @media (max-width: 760px) {
+    select { min-width: 0; width: 100%; }
+    thead { display: none; }
+    tr, td { display: block; }
+    td { border-top: 0; padding: 4px 0; }
+    tr { border-top: 1px solid var(--line); padding: 10px 0; }
+    .mlabel { display: inline; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Referral completeness review</h1>
+  <span class="note">Synthetic data only. The system never contacts anyone: follow-ups are drafts for staff.</span>
+  <span class="note" id="model"></span>
+</header>
+<main>
+  <section class="panel" aria-label="Choose a packet">
+    <div class="tabs" role="tablist">
+      <button role="tab" id="tab-sample" aria-selected="true">Sample case</button>
+      <button role="tab" id="tab-upload" aria-selected="false">Upload packet</button>
+    </div>
+    <form id="sample-form" class="row">
+      <label>Stored case
+        <select id="sample"></select>
+      </label>
+      <button class="primary" type="submit">Check packet</button>
+    </form>
+    <form id="upload-form" class="row" hidden>
+      <label>Checklist <select id="checklist"></select></label>
+      <label>Referral date <input type="date" id="refdate" required></label>
+      <label>Documents (.pdf or .txt) <input type="file" id="files" accept=".pdf,.txt" multiple required></label>
+      <button class="primary" type="submit">Check packet</button>
+    </form>
+    <div id="status" role="status" aria-live="polite"></div>
+  </section>
+
+  <section id="results" hidden>
+    <div class="panel">
+      <div class="summary">
+        <div class="verdict" id="verdict"></div>
+        <div class="chips" id="chips"></div>
+        <div class="meta" id="runmeta"></div>
+      </div>
+      <div class="docs" id="docs"></div>
+      <div class="warn" id="quarantine" hidden></div>
+    </div>
+
+    <div class="panel">
+      <h2>Checklist items</h2>
+      <table>
+        <thead><tr><th style="width:22%">Item</th><th style="width:13%">Status</th>
+          <th id="gold-head" style="width:13%">Gold label</th><th>Evidence</th></tr></thead>
+        <tbody id="items"></tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <div class="row" style="justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <h2 style="margin:0">Follow-up drafts</h2>
+        <button class="small" id="copy" type="button">Copy all</button>
+      </div>
+      <p class="meta" style="margin-top:0">Edit before sending. Nothing is sent from here.</p>
+      <div id="followups"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+const LABEL = {present: "Present", missing: "Missing", contradictory: "Contradictory", stale: "Stale",
+               needs_review: "Needs review", not_applicable: "Not applicable"};
+const ORDER = ["missing", "contradictory", "stale", "needs_review", "present", "not_applicable"];
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls;
+                                 if (text !== undefined) e.textContent = text; return e; };
+const badge = (s) => el("span", "badge s-" + s, LABEL[s] || s);
+let checklists = {};
+
+async function getJSON(url, opts) {
+  const r = await fetch(url, opts);
+  const body = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(body.detail ? (typeof body.detail === "string" ? body.detail
+                                             : JSON.stringify(body.detail)) : r.status + " " + r.statusText);
+  return body;
+}
+
+async function checklist(id) {
+  if (!checklists[id]) checklists[id] = await getJSON("/checklists/" + encodeURIComponent(id));
+  return checklists[id];
+}
+
+function setTab(which) {
+  const sample = which === "sample";
+  $("tab-sample").setAttribute("aria-selected", sample); $("tab-upload").setAttribute("aria-selected", !sample);
+  $("sample-form").hidden = !sample; $("upload-form").hidden = sample;
+}
+
+async function init() {
+  $("tab-sample").onclick = () => setTab("sample");
+  $("tab-upload").onclick = () => setTab("upload");
+  try {
+    const h = await getJSON("/health"); $("model").textContent = "Model: " + h.model;
+    const ids = await getJSON("/checklists");
+    for (const id of ids) $("checklist").append(new Option(id, id));
+    const samples = await getJSON("/samples");
+    const groups = {};
+    for (const s of samples) {
+      const kind = s.case_id.includes("-hard-") ? "Hard set (43-46 pages)"
+                 : s.split === "adversarial" ? "Hand-written adversarial" : "Dev set";
+      (groups[kind] ||= []).push(s);
+    }
+    for (const [kind, list] of Object.entries(groups)) {
+      const g = document.createElement("optgroup"); g.label = kind;
+      for (const s of list) g.append(new Option(`${s.case_id}  (${s.documents} docs, ${s.pages} pages)`, s.case_id));
+      $("sample").append(g);
+    }
+  } catch (e) { showStatus("Could not reach the API: " + e.message, true); }
+}
+
+function showStatus(msg, error) { $("status").textContent = msg; $("status").className = error ? "error" : ""; }
+
+async function run(promise) {
+  document.querySelectorAll("button.primary").forEach(b => b.disabled = true);
+  showStatus("Checking the packet. This usually takes 15-20 seconds...");
+  const started = Date.now();
+  const tick = setInterval(() => showStatus(`Checking the packet... ${Math.round((Date.now() - started) / 1000)} s`), 1000);
+  try { const data = await promise; await render(data); showStatus(""); }
+  catch (e) { showStatus("Error: " + e.message, true); }
+  finally { clearInterval(tick); document.querySelectorAll("button.primary").forEach(b => b.disabled = false); }
+}
+
+$("sample-form").onsubmit = (ev) => {
+  ev.preventDefault();
+  const id = $("sample").value; if (!id) return;
+  run(getJSON("/samples/" + encodeURIComponent(id) + "/check", {method: "POST"}));
+};
+$("upload-form").onsubmit = (ev) => {
+  ev.preventDefault();
+  const fd = new FormData();
+  fd.append("checklist_id", $("checklist").value);
+  fd.append("referral_date", $("refdate").value);
+  for (const f of $("files").files) fd.append("files", f);
+  run(getJSON("/cases", {method: "POST", body: fd}));
+};
+
+async function render(data) {
+  const res = data.result, gold = data.gold;
+  const cl = await checklist(res.checklist_id);
+  const items = Object.fromEntries(cl.items.map(i => [i.item_id, i]));
+  const rows = [...res.items].sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status));
+  const gaps = res.items.filter(i => ["missing", "contradictory", "stale", "needs_review"].includes(i.status));
+
+  $("verdict").textContent = gaps.length ? `${gaps.length} of ${res.items.length} items need follow-up`
+                                         : "Packet complete";
+  const counts = {};
+  for (const i of res.items) counts[i.status] = (counts[i.status] || 0) + 1;
+  $("chips").replaceChildren(...ORDER.filter(s => counts[s]).map(s => { const b = badge(s);
+    b.textContent = `${LABEL[s]} ${counts[s]}`; return b; }));
+  let meta = `${res.case_id} · ${data.seconds} s · ${data.llm_calls} model calls`;
+  if (data.cost_usd != null) meta += ` · $${data.cost_usd.toFixed(4)}`;
+  if (gold) {
+    const agree = res.items.filter(i => gold[i.item_id] === i.status).length;
+    meta += ` · matches gold on ${agree} of ${res.items.length}`;
+  }
+  $("runmeta").textContent = meta;
+  $("docs").replaceChildren(el("span", "", "Documents:"), ...data.documents.map(d =>
+    el("span", "", `${d.doc_id} (${d.pages} p${d.doc_date ? ", " + d.doc_date : ""})`)));
+  $("quarantine").hidden = !res.quarantined_docs.length;
+  $("quarantine").textContent = res.quarantined_docs.length ? "Set aside as another patient's or unidentified: "
+    + res.quarantined_docs.join(", ") + ". These documents were not used as evidence." : "";
+
+  $("gold-head").hidden = !gold;
+  $("items").replaceChildren(...rows.map(it => {
+    const tr = document.createElement("tr");
+    const def = items[it.item_id] || {};
+    const cItem = el("td", "item"); cItem.append(el("b", "", def.description || it.item_id), el("span", "", it.item_id));
+    if (def.recency_days) cItem.append(el("span", "", ` · within ${def.recency_days} days`));
+    const cStatus = el("td"); cStatus.append(badge(it.status));
+    const cGold = el("td"); cGold.hidden = !gold;
+    if (gold && gold[it.item_id]) {
+      cGold.append(el("span", "mlabel", "Gold label"), badge(gold[it.item_id]));
+      const ok = gold[it.item_id] === it.status;
+      cGold.append(el("span", "match " + (ok ? "ok" : "bad"), ok ? "✓" : "✗"));
+      cGold.lastChild.setAttribute("aria-label", ok ? "matches" : "differs");
+    }
+    const cEv = el("td");
+    for (const c of it.citations) {
+      const box = el("div", "cite");
+      box.append(el("div", "where", `${c.doc_id} · page ${c.page}${c.doc_date ? " · " + c.doc_date : ""}`),
+                 el("blockquote", "", c.quote));
+      cEv.append(box);
+    }
+    if (it.rationale) cEv.append(el("div", "why", it.rationale));
+    if (it.flags.length) cEv.append(el("div", "flags", "Flags: " + it.flags.join(", ")));
+    tr.append(cItem, cStatus, cGold, cEv);
+    return tr;
+  }));
+
+  $("followups").replaceChildren(...(res.followups.length ? res.followups.map(f => {
+    const box = el("div", "followup");
+    const lab = el("label", "", (items[f.item_id] || {}).description || f.item_id);
+    const ta = el("textarea"); ta.value = f.request; ta.setAttribute("aria-label", "Draft request for " + f.item_id);
+    lab.append(ta); box.append(lab); return box;
+  }) : [el("p", "meta", "No follow-ups needed.")]));
+  $("results").hidden = false;
+}
+
+$("copy").onclick = async () => {
+  const text = [...document.querySelectorAll("#followups textarea")].map(t => "- " + t.value.trim()).join("\n");
+  try { await navigator.clipboard.writeText(text); $("copy").textContent = "Copied"; }
+  catch { $("copy").textContent = "Copy failed"; }
+  setTimeout(() => $("copy").textContent = "Copy all", 1500);
+};
+
+init();
+</script>
+</body>
+</html>
