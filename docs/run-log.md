@@ -47,6 +47,11 @@ pre-filled; `python -m referral.eval.compare runs/A runs/B` gives the side-by-si
 | 2026-11-26 | def-hybrid-dev | Shreyas | Same, `--retrieval hybrid` | dev (40) | 0.98 | 1.00 | 1.00 | 0.00 | 0.65 | $0.002 | 16.0 s | 483e603 | `dev-010` meds now Missing (correct): "Only one medication is mentioned in passing". 1 wrong (`dev-038`); vs `hybrid-dev`: 1 item vs 0, p = 1. |
 | 2026-11-26 | def-b1-dev | Shreyas | Same, B1 | dev (40) | 0.95 | 1.00 | 0.98 | 0.00 | 0.51 | $0.001 | 9.0 s | 483e603 | Accuracy 0.969 (earlier B1 runs 0.959, 0.963); vs `b1-dev` p = 0.648, vs `b1-dev-r2` p = 0.815. |
 | 2026-11-26 | def-pipe-hard-rev | Shreyas | Same, hard set, `--doc-order reverse` | hard (18) | 0.96 | 1.00 | 0.99 | 0.00 | 0.73 | $0.003 | 17.1 s | 483e603 | `hard-015` meds now Missing (correct). 1 wrong (`hard-003` bmp contradiction); vs `pipe-hard-rev`: 2 items vs 0, p = 0.5. |
+| 2026-11-26 | test-b0 | Shreyas | **Freeze** (`824f8f4`, tag `freeze-2026-11-26`): B0 on the held-out test split; deterministic, so run once | test (110) | 0.79 | 0.53 | 0.33 | 0.00 | 0.00 | $0.000 | 0.0 s | 824f8f4 | Lower bound. |
+| 2026-11-26 | test-b1 | Shreyas | **Freeze**: B1 | test (110) | 0.92 | 1.00 | 0.98 | 0.00 | 0.52 | $0.001 | 9.1 s | 824f8f4 | 24 of 880 wrong: 18 items dropped, 3 contradictions missed, 3 Missing called Present. Right-document citations 0.905. |
+| 2026-11-26 | test-b1-r2 | Shreyas | **Freeze**: B1 repeat | test (110) | 0.94 | 0.99 | 0.97 | 0.00 | 0.52 | $0.001 | 9.0 s | 824f8f4 | 35 wrong: 26 dropped, 3 Needs review, 3 contradictions missed, 2 Missing called Present, 1 Present called Missing. vs `test-b1`: p = 0.108. |
+| 2026-11-26 | test-pipe | Shreyas | **Freeze**: pipeline, defaults (BM25, value expansion, strict long-context read, piecewise quotes, quote length check, condition check, meds definition) | test (110) | 0.95 | 1.00 | 0.98 | 0.00 | 0.70 | $0.002 | 15.4 s | 824f8f4 | 5 of 880 wrong: 4 contradictions missed (3 retrieval misses, only one side retrieved; 1 with both shown), `test-021` reason Missing called Present. Right-document citations 0.995. |
+| 2026-11-26 | test-pipe-r2 | Shreyas | **Freeze**: pipeline repeat | test (110) | 0.95 | 1.00 | 0.97 | 0.00 | 0.70 | $0.002 | 14.7 s | 824f8f4 | 6 wrong: 5 contradictions missed (the same 3 retrieval misses plus 2 with both shown), `test-021` reason. vs `test-pipe`: p = 1. |
 
 ## Hypotheses tried
 
@@ -154,3 +159,34 @@ total. `dev-010`-style errors (one drug mention called a medication list) now ap
 Nov 26 meds definition: `def-pipe-dev`, `def-hybrid-dev`, `def-b1-dev`, `def-pipe-hard-rev` at `483e603` on
 `shreyas/meds-definition`, $0.246 in total. Test split generated the same day (110 cases, `data/test_cases`,
 gitignored, $0.172); nothing has been run on it.
+
+## Frozen test results (Nov 26, `824f8f4`, tag `freeze-2026-11-26`)
+
+110 held-out cases (880 items), run once and not touched before. All numbers from `runs/test-*/metrics.json`
+and `python -m referral.eval.compare ... --cases-dir data/test_cases`. Brackets are 95% bootstrap CIs.
+
+| Run | Gap recall | Gap precision | Macro-F1 (gold classes) | Accuracy | Cite: doc | Cite: passage | $/case | Mean / max s |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| B0 | 0.786 [0.708, 0.861] | 0.533 | 0.332 [0.319, 0.342] | 0.867 | 0.990 | 0.001 | 0 | 0.0 |
+| B1, run 1 | 0.920 [0.862, 0.968] | 1.000 | 0.975 [0.952, 0.992] | 0.973 | 0.905 | 0.520 | 0.0010 | 9.1 / 13.9 |
+| B1, run 2 | 0.938 [0.890, 0.977] | 0.991 | 0.974 [0.954, 0.989] | 0.960 | 0.898 | 0.516 | 0.0010 | 9.0 / 14.8 |
+| Pipeline, run 1 | 0.955 [0.914, 0.990] | 1.000 | 0.978 [0.952, 0.994] | 0.994 | 0.995 | 0.704 | 0.0016 | 15.4 / 19.6 |
+| Pipeline, run 2 | 0.946 [0.900, 0.983] | 1.000 | 0.972 [0.946, 0.992] | 0.993 | 0.995 | 0.702 | 0.0016 | 14.7 / 22.4 |
+
+- **Pipeline vs B1, status correct:** pipeline ahead in all four pairings, 22-33 items vs 3-4, McNemar p =
+  2.27e-07 to 0.000534. **Gap correct:** not significant (6-8 items vs 3-4, p = 0.388 to 0.754).
+- **B1 vs B0:** p <= 3.71e-12 (status), <= 1.59e-22 (gaps).
+- **Run to run:** pipeline runs agree on all but 3 items (p = 1); B1 runs differ on 39 (p = 0.108).
+- **Where the pipeline loses:** contradictions caught 18 and 17 of 22, vs 19 and 19 for B1. Three are retrieval
+  misses in both runs (`test-026` meds, `test-046` lipids, `test-093` meds: only one side retrieved, value
+  expansion did not add the other); the rest were shown both sides and called Present.
+- **Where B1 loses:** 18 and 26 items dropped from its output; all of B1's errors on items with evidence sit in
+  the last quarter of the packet (depth 0.75-1.00: 0.938 and 0.897 accuracy, vs 1.000 below it), where the
+  referral letter sorts last, so position and the dropped `reason` item are confounded here.
+- **Slices (pipeline run 1 / run 2):** buried 1.000 / 0.989 accuracy, stale 1.000 / 0.992, wrong-patient 1.000 /
+  1.000 (no false Contradictory from the 6 wrong-patient documents), abbreviation 0.991 / 0.991, contradiction
+  0.972 / 0.966. False-Missing rate 0.000.
+- **Targets:** gap recall >= 0.90 met (CI lower bounds 0.914, 0.900); gap precision >= 0.80 met; macro-F1 >= 0.80
+  met; citation precision >= 0.95 met at document and page level (0.995), missed at passage level (0.70);
+  cost <= $0.10 and latency <= 60 s met.
+- **Cost:** $0.590 for the four paid runs.
