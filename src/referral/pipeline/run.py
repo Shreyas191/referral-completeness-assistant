@@ -3,7 +3,7 @@ from dataclasses import asdict, dataclass
 from datetime import date
 
 from referral.config import settings
-from referral.ingest.chunker import chunk_case
+from referral.ingest.chunker import MAX_CHARS, chunk_case
 from referral.ingest.identity import quarantine
 from referral.llm import LLM
 from referral.pipeline.absence import candidates_for_recheck, final_read, names_item
@@ -21,6 +21,8 @@ class PipelineConfig:
     retrieval_mode: str = "bm25"     # bm25 | dense | hybrid   (E3)
     scope: str = "case"              # case | global           (E2)
     top_k: int = settings.top_k
+    chunk_size: int = MAX_CHARS        # E3 chunk size, in characters
+    sentence_cuts: bool = False      # cut long paragraphs at section / sentence boundaries, not mid-word
     identity_check: bool = True
     absence_check: bool = True       # wide per-item re-check before accepting Missing
     absence_long_context: bool = True  # whole-packet final read for items still Missing (#4)
@@ -53,7 +55,7 @@ def run_case(
         docs, quarantined = quarantine(docs)
     trace.quarantined_docs = quarantined
 
-    chunks = chunk_case(docs)
+    chunks = chunk_case(docs, cfg.chunk_size, cfg.sentence_cuts)
     # In the global-scope ablation, citations to other cases' chunks must still validate, so they can be counted.
     pool = global_chunks if cfg.scope == "global" and global_chunks else chunks
     chunks_by_id = {c.chunk_id: c for c in [*chunks, *pool]}

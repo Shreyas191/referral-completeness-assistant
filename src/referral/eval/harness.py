@@ -59,7 +59,7 @@ def run_split(
     docs_by_case = {gold.case_id: load_case(case_dir) for case_dir, gold in cases}
 
     # Every chunk in the split, for recall@k lookups and for the global-scope ablation (E2).
-    all_chunks = [c for docs in docs_by_case.values() for c in chunk_case(docs)]
+    all_chunks = [c for docs in docs_by_case.values() for c in chunk_case(docs, cfg.chunk_size, cfg.sentence_cuts)]
     chunks_by_id = {c.chunk_id: c for c in all_chunks}
     global_chunks = all_chunks if system == "pipeline" and cfg.scope == "global" else None
 
@@ -135,6 +135,9 @@ def main() -> None:
                     help="let the final read overturn Missing without a quote naming the item")
     ap.add_argument("--no-piecewise-quotes", action="store_true",
                     help="validator requires each quote to match the cited chunk as one piece")
+    ap.add_argument("--chunk-size", type=int, default=PipelineConfig.chunk_size, help="E3: chunk size in characters")
+    ap.add_argument("--sentence-cuts", action="store_true",
+                    help="cut long paragraphs at section or sentence boundaries instead of a fixed length")
     ap.add_argument("--no-quote-length-check", action="store_true",
                     help="let a quote longer than its chunk pass if it contains the chunk (old behaviour)")
     ap.add_argument("--no-value-expansion", action="store_true",
@@ -153,6 +156,7 @@ def main() -> None:
         value_expansion=not args.no_value_expansion, strict_long_context=not args.no_strict_long_context,
         piecewise_quotes=not args.no_piecewise_quotes,
         quote_length_check=not args.no_quote_length_check,
+        chunk_size=args.chunk_size, sentence_cuts=args.sentence_cuts,
     )
     llm = LLM() if args.system != "b0" else None
     metrics = run_split(args.system, args.split, Path("runs") / args.name, cfg, llm, cases_dir=args.cases_dir)

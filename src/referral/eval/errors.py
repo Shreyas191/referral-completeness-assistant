@@ -26,7 +26,7 @@ from pathlib import Path
 from referral.eval.gold import GoldCase, GoldEvidence, GoldItem, load_gold
 from referral.eval.metrics import PRESENT_LIKE, _evidence_hit
 from referral.eval.report import render_report
-from referral.ingest.chunker import chunk_case
+from referral.ingest.chunker import MAX_CHARS, chunk_case
 from referral.ingest.pdf_loader import load_case
 from referral.pipeline.trace import CaseTrace, ItemTrace
 from referral.schemas import CaseResult, Chunk, ItemResult, Status
@@ -211,7 +211,9 @@ def from_run_dir(run_dir: Path, cases_dir: Path | None = None) -> dict[str, int]
     preds = [CaseResult.model_validate_json((run_dir / f"{cid}.json").read_text()) for cid in case_ids
              if (run_dir / f"{cid}.json").exists()]
     # Chunk every case in the run: under global scope (E2) a trace can point at another case's chunks.
-    chunks = [c for cid in case_ids for c in chunk_case(load_case(cases_dir / cid))]
+    cfg = metrics.get("config", {})
+    size, cuts = cfg.get("chunk_size", MAX_CHARS), cfg.get("sentence_cuts", False)
+    chunks = [c for cid in case_ids for c in chunk_case(load_case(cases_dir / cid), size, cuts)]
     counts = write_errors(run_dir, golds, preds, traces, {c.chunk_id: c for c in chunks})
     metrics["error_attribution"] = counts
     (run_dir / "metrics.json").write_text(json.dumps(metrics, indent=2))

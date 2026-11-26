@@ -27,14 +27,15 @@ KS = (1, 3, 5, 10)
 MODES = ("bm25", "dense", "hybrid")
 
 
-def sweep(case_dirs: list[Path], checklist_name: str, chunk_size: int, modes=MODES, dense=None) -> dict:
+def sweep(case_dirs: list[Path], checklist_name: str, chunk_size: int, modes=MODES, dense=None,
+          sentence_cuts: bool = False) -> dict:
     items = {i.item_id: i for i in load_checklist(checklist_name, CHECKLISTS).items}
     out = {m: {"items": 0, "multi_doc_items": 0, **{f"{r}@{k}": 0 for r in ("any", "all", "multi") for k in KS}}
            for m in modes}
     passages = findable = n_chunks = 0
     for d in case_dirs:
         gold = load_gold(d)
-        chunks = [c for doc in load_case(d) for c in chunk_document(doc, chunk_size)]
+        chunks = [c for doc in load_case(d) for c in chunk_document(doc, chunk_size, sentence_cuts)]
         n_chunks += len(chunks)
         if dense is not None:
             dense.add(chunks)
@@ -63,16 +64,17 @@ def sweep(case_dirs: list[Path], checklist_name: str, chunk_size: int, modes=MOD
             r[f"any@{k}"] = round(r[f"any@{k}"] / r["items"], 3) if r["items"] else 0.0
             r[f"all@{k}"] = round(r[f"all@{k}"] / r["items"], 3) if r["items"] else 0.0
             r[f"multi@{k}"] = round(r[f"multi@{k}"] / r["multi_doc_items"], 3) if r["multi_doc_items"] else 0.0
-    return {"chunk_size": chunk_size, "cases": len(case_dirs), "chunks": n_chunks,
+    return {"chunk_size": chunk_size, "sentence_cuts": sentence_cuts, "cases": len(case_dirs), "chunks": n_chunks,
             "findable": round(findable / passages, 3) if passages else 0.0, "modes": out}
 
 
 def render(results: list[dict]) -> str:
-    lines = ["| Chunk size | Chunks | Findable | Mode | any@3 | any@5 | all@3 | all@5 | all@10 | multi-doc@5 "
-             "| multi-doc@10 |", "| --- " * 11 + "|"]
+    lines = ["| Chunk size | Cuts | Chunks | Findable | Mode | any@3 | any@5 | all@3 | all@5 | all@10 | multi-doc@5 "
+             "| multi-doc@10 |", "| --- " * 12 + "|"]
     for res in results:
         for mode, r in res["modes"].items():
-            lines.append(f"| {res['chunk_size']} | {res['chunks']} | {res['findable']:.3f} | {mode} | "
+            cuts = "sentence" if res.get("sentence_cuts") else "fixed"
+            lines.append(f"| {res['chunk_size']} | {cuts} | {res['chunks']} | {res['findable']:.3f} | {mode} | "
                          f"{r['any@3']:.3f} | {r['any@5']:.3f} | {r['all@3']:.3f} | {r['all@5']:.3f} | "
                          f"{r['all@10']:.3f} | {r['multi@5']:.3f} (n={r['multi_doc_items']}) | {r['multi@10']:.3f} |")
     return "\n".join(lines)
@@ -84,6 +86,7 @@ def main() -> None:
     ap.add_argument("--checklist", default="cardiology-v1")
     ap.add_argument("--cases-dir", type=Path, default=CASES)
     ap.add_argument("--chunk-sizes", type=int, nargs="+", default=[MAX_CHARS])
+    ap.add_argument("--sentence-cuts", action="store_true", help="section / sentence boundary cuts")
     ap.add_argument("--modes", nargs="+", default=list(MODES), choices=MODES)
     ap.add_argument("--out", type=Path, help="write the results as JSON here")
     args = ap.parse_args()
@@ -96,8 +99,8 @@ def main() -> None:
         if set(args.modes) - {"bm25"}:
             from referral.retrieval.hybrid import DenseRetriever
 
-            dense = DenseRetriever(tempfile.mkdtemp(), collection=f"sweep{size}")
-        results.append(sweep(case_dirs, args.checklist, size, args.modes, dense))
+            dense = DenseRetriever(tempfile.mkdtemp(), collection=f"sweep{size}{'s' if args.sentence_cuts else 'f'}")
+        results.append(sweep(case_dirs, args.checklist, size, args.modes, dense, args.sentence_cuts))
     print(render(results))
     if args.out:
         args.out.write_text(json.dumps(results, indent=1))
