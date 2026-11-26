@@ -363,3 +363,38 @@ def test_reverse_doc_order_moves_evidence_but_not_results(case_dir, tmp_path):
     a = run_split("pipeline", "dev", tmp_path / "a", PipelineConfig(), FakeLLM(), **kw)
     b = run_split("pipeline", "dev", tmp_path / "b", PipelineConfig(), FakeLLM(), doc_order="reverse", **kw)
     assert b["doc_order"] == "reverse" and a["status_accuracy"] == b["status_accuracy"]
+
+
+def test_item_definition_reaches_every_prompt_that_judges_the_item():
+    from referral.baselines.b1_long_context import run_b1
+    from referral.ingest.chunker import chunk_case
+    from referral.pipeline.absence import final_read
+    from referral.pipeline.verifier import verify_item
+    from referral.schemas import Document
+
+    checklist = load_checklist("cardiology-v1", CHECKLISTS)
+    meds = next(i for i in checklist.items if i.item_id == "meds")
+    assert "not by itself a medication list" in meds.definition
+    assert all(i.definition is None for i in checklist.items if i.item_id != "meds")
+
+    class Recorder(FakeLLM):
+        def __init__(self):
+            super().__init__()
+            self.users = []
+
+        def structured(self, system, user, schema):
+            self.users.append(user)
+            return super().structured(system, user, schema)
+
+    doc = Document(doc_id="referral_letter", case_id="c1", pages=["Date: 11/01/2026\n\nPatient is on warfarin."])
+    llm = Recorder()
+    verify_item(llm, meds, chunk_case([doc]))
+    final_read(llm, [meds], chunk_case([doc]))
+    try:
+        run_b1([doc], checklist, date(2026, 11, 1), llm)
+    except NotImplementedError:
+        pass  # the fake has no B1 schema; the prompt was still recorded
+    assert len(llm.users) == 3 and all(meds.definition in u for u in llm.users)
+    ecg = next(i for i in checklist.items if i.item_id == "ecg")
+    verify_item(llm, ecg, chunk_case([doc]))
+    assert "Definition:" not in llm.users[-1]

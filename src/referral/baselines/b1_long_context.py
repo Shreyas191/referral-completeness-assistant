@@ -28,6 +28,7 @@ def run_b1(docs: list[Document], checklist: Checklist, reference_date, llm: LLM)
         f"- {i.item_id}: {i.description}"
         + (f" (only if {i.condition})" if i.condition else "")
         + (f" (stale if older than {i.recency_days} days)" if i.recency_days else "")
+        + (f" Definition: {i.definition}" if i.definition else "")
         for i in checklist.items
     )
     user = (

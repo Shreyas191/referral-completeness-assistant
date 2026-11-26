@@ -41,8 +41,9 @@ def format_passages(chunks: list[Chunk]) -> str:
 
 def verify_item(llm: LLM, item: ChecklistItem, chunks: list[Chunk]) -> VerifierOutput:
     condition = f"\nCondition: required only if {item.condition}." if item.condition else ""
+    definition = f"\nDefinition: {item.definition}" if item.definition else ""
     user = (
-        f"Checklist item {item.item_id}: {item.description}{condition}\n"
+        f"Checklist item {item.item_id}: {item.description}{condition}{definition}\n"
         f"Also known as: {', '.join(item.synonyms) or 'n/a'}\n\n"
         f"Passages:\n{format_passages(chunks) or '(none retrieved)'}"
     )
