@@ -82,7 +82,7 @@ src/referral/
   baselines/            b0_keywords.py (lower bound), b1_long_context.py (primary baseline)
   eval/                 gold.py (label format), metrics.py (incl. bootstrap CIs, slices), harness.py (CLI),
                         report.py (report.md, cost, git hash), compare.py (two runs + McNemar),
-                        errors.py (error attribution from traces)
+                        errors.py (error attribution from traces), retrieval_sweep.py (E3 recall, no LLM)
   api.py                FastAPI backend for the review UI
 datagen/                synthetic cases: defect_plan.py → render.py (LLM prose, facts in code) → build.py
                         (noise, PDFs, gold.json) → check_cases.py (gold, recency, identity, leaks)
@@ -109,6 +109,7 @@ python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --
 # each run folder gets metrics.json (CIs, slices, commit, cost), report.md, and for the pipeline errors.md
 python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + paired McNemar
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run
+python -m referral.eval.retrieval_sweep --chunk-sizes 1200 600 300   # E3 recall@k by mode, no LLM calls
 uvicorn referral.api:app --reload
 ```
 
