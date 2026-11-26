@@ -67,11 +67,12 @@ def load_text(path: Path, case_id: str) -> Document:
     )
 
 
-def load_case(case_dir: Path) -> list[Document]:
-    """Load every .pdf and .txt document in a case folder, sorted by file name."""
+def load_case(case_dir: Path, reverse: bool = False) -> list[Document]:
+    """Load every .pdf and .txt document in a case folder, sorted by file name (reverse=True: E4 position
+    experiment, same documents in the opposite order)."""
     case_id = case_dir.name
     docs = []
-    for path in sorted(case_dir.iterdir()):
+    for path in sorted(case_dir.iterdir(), reverse=reverse):
         if path.suffix.lower() == ".pdf":
             docs.append(load_pdf(path, case_id))
         elif path.suffix.lower() == ".txt":

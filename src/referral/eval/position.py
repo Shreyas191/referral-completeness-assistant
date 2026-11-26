@@ -1,9 +1,9 @@
 """E4: accuracy by where the evidence sits in the packet, and by packet length. No LLM calls.
 
 For every gold item with evidence, the evidence's packet page is its page counted across the documents in the
-order the loader reads them (sorted file names), and its depth is that page over the packet's page count. Items
-without evidence (Missing, Not applicable) have no position and are left out of the position table; they still
-count in the packet-length table.
+order the run read them (file names, reversed for --doc-order reverse runs), and its depth is that page over the
+packet's page count. Items without evidence (Missing, Not applicable) have no position and are left out of the
+position table; they still count in the packet-length table.
 
     python -m referral.eval.position runs/b1-hard runs/pipe-hard --cases-dir data/hard_cases
 """
@@ -20,11 +20,12 @@ DEPTH_BINS = [(0.0, 0.25), (0.25, 0.5), (0.5, 0.75), (0.75, 1.01)]
 LENGTH_BINS = [(1, 20), (21, 40), (41, 1000)]
 
 
-def evidence_positions(case_dir: Path, gold: GoldCase) -> tuple[int, dict[str, tuple[int, float]]]:
+def evidence_positions(case_dir: Path, gold: GoldCase,
+                       reverse: bool = False) -> tuple[int, dict[str, tuple[int, float]]]:
     """(packet pages, {item_id: (deepest evidence page, depth)}). Deepest, because an item is only fully seen
     once its last piece of evidence is read; for a contradiction that is the second document."""
     offset, starts = 0, {}
-    for doc in load_case(case_dir):
+    for doc in load_case(case_dir, reverse=reverse):
         starts[doc.doc_id] = offset
         offset += len(doc.pages)
     out = {}
@@ -40,7 +41,9 @@ def _bin(value, bins):
 
 
 def table(run_dirs: list[Path], cases_dir: Path) -> str:
-    runs = {d.name: load_run(d)[1] for d in run_dirs}
+    loaded = {d.name: load_run(d) for d in run_dirs}
+    runs = {name: preds for name, (_, preds) in loaded.items()}
+    reverse = {name: metrics.get("doc_order") == "reverse" for name, (metrics, _) in loaded.items()}
     case_ids = sorted(set.intersection(*(set(p) for p in runs.values())))
     rows: dict[tuple, dict[str, list[int]]] = {}
 
@@ -51,8 +54,8 @@ def table(run_dirs: list[Path], cases_dir: Path) -> str:
 
     for cid in case_ids:
         gold = load_gold(cases_dir / cid)
-        n_pages, pos = evidence_positions(cases_dir / cid, gold)
         for run, preds in runs.items():
+            n_pages, pos = evidence_positions(cases_dir / cid, gold, reverse[run])
             items = {r.item_id: r.status for r in preds[cid].items}
             for gi in gold.items:
                 ok = items.get(gi.item_id, Status.NEEDS_REVIEW) == gi.status
