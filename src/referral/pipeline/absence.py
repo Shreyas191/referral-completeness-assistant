@@ -114,6 +114,7 @@ def final_read(llm: LLM, items: list[ChecklistItem], chunks: list[Chunk]) -> dic
         f"- {i.item_id}: {i.description}"
         + (f" (also: {', '.join(i.synonyms)})" if i.synonyms else "")
         + (f" (required only if {i.condition})" if i.condition else "")
+        + (f" Definition: {i.definition}" if i.definition else "")
         for i in items
     )
     best: dict[str, VerifierOutput] = {}

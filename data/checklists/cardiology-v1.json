@@ -2,7 +2,7 @@
   "checklist_id": "cardiology-v1",
   "clinic": "Example Cardiology Clinic",
   "specialty": "cardiology",
-  "version": "1.0",
+  "version": "1.1",
   "items": [
     {"item_id": "reason", "description": "reason for referral", "evidence_type": "note",
      "synonyms": ["reason for referral", "referred for", "consult for"]},
@@ -15,7 +15,8 @@
     {"item_id": "bmp", "description": "basic metabolic panel", "evidence_type": "lab", "recency_days": 90,
      "synonyms": ["BMP", "creatinine", "potassium", "electrolytes"]},
     {"item_id": "meds", "description": "current medication list", "evidence_type": "medication_list",
-     "synonyms": ["medications", "med list", "current meds"]},
+     "synonyms": ["medications", "med list", "current meds"],
+     "definition": "A list of the patient's current medications. A single drug mentioned in passing (e.g. \"Patient is on warfarin.\") is not by itself a medication list, but it can contradict one."},
     {"item_id": "progress_note", "description": "recent progress note with cardiac exam", "evidence_type": "note",
      "recency_days": 90, "synonyms": ["progress note", "office visit", "cardiac exam", "heart sounds"]},
     {"item_id": "inr", "description": "INR result", "evidence_type": "lab", "recency_days": 30,

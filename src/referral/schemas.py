@@ -25,6 +25,8 @@ class ChecklistItem(BaseModel):
     condition: str | None = Field(None, description="Only required when this holds, e.g. 'on warfarin'")
     recency_days: int | None = Field(None, description="Clinic-owned staleness window; None = no limit")
     synonyms: list[str] = []
+    # What counts as evidence, in the clinic's words; shown to every model call that judges the item.
+    definition: str | None = None
 
 
 class Checklist(BaseModel):
