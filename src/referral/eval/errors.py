@@ -83,7 +83,7 @@ def attribute_item(gold: GoldCase, gi: GoldItem, pred: ItemResult | None, t: Ite
     record.update(gold_evidence=[ge.text for ge in evidence], first_gold_rank=first_rank,
                   shown=t.shown, expansion=t.expansion, absence_extra=t.absence_extra,
                   citations=[{"doc_id": c.doc_id, "quote": c.quote} for c in (pred.citations if pred else [])],
-                  rationale=pred.rationale if pred else "", flags=flags)
+                  rationale=pred.rationale if pred else "", flags=flags, rejected_quotes=t.rejected_quotes)
     if pred and any(c.doc_id in gold.wrong_patient_docs for c in pred.citations):
         details.append("cites_wrong_patient_doc")
 
@@ -180,6 +180,9 @@ def render_errors(records: list[dict], total_items: int, run_name: str = "") -> 
                 lines.append(f"  - Gold evidence: \"{_short(r['gold_evidence'][0])}\"")
             for c in r.get("citations", [])[:2]:
                 lines.append(f"  - Cited ({c['doc_id']}): \"{_short(c['quote'])}\"")
+            for q in r.get("rejected_quotes", [])[:2]:
+                score = "unknown chunk" if q["score"] is None else f"match {q['score']}"
+                lines.append(f"  - Rejected quote ({q['chunk_id'].split('/')[-1]}, {score}): \"{_short(q['quote'])}\"")
             if r.get("rationale"):
                 lines.append(f"  - Model rationale: {_short(r['rationale'])}")
     return "\n".join(lines) + "\n"
