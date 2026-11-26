@@ -105,11 +105,11 @@ python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --
 # ablations: --scope global (E2), --no-absence-check, --no-long-context, --no-validator,
 #            --no-conflict-checker, --no-identity-check, --no-value-expansion,
 #            --no-strict-long-context, --no-piecewise-quotes, --no-quote-length-check,
-#            --top-k N, --cases-dir PATH
+#            --top-k N, --chunk-size N, --sentence-cuts (E3), --cases-dir PATH
 # each run folder gets metrics.json (CIs, slices, commit, cost), report.md, and for the pipeline errors.md
 python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + paired McNemar
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run
-python -m referral.eval.retrieval_sweep --chunk-sizes 1200 600 300   # E3 recall@k by mode, no LLM calls
+python -m referral.eval.retrieval_sweep --chunk-sizes 1200 600 300 --sentence-cuts   # E3 recall@k, no LLM calls
 uvicorn referral.api:app --reload
 ```
 
