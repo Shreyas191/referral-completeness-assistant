@@ -11,6 +11,7 @@ from referral.pipeline.conflicts import dose_conflicts, laterality_conflict
 from referral.pipeline.trace import TRACE_DEPTH, CaseTrace, ItemTrace
 from referral.pipeline.validator import decide
 from referral.pipeline.verifier import VerifierOutput, verify_item
+from referral.retrieval.expansion import value_expansion
 from referral.retrieval.hybrid import CaseRetriever, DenseRetriever
 from referral.schemas import CaseResult, Checklist, ChecklistItem, Chunk, Document, FollowUp, ItemResult, Status
 
@@ -25,6 +26,7 @@ class PipelineConfig:
     absence_long_context: bool = True  # whole-packet final read for items still Missing (#4)
     validator: bool = True           # (E5)
     conflict_checker: bool = True    # (E5)
+    value_expansion: bool = True     # add other documents' values for the top chunk's terms (vexp-dev runs)
 
 
 def run_case(
@@ -62,16 +64,19 @@ def run_case(
     for item in checklist.items:
         ranked = retriever.search(item, max(cfg.top_k, TRACE_DEPTH))
         shown = ranked[: cfg.top_k]
-        proposal = verify_item(llm, item, shown)
+        expansion = value_expansion(shown, chunks) if cfg.value_expansion else []
+        first = shown + expansion
+        proposal = verify_item(llm, item, first)
         t = ItemTrace(item_id=item.item_id, ranked=[c.chunk_id for c in ranked],
-                      shown=[c.chunk_id for c in shown], first_status=proposal.status)
+                      shown=[c.chunk_id for c in shown], expansion=[c.chunk_id for c in expansion],
+                      first_status=proposal.status)
 
         if proposal.status == "missing" and cfg.absence_check:
             wide = retriever.search(item, settings.absence_top_k)
-            extra = candidates_for_recheck(item, shown, wide, chunks)
+            extra = candidates_for_recheck(item, first, wide, chunks)
             t.absence_extra = [c.chunk_id for c in extra]
             if extra:
-                second = verify_item(llm, item, shown + extra)
+                second = verify_item(llm, item, first + extra)
                 t.absence_status = second.status
                 if second.status != "missing":
                     proposal = second

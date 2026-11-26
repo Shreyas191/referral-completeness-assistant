@@ -131,6 +131,8 @@ def main() -> None:
     ap.add_argument("--no-long-context", action="store_true", help="keep the wide re-check, drop the final read")
     ap.add_argument("--no-validator", action="store_true", help="E5 ablation")
     ap.add_argument("--no-conflict-checker", action="store_true", help="E5 ablation")
+    ap.add_argument("--no-value-expansion", action="store_true",
+                    help="drop value-term expansion (contradiction recall)")
     args = ap.parse_args()
 
     if args.split == "test":
@@ -142,6 +144,7 @@ def main() -> None:
         absence_check=not args.no_absence_check,
         absence_long_context=not (args.no_absence_check or args.no_long_context),
         validator=not args.no_validator, conflict_checker=not args.no_conflict_checker,
+        value_expansion=not args.no_value_expansion,
     )
     llm = LLM() if args.system != "b0" else None
     metrics = run_split(args.system, args.split, Path("runs") / args.name, cfg, llm, cases_dir=args.cases_dir)

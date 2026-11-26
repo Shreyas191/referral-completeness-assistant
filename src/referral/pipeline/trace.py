@@ -10,6 +10,7 @@ class ItemTrace(BaseModel):
     item_id: str
     ranked: list[str] = []          # first-pass retrieval, best first, up to TRACE_DEPTH chunk ids
     shown: list[str] = []           # chunk ids actually given to the verifier on the first pass
+    expansion: list[str] = []       # extra chunk ids added by value-term expansion, shown with `shown`
     first_status: str = ""          # verifier's first proposal
     absence_extra: list[str] = []   # extra chunk ids shown by the absence re-check
     absence_status: str | None = None

@@ -95,7 +95,7 @@ python -m referral.eval.harness --system b0 --split dev --name b0-dev
 python -m referral.eval.harness --system b1 --split dev --name b1-dev
 python -m referral.eval.harness --system pipeline --split dev --name pipe-dev --retrieval bm25
 # ablations: --scope global (E2), --no-absence-check, --no-long-context, --no-validator,
-#            --no-conflict-checker, --no-identity-check, --top-k N, --cases-dir PATH
+#            --no-conflict-checker, --no-identity-check, --no-value-expansion, --top-k N, --cases-dir PATH
 # each run folder gets metrics.json (CIs, slices, commit, cost), report.md, and for the pipeline errors.md
 python -m referral.eval.compare runs/b1-dev runs/pipe-dev     # side by side + paired McNemar
 python -m referral.eval.errors runs/pipe-dev                  # rebuild error attribution for a saved run
