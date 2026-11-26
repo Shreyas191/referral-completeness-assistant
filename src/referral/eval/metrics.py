@@ -32,12 +32,20 @@ def gap_prf(golds: list[GoldCase], preds: list[CaseResult]) -> dict[str, float]:
     return {"gap_precision": precision, "gap_recall": recall, "gap_f1": f1}
 
 
-def status_macro_f1(golds: list[GoldCase], preds: list[CaseResult]) -> float:
+def status_macro_f1(golds: list[GoldCase], preds: list[CaseResult], gold_classes_only: bool = False) -> float:
+    """Mean per-class F1 over every status that occurs in gold or predictions.
+
+    gold_classes_only=True averages only over statuses that occur in gold (`status_macro_f1_gold`). With the
+    default, one stray prediction of a status gold never uses (e.g. one Needs review on dev, which has no
+    Needs review items) adds a class scoring 0.0 to the average: on dev that moved macro-F1 from 0.967 to
+    0.827 between two runs with identical accuracy (vexp-dev, vexp-dev-r2). The stray prediction still counts
+    against recall of the item's true class either way.
+    """
     tp, fp, fn = Counter(), Counter(), Counter()
     labels = set()
     for gi, pi, _ in pairs(golds, preds):
         pred = pi.status if pi else Status.NEEDS_REVIEW
-        labels |= {gi.status, pred}
+        labels |= {gi.status} if gold_classes_only else {gi.status, pred}
         if pred == gi.status:
             tp[pred] += 1
         else:
@@ -170,7 +178,7 @@ def bootstrap_ci(per_case_values: list[float], n: int = 2000, seed: int = 0) -> 
 # fuzzy citation matching runs once per case instead of once per resample.
 
 PRESENT_LIKE = {Status.PRESENT, Status.STALE, Status.CONTRADICTORY}
-CI_METRICS = ("gap_recall", "gap_precision", "gap_f1", "status_macro_f1", "status_accuracy",
+CI_METRICS = ("gap_recall", "gap_precision", "gap_f1", "status_macro_f1", "status_macro_f1_gold", "status_accuracy",
               "citation_precision", "citation_doc_precision", "citation_page_precision", "false_missing_rate")
 # Slices from the dataset plan; always listed so tables line up across runs. Others found in gold are appended.
 REPORT_SLICES = ("buried", "contradiction", "stale", "wrong_patient", "abbreviation")
@@ -191,6 +199,7 @@ def case_counts(gold: GoldCase, pred: CaseResult | None) -> Counter:
         c["gap_fn"] += gold_pos and not pred_pos
         c[("label", gi.status)] += 1
         c[("label", ps)] += 1
+        c[("gold", gi.status)] += 1
         if ps == gi.status:
             c[("tp", ps)] += 1
         else:
@@ -230,16 +239,19 @@ def metrics_from_counts(c: Counter, undefined: float | None = 0.0) -> dict[str, 
         gap_f1 = 2 * p * r / (p + r)
     else:
         gap_f1 = undefined if precision is None and recall is None else 0.0
-    f1s = []
-    for lab in {k[1] for k in c if isinstance(k, tuple) and k[0] == "label" and c[k]}:
+    def class_f1(lab) -> float:
         lp = c[("tp", lab)] / (c[("tp", lab)] + c[("fp", lab)]) if c[("tp", lab)] + c[("fp", lab)] else 0.0
         lr = c[("tp", lab)] / (c[("tp", lab)] + c[("fn", lab)]) if c[("tp", lab)] + c[("fn", lab)] else 0.0
-        f1s.append(2 * lp * lr / (lp + lr) if lp + lr else 0.0)
+        return 2 * lp * lr / (lp + lr) if lp + lr else 0.0
+
+    f1s = [class_f1(lab) for lab in {k[1] for k in c if isinstance(k, tuple) and k[0] == "label" and c[k]}]
+    gold_f1s = [class_f1(lab) for lab in {k[1] for k in c if isinstance(k, tuple) and k[0] == "gold" and c[k]}]
     return {
         "gap_precision": precision,
         "gap_recall": recall,
         "gap_f1": gap_f1,
         "status_macro_f1": sum(f1s) / len(f1s) if f1s else undefined,
+        "status_macro_f1_gold": sum(gold_f1s) / len(gold_f1s) if gold_f1s else undefined,
         "status_accuracy": ratio("correct", "items"),
         "citation_precision": ratio("cite_good", "cite_total"),
         "citation_doc_precision": ratio("cite_doc", "cite_total"),
@@ -301,6 +313,7 @@ def summarize(golds: list[GoldCase], preds: list[CaseResult]) -> dict[str, float
     return {
         **gap_prf(golds, preds),
         "status_macro_f1": status_macro_f1(golds, preds),
+        "status_macro_f1_gold": status_macro_f1(golds, preds, gold_classes_only=True),
         "status_accuracy": status_accuracy(golds, preds),
         "citation_precision": citation_precision(golds, preds),
         **citation_levels(golds, preds),

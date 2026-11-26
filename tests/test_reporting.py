@@ -184,3 +184,21 @@ def test_another_patients_document_is_not_the_right_document():
     # Same doc_id and page as the gold evidence, but the chunk belongs to case c9.
     m = summarize([gold("c0", [S.PRESENT], evidence={"i0": [EV]})], [pred("c0", [S.PRESENT], {"i0": [FOREIGN]})])
     assert m["citation_doc_precision"] == m["citation_page_precision"] == 0.0
+
+
+def test_macro_f1_over_gold_classes_ignores_a_stray_status():
+    # Gold has no Needs review; one stray Needs review prediction adds a 0.0 class to the plain macro-F1 only.
+    g = [gold("c0", [S.PRESENT, S.PRESENT, S.MISSING, S.MISSING])]
+    p = [pred("c0", [S.PRESENT, S.NEEDS_REVIEW, S.MISSING, S.MISSING])]
+    m = summarize(g, p)
+    present_f1 = 2 * 1.0 * 0.5 / 1.5
+    assert m["status_macro_f1_gold"] == pytest.approx((present_f1 + 1.0) / 2)
+    assert m["status_macro_f1"] == pytest.approx((present_f1 + 1.0 + 0.0) / 3)
+    from_counts = metrics_from_counts(case_counts(g[0], p[0]))
+    assert from_counts["status_macro_f1_gold"] == pytest.approx(m["status_macro_f1_gold"])
+    assert "status_macro_f1_gold" in bootstrap_cis(g, p)
+
+
+def test_macro_f1_variants_agree_when_no_stray_status():
+    m = summarize([gold("c0", [S.PRESENT, S.MISSING])], [pred("c0", [S.MISSING, S.MISSING])])
+    assert m["status_macro_f1_gold"] == m["status_macro_f1"]
