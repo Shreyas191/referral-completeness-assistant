@@ -1,0 +1,105 @@
+{
+  "case_id": "cardiology-v1-hard-003",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-10",
+  "split": "dev",
+  "slices": [
+    "buried",
+    "contradiction"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of breathlessness on exertion."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 55 bpm. Normal axis. PR interval 186 ms, QRS 82 ms, QTc 427\nms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 6,
+          "text": "Transthoracic echo this admission: LVEF 40%. Trace mitral regurgitation. Moderately\nreduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 218 mg/dL (H)\nLDL Cholesterol: 135 mg/dL (H)\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 70 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "Most recent potassium is 5.9 mmol/L."
+        },
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 141 mmol/L\nPotassium: 4.1 mmol/L\nChloride: 102 mmol/L\nCO2: 29 mmol/L\nBUN: 9 mg/dL\nCreatinine: 1.2 mg/dL\nGlucose: 153 mg/dL (H)\nCalcium: 9.5 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Losartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular vcnous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: no peripheral edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

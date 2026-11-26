@@ -13,6 +13,7 @@ Defects:
   stale       the evidence sits in its own document dated past the item's recency window
   contradict  the note (or letter) states a value that conflicts with the item's own document
   bury        the evidence is on page BURY_PAGE of a LONG_PAGES-page discharge summary
+              (hard profile: on a random page of one of two longer hospital documents, see PROFILES)
   abbreviate  the evidence is a clinical-shorthand line in the note (or letter), with no formal report
 A conditional item whose condition does not hold is not_applicable, and the condition's key word
 (e.g. "warfarin") appears nowhere in the packet.
@@ -27,7 +28,7 @@ import re
 from dataclasses import dataclass
 from datetime import date, timedelta
 from pathlib import Path
-from typing import Literal
+from typing import ClassVar, Literal
 
 from pydantic import BaseModel, Field
 
@@ -37,6 +38,20 @@ from referral.schemas import Checklist, ChecklistItem, Status
 LONG_PAGES = 12  # bury: length of the discharge summary...
 BURY_PAGE = 11   # ...and the page that holds the evidence ("buried past page 10")
 REF_START = date(2026, 9, 1)  # referral (reference) dates fall in the 90 days after this
+
+
+@dataclass(frozen=True)
+class Profile:
+    """How long and how defect-heavy a packet is. "standard" is the dev / test set; "hard" is for E3 and E4:
+    every packet carries `long_docs` hospital documents of `long_pages` pages (about 45-50 pages in all), and
+    buried evidence lands on a random page of one of them, so evidence position and packet length vary."""
+    name: str = "standard"
+    long_docs: int = 0                 # long documents in every packet; 0 = only when an item is buried
+    long_pages: int = LONG_PAGES
+    bury_page: int | None = BURY_PAGE  # None = a random page from 2 to long_pages
+
+
+PROFILES = {"standard": Profile(), "hard": Profile("hard", long_docs=2, long_pages=20, bury_page=None)}
 LEAK_ATTEMPTS = 3
 MAX_DOCS = 8  # packets are 2-8 documents (CLAUDE.md); older progress notes are dropped first
 NO_REASON_RULE = ("Do not say why the patient is being referred, what should be evaluated, or mention any planned "
@@ -92,7 +107,20 @@ class Section(BaseModel):
 
 
 class LongNoteProse(BaseModel):
+    n_sections: ClassVar[int] = LONG_PAGES
     sections: list[Section] = Field(min_length=LONG_PAGES, max_length=LONG_PAGES)
+
+
+_LONG_SCHEMAS: dict[int, type[LongNoteProse]] = {LONG_PAGES: LongNoteProse}
+
+
+def long_prose_schema(n: int) -> type[LongNoteProse]:
+    """LongNoteProse with at least n sections; the caller keeps the first n. (Asked for 20, gpt-6-luna returned 21
+    twice, even after the repair prompt, so an exact length would fail the case for no reason.)"""
+    if n not in _LONG_SCHEMAS:
+        _LONG_SCHEMAS[n] = type(f"LongNoteProse{n}", (LongNoteProse,), {
+            "n_sections": n, "__annotations__": {"sections": list[Section]}, "sections": Field(min_length=n)})
+    return _LONG_SCHEMAS[n]
 
 
 # ---------------------------------------------------------------- output
@@ -125,6 +153,7 @@ class RenderedCase(BaseModel):
     evidence: list[PlantedEvidence]
     expected: dict[str, Status]
     wrong_patient_docs: list[str] = []
+    profile: str = "standard"
     llm_calls: int = 0
     input_tokens: int = 0
     output_tokens: int = 0
@@ -325,11 +354,12 @@ def _strings(value, skip: frozenset = frozenset()) -> list[str]:
     return []
 
 
-def ask(llm, user: str, schema: type[BaseModel], forbidden: list[str], skip: frozenset = frozenset()):
+def ask(llm, user: str, schema: type[BaseModel], forbidden: list[str], skip: frozenset = frozenset(),
+        max_tokens: int = 4000):
     """llm.structured with a leak guard: retry with feedback while any forbidden term appears."""
     prompt = user
     for _ in range(LEAK_ATTEMPTS):
-        out = llm.structured(SYSTEM, prompt, schema)
+        out = llm.structured(SYSTEM, prompt, schema, max_tokens=max_tokens)
         leaked = find_terms("\n".join(_strings(out.model_dump(), skip)), forbidden)
         if not leaked:
             return out
@@ -358,8 +388,9 @@ def _rules(forbidden: list[str], extra: str = "") -> str:
 # ---------------------------------------------------------------- the renderer
 
 class _Builder:
-    def __init__(self, plan: DefectPlan, checklist: Checklist, llm, rng: random.Random):
-        self.plan, self.checklist, self.llm, self.rng = plan, checklist, llm, rng
+    def __init__(self, plan: DefectPlan, checklist: Checklist, llm, rng: random.Random,
+                 profile: Profile = PROFILES["standard"]):
+        self.plan, self.checklist, self.llm, self.rng, self.profile = plan, checklist, llm, rng, profile
         self.items = {i.item_id: i for i in checklist.items}
         missing_specs = set(self.items) - set(SPECS)
         if missing_specs:
@@ -496,10 +527,11 @@ class _Builder:
         self._reports(p, facts)
         self._labs(p, facts)
         buried = [i for i in self.items if self.d(i) == "bury"]
+        bury = None
         if buried:
             item_id = buried[0]
-            text = meds["bury"] if item_id == "meds" else facts[item_id]["bury"]
-            self._discharge_summary(p, item_id, text, reason_known)
+            bury = (item_id, meds["bury"] if item_id == "meds" else facts[item_id]["bury"])
+        self._long_docs(p, bury)
 
         expected = {}
         for item_id in self.items:
@@ -509,7 +541,8 @@ class _Builder:
         return RenderedCase(
             case_id=self.plan.case_id, checklist_id=self.plan.checklist_id, reference_date=self.ref,
             plan=self.plan, patient=p, docs=self.docs, evidence=self.evidence, expected=expected,
-            wrong_patient_docs=[doc.doc_id for doc in self.docs if doc.patient == "other"])
+            wrong_patient_docs=[doc.doc_id for doc in self.docs if doc.patient == "other"],
+            profile=self.profile.name)
 
     # -- documents
 
@@ -566,7 +599,7 @@ class _Builder:
         reports = sum(i in facts and self.d(i) in (None, "stale", "contradict") for i in ("ecg", "echo"))
         meds = "meds" in self.applicable and self.d("meds") in (None, "contradict")
         bury = any(self.d(i) == "bury" for i in self.items)
-        return 1 + meds + reports + labs + bury
+        return 1 + meds + reports + labs + (self.profile.long_docs or bury)
 
     def _notes(self, p: Patient, note_date: date, reason_known: bool, inserts, condition_lines,
                max_older: int = 2) -> None:
@@ -639,36 +672,62 @@ class _Builder:
                                     "dob": p.dob - timedelta(days=rng.randint(400, 1500)),
                                     "referring_physician": "Dr. " + rng.choice(["Angela Ruiz", "Tom Becker"])})
 
-    def _discharge_summary(self, p: Patient, item_id: str, text: str, reason_known: bool) -> None:
-        window = self.window(item_id)
-        when = self.ref - timedelta(days=self.rng.randint(5, max(5, min(45, int(window * 0.7)) if window else 45)))
-        admission = self.rng.choice(["community-acquired pneumonia", "cellulitis of the lower leg",
-                                     "elective total knee replacement", "acute kidney stone with obstruction",
-                                     "diverticulitis managed without surgery"])
+    def _long_docs(self, p: Patient, bury: tuple[str, str] | None) -> None:
+        """Long hospital documents: one discharge summary holding the buried evidence (standard), or
+        profile.long_docs of them in every packet with the evidence, if any, on a random page of one (hard)."""
+        n = self.profile.long_docs or (1 if bury else 0)
+        if not n:
+            return
+        admissions = self.rng.sample(ADMISSIONS, n)
+        holder = self.rng.randrange(n) if bury else None
+        dates = []
+        for k in range(n):
+            if k == holder:
+                window = self.window(bury[0])
+                hi = max(5, min(45, int(window * 0.7)) if window else 45)
+                dates.append(self.ref - timedelta(days=self.rng.randint(5, hi)))
+            else:
+                dates.append(self.ref - timedelta(days=self.rng.randint(60, 400)))
+        # Oldest gets the lowest number, so the ids don't reveal which document holds the evidence.
+        order = sorted(range(n), key=lambda k: dates[k])
+        for rank, k in enumerate(order, 1):
+            doc_id = "discharge_summary" if n == 1 else f"discharge_summary_{rank}"
+            self._discharge_summary(p, doc_id, admissions[k], dates[k], bury if k == holder else None)
+
+    def _discharge_summary(self, p: Patient, doc_id: str, admission: str, when: date,
+                           bury: tuple[str, str] | None) -> None:
+        pages_n = self.profile.long_pages
+        bury_page = self.profile.bury_page or self.rng.randint(2, pages_n)
         extra = "Do not describe a physical examination. Do not mention the referral."
         prose = ask(self.llm, f"Write a hospital discharge summary for an admission for {admission}, as exactly "
-                              f"{LONG_PAGES} sections (e.g. admission diagnosis, history, hospital course by day, "
+                              f"{pages_n} sections (e.g. admission diagnosis, history, hospital course by day, "
                               "consults, procedures, condition at discharge, instructions, follow-up). Each section "
                               "120-200 words.\n" + self.patient_summary(p, False) + _rules(self.forbidden, extra),
-                    LongNoteProse, self.forbidden)
+                    long_prose_schema(pages_n), self.forbidden, max_tokens=max(4000, 700 * pages_n))
         pages = []
-        for n, section in enumerate(prose.sections, 1):
+        for n, section in enumerate(prose.sections[:pages_n], 1):
             top = header("DISCHARGE SUMMARY", when, p, f"Attending: {p.referring_physician}") if n == 1 \
-                else running_header(p, "Discharge summary", n, LONG_PAGES)
+                else running_header(p, "Discharge summary", n, pages_n)
             body = f"{section.title.upper()}:\n{section.text}"
-            if n == BURY_PAGE:
+            if bury and n == bury_page:
                 paragraphs = section.text.split("\n\n")
                 mid = max(1, len(paragraphs) // 2)
-                body = f"{section.title.upper()}:\n" + "\n\n".join(paragraphs[:mid] + [text] + paragraphs[mid:])
+                body = f"{section.title.upper()}:\n" + "\n\n".join(paragraphs[:mid] + [bury[1]] + paragraphs[mid:])
             pages.append(f"{top}\n\n{body}\n")
-        self.add(RenderedDoc(doc_id="discharge_summary", doc_type="unknown", doc_date=when, pages=pages),
-                 [(item_id, text)])
+        self.add(RenderedDoc(doc_id=doc_id, doc_type="unknown", doc_date=when, pages=pages),
+                 [bury] if bury else [])
 
 
-def render_case(plan: DefectPlan, checklist: Checklist, llm, seed: int | str = 0) -> RenderedCase:
+ADMISSIONS = ["community-acquired pneumonia", "cellulitis of the lower leg", "elective total knee replacement",
+              "acute kidney stone with obstruction", "diverticulitis managed without surgery",
+              "elective hip replacement", "urinary tract infection with dehydration", "gallstone pancreatitis"]
+
+
+def render_case(plan: DefectPlan, checklist: Checklist, llm, seed: int | str = 0,
+                profile: str = "standard") -> RenderedCase:
     """Render one case. Deterministic given the seed and the LLM's answers."""
     before = (llm.calls, llm.input_tokens, llm.output_tokens)
-    case = _Builder(plan, checklist, llm, random.Random(f"{seed}:{plan.case_id}")).build()
+    case = _Builder(plan, checklist, llm, random.Random(f"{seed}:{plan.case_id}"), PROFILES[profile]).build()
     case.llm_calls = llm.calls - before[0]
     case.input_tokens = llm.input_tokens - before[1]
     case.output_tokens = llm.output_tokens - before[2]

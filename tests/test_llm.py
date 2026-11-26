@@ -104,3 +104,15 @@ def test_clients_have_a_request_timeout(monkeypatch, provider, cls):
     client = LLM(provider=provider)._client
     assert client.timeout == settings.llm_timeout_s == 120
     assert client.max_retries == settings.llm_max_retries == 2
+
+
+@pytest.mark.parametrize("provider, fake, key", [("anthropic", FakeAnthropic, "max_tokens"),
+                                                 ("openai", FakeOpenAI, "max_completion_tokens")])
+def test_structured_passes_max_tokens_and_defaults_to_4000(monkeypatch, provider, fake, key):
+    # The hard-profile generator asks for 20-section documents, which do not fit in 4000 output tokens.
+    client = fake()
+    monkeypatch.setattr(LLM, "_make_client", lambda self: client)
+    llm = LLM(provider=provider)
+    llm.structured("sys", "user", VerifierOutput)
+    llm.structured("sys", "user", VerifierOutput, max_tokens=14000)
+    assert [s[key] for s in client.sent] == [4000, 14000]

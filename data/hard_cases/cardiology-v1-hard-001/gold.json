@@ -1,0 +1,81 @@
+{
+  "case_id": "cardiology-v1-hard-001",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-14",
+  "split": "dev",
+  "slices": [
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventncular size. Left ventricular ejection fraction estimated at\n40%. Mild aortic valve sclerosis without stenosis. No pericardial effusion.\nImpression: Moderately reduced lft ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 138 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 101 mmol/L\nCO2: 22 mmol/L\nBUN: 23 mg/dL (H)\nCreatinine: 1.3 mg/dL (H)\nGlucose: 168 mg/dL (H)\nCalcium: 9.7 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: clear bilaterally.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

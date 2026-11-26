@@ -1,0 +1,94 @@
+{
+  "case_id": "cardiology-v1-hard-018",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-30",
+  "split": "dev",
+  "slices": [
+    "complete"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: EvaIuation of persistently elevated blood pressure despite treatment."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sius bradycardia at 52 bpm. Normal axis. PR interval 200 ms, QRS 102 ms, QTc 424\nms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Lcft ventricular ejection fraction estimated at\n45%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Mildly reduced left ventricular sysolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 147 mg/dL\nLDL Cholesterol: 89 mg/dL\nHDL Cholesterol: 38 mg/dL (L)\nTriglycerides: 102 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 139 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 99 mmol/L\nCO2: 28 mmol/L\nBUN: 18 mg/dL\nCeatinine: 1.1 mg/dL\nGlucose: 83 mg/dL\nCalcium: 9.8 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 40 mg by moutb once daily\nAmlodipine 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nOmeprazole 20 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

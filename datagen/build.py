@@ -2,6 +2,8 @@
 
     python -m datagen.build --checklist cardiology-v1 --n 5 --seed 0 --split dev
     python -m datagen.build --checklist cardiology-v1 --n 40 --seed 10 --split dev --quota   # the dev set
+    python -m datagen.build --checklist cardiology-v1 --n 20 --seed 30 --split dev --quota --profile hard \
+        --out data/hard_cases                                                                # E3 / E4 set
 
 For each plan (same case ids and seeds as `python -m datagen.render`): reuse
 data/rendered/<case_id>/rendered.json when it exists, otherwise render the case with the LLM; add OCR-style
@@ -27,7 +29,7 @@ import textwrap
 from pathlib import Path
 
 from datagen.check_cases import check_case
-from datagen.defect_plan import make_plan, select_plans
+from datagen.defect_plan import MIX, MIX_HARD, make_plan, select_plans
 from datagen.render import LeakError, RenderedCase, render_case, write_case
 from referral.eval.gold import GoldCase, GoldEvidence, GoldItem
 from referral.ingest.pdf_loader import guess_doc_date, load_case
@@ -218,18 +220,22 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=Path("data/cases"))
     ap.add_argument("--quota", action="store_true",
                     help="pick the n plans to match the dataset mix (ids <checklist>-<split>-000...)")
+    ap.add_argument("--profile", default="standard", choices=["standard", "hard"],
+                    help="hard: ~45-50 page packets, evidence at random pages, more contradictions / stale / bury")
     ap.add_argument("--first", type=int, help="only process the first K selected cases (render in batches)")
     args = ap.parse_args()
 
     raw = json.loads(Path(f"data/checklists/{args.checklist}.json").read_text())
     checklist = Checklist.model_validate(raw)
     llm = None
+    mix = MIX_HARD if args.profile == "hard" else MIX
+    tag = "hard" if args.profile == "hard" else args.split
     if args.quota:
-        plans, targets, achieved = select_plans(raw, args.n, args.seed, f"{args.checklist}-{args.split}")
+        plans, targets, achieved = select_plans(raw, args.n, args.seed, f"{args.checklist}-{tag}", mix=mix)
         print("mix    " + "  ".join(f"{k} {achieved[k]}/{targets[k]}" for k in targets) + "  (achieved/target)\n")
     else:
         rng = random.Random(args.seed)
-        plans = [make_plan(f"{args.checklist}-{args.seed}-{n:03d}", raw, rng) for n in range(args.n)]
+        plans = [make_plan(f"{args.checklist}-{args.seed}-{n:03d}", raw, rng, mix) for n in range(args.n)]
     plans = plans[:args.first] if args.first else plans
     flagged = 0
     for plan in plans:
@@ -237,14 +243,14 @@ def main() -> int:
         try:
             if cached.exists():
                 case = RenderedCase.model_validate_json(cached.read_text())
-                if case.plan != plan:
-                    raise ValueError(f"{cached} was rendered from a different plan; delete it to re-render")
+                if case.plan != plan or case.profile != args.profile:
+                    raise ValueError(f"{cached} was rendered from a different plan or profile; delete it to re-render")
                 how = "reused"
             else:
                 if llm is None:
                     from referral.llm import LLM
                     llm = LLM()
-                case = render_case(plan, checklist, llm, seed=args.seed)
+                case = render_case(plan, checklist, llm, seed=args.seed, profile=args.profile)
                 write_case(case, args.rendered)
                 how = f"rendered ({case.llm_calls} calls)"
             case_dir = build_case(case, args.out, args.split, args.noise, args.seed)

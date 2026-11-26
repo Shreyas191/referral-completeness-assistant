@@ -1,0 +1,101 @@
+{
+  "case_id": "cardiology-v1-hard-000",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-05",
+  "split": "dev",
+  "slices": [
+    "buried",
+    "contradiction",
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of a newly heard heart murmur."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus bradycardia at 51 bpm. Normal axis. PR interval 197 ms, QRS 105 ms, QTc\n415 ms.\nImpression: Sinus bradycardia, otherwise normal tracing."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "Most recent echo showed an ejection fraction of 60%."
+        },
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n35%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report_1",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 165 mg/dL\nLDL Cholesterol: 63 mg/dL\nHDL Cholesterol: 57 mg/dL\nTriglycerides: 227 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "lab_report_2",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 142 mmol/L\nPotassium: 3.7 mmol/L\nChloride: 101 mmol/L\nCO2: 27 mmol/L\nBUN: 13 mg/dL\nCreatinine: 0.8 mg/dL\nGlucose: 170 mg/dL (H)\nCalcium: 10.2 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 20,
+          "text": "Discharge medications:\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: welll appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

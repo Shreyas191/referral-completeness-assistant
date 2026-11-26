@@ -1,0 +1,101 @@
+{
+  "case_id": "cardiology-v1-hard-014",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-18",
+  "split": "dev",
+  "slices": [
+    "abbreviation",
+    "buried",
+    "contradiction",
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 86 bpm. Normal axis. PR interval 192 ms, QRS 82 ms, QTc\n451 ms.\nImpression: Normal sinus rhythm with no acute ST-T wave changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "TTE: LVEF 50%, mildly reduced LV fxn, no sig valve dz."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 13,
+          "text": "Fasting lipid panel this admission: total cholesterol: 186 mg/dL, LDL: 131 mg/dL, HDL: 36\nmg/dL, triglycerides: 95 mg/dL."
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 3.6 mmol/L\nChloride: 101 mmol/L\nCO2: 23 mmol/L\nBUN: 25 mg/dL (H)\nCreatinine: 0.6 mg/dL\nGlucose: 105 mg/dL (H)\nCalcium: 9.8 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "Continue metformin 250 mg twice daily."
+        },
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 75 mcg by mouthonce daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: faint bibasilar crackles.\nExtremities:trace ankle edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: wcll appearing, no distress.\nNeck: supple, no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rbs, or gallops.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "case_id": "cardiology-v1-hard-008",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-31",
+  "split": "dev",
+  "slices": [
+    "contradiction",
+    "missing",
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "echo",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Most recent echo showed an ejection fraction of 30%."
+        },
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n55%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "lab_report_1",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 157 mg/dL\nLDL Cholesterol: 77 mg/dL\nHDL Cholesterol: 33 mg/dL (L)\nTriglycerides: 237 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report_2",
+          "page": 1,
+          "text": "BASIC METABBOLIC PANEL\nSodium: 140 mmol/L\nPotassium: 4.4 mmol/L\nChloride: 99 mmol/L\nCO2: 29 mmol/L\nBUN: 27 mg/dL (H)\nCreatinine: 0.8 mg/dL\nGlucose: 133 mg/dL (H)\nCalcium: 8.8 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Amlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nAcetaminophen 500 mg by mouth as needed"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

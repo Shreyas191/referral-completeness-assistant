@@ -1,0 +1,78 @@
+{
+  "case_id": "cardiology-v1-hard-009",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-22",
+  "split": "dev",
+  "slices": [
+    "abbreviation",
+    "buried",
+    "missing"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 12,
+          "text": "12-lead ECG on admission: sinus rhythm with occasional premature atrial complexes at 71\nbpm, PR interval 160 ms, QRS 103 ms, QTc 419 ms. Sinus rhythm with occasional prernature\natrial complexes and no acute changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction cstimated at\n40%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Moderately reduced left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Lipids: TC 172, LDL 76, HDL 49, TG 236."
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 144 mmol/L\nPotassium: 4.9 mmol/L\nChloride: 105 mmol/L\nCO2: 21 mmol/L\nBUN: 29 mg/dL (H)\nCreatinine: 1.6 mg/dL (H)\nGlucose: 160 mg/dL (H)\nCalcium: 9.3 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "progress_note",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

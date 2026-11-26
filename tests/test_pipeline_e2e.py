@@ -336,3 +336,15 @@ def test_condition_check_adds_no_call_when_the_condition_is_never_mentioned(case
     run(case_dir, off, condition_check=False)
     assert trace.item("inr").condition_extra == [] and trace.item("inr").condition_status is None
     assert on.calls == off.calls
+
+
+def test_evidence_positions_count_pages_across_documents_in_loader_order(case_dir):
+    from referral.eval.gold import load_gold
+    from referral.eval.position import evidence_positions
+
+    n_pages, pos = evidence_positions(case_dir, load_gold(case_dir))
+    order = [d.doc_id for d in load_case(case_dir)]
+    pages = {d.doc_id: len(d.pages) for d in load_case(case_dir)}
+    before = sum(pages[d] for d in order[:order.index("progress_note")])
+    assert n_pages == sum(pages.values())
+    assert pos == {"echo": (before + 2, (before + 2) / n_pages)}   # TTE on page 2 of the progress note

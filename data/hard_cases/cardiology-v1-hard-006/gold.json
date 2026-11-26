@@ -1,0 +1,94 @@
+{
+  "case_id": "cardiology-v1-hard-006",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-08",
+  "split": "dev",
+  "slices": [
+    "complete"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of intermittent palpitations."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Sinus rhythm with occasional premature atrial complexes at 82 bpm. Normal axis.\nPR interval 184 ms, QRS 90 ms, QTc 424 ms.\nImpression: Sinus rhythm with occasional premature atrial complexes and no acute changes."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n55%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 138 mg/dL\nLDL Cholesterol: 63 mg/dL\nHDL Cholesterol: 42 mg/dL\nTriglycerides: 165 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLlC PANEL\nSodium: 139 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 105 mmol/L\nCO2: 24 mmol/L\nBUN: 21 mg/dL (H)\nCreatinine: 1.0 mg/dL\nGlucose: 177 mg/dL (H)\nCalcium: 9.0 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Amlodipine 5 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nLevothyroxine 50 mcg by mouth onnce daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distres.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs, rubs, or gallops.\nLungs: clear bilateerally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

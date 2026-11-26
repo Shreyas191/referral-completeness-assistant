@@ -1,0 +1,94 @@
+{
+  "case_id": "cardiology-v1-hard-019",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-03",
+  "split": "dev",
+  "slices": [
+    "stale"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of a recent fainting episode with brief loss of\nconsciousness."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 86 bpm. Normal axis. PR interval 188 ms, QRS 104 ms, QTc\n414 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "stale",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricularejection fraction estimated at\n60%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPID PANEL\nTotal Cholesterol: 258 mg/dL (H)\nLDL Cholesterol: 180 mg/dL (H)\nHDL Cholesterol: 33 mg/dL (L)\nTriglycerides: 226 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 137 mmol/L\nPotassium: 4.7 mmol/L\nChloride: 106 mmol/L\nCO2: 23 mmol/L\nBUN: 19 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 178 mg/dL (H)\nCalcium: 9.1 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nLevothyroxine 50 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXM:\nGeneral: well appearing, no distress.\nNeck: no carotid bruits.\nCardiac exam: regular rate and rhythm, normal S1 and S2, grade 2/6 systolic ejection\nmurmur, no radiation.\nLungs: clear bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

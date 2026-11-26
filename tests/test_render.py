@@ -53,7 +53,7 @@ class ScriptedLLM:
         self.prose_prompts: list[str] = []
         self.calls = self.input_tokens = self.output_tokens = 0
 
-    def structured(self, system, user, schema):
+    def structured(self, system, user, schema, **kw):
         self.calls += 1
         self.input_tokens += len(user) // 4
         self.output_tokens += 100
@@ -78,9 +78,9 @@ class ScriptedLLM:
         if schema is NoteProse:
             return NoteProse(subjective="Tired on exertion." + leak,
                              assessment_plan=["Hypertension, continue regimen.", "Refer to specialist."])
-        if schema is LongNoteProse:
-            return LongNoteProse(sections=[Section(title=f"Part {n}", text="Uneventful day." + leak)
-                                           for n in range(LONG_PAGES)])
+        if isinstance(schema, type) and issubclass(schema, LongNoteProse):
+            return schema(sections=[Section(title=f"Part {n}", text="Uneventful day." + leak)
+                                    for n in range(schema.n_sections)])
         raise NotImplementedError(schema)
 
 
@@ -246,3 +246,40 @@ def test_find_terms_matches_whole_words_only():
     assert find_terms("She echoed the plan.", ["echo"]) == set()
     assert find_terms("PT/INR 2.1", ["PT/INR", "prothrombin time"]) == {"PT/INR"}
     assert find_terms("bilateral 12-lead tracing", ["12-lead"]) == {"12-lead"}
+
+
+def test_hard_profile_adds_two_long_documents_and_buries_at_a_random_page():
+    from datagen.render import MAX_DOCS, PROFILES
+
+    hard = PROFILES["hard"]
+    pages_seen = set()
+    for k in range(12):
+        plan = plan_with(f"hard-bury-{k}", {"bmp": "bury"})
+        case = render_case(plan, CHECKLIST, ScriptedLLM(), seed=k, profile="hard")
+        long_docs = [d for d in case.docs if d.doc_id.startswith("discharge_summary")]
+        assert [len(d.pages) for d in long_docs] == [hard.long_pages] * hard.long_docs
+        assert len(case.docs) <= MAX_DOCS and case.profile == "hard"
+        ev = [e for e in case.evidence if e.item_id == "bmp"]
+        assert len(ev) == 1 and ev[0].doc_id in {d.doc_id for d in long_docs}
+        pages_seen.add(ev[0].page)
+        holder = next(d for d in long_docs if d.doc_id == ev[0].doc_id)
+        assert (case.reference_date - holder.doc_date).days <= CHECKLIST.items[[i.item_id for i in
+                                                                               CHECKLIST.items].index("bmp")].recency_days
+    assert len(pages_seen) > 3                       # the buried page varies
+
+
+def test_hard_profile_without_a_buried_item_still_has_long_documents():
+    case = render_case(plan_with("hard-complete"), CHECKLIST, ScriptedLLM(), seed=3, profile="hard")
+    long_docs = [d for d in case.docs if d.doc_id.startswith("discharge_summary")]
+    assert len(long_docs) == 2 and sum(len(d.pages) for d in case.docs) >= 40
+    assert not any(e.doc_id.startswith("discharge_summary") for e in case.evidence)
+
+
+def test_hard_mix_quota_has_more_hard_defects():
+    from datagen.defect_plan import MIX_HARD, quota_targets, select_plans
+
+    plans, targets, achieved = select_plans(RAW, 20, 30, "cardiology-v1-hard", mix=MIX_HARD, pool_size=2000,
+                                            steps=20_000)
+    assert len(plans) == 20 and plans[0].case_id == "cardiology-v1-hard-000"
+    assert targets == quota_targets(20, MIX_HARD) and targets["bury"] == 12 and targets["contradict"] == 10
+    assert sum(abs(achieved[k] - targets[k]) for k in targets) <= 2

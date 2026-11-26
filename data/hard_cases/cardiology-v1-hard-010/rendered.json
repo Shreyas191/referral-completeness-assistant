@@ -1,0 +1,268 @@
+{
+  "case_id": "cardiology-v1-hard-010",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-18",
+  "plan": {
+    "case_id": "cardiology-v1-hard-010",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": null
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": "bury"
+      },
+      {
+        "item_id": "bmp",
+        "defect": null
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": null
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": true
+    }
+  },
+  "patient": {
+    "first_name": "Robert",
+    "last_name": "Nelson",
+    "conditions": [
+      "Atrial fibrillation",
+      "Hypertension",
+      "Type 2 diabetes mellitus"
+    ],
+    "medications": [
+      {
+        "name": "metoprolol succinate",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "losartan",
+        "dose": 50.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "warfarin",
+        "dose": 5.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies",
+    "referral_reason": "Evaluation of leg swelling and breathlessness concerning for heart failure.",
+    "history": "Robert is a 67-year-old man with several weeks of worsening swelling in both legs and increasing breathlessness with activity. He reports needing more pillows at night and has noticed reduced stamina.",
+    "referring_physician": "Dr. Martin Moore",
+    "practice": "Greenfield Medical Group",
+    "sex": "male",
+    "age": 67,
+    "dob": "1959-01-20",
+    "mrn": "MRN-49878"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-10-18",
+      "pages": [
+        "REFERRAL LETTER\nDate: 10/18/2026\nPatient Name: Robert Nelson\nDOB: 01/20/1959\nMRN: MRN-49878\n\nTo: Cardiology Clinic Intake\nFrom: Dr. Martin Moore, Greenfield Medical Group\n\nDear Colleague,\n\nReason for referral: Evaluation of leg swelling and breathlessness concerning for heart failure.\n\nRobert Nelson is a 67-year-old man with atrial fibrillation, hypertension, and type 2 diabetes mellitus.\n\nHe has had several weeks of worsening swelling in both legs and increasing breathlessness with activity. He needs more pillows at night and has noticed reduced stamina. Please evaluate him for possible heart failure.\n\nThank you for seeing this patient.\n\nDr. Martin Moore\nGreenfield Medical Group\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note",
+      "doc_type": "progress_note",
+      "doc_date": "2026-09-28",
+      "pages": [
+        "PROGRESS NOTE\nDate: 09/28/2026\nPatient Name: Robert Nelson\nDOB: 01/20/1959\nMRN: MRN-49878\nProvider: Dr. Martin Moore\n\nSUBJECTIVE:\nRobert Nelson is a 67-year-old man with several weeks of worsening swelling in both legs and increasing breathlessness with activity. He needs more pillows at night and has noticed reduced stamina.\n\nVITALS:\nBP 124/75, HR 80, RR 18, SpO2 99% on room air, weight 230 lb.\n\nEXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema.\n\nDATA REVIEWED:\n\nPatient is on warfarin.\n\nASSESSMENT AND PLAN:\n1. Bilateral leg swelling and exertional breathlessness with increased pillow use, concerning for heart failure. Refer to cardiology for evaluation and management.\n2. Atrial fibrillation. Coordinate ongoing care with cardiology.\n3. Hypertension. Continue routine follow-up with primary care.\n4. Type 2 diabetes mellitus. Continue routine follow-up with primary care.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-09-28",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 09/28/2026\nPatient Name: Robert Nelson\nDOB: 01/20/1959\nMRN: MRN-49878\n\nMetoprolol succinate 50 mg by mouth once daily\nLosartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily\n\nAllergies: No known allergies\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "ecg_report",
+      "doc_type": "unknown",
+      "doc_date": "2026-09-10",
+      "pages": [
+        "12-LEAD ECG REPORT\nDate: 09/10/2026\nPatient Name: Robert Nelson\nDOB: 01/20/1959\nMRN: MRN-49878\nOrdering provider: Dr. Martin Moore\n\nFindings: Normal sinus rhythm at 84 bpm. Normal axis. PR interval 163 ms, QRS 82 ms, QTc 418 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-09-25",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 09/25/2026\nPatient Name: Robert Nelson\nDOB: 01/20/1959\nMRN: MRN-49878\nOrdering provider: Dr. Martin Moore\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-10-01",
+      "pages": [
+        "LABORATORY REPORT\nDate: 10/01/2026\nPatient Name: Robert Nelson\nDOB: 01/20/1959\nMRN: MRN-49878\nOrdering provider: Dr. Martin Moore\n\nBASIC METABOLIC PANEL\nSodium: 144 mmol/L\nPotassium: 5.0 mmol/L\nChloride: 106 mmol/L\nCO2: 22 mmol/L\nBUN: 20 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 158 mg/dL (H)\nCalcium: 10.1 mg/dL\n\nCOAGULATION\nProthrombin Time: 21.0 sec\nINR: 1.9\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-04-17",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 04/17/2026\nPatient Name: Robert Nelson\nDOB: 01/20/1959\nMRN: MRN-49878\nAttending: Dr. Martin Moore\n\nADMISSION DIAGNOSIS:\nRobert Nelson is a 67-year-old man admitted for a urinary tract infection with dehydration. His established medical conditions include atrial fibrillation, hypertension, and type 2 diabetes mellitus. He presented after a period of urinary discomfort and reduced fluid intake, followed by weakness and difficulty maintaining his usual activity. The combination of urinary symptoms and poor intake raised concern for infection with volume depletion. He required inpatient care for hydration, antimicrobial treatment, observation, and support with return to oral intake. The admission plan also included attention to his chronic conditions and review of his ability to manage safely at home. No calendar date, named drug, test, or numerical result is included in this summary. The hospital stay focused on symptom relief, recovery of usual function, and a practical plan for continued care after discharge.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 2 of 20\n\nHISTORY OF PRESENT ILLNESS:\nBefore admission, Mr. Nelson developed urinary urgency and discomfort, with worsening fatigue over several days. He reported drinking less than usual because he felt unwell and was concerned about the urinary symptoms. He described reduced energy and less confidence walking around his home, without reporting a fall. The symptoms progressed enough that family members encouraged evaluation and hospital care. His history of type 2 diabetes was considered relevant because infection and reduced intake can complicate routine self-care. Atrial fibrillation and hypertension were also reviewed during planning. There was no reported recent procedure or new injury associated with the onset of illness. The patient and family provided a consistent account of the change from his usual state. The admission was undertaken to treat the urinary infection, address dehydration, and observe his response to supportive care.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Nelson has a history of atrial fibrillation, hypertension, and type 2 diabetes mellitus. These conditions were incorporated into inpatient planning, with attention to continuity of his established care and avoidance of unnecessary disruption to his routine. The history available to the team did not identify a new chronic diagnosis during this admission. His usual level of independence was reviewed with him and his family, particularly in relation to fluid intake, mobility, and recognizing worsening urinary symptoms. The patient was able to communicate his needs and participate in decisions about care. Chronic conditions did not prevent treatment of the acute infection. The inpatient stay was directed primarily at infection and dehydration, while maintaining appropriate oversight of his longstanding health concerns and arranging a clear transition plan.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 4 of 20\n\nADMISSION ASSESSMENT:\nAt admission, the working assessment was urinary tract infection accompanied by dehydration after reduced oral intake. The reported urinary discomfort and urgency supported the infection diagnosis, while the history of inadequate fluid consumption and weakness supported the need for rehydration and observation. The team considered his age and chronic illnesses when determining that care at home without initial treatment would not be appropriate. Atrial fibrillation, hypertension, and diabetes were reviewed as relevant background conditions, but no acute complication of these conditions was identified in the information used for the discharge narrative. The care plan emphasized antimicrobial therapy, fluid replacement, gradual resumption of food and drink, and observation for clinical improvement. Disposition planning began early, with attention to home support and the patient's ability to follow instructions.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 5 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Nelson was admitted for treatment of urinary infection and dehydration. The team began supportive hydration and antimicrobial therapy, with ongoing observation of urinary complaints, energy, and ability to take fluids. He was encouraged to drink as tolerated and was offered assistance with routine needs while feeling weak. The plan accounted for his atrial fibrillation, hypertension, and type 2 diabetes without introducing details of specific products or measurements. The patient was able to discuss his symptoms and participate in care planning. Staff reviewed the expected course of treatment and explained that improvement in intake and activity would guide the transition toward home. The initial day focused on stabilization, comfort, and reducing the effects of poor intake while treating the suspected source of infection.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, Mr. Nelson reported less urinary discomfort and was more willing to drink. Hydration support continued while staff observed his tolerance of oral fluids and his ability to manage ordinary activity. Antimicrobial treatment was continued, and the team reviewed whether the overall course remained consistent with uncomplicated recovery. His chronic conditions were considered during routine planning, with no new concern requiring a change in the admission focus. He remained engaged in discussion and could describe the instructions being reviewed with him. The team reinforced the importance of completing the planned treatment and maintaining regular fluid intake after discharge. Discharge preparation continued, including review of home support, access to follow-up care, and circumstances that should prompt urgent reassessment.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Mr. Nelson described continued improvement in urinary symptoms and fatigue. He was taking fluids more reliably and showed improved tolerance for usual movement within the care setting. Supportive hydration was adjusted to reflect his improved oral intake, while antimicrobial treatment continued as planned. No new acute issue was identified that changed the primary diagnosis or discharge direction. The team reviewed his chronic atrial fibrillation, hypertension, and diabetes as part of safe transition planning. He and his family discussed how to support adequate drinking and recognize a return of symptoms. The patient's recovery was assessed by his overall comfort, intake, activity, and ability to understand the plan, rather than by a single isolated measure. Planning focused on a safe home transition.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY FOUR:\nOn the fourth hospital day, Mr. Nelson continued to make progress with the treatment plan. Urinary discomfort remained improved, and he was able to maintain oral fluids with less need for staff prompting. His energy and activity were closer to his reported baseline, and he expressed readiness to return home. Antimicrobial therapy and supportive care were continued according to the established plan. The team confirmed that the acute admission goals had been met sufficiently for discharge planning to proceed. His family remained available to help with routine support and transportation. Instructions were reviewed in plain language, including hydration, completion of the prescribed treatment course, and signs of recurrence or worsening illness. Follow-up arrangements were discussed to support continued recovery and ongoing management of his chronic conditions.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 9 of 20\n\nINFECTION MANAGEMENT:\nThe urinary tract infection was treated with antimicrobial therapy during the admission. The treatment plan was guided by the presenting urinary symptoms and the patient's clinical course, with observation for persistent discomfort, new symptoms, or failure to improve. Mr. Nelson reported progressive relief during the stay, and the team planned continued treatment after discharge. He was advised that completing the full course is important even if symptoms resolve early. He was also instructed to seek prompt care for recurrent urinary pain, urgency that worsens, inability to pass urine, or other concerning changes. No specific drug name or test result is included in this summary. The infection remained the central acute problem addressed during hospitalization, and improvement supported transition to outpatient care with clear instructions and follow-up.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 10 of 20\n\nDEHYDRATION MANAGEMENT:\nDehydration was addressed with fluid replacement and encouragement of regular oral intake. Mr. Nelson had reduced his drinking before admission because of discomfort and general illness, contributing to weakness and need for inpatient support. During the stay, hydration was provided while his tolerance of fluids and ability to drink independently were followed. As symptoms improved, he was encouraged to take fluids by mouth at regular intervals. The plan after discharge was to continue frequent drinking throughout the day, unless a treating clinician gives him different instructions. His family was included in discussion of practical ways to make fluids available and to notice a renewed decline in intake. He was told to contact a clinician if he cannot keep fluids down or develops worsening weakness, confusion, or other marked change.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 11 of 20\n\nCHRONIC CONDITIONS DURING ADMISSION:\nAtrial fibrillation, hypertension, and type 2 diabetes mellitus were considered throughout the admission. The primary focus remained treatment of infection and dehydration, while the team sought to maintain continuity with his established care for these conditions. No new chronic diagnosis was made during the stay, and no acute event related to these conditions altered the discharge plan. Mr. Nelson was encouraged to follow the established outpatient instructions he had received before admission and to clarify any uncertainty with his regular clinician. The discharge discussion emphasized that reduced intake or recurrent infection may affect his usual routine, so he should request advice if he is unable to follow his regular plan. His family was invited to assist with the transition and help arrange timely outpatient follow-up.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 12 of 20\n\nCONSULTATIONS:\nNo specialty team was requested to provide separate inpatient evaluation. The attending service coordinated treatment of the urinary infection and dehydration and considered the patient's chronic conditions in the overall plan. Nursing staff supported hydration, comfort, mobility, and review of the instructions. Discharge planning included discussion with Mr. Nelson and his family about available help at home and the importance of continuing care after leaving the hospital. The patient was able to participate in these discussions and expressed understanding of the main goals. If new concerns arise after discharge, he should contact his regular clinician or seek urgent assessment as appropriate. The absence of a separate specialty evaluation did not delay the care provided or the transition plan. The team considered the patient's clinical improvement and practical support needs in deciding that home discharge was reasonable.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 13 of 20\n\nPROCEDURES:\nNo invasive procedure was required during this admission. Care consisted of supportive hydration, antimicrobial treatment, observation, assistance with oral intake, and discharge education. The patient did not require an operative intervention or a procedural treatment for the urinary symptoms. His course improved with the planned nonprocedural care, and no complication requiring escalation was identified in the discharge plan. The team discussed routine self-care and ways to reduce the chance of recurrent dehydration, including drinking regularly and seeking advice if illness interferes with intake. No procedure-related restrictions are needed after discharge. If a new urinary problem develops, he should obtain prompt clinical guidance rather than attempting an intervention at home. The hospital stay was focused on recovery from infection and dehydration and on arranging continued outpatient care.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 14 of 20\n\nRESPONSE TO TREATMENT:\nMr. Nelson responded favorably to inpatient treatment. Urinary discomfort and urgency improved over the course of the stay, while his willingness and ability to drink increased. His reported weakness also lessened, and he felt closer to his usual level of function by the time discharge was considered. He tolerated the planned transition from staff-supported hydration toward oral fluids. No new problem emerged that required a different primary treatment plan or prolonged admission. The patient and family were able to discuss the instructions and identify who to contact if symptoms returned. Improvement was judged from the overall clinical course, symptom report, intake, and functional progress. The favorable response supported completion of the remaining treatment at home with follow-up through his regular care team.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 15 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Nelson was considered improved and appropriate for continued recovery at home. His urinary symptoms had eased, oral fluid intake had improved, and his weakness was less limiting than at admission. He was able to take part in planning and understood the need to continue the treatment plan after leaving the hospital. No new acute concern prevented discharge. His chronic atrial fibrillation, hypertension, and type 2 diabetes remained part of his ongoing care needs and were not the primary reason for continued inpatient treatment. Family support was available to assist with the transition. He was advised to seek prompt care for worsening urinary symptoms, inability to drink, marked weakness, or any sudden change in his condition. Follow-up was recommended to confirm continued recovery.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 16 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Nelson was instructed to complete the treatment course provided at discharge and not to stop early solely because he feels better. He should drink fluids regularly during the day and increase attention to intake when feeling unwell, while following any individualized guidance from his regular clinician. He should resume his usual daily activities gradually and allow time for strength to return. He and his family were asked to monitor for recurrent urinary discomfort, worsening urgency, inability to pass urine, feverishness, inability to keep fluids down, confusion, or marked decline in energy. Any severe or rapidly worsening symptom should prompt urgent medical attention. He should continue established care for atrial fibrillation, hypertension, and diabetes and contact his regular clinician if illness interferes with that routine. Written instructions were reviewed before departure.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 17 of 20\n\nDIET AND HYDRATION:\nAfter discharge, Mr. Nelson should maintain regular fluid intake throughout the day, with practical reminders or family assistance if needed. He reported that illness had reduced his drinking before admission, so avoiding another prolonged period of poor intake is an important part of recovery. He may return gradually to his usual food and drink pattern as tolerated. If nausea, urinary symptoms, or another illness makes drinking difficult, he should seek advice rather than waiting until weakness becomes severe. Any individualized fluid guidance from his regular clinician should take precedence over general advice. Family members can help by keeping drinks accessible and checking that he is managing his usual routine. He should not make major changes to his established care plan without discussing them with a clinician. Continued attention to hydration may support recovery and reduce recurrence of dehydration.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 18 of 20\n\nACTIVITY AND HOME SUPPORT:\nMr. Nelson may increase activity gradually as his energy returns. He should take breaks when tired and avoid rushing tasks during the first part of recovery. His family is available to assist with transportation, meals, access to fluids, and other routine needs while he regains strength. He should use any usual safety practices in the home and ask for help if weakness returns or walking becomes difficult. There were no procedure-related activity restrictions at discharge. The family was encouraged to remain attentive to changes in intake, urinary symptoms, and ability to complete ordinary activities. If he has a sudden decline, a fall, or an inability to manage safely at home, they should contact a clinician promptly or seek urgent care. A gradual return to his customary routine is appropriate as tolerated.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP:\nMr. Nelson should arrange follow-up with his regular clinician after discharge to review recovery from the urinary infection and dehydration and to continue care for atrial fibrillation, hypertension, and type 2 diabetes. The timing should be prompt enough to address any lingering symptoms or difficulty completing the treatment plan. He should bring his discharge instructions and share any concerns about oral intake, urinary discomfort, or return of weakness. If symptoms worsen before the planned follow-up, he should not wait for the appointment and should seek earlier advice. The family can assist with arranging transportation and keeping track of the plan. Continued outpatient contact will allow the care team to confirm that symptoms remain improved and that his usual chronic care can continue without interruption.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 20 of 20\n\nRETURN PRECAUTIONS:\nMr. Nelson and his family were advised to seek urgent care for severe or rapidly worsening urinary discomfort, inability to pass urine, new confusion, fainting, marked weakness, or inability to keep fluids down. A return of feverishness or a significant decline in usual activity should also prompt timely clinical advice. If he develops chest discomfort, trouble breathing, or another sudden serious symptom, emergency services should be contacted. For milder but persistent urinary symptoms or reduced drinking, he should contact his regular clinician promptly. He should not wait until symptoms become severe before asking for help. These precautions were reviewed with the patient and family, who were given an opportunity to ask questions. They stated that they understood when to contact the outpatient team and when urgent assessment is appropriate.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-01",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/01/2026\nPatient Name: Robert Nelson\nDOB: 01/20/1959\nMRN: MRN-49878\nAttending: Dr. Martin Moore\n\nADMISSION DIAGNOSIS:\nRobert Nelson is a 67-year-old man admitted for cellulitis involving the lower leg. He described a recent area of increasing redness, swelling, tenderness, and warmth, with discomfort affecting ordinary walking. The symptoms had progressed despite his initial efforts at home and raised concern for a spreading skin infection. The working diagnosis was lower-leg cellulitis requiring hospital-based treatment and observation. His history includes atrial fibrillation, hypertension, and type 2 diabetes mellitus, which were considered when planning care. The admission plan focused on treating the infection, following his reported symptoms over time, supporting safe mobility, and identifying any change that would require a different approach. There was no reported injury requiring repair, and no operative treatment was anticipated. The patient participated in discussion of the plan and understood that the length of stay would depend on his response and ability to continue care safely outside the hospital.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 2 of 20\n\nHISTORY OF PRESENT ILLNESS:\nMr. Nelson reported that discomfort and skin redness on the lower leg developed over several days and gradually became more noticeable. He described swelling and tenderness that made walking less comfortable, though he remained able to move about with care. He did not report a known penetrating injury or a recent procedure involving the affected area. He came to the hospital because the symptoms were not settling and he was concerned about further spread. He denied feeling confused and was able to provide a consistent account of the events leading to admission. His usual intake and activity had been reduced somewhat because of discomfort. The history was reviewed with him during the stay and used to follow the course of the illness. No calendar dates or measured values are included in this summary. The primary concern throughout admission remained the skin infection and its effect on comfort and mobility.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nThe patient has a history of atrial fibrillation, hypertension, and type 2 diabetes mellitus. These chronic conditions were acknowledged throughout the admission and incorporated into decisions about inpatient treatment and discharge planning. Mr. Nelson was able to describe his usual routine and the ways these conditions are managed in his daily life. The team aimed to avoid unnecessary disruption while addressing the acute infection. Diabetes was considered relevant because it can complicate recovery from a skin infection, so the patient was encouraged to maintain his usual self-care practices and report any difficulty with intake or routine. His history of atrial fibrillation was considered when discussing safety and continuity of long-term care. Hypertension remained part of the chronic history, with attention to maintaining his established outpatient plan. No specific drug names, doses, laboratory values, or test findings are included here. The patient’s chronic conditions did not prevent participation in discharge planning.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 4 of 20\n\nADMISSION HISTORY AND GOALS:\nAt admission, Mr. Nelson’s priorities were relief of lower-leg discomfort, control of the redness and swelling, and confidence that the infection would not continue to spread after leaving the hospital. He was concerned that his diabetes might make healing more difficult and asked how to care for the affected area at home. The team reviewed the expected course of treatment, the need to observe for continued improvement, and the importance of seeking timely help if symptoms worsened. His history of atrial fibrillation and hypertension was reviewed as part of safe planning for the hospital stay and transition home. He expressed a preference to return home once the infection was improving and he could manage ordinary activity safely. The care plan was discussed in plain language, with opportunities for questions. Discharge readiness was to be based on symptom trend, functional ability, and a workable plan for continued care.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 5 of 20\n\nINITIAL TREATMENT PLAN:\nThe initial plan was to treat the suspected bacterial skin infection with antimicrobial therapy and observe the affected area through the patient’s reports of pain, redness, swelling, and ability to walk. The team planned to reassess the overall course regularly and adjust the approach if symptoms failed to improve or if new concerns arose. Supportive care included keeping the area protected, encouraging rest as needed, and allowing activity within the patient’s comfort. His diabetes, atrial fibrillation, and hypertension were included in the overall review of care needs. The team also discussed the importance of maintaining food and fluid intake and communicating any new symptoms. No procedure was planned at admission. Mr. Nelson was informed that treatment would continue in the hospital until the infection showed a favorable trend and a safe outpatient plan could be established. He agreed with this approach and remained engaged in decisions about his care.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, care focused on beginning treatment for the lower-leg infection and establishing a clear account of the patient’s symptoms and functional limitations. Mr. Nelson continued to report discomfort and swelling, with walking still more difficult than usual. The team reviewed the expected goals of therapy and asked him to communicate any change in pain, spread of redness, or ability to bear weight. Supportive measures were continued, and activity was paced according to comfort. His chronic conditions were considered in planning ongoing care, without changing the central focus on the acute infection. He remained able to take part in discussion and make his preferences known. The team explained that improvement may take time and that the decision to leave the hospital would depend on a sustained favorable course. No procedure was performed. The plan was to continue treatment and review his symptoms again the following day.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, Mr. Nelson reported that the affected leg was becoming less uncomfortable, although some swelling and skin changes remained noticeable to him. He was able to move about with greater ease and did not describe a new area of concern. The team continued the established antimicrobial approach and supportive care, with attention to the direction of change rather than a single observation. He was reminded to avoid unnecessary friction or injury to the area and to ask for assistance if walking became uncomfortable. His chronic health conditions remained part of routine planning during the admission. The patient asked about how long treatment might continue after discharge, and the team explained that the outpatient plan would be reviewed once improvement was sufficiently reliable. No invasive intervention was required. Overall, the reported symptom trend was favorable, and continued observation was planned to confirm that progress could be maintained.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY THREE:\nOn the third hospital day, Mr. Nelson described further improvement in discomfort and greater confidence with ordinary walking. He reported no new symptoms suggesting that the infection was spreading or interfering with other activities. The care team continued treatment and reviewed the importance of completing the planned course after discharge. The affected area remained the focus of symptom follow-up, but no procedure was needed. Discussion also addressed keeping the area clean and protected and avoiding activities that could cause skin damage while it healed. The patient was able to rest, eat, and participate in planning without new barriers being reported. His chronic conditions were reviewed in the context of continuing care at home. Because the overall trend was encouraging, the team began discussing a transition to outpatient treatment, contingent on ongoing stability and the patient’s ability to follow the instructions. He agreed to continue working toward discharge.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, LATER OBSERVATION:\nDuring the remaining period of observation, Mr. Nelson continued to report a favorable change in the lower-leg symptoms. Discomfort was less disruptive, and he described improved tolerance for walking and routine self-care. There was no reported return of rapidly increasing redness or new functional difficulty. The team continued the planned treatment and made sure the patient understood that visible skin changes may take longer to resolve than pain or tenderness. He was encouraged to avoid judging recovery by appearance alone and to seek help if the overall trend reversed. Discharge planning continued with attention to access to follow-up and the patient’s confidence in managing care at home. His chronic conditions remained stable by history, and he reported no new concern related to them. Continued inpatient care was no longer considered necessary once the team and patient agreed that the improvement was sustained and a safe transition plan was in place.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 10 of 20\n\nANTIMICROBIAL TREATMENT AND RESPONSE:\nAntimicrobial treatment was started for the suspected skin infection and continued during the admission. The treatment plan was reviewed as the patient described changes in discomfort, swelling, redness, and walking ability. His reported improvement supported continuing the existing approach rather than pursuing an invasive intervention. The team discussed the importance of following the complete outpatient course as directed and not stopping early solely because symptoms had begun to improve. Mr. Nelson was also advised to contact his care team if he had difficulty continuing treatment or experienced a concerning change. No specific drug names or doses are included in this summary. No laboratory or imaging findings are reported. The principal measure of progress in this narrative is the patient’s improving symptom course and increasing ability to manage ordinary activity. At discharge, the plan was for continued treatment outside the hospital with timely follow-up and clear guidance on when to seek urgent reassessment.\n\nFasting lipid panel this admission: total cholesterol: 270 mg/dL, LDL: 181 mg/dL, HDL: 46 mg/dL, triglycerides: 216 mg/dL.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 11 of 20\n\nDIABETES MANAGEMENT DURING ADMISSION:\nType 2 diabetes mellitus was considered throughout the stay because it may affect recovery from a skin infection. The team discussed maintaining the patient’s familiar self-care routine as much as possible and promptly reporting any difficulty with eating, drinking, or continuing his usual daily care. Mr. Nelson remained able to participate in these discussions and did not report a new diabetes-related concern that changed the focus of the admission. He was reminded that attention to skin protection and early reporting of new irritation are important parts of ongoing self-care. The discharge plan included continued management with his established outpatient team, without naming a drug or specifying a dose in this document. The patient was encouraged to keep routine follow-up and to seek guidance if illness interfered with his usual diabetes plan. His infection was improving at the time of discharge, and no separate diabetes-related barrier to returning home was identified.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 12 of 20\n\nATRIAL FIBRILLATION HISTORY:\nAtrial fibrillation remained part of Mr. Nelson’s medical history during this admission. The acute reason for hospitalization was the lower-leg infection, and no new symptom related to his chronic rhythm condition was reported as a barrier to treatment or discharge. The team considered his established outpatient care while planning the hospital course and transition home. Discussion emphasized continuing the routine plan already provided by his regular clinicians and promptly seeking help for any new or concerning symptoms. No specific treatment names, doses, test findings, or numerical values are included in this summary. Mr. Nelson was able to discuss his medical history and understood that follow-up for chronic conditions should continue after recovery from the infection. His atrial fibrillation did not require a separate procedure during this stay. The patient left with instructions to maintain continuity of care and to contact his usual team if questions arose about his chronic condition.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 13 of 20\n\nHYPERTENSION HISTORY:\nHypertension was acknowledged as a chronic condition during the admission and included in the transition plan. Mr. Nelson did not report a new concern related to his usual management that interfered with care of the lower-leg infection. The inpatient team aimed to maintain continuity with the plan he follows outside the hospital while keeping the acute infection as the main focus. No specific drug name, dose, measured value, or test result is included in this document. The patient was encouraged to continue routine follow-up with his established clinicians after discharge and to ask for clarification if his usual plan was affected by illness or changes in daily routine. He understood that care of the infection and ongoing management of hypertension would both require attention at home. There was no hypertension-related procedure during the stay, and this condition did not prevent the planned discharge once the infection was improving.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 14 of 20\n\nCONSULTING SERVICES:\nThe inpatient team coordinated care among the clinicians involved in Mr. Nelson’s hospitalization. The primary service directed treatment of the lower-leg infection and reviewed progress with the patient as symptoms changed. Additional clinical input was available to support decisions about antimicrobial management and the safe transition to outpatient care. Discussions emphasized the reported course of the skin symptoms, his ability to walk, and the practical needs of continuing treatment at home. His diabetes, atrial fibrillation, and hypertension were also considered when reviewing the plan. No specialist recommendation required an operation or other invasive approach. The patient was kept informed of the plan and had the opportunity to ask questions about the roles of the care team. Coordination focused on ensuring that instructions were understandable and that follow-up could be arranged through his usual outpatient care. No outside referral is described in this summary.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 15 of 20\n\nPROCEDURES AND INTERVENTIONS:\nNo surgical or invasive procedure was performed during this admission. Treatment of the lower-leg cellulitis was managed with antimicrobial therapy, supportive measures, and observation of the patient’s reported symptoms and functional progress. The affected area did not require operative drainage or repair during the hospital stay. The team focused on protecting the skin, limiting avoidable irritation, and allowing activity according to comfort. Mr. Nelson remained involved in decisions and was informed that a procedure would be reconsidered only if the clinical course changed in a way that warranted it. His symptoms improved with the nonoperative approach, and no procedure was needed before discharge. This section does not report any test or imaging findings. The absence of an intervention did not reduce the importance of completing the planned outpatient treatment and following the instructions for monitoring the area at home.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 16 of 20\n\nFUNCTION AND DISCHARGE PLANNING:\nDischarge planning focused on whether Mr. Nelson could manage routine activity and continue treatment safely outside the hospital. He reported increasing ease with walking as discomfort improved and felt more confident about returning to his usual setting. The team reviewed practical steps for protecting the affected area, keeping follow-up arrangements, and obtaining help if the infection worsened. His chronic conditions were included in planning for continuity of care, with the expectation that he would resume contact with his established clinicians as needed. No new limitation was identified that required inpatient rehabilitation or a procedure. The patient participated in the discussion and expressed understanding of the proposed plan. The team also addressed questions about expected recovery and the possibility that some skin changes could persist after other symptoms had eased. Discharge was planned once improvement remained sustained and the patient was comfortable managing care at home.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Nelson reported that lower-leg discomfort and swelling had improved and that walking was easier than at admission. He did not report a new area of spreading redness or a worsening symptom that required continued hospital care. He was able to discuss the home plan, describe when he would seek additional help, and participate in ordinary self-care planning. The infection was considered to be responding to treatment, with continued outpatient care needed for full recovery. His history of diabetes, atrial fibrillation, and hypertension remained important to ongoing care but did not prevent discharge. No procedure was required during the admission. The patient was discharged to continue treatment outside the hospital with instructions for skin care and follow-up. He understood that he should seek prompt reassessment if symptoms worsened, if new concerns developed, or if he could not continue the agreed plan.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 18 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Nelson was instructed to continue the treatment plan provided at discharge and to follow directions carefully until the course was complete. He should keep the affected area clean and protected, avoid rubbing or injury, and allow activity to increase as comfort permits. He was advised to contact his care team promptly if redness or swelling spreads, pain increases, walking becomes more difficult, or a new symptom develops. Urgent help should be sought for a sudden or severe change, confusion, or inability to continue care safely. He should maintain his usual self-care practices for diabetes and continue established follow-up for atrial fibrillation and hypertension. The patient was encouraged to ask questions if any part of the instructions was unclear. He should not make changes to his chronic treatment routine without guidance from his regular clinician. These instructions were reviewed before he left, and he expressed understanding of the plan.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 19 of 20\n\nFOLLOW-UP PLAN:\nFollow-up with Mr. Nelson’s usual outpatient care team was recommended to review recovery from the lower-leg infection and maintain continuity for diabetes, atrial fibrillation, and hypertension. He was asked to arrange that follow-up promptly after leaving the hospital and to bring any questions about the treatment plan. If the infection does not continue to improve, or if redness, swelling, discomfort, or difficulty walking increases, he should contact a clinician without waiting for the routine appointment. New or severe symptoms warrant urgent assessment. The patient was reminded that the skin may take time to return to its usual appearance even when he feels better, but worsening symptoms should not be ignored. The outpatient team can determine whether further care is needed based on his course. No calendar date is specified in this summary. Mr. Nelson stated that he understood the need for continued follow-up and agreed with the plan.\n",
+        "Robert Nelson | MRN-49878 | Discharge summary | Page 20 of 20\n\nPATIENT UNDERSTANDING AND PARTICIPATION:\nMr. Nelson participated in discussions about the infection, the expected course of recovery, and the transition home. He was able to describe the main reasons for continuing treatment and the changes that should prompt contact with a clinician. He asked practical questions about protecting the area and returning to ordinary activity, and those questions were addressed before discharge. The team emphasized that activity should be guided by comfort and that worsening symptoms should be reported promptly. His chronic conditions were included in the discussion so that he could maintain continuity with his regular care. The patient expressed agreement with the outpatient plan and did not identify a barrier that would prevent him from following the instructions. He was encouraged to seek clarification rather than make unsupported changes to his usual care. His engagement in planning supported a safe transition from hospital to home.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of leg swelling and breathlessness concerning for heart failure."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note",
+      "page": 1,
+      "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Metoprolol succinate 50 mg by mouth once daily\nLosartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "ecg_report",
+      "page": 1,
+      "text": "Findings: Normal sinus rhythm at 84 bpm. Normal axis. PR interval 163 ms, QRS 82 ms, QTc 418 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 144 mmol/L\nPotassium: 5.0 mmol/L\nChloride: 106 mmol/L\nCO2: 22 mmol/L\nBUN: 20 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 158 mg/dL (H)\nCalcium: 10.1 mg/dL"
+    },
+    {
+      "item_id": "inr",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "COAGULATION\nProthrombin Time: 21.0 sec\nINR: 1.9"
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "discharge_summary_2",
+      "page": 10,
+      "text": "Fasting lipid panel this admission: total cholesterol: 270 mg/dL, LDL: 181 mg/dL, HDL: 46 mg/dL, triglycerides: 216 mg/dL."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "present",
+    "meds": "present",
+    "progress_note": "present",
+    "inr": "present"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 5,
+  "input_tokens": 2830,
+  "output_tokens": 10581
+}

@@ -1,0 +1,105 @@
+{
+  "case_id": "cardiology-v1-hard-011",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-09-06",
+  "split": "dev",
+  "slices": [
+    "abbreviation",
+    "contradiction"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of perioperative cardiovascular risk before planned\nelective total knee arthroplasty."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EKG: NSR, LVH by voltage, rate 83, PR 153, QRS 109."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n65%. Mild mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "contradictory",
+      "evidence": [
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "Most recent LDL is 91 mg/dL."
+        },
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "LIPIDPANEL\nTotal Cholesterol: 269 mg/dL (H)\nLDL Choesterol: 151 mg/dL (H)\nHDL Cholesterol: 69 mg/dL\nTriglycerides: 246 mg/dL (H)"
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 134 mmol/L (L)\nPotassium:5.2 mmol/L (H)\nChloride: 106 mmol/L\nCO2: 28 mmol/L\nBUN: 30 mg/dL (H)\nCreatinine: 0.7 mg/dL\nGlucose: 174 mg/dL (H)\nCalcium: 10.1 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note_1",
+          "page": 1,
+          "text": "EXM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+        },
+        {
+          "doc_id": "progress_note_2",
+          "page": 1,
+          "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, no murmurs or gallops.\nLungs: clear to auscultation bilaterally.\nExtremities: trace ankle edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "not_applicable",
+      "evidence": []
+    }
+  ]
+}

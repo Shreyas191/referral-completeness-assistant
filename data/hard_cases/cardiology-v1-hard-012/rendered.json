@@ -1,0 +1,268 @@
+{
+  "case_id": "cardiology-v1-hard-012",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-11-09",
+  "plan": {
+    "case_id": "cardiology-v1-hard-012",
+    "checklist_id": "cardiology-v1",
+    "items": [
+      {
+        "item_id": "reason",
+        "defect": null
+      },
+      {
+        "item_id": "ecg",
+        "defect": "bury"
+      },
+      {
+        "item_id": "echo",
+        "defect": null
+      },
+      {
+        "item_id": "lipids",
+        "defect": null
+      },
+      {
+        "item_id": "bmp",
+        "defect": "contradict"
+      },
+      {
+        "item_id": "meds",
+        "defect": null
+      },
+      {
+        "item_id": "progress_note",
+        "defect": "stale"
+      },
+      {
+        "item_id": "inr",
+        "defect": null
+      }
+    ],
+    "wrong_patient_doc": false,
+    "condition_holds": {
+      "inr": false
+    }
+  },
+  "patient": {
+    "first_name": "Brian",
+    "last_name": "Dawson",
+    "conditions": [
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Chronic obstructive pulmonary disease"
+    ],
+    "medications": [
+      {
+        "name": "lisinopril",
+        "dose": 10.0,
+        "unit": "mg",
+        "frequency": "once daily"
+      },
+      {
+        "name": "metformin",
+        "dose": 500.0,
+        "unit": "mg",
+        "frequency": "twice daily"
+      },
+      {
+        "name": "tiotropium",
+        "dose": 18.0,
+        "unit": "mcg",
+        "frequency": "once daily"
+      }
+    ],
+    "allergies": "No known allergies.",
+    "referral_reason": "Evaluation of breathlessness on exertion.",
+    "history": "Brian Dawson is a 64-year-old man with increasing breathlessness when walking uphill or climbing stairs over the past three months. He denies breathlessness at rest and would like assessment of this change.",
+    "referring_physician": "Dr. David Turner",
+    "practice": "Trinity Family Practice",
+    "sex": "male",
+    "age": 64,
+    "dob": "1962-07-18",
+    "mrn": "MRN-90671"
+  },
+  "docs": [
+    {
+      "doc_id": "referral_letter",
+      "doc_type": "referral_letter",
+      "doc_date": "2026-11-09",
+      "pages": [
+        "REFERRAL LETTER\nDate: 11/09/2026\nPatient Name: Brian Dawson\nDOB: 07/18/1962\nMRN: MRN-90671\n\nTo: Cardiology Clinic Intake\nFrom: Dr. David Turner, Trinity Family Practice\n\nDear Colleague,\n\nReason for referral: Evaluation of breathlessness on exertion.\n\nI am writing from Trinity Family Practice to request cardiology assessment of Brian Dawson, a 64-year-old man with hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease.\n\nOver the past three months, he has developed increasing breathlessness when walking uphill or climbing stairs. He denies breathlessness at rest and would like assessment of this change.\n\nMost recent potassium is 5.9 mmol/L.\n\nThank you for seeing this patient.\n\nDr. David Turner\nTrinity Family Practice\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_1",
+      "doc_type": "progress_note",
+      "doc_date": "2026-02-05",
+      "pages": [
+        "PROGRESS NOTE\nDate: 02/05/2026\nPatient Name: Brian Dawson\nDOB: 07/18/1962\nMRN: MRN-90671\nProvider: Dr. David Turner\n\nSUBJECTIVE:\nBrian Dawson is a 64-year-old male seen for routine follow-up. He reports taking his treatment as directed and following his usual care plan. Breathing has been stable. He has no new concerns.\n\nVITALS:\nBP 119/85, HR 82, RR 15, SpO2 95% on room air, weight 199 lb.\n\nEXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Hypertension is stable by history. Continue the established treatment plan and lifestyle measures. Follow blood pressure over time.\n2. Type 2 diabetes mellitus is stable by history. Continue the established treatment plan, dietary measures, and activity as tolerated.\n3. Chronic obstructive pulmonary disease is stable by history. Continue the established respiratory treatment plan and avoid respiratory irritants.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "progress_note_2",
+      "doc_type": "progress_note",
+      "doc_date": "2026-04-12",
+      "pages": [
+        "PROGRESS NOTE\nDate: 04/12/2026\nPatient Name: Brian Dawson\nDOB: 07/18/1962\nMRN: MRN-90671\nProvider: Dr. David Turner\n\nSUBJECTIVE:\nBrian Dawson is a 64-year-old man with hypertension, type 2 diabetes, and COPD who reports increasing breathlessness when walking uphill or climbing stairs over the past three months. He denies breathlessness at rest and would like this change assessed.\n\nVITALS:\nBP 122/69, HR 64, RR 14, SpO2 95% on room air, weight 159 lb.\n\nEXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles.\n\nASSESSMENT AND PLAN:\n1. Exertional breathlessness: Increasing over three months without symptoms at rest. Request cardiology evaluation for further assessment.\n2. COPD: May contribute to exertional breathlessness. Continue routine follow-up and reassess if symptoms worsen.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "medication_list",
+      "doc_type": "medication_list",
+      "doc_date": "2026-11-02",
+      "pages": [
+        "CURRENT MEDICATION LIST\nDate: 11/02/2026\nPatient Name: Brian Dawson\nDOB: 07/18/1962\nMRN: MRN-90671\n\nLisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily\n\nAllergies: No known allergies.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "imaging_report",
+      "doc_type": "imaging_report",
+      "doc_date": "2026-07-28",
+      "pages": [
+        "TRANSTHORACIC ECHOCARDIOGRAM REPORT\nDate: 07/28/2026\nPatient Name: Brian Dawson\nDOB: 07/18/1962\nMRN: MRN-90671\nOrdering provider: Dr. David Turner\n\nFindings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "lab_report",
+      "doc_type": "lab_report",
+      "doc_date": "2026-11-07",
+      "pages": [
+        "LABORATORY REPORT\nDate: 11/07/2026\nPatient Name: Brian Dawson\nDOB: 07/18/1962\nMRN: MRN-90671\nOrdering provider: Dr. David Turner\n\nLIPID PANEL\nTotal Cholesterol: 205 mg/dL (H)\nLDL Cholesterol: 134 mg/dL (H)\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 155 mg/dL (H)\n\nBASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 3.6 mmol/L\nChloride: 98 mmol/L\nCO2: 24 mmol/L\nBUN: 29 mg/dL (H)\nCreatinine: 1.6 mg/dL (H)\nGlucose: 139 mg/dL (H)\nCalcium: 9.5 mg/dL\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_1",
+      "doc_type": "unknown",
+      "doc_date": "2026-07-25",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 07/25/2026\nPatient Name: Brian Dawson\nDOB: 07/18/1962\nMRN: MRN-90671\nAttending: Dr. David Turner\n\nADMISSION DIAGNOSIS:\nBrian Dawson was admitted with community-acquired pneumonia after developing worsening cough, increased sputum, fatigue, and shortness of breath at home. His established chronic obstructive pulmonary disease contributed to reduced respiratory reserve during the acute illness. The admitting team considered the infection responsible for the change from his usual breathing pattern. He required hospital-level support, including supplemental oxygen and close observation, while treatment began. His history also includes hypertension and type 2 diabetes mellitus, which were considered during the inpatient plan. The working diagnosis remained community-acquired pneumonia throughout the stay. No separate acute condition became the primary focus of admission. The patient and family were informed that recovery could take time and that his chronic lung disease increased the importance of completing treatment and arranging prompt follow-up after leaving the hospital.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 2 of 20\n\nHISTORY OF PRESENT ILLNESS:\nMr. Dawson described several days of increasing cough and sputum, with worsening breathlessness that limited his usual activity. He reported feeling generally unwell and having less energy than normal. Symptoms began in the community, without a preceding hospital stay or known recent institutional exposure. He came to the hospital when breathing difficulty continued to worsen and usual self-care became harder. He denied a recent change in his baseline chronic conditions before this illness. The history supported an acute respiratory infection superimposed on chronic obstructive pulmonary disease. The admitting team gathered information from Mr. Dawson and available family members to establish his usual respiratory function and home support. His account remained consistent during the admission. He was able to participate in decisions and understood the reason for inpatient care.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL HISTORY:\nMr. Dawson is a 64-year-old man with hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. His lung disease has required ongoing outpatient care, and he understands that respiratory infections may worsen his breathing. His diabetes is managed in the community, with attention to food intake and the established care plan. Hypertension is also followed outside the hospital. There was no reported history of a recent admission for a similar infection. He did not describe a new limitation or acute event involving another chronic condition before this illness began. These diagnoses were considered when planning inpatient treatment, activity, nutrition, and discharge support. The team encouraged him to maintain routine care for each chronic condition after recovery from pneumonia. No additional chronic diagnosis altered the central plan during this hospitalization.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 4 of 20\n\nADMISSION HISTORY AND CONTEXT:\nAt admission, Mr. Dawson needed a higher level of respiratory support than he could manage at home. His cough and breathlessness interfered with sleep, walking, and routine daily tasks. He was able to provide a useful history and discuss his preferences. The team reviewed his usual level of independence, home setting, and available help with family participation as appropriate. He reported a stable living arrangement and a plan to return home once breathing and activity improved. There was no reported barrier to obtaining follow-up care. His chronic obstructive pulmonary disease made gradual recovery and careful observation important. Staff explained the goals of inpatient treatment in plain language, including easing respiratory symptoms, treating the infection, supporting hydration and nutrition, and increasing activity safely. Mr. Dawson agreed with the proposed plan.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 5 of 20\n\nINITIAL INPATIENT PLAN:\nThe initial plan focused on treatment of community-acquired pneumonia and support of Mr. Dawson’s breathing. Supplemental oxygen was provided, with the aim of reducing support as his respiratory symptoms improved. Antibiotic therapy was started for the suspected community-acquired infection, and the team planned to adjust the overall approach according to his clinical course. Staff encouraged fluids, meals as tolerated, rest, and gradual movement. His chronic obstructive pulmonary disease was considered in respiratory care planning, while hypertension and diabetes remained part of routine inpatient management. The team monitored his ability to speak, sleep, eat, and move without excessive breathlessness through regular clinical review. Nursing staff reinforced cough etiquette and hand hygiene. Discharge planning began early so that home support and follow-up could be arranged without delaying a safe transition.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, DAY ONE:\nOn the first hospital day, Mr. Dawson continued to report cough, sputum, fatigue, and shortness of breath with activity. Supplemental oxygen remained necessary, and he stayed under inpatient observation. Antibiotic treatment continued for the presumed community-acquired infection. He was encouraged to take fluids and food as tolerated, and staff offered rest periods between routine activities. His chronic obstructive pulmonary disease was included in the respiratory care plan. The team discussed the expected course of pneumonia and explained that cough and low energy may persist even after breathing begins to improve. Mr. Dawson remained engaged in care discussions and asked appropriate questions. Nursing support focused on comfort, pacing, and safe movement. No new complaint displaced pneumonia as the primary issue. The plan was to continue support and reassess his ability to reduce oxygen needs.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, DAY TWO:\nOn the second hospital day, Mr. Dawson described gradual improvement in breathing at rest, although cough and fatigue continued. He was able to spend more time sitting up and began short periods of walking with staff support. Supplemental oxygen was reduced as tolerated, with attention to symptoms and activity. Antibiotic therapy continued without a reported treatment problem. Oral intake improved, and he was encouraged to maintain fluids and meals while recovering. The team reviewed his progress with him and reinforced that increased activity should be gradual. His chronic obstructive pulmonary disease remained relevant to his recovery, particularly during exertion. Hypertension and diabetes continued to be managed as chronic conditions during the stay. Discharge planning advanced, including discussion of home arrangements and follow-up. He remained in agreement with the plan to continue treatment and observation.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, DAY THREE:\nBy the third hospital day, Mr. Dawson reported continued improvement and less breathlessness during basic activity. He was able to walk farther with rest breaks and was no longer relying on the same level of respiratory support used at admission. Cough and reduced stamina remained, but he felt capable of managing these symptoms at home with guidance. Antibiotic treatment continued as planned. Staff reviewed pacing, rest, fluids, and the need to avoid rushing back to usual activity. The team discussed signs that should prompt urgent reassessment. His family was included in discharge planning with his permission. He demonstrated understanding of the instructions and could explain when he would seek help. The inpatient team considered his respiratory trajectory and available support adequate for transition home once final arrangements were completed.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, DAY FOUR AND STABILIZATION:\nDuring the later hospital course, Mr. Dawson maintained the improvement in his breathing and activity. He tolerated walking around his room and completing basic self-care with only planned rest periods. Supplemental oxygen was discontinued after he was able to remain comfortable without it during routine activity. Cough and fatigue had not fully resolved, and the team explained that these can continue during recovery from pneumonia. The prescribed antibiotic course was organized for completion after discharge, without naming a drug or dose in this summary. He was eating and drinking adequately and was comfortable with the home plan. No new inpatient concern required a change in disposition. His chronic lung disease was addressed in the ongoing outpatient plan, and care of hypertension and diabetes was to continue through his usual providers.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 10 of 20\n\nRESPIRATORY CARE:\nRespiratory support was directed at easing Mr. Dawson’s shortness of breath while the infection improved. Supplemental oxygen was used early in the stay and gradually withdrawn as he became more comfortable and active. Staff encouraged upright positioning, measured pacing, rest between tasks, and fluids as tolerated. Cough management and hand hygiene were reviewed with him. His chronic obstructive pulmonary disease was considered when setting activity expectations and planning the transition home. He was advised that fatigue and cough can remain after discharge and should improve progressively. He was also told not to push through marked breathlessness. The team discussed contacting his usual clinician if his chronic breathing pattern did not return toward baseline. Mr. Dawson understood the plan and participated in decisions about increasing activity. No specific respiratory device or procedure was required during the admission.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 11 of 20\n\nANTIBIOTIC TREATMENT AND RESPONSE:\nAntibiotic therapy was initiated for the working diagnosis of community-acquired pneumonia and continued during the inpatient stay. Mr. Dawson’s cough, sputum, and breathlessness improved gradually while treatment and supportive care were provided. He did not report an adverse reaction that required changing the plan. Before discharge, the team reviewed the importance of completing the remaining prescribed course, following the directions supplied at the pharmacy, and not stopping early solely because symptoms had eased. No drug name or dose is included in this summary. The patient was reminded to contact his clinician if he could not tolerate the course or if a concerning new symptom developed. Staff explained that improvement can be gradual and that persistent mild cough alone may not mean treatment has failed. He repeated the key instructions back to the team.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 12 of 20\n\nCHRONIC CONDITION MANAGEMENT:\nHypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease were considered throughout the admission. The acute focus remained pneumonia, while routine care for the chronic conditions continued within the inpatient plan. Reduced appetite and lower activity were discussed in relation to diabetes self-care, and Mr. Dawson was encouraged to resume his usual community routine as he recovered. He was advised to follow the ongoing plan from his established clinicians rather than make independent changes after discharge. His chronic lung disease was addressed through respiratory support, pacing, and guidance on recognizing a worsening pattern. The team did not identify a chronic-condition issue that required a separate inpatient intervention. Mr. Dawson understood that recovery from pneumonia may temporarily affect his usual activity and self-management. Follow-up with his regular care team was encouraged to support return to baseline.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 13 of 20\n\nCONSULTATIONS AND TEAM INPUT:\nThe inpatient care team coordinated nursing, respiratory support, and discharge planning around Mr. Dawson’s recovery from pneumonia. Respiratory care staff reinforced pacing, safe movement, and ways to manage breathlessness during basic activity. Nursing staff reviewed comfort measures, hydration, nutrition, and infection precautions. Discharge planning staff discussed his home setting, available family support, and access to follow-up. The primary team remained responsible for the overall treatment plan and communicated changes in plain language. Mr. Dawson was included in discussions and gave permission for family participation where helpful. No specialty service needed to assume primary management, and no separate consultant intervention changed the course of treatment. The team agreed that ongoing care could safely continue in the community once his respiratory needs had improved and the home plan was understood.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 14 of 20\n\nPROCEDURES AND TREATMENT LIMITATIONS:\nNo invasive procedure was needed during this admission. Care consisted of inpatient observation, supplemental oxygen during the earlier portion of the stay, antibiotic therapy, and supportive measures. Mr. Dawson did not require assisted breathing or transfer to a higher level of care. Activity was increased gradually, with rest breaks when needed. Food and fluids were offered according to tolerance, and staff emphasized comfort and safety while he regained strength. The team reviewed the expected recovery pattern and the importance of continuing the plan after leaving the hospital. This summary does not list named tests, results, drugs, doses, or imaging findings. No procedure-related complication occurred. Mr. Dawson remained able to participate in his own care and understood that he should seek help if breathing worsened or if new symptoms made home recovery unsafe.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 15 of 20\n\nCOMPLICATIONS AND SAFETY:\nThe hospital course was not complicated by a new acute condition. Mr. Dawson’s symptoms improved with treatment and supportive care, and his need for respiratory support decreased. He had ongoing cough and fatigue at discharge planning, which the team considered compatible with continued recovery provided these symptoms did not worsen. Staff encouraged gradual activity to reduce strain and recommended asking for help with tasks if he became unusually breathless or weak. He was reminded to maintain good hand hygiene and to avoid close contact with people who were ill while recovering. No fall, injury, or treatment reaction was reported during the stay. The team explained that worsening breathlessness, inability to drink, confusion, or a sudden decline should prompt urgent medical attention. Mr. Dawson and his family understood these safety instructions.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 16 of 20\n\nFUNCTIONAL STATUS AND DISCHARGE READINESS:\nMr. Dawson’s activity improved over the course of admission. Before discharge, he could manage basic self-care and short walks with rest periods. He continued to tire more easily than usual, so the team recommended a gradual return to daily routines rather than immediate full activity. He was able to describe his home plan and identify family support available if he needed assistance. He understood the instructions for completing treatment and arranging follow-up. His breathing was sufficiently improved for care outside the hospital, and he no longer required the level of respiratory support used at admission. The team reviewed transportation and access to food, fluids, and routine care after discharge. Mr. Dawson agreed that he felt ready to return home and knew to seek help if he could not manage safely.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 17 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Dawson was improved from admission and considered appropriate for return home. His cough and fatigue had not completely resolved, but his breathing was more comfortable and he could perform basic activities with rest breaks. Supplemental oxygen was no longer required for his planned home care. He was able to eat and drink and take part in decisions about next steps. The team reviewed the community-acquired pneumonia treatment plan, chronic condition follow-up, activity guidance, and warning symptoms. He understood that recovery may continue after leaving the hospital and that symptoms should trend in the right direction. His family was aware of the plan and could assist as needed. He left with instructions to contact his usual clinician for routine follow-up and to seek urgent care if breathing or general condition worsened.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 18 of 20\n\nDISCHARGE TREATMENT INSTRUCTIONS:\nMr. Dawson was instructed to complete the prescribed antibiotic course exactly as directed in the separate discharge paperwork. He should not stop early because he feels better, share the treatment with another person, or alter the instructions without speaking with a clinician. He should continue his established care plan for hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease, using the directions already provided by his usual clinicians. No drug names or doses are included in this summary. He was encouraged to drink fluids and eat regular meals as tolerated. He should rest when tired and increase activity gradually. If he has difficulty following the treatment plan, develops a concerning reaction, or cannot maintain fluids, he should contact a clinician promptly for guidance rather than simply waiting for the next scheduled appointment.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 19 of 20\n\nHOME CARE AND RECOVERY GUIDANCE:\nAt home, Mr. Dawson should allow time for recovery and avoid strenuous activity until his breathing and stamina are closer to baseline. Short walks with planned rest are appropriate if they do not cause marked breathlessness. He should continue regular meals and fluids as tolerated and use practical measures to reduce spread of respiratory illness, including hand hygiene and covering coughs. Family members may assist with shopping, meals, or transportation while his energy remains limited. He should keep a record of changes in cough, sputum, breathing, and ability to complete usual tasks so he can describe his recovery at follow-up. A lingering cough or tiredness may persist, but worsening symptoms should not be ignored. He was advised to avoid tobacco smoke and other known breathing irritants during recovery and to follow his usual chronic lung care plan.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP PLAN:\nMr. Dawson should arrange follow-up with his usual outpatient clinician within several days after returning home. The visit should review recovery from pneumonia, remaining cough or breathlessness, antibiotic completion, and ongoing care for hypertension, type 2 diabetes mellitus, and chronic obstructive pulmonary disease. He should bring the discharge paperwork and any questions about the home plan. If he cannot obtain an appointment in that interval, he should contact the clinic to discuss an appropriate alternative. Further follow-up can be arranged according to his symptoms and the advice of his established care team. He should not wait for routine follow-up if his breathing worsens or he becomes unable to manage at home. Mr. Dawson and his family stated that they understood how to arrange this follow-up and where to seek help.\n"
+      ],
+      "patient": "case"
+    },
+    {
+      "doc_id": "discharge_summary_2",
+      "doc_type": "unknown",
+      "doc_date": "2026-10-20",
+      "pages": [
+        "DISCHARGE SUMMARY\nDate: 10/20/2026\nPatient Name: Brian Dawson\nDOB: 07/18/1962\nMRN: MRN-90671\nAttending: Dr. David Turner\n\nADMISSION DIAGNOSIS:\nBrian Dawson is a 64-year-old man admitted for cellulitis involving the lower leg. The admission problem was a spreading skin and soft-tissue infection associated with increasing redness, warmth, tenderness, and swelling reported before arrival. He described discomfort that limited his usual walking. The involved area was assessed as requiring inpatient treatment because of the extent of symptoms and his underlying diabetes. No injury requiring operative care was reported. The treatment plan focused on controlling the infection, protecting the affected skin, supporting mobility, and watching for change in symptoms. His history of hypertension and chronic obstructive pulmonary disease was included in the care plan. The team also considered his diabetes when planning infection treatment and recovery. He remained hospitalized until symptoms had improved enough for ongoing care at home.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 2 of 20\n\nHISTORY OF PRESENT ILLNESS:\nMr. Dawson reported that the lower-leg symptoms had developed over several days and had become more uncomfortable before admission. Redness and swelling extended beyond the area where he first noticed irritation. He did not report a recent major injury or procedure involving the leg. Walking and standing had become more difficult because of soreness. He sought hospital care when the symptoms continued to progress. His history included type 2 diabetes, hypertension, and chronic obstructive pulmonary disease. He did not describe a new breathing concern as the reason for admission. The hospital team reviewed the course of the skin symptoms with him and used his account to guide daily reassessment. His priorities were relief of discomfort, improvement in walking, and a clear plan for continuing treatment after leaving the hospital.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 3 of 20\n\nRELEVANT MEDICAL BACKGROUND:\nThe patient has a history of type 2 diabetes mellitus, hypertension, and chronic obstructive pulmonary disease. These chronic conditions were considered during treatment of the lower-leg infection and planning for a safe discharge. Diabetes can complicate skin recovery, so the team emphasized routine monitoring and consistent meals during the stay. His hypertension was followed as part of usual inpatient care, without a reported acute concern requiring a separate hospital intervention. His chronic lung condition was stable by his report, and he did not require a new respiratory treatment plan during this admission. He was able to participate in discussions about his care and home needs. No additional chronic condition changed the primary plan for treating the cellulitis. The patient was encouraged to share any change in symptoms or ability to manage care at home.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 4 of 20\n\nADMISSION ASSESSMENT:\nThe admission assessment identified lower-leg cellulitis as the active problem requiring hospital treatment. The team reviewed the progression of redness, tenderness, swelling, and difficulty walking with Mr. Dawson. His diabetes was recognized as a factor that could affect healing, and the team planned close observation of the affected area and his overall response. There was no reported concern that required emergency surgery or transfer to a higher level of care. His chronic obstructive pulmonary disease and hypertension were reviewed for stability and incorporated into routine inpatient planning. The patient was informed that treatment would include antimicrobial therapy, protection of the skin, and reassessment over time. The anticipated plan was to continue hospital care until the infection showed a clear response and he could safely continue treatment outside the hospital.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 5 of 20\n\nINITIAL TREATMENT PLAN:\nThe initial plan was to begin antimicrobial treatment for the lower-leg cellulitis and reassess his symptoms during the admission. The affected skin was kept protected, and nursing staff were asked to report any extension of redness, worsening pain, or drainage. Mr. Dawson was encouraged to rest the leg when possible and to request assistance when walking if discomfort affected his balance. The team discussed the importance of completing the prescribed treatment after discharge and not stopping early simply because the skin looked better. His diabetes was monitored as part of routine care, with attention to meals and the demands of recovery. His chronic lung condition and hypertension were followed without a change in the central treatment plan. The patient understood the goals and agreed with continued inpatient observation.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 6 of 20\n\nHOSPITAL COURSE, FIRST DAY:\nDuring the first hospital day, Mr. Dawson continued antimicrobial treatment for cellulitis of the lower leg. He reported ongoing tenderness but was able to discuss the course of his symptoms and participate in planning. Staff monitored the involved area for spread and asked him to report any new discomfort or drainage. The leg was supported with rest and careful positioning when he was in bed. He walked with assistance as needed, since soreness made longer distances difficult. His diabetes was addressed through routine inpatient monitoring and coordination with meals. There was no new concern from his chronic obstructive pulmonary disease, and his hypertension remained part of routine care. The team reviewed the expected course with him, including that improvement may be gradual and that the full treatment plan must continue after discharge.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 7 of 20\n\nHOSPITAL COURSE, SECOND DAY:\nOn the second hospital day, Mr. Dawson described less discomfort at rest, although the leg remained sore with activity. The team continued antimicrobial treatment and repeated its review of symptom progression with him. Nursing care focused on keeping the skin clean and protected, observing for change, and helping him move safely. He was encouraged to elevate the leg during periods of rest and to increase walking as comfort allowed. No new issue related to his chronic obstructive pulmonary disease was reported. His hypertension and diabetes continued to be included in routine inpatient management. The patient asked questions about the expected duration of treatment and how to manage the affected area at home. The team explained that treatment would continue beyond the hospital and that prompt follow-up would help ensure continued improvement.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 8 of 20\n\nHOSPITAL COURSE, THIRD DAY:\nBy the third hospital day, Mr. Dawson reported that the lower-leg discomfort was easing and that walking was becoming more manageable. The involved area was reviewed as part of routine care, with attention to whether redness or swelling was continuing to extend. Antimicrobial treatment continued without a reported intolerance that changed the plan. He spent more time out of bed and practiced moving at a comfortable pace. Staff reinforced the need to avoid rubbing or irritating the skin and to keep the area protected. His diabetes, hypertension, and chronic obstructive pulmonary disease remained part of the discharge planning discussion, but none required a new inpatient intervention. The team began reviewing home support and follow-up arrangements, while confirming that he understood the warning signs that should prompt urgent reassessment.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 9 of 20\n\nHOSPITAL COURSE, FOURTH DAY:\nOn the fourth hospital day, Mr. Dawson continued to report improvement in pain and mobility. There was no report of a new symptom that required broadening the inpatient plan. The team continued the planned antimicrobial course and reviewed the next steps for completion at home. Nursing staff reinforced skin care, safe walking, and the importance of avoiding pressure or friction over the affected area. He was able to describe when he would seek help if redness, pain, swelling, or drainage increased again. The patient and team discussed whether his home arrangements could support continued treatment and follow-up. His chronic conditions remained stable by his report and did not prevent discharge planning. The decision to prepare for discharge was based on his improving symptoms and ability to continue care outside the hospital.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 10 of 20\n\nDIABETES DURING ADMISSION:\nType 2 diabetes was considered throughout the admission because it may slow recovery from a skin infection. The team included routine monitoring in his inpatient plan and encouraged regular meals while treatment continued. Mr. Dawson was reminded that keeping his usual diabetes care organized after discharge would support healing. No specific laboratory value or treatment result is included in this summary. He was advised to contact his usual clinician if his diabetes becomes harder to manage during recovery or if he is unable to maintain his usual intake. The patient was also instructed to inspect the affected skin daily and to report new breakdown or drainage. Diabetes did not create a separate acute complication during this stay. Education focused on continued self-care and timely follow-up while the cellulitis resolves.\n\n12-lead ECG on admission: sinus rhythm with occasional premature atrial complexes at 78 bpm, PR interval 140 ms, QRS 86 ms, QTc 458 ms. Sinus rhythm with occasional premature atrial complexes and no acute changes.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 11 of 20\n\nCHRONIC LUNG CONDITION:\nMr. Dawson has chronic obstructive pulmonary disease. He did not report a new breathing complaint that altered the reason for this admission, and no separate inpatient treatment course for a lung flare was needed. The team continued to consider his respiratory history when planning activity and discharge. He was encouraged to pace walking, take rest breaks, and seek assistance if exertion caused unusual breathing difficulty. Routine care for his chronic condition was to continue according to his established outpatient plan. The patient was reminded to contact a clinician promptly for a substantial change in breathing or a new respiratory concern. His lung condition did not prevent him from participating in mobility planning. No new respiratory procedure was performed during this hospitalization, and the focus remained treatment of the lower-leg cellulitis.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 12 of 20\n\nHYPERTENSION:\nHypertension was included in the review of Mr. Dawson's chronic health conditions during the admission. There was no reported acute concern that required a separate inpatient intervention or altered the treatment of the lower-leg cellulitis. The team planned for his established outpatient care to continue after discharge, with follow-up through his usual clinician. He was encouraged to take his home treatment as directed and not to make changes without guidance from a qualified clinician. No medication name or dose is included in this summary. The patient was reminded to seek advice if he develops a new concern during recovery. Hypertension did not limit his progress with walking or his ability to understand the discharge plan. The central hospital treatment remained antimicrobial care for the skin infection and support for a safe transition home.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 13 of 20\n\nCARE TEAM COORDINATION:\nThe inpatient care team coordinated treatment, nursing observation, mobility support, and discharge planning. Staff communicated changes in Mr. Dawson's reported discomfort and ability to walk so the plan could be adjusted as needed. Nursing personnel reinforced skin protection, routine diabetes care, and signs of worsening infection. The treating team reviewed his chronic conditions and confirmed that no additional inpatient service was needed to address them during this stay. Discharge planning included discussion of access to continued treatment, help at home, and follow-up with his usual clinician. The patient participated in these conversations and was able to restate the key parts of the plan. Coordination among the team members supported a consistent approach to infection care and preparation for continued recovery after leaving the hospital.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 14 of 20\n\nPROCEDURES:\nNo operative procedure was performed during this admission. The cellulitis was managed with antimicrobial treatment, observation, and supportive care. The affected skin was protected, and the team monitored his reported symptoms and ability to move safely. There was no reported need for a drainage procedure or surgical treatment. Mr. Dawson was informed that any new wound opening, drainage, or rapid worsening after discharge should be reported promptly. The absence of a procedure did not lessen the importance of completing the treatment plan and attending follow-up. The patient understood that skin recovery can take time and that he should avoid manipulating the affected area. The hospital course remained focused on nonoperative treatment and safe transition to outpatient care.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 15 of 20\n\nSKIN CARE AND NURSING SUPPORT:\nNursing care emphasized protection of the lower-leg skin and observation for changes in the patient's symptoms. Staff encouraged Mr. Dawson to keep the area clean and avoid rubbing, scratching, or placing pressure over tender skin. He was asked to report increased pain, new drainage, a change in the spread of redness, or any new area of skin breakdown. Supportive positioning and rest were used when he was not walking. He received reminders about completing the treatment course after discharge and keeping planned follow-up. The patient was able to discuss these instructions and ask questions about home care. No complex wound procedure was required. The nursing plan also supported safe mobility and routine care of his chronic conditions while the cellulitis improved.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 16 of 20\n\nMOBILITY AND ACTIVITY:\nLower-leg discomfort initially limited Mr. Dawson's usual walking. During the admission, staff encouraged activity as tolerated while allowing rest when soreness increased. He was asked to move carefully and request help if he felt unsteady or if pain made walking difficult. His ability to participate in mobility planning improved as symptoms eased. At home, he may gradually return to ordinary activity, avoiding actions that cause increasing pain or place friction on the affected skin. Resting with the leg supported was discussed as a comfort measure. He was advised not to remain inactive for prolonged periods if he can move safely. New difficulty walking, worsening discomfort, or an inability to manage basic daily tasks should prompt contact with a clinician. These recommendations were reviewed before discharge.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 17 of 20\n\nNUTRITION AND RECOVERY:\nThe team encouraged Mr. Dawson to maintain regular meals and adequate fluid intake during recovery, consistent with any existing guidance from his usual clinicians. Reliable intake can support general recovery while the skin infection resolves. His diabetes was considered when discussing meals, and he was encouraged to continue his established self-care routine. He should seek advice if nausea, poor intake, or another problem prevents him from following that routine. No special diet was introduced solely for this admission. The patient was reminded that nutrition does not replace antimicrobial treatment or follow-up. He was encouraged to contact his usual clinician if he has questions about adjusting his diet in the setting of diabetes, hypertension, or chronic obstructive pulmonary disease. These recommendations were included in the home recovery discussion.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 18 of 20\n\nCONDITION AT DISCHARGE:\nAt discharge, Mr. Dawson reported that the lower-leg discomfort had improved and that he could move more comfortably than at admission. His symptoms had responded sufficiently to continue the treatment course outside the hospital. He understood the need to protect the affected skin, complete the prescribed therapy, and attend follow-up. No new concern related to his chronic obstructive pulmonary disease or hypertension was reported as a barrier to leaving the hospital. His diabetes remained relevant to continued skin care and recovery planning. He was considered appropriate for discharge home with instructions to seek prompt reassessment if the infection worsened or if new symptoms developed. The patient participated in the discharge discussion and expressed understanding of the care plan and available next steps.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 19 of 20\n\nDISCHARGE INSTRUCTIONS:\nMr. Dawson was instructed to complete the antimicrobial course exactly as directed after leaving the hospital. He should keep the affected skin clean and protected, avoid scratching or rubbing it, and inspect it daily for change. He should seek urgent care if redness spreads, pain or swelling increases, drainage appears, fever develops, or he feels markedly worse. He should request help with walking if discomfort makes him unsteady. He should continue his established care for diabetes, hypertension, and chronic obstructive pulmonary disease, without changing any treatment on his own. He was advised to maintain regular meals and follow the guidance provided by his usual clinicians. If he cannot obtain or continue the prescribed treatment, he should contact a clinician promptly rather than allowing a gap in care.\n",
+        "Brian Dawson | MRN-90671 | Discharge summary | Page 20 of 20\n\nFOLLOW-UP PLAN:\nMr. Dawson should arrange follow-up with his usual clinician soon after discharge to confirm continued improvement of the lower-leg cellulitis and review his ongoing care. He should bring the discharge instructions and provide an update on pain, redness, swelling, skin integrity, and walking ability. If symptoms worsen before the planned appointment, he should seek urgent reassessment rather than waiting. Follow-up should also support routine care of his diabetes, hypertension, and chronic obstructive pulmonary disease. He should contact the hospital team or his usual clinician if questions arise about the treatment course or if he cannot follow the home plan. No calendar date is specified in this summary. The patient stated that he understood the follow-up plan and the circumstances that require earlier attention.\n"
+      ],
+      "patient": "case"
+    }
+  ],
+  "evidence": [
+    {
+      "item_id": "reason",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Reason for referral: Evaluation of breathlessness on exertion."
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "referral_letter",
+      "page": 1,
+      "text": "Most recent potassium is 5.9 mmol/L."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_1",
+      "page": 1,
+      "text": "EXAM:\nGeneral: well appearing, no distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: faint bibasilar crackles.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "progress_note",
+      "doc_id": "progress_note_2",
+      "page": 1,
+      "text": "EXAM:\nGeneral: comfortable at rest.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the sternal border, no gallop.\nLungs: clear to auscultation bilaterally.\nExtremities: 1+ pitting edema of both ankles."
+    },
+    {
+      "item_id": "meds",
+      "doc_id": "medication_list",
+      "page": 1,
+      "text": "Lisinopril 10 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nTiotropium 18 mcg by mouth once daily"
+    },
+    {
+      "item_id": "echo",
+      "doc_id": "imaging_report",
+      "page": 1,
+      "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at 55%. Grade 1 diastolic dysfunction. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+    },
+    {
+      "item_id": "lipids",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "LIPID PANEL\nTotal Cholesterol: 205 mg/dL (H)\nLDL Cholesterol: 134 mg/dL (H)\nHDL Cholesterol: 40 mg/dL\nTriglycerides: 155 mg/dL (H)"
+    },
+    {
+      "item_id": "bmp",
+      "doc_id": "lab_report",
+      "page": 1,
+      "text": "BASIC METABOLIC PANEL\nSodium: 136 mmol/L\nPotassium: 3.6 mmol/L\nChloride: 98 mmol/L\nCO2: 24 mmol/L\nBUN: 29 mg/dL (H)\nCreatinine: 1.6 mg/dL (H)\nGlucose: 139 mg/dL (H)\nCalcium: 9.5 mg/dL"
+    },
+    {
+      "item_id": "ecg",
+      "doc_id": "discharge_summary_2",
+      "page": 10,
+      "text": "12-lead ECG on admission: sinus rhythm with occasional premature atrial complexes at 78 bpm, PR interval 140 ms, QRS 86 ms, QTc 458 ms. Sinus rhythm with occasional premature atrial complexes and no acute changes."
+    }
+  ],
+  "expected": {
+    "reason": "present",
+    "ecg": "present",
+    "echo": "present",
+    "lipids": "present",
+    "bmp": "contradictory",
+    "meds": "present",
+    "progress_note": "stale",
+    "inr": "not_applicable"
+  },
+  "wrong_patient_docs": [],
+  "profile": "hard",
+  "llm_calls": 6,
+  "input_tokens": 3272,
+  "output_tokens": 10454
+}

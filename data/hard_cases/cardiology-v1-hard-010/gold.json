@@ -1,0 +1,100 @@
+{
+  "case_id": "cardiology-v1-hard-010",
+  "checklist_id": "cardiology-v1",
+  "reference_date": "2026-10-18",
+  "split": "dev",
+  "slices": [
+    "buried"
+  ],
+  "wrong_patient_docs": [],
+  "items": [
+    {
+      "item_id": "reason",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "referral_letter",
+          "page": 1,
+          "text": "Reason for referral: Evaluation of leg swelling and breathlessness concerning for heart\nfailure."
+        }
+      ]
+    },
+    {
+      "item_id": "ecg",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "ecg_report",
+          "page": 1,
+          "text": "Findings: Normal sinus rhythm at 84 bpm. Normal axis. PR interval 163 ms, QRS 82 ms, QTc\n418 ms.\nImpression: Normal sinus rhythm with voltage criteria for left ventricular hypertrophy."
+        }
+      ]
+    },
+    {
+      "item_id": "echo",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "imaging_report",
+          "page": 1,
+          "text": "Findings: Normal left ventricular size. Left ventricular ejection fraction estimated at\n60%. Trace mitral regurgitation. No pericardial effusion.\nImpression: Normal left ventricular systolic function."
+        }
+      ]
+    },
+    {
+      "item_id": "lipids",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "discharge_summary_2",
+          "page": 10,
+          "text": "Fasting lipid panel this admission: total cholesterol: 270 mg/dL, LDL: 181 mg/dL, HDL: 46\nmg/dL, triglycerides: 216 mg/dL."
+        }
+      ]
+    },
+    {
+      "item_id": "bmp",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "BASIC METABOLIC PANEL\nSodium: 144 mmol/L\nPotassium: 5.0 mmol/L\nChloride: 106 mmol/L\nCO2: 22 mmol/L\nBUN: 20 mg/dL\nCreatinine: 0.7 mg/dL\nGlucose: 158 mg/dL (H)\nCalcium: 10.1 mg/dL"
+        }
+      ]
+    },
+    {
+      "item_id": "meds",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "medication_list",
+          "page": 1,
+          "text": "Metoprolol succinate 50 mg by mouth once daily\nLosartan 50 mg by mouth once daily\nMetformin 500 mg by mouth twice daily\nWarfarin 5 mg by mouth once daily"
+        }
+      ]
+    },
+    {
+      "item_id": "progress_note",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "progress_note",
+          "page": 1,
+          "text": "EXAM:\nGeneral: alert, no acute distress.\nNeck: no jugular venous distension.\nCardiac exam: regular rate and rhythm, normal S1 and S2, soft systolic murmur at the\nsternal border, no gallop.\nLungs: clear bilaterally.\nExtremities: no peripheral edema."
+        }
+      ]
+    },
+    {
+      "item_id": "inr",
+      "status": "present",
+      "evidence": [
+        {
+          "doc_id": "lab_report",
+          "page": 1,
+          "text": "COAGULATION\nProthrombin Time: 21.0 sec\nINR: 1.9"
+        }
+      ]
+    }
+  ]
+}
